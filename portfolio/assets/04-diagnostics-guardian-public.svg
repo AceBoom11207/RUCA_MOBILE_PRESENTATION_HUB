@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">RUCA Guardian Diagnostics</title>
+  <desc id="desc">Privacy-safe conceptual rendering of the RUCA diagnostics interface with no workstation-identifying information.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050607"/>
+      <stop offset="1" stop-color="#111519"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#171b1f"/>
+      <stop offset="1" stop-color="#0c0f12"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="46%" r="58%">
+      <stop offset="0" stop-color="#f0c85f" stop-opacity=".55"/>
+      <stop offset=".45" stop-color="#9b7420" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#0a0c0e" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="820" cy="460" r="360" fill="url(#core)"/>
+
+  <rect x="36" y="30" width="1528" height="840" rx="26" fill="#080a0c" stroke="#7f6728" stroke-width="2"/>
+  <rect x="36" y="30" width="1528" height="82" rx="26" fill="#0f1215"/>
+  <rect x="36" y="89" width="1528" height="23" fill="#0f1215"/>
+  <line x1="36" y1="112" x2="1564" y2="112" stroke="#7f6728"/>
+
+  <g fill="#e9d17c" font-family="Segoe UI, Arial, sans-serif">
+    <text x="68" y="67" font-size="28" font-weight="700" letter-spacing="5">RUCA</text>
+    <text x="68" y="91" font-size="12" fill="#8b8f94" letter-spacing="2">GUARDIAN DIAGNOSTICS // PUBLIC PRESENTATION</text>
+  </g>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">
+    <rect x="1080" y="50" width="106" height="40" rx="20" fill="#171a1d" stroke="#464b50"/>
+    <text x="1110" y="75" fill="#e6e6e6">HOME</text>
+    <rect x="1200" y="50" width="118" height="40" rx="20" fill="#171a1d" stroke="#464b50"/>
+    <text x="1229" y="75" fill="#e6e6e6">HEALTH</text>
+    <rect x="1332" y="50" width="186" height="40" rx="20" fill="#3b3116" stroke="#b48c2b"/>
+    <text x="1361" y="75" fill="#f3d477">DIAGNOSTICS</text>
+  </g>
+
+  <rect x="68" y="144" width="250" height="650" rx="18" fill="url(#panel)" stroke="#2f3539"/>
+  <text x="92" y="183" fill="#d9bc60" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">SYSTEMS</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="15">
+    <g fill="#1a1e21" stroke="#343a3e">
+      <rect x="88" y="205" width="210" height="46" rx="10"/>
+      <rect x="88" y="261" width="210" height="46" rx="10"/>
+      <rect x="88" y="317" width="210" height="46" rx="10"/>
+      <rect x="88" y="373" width="210" height="46" rx="10"/>
+      <rect x="88" y="429" width="210" height="46" rx="10"/>
+      <rect x="88" y="485" width="210" height="46" rx="10"/>
+    </g>
+    <g fill="#c7c9cb">
+      <text x="112" y="234">CPU</text>
+      <text x="112" y="290">GPU</text>
+      <text x="112" y="346">Memory</text>
+      <text x="112" y="402">Storage</text>
+      <text x="112" y="458">Network</text>
+      <text x="112" y="514">Thermals</text>
+    </g>
+    <g fill="#6dd59a" font-weight="700">
+      <text x="248" y="234">GOOD</text>
+      <text x="248" y="290">GOOD</text>
+      <text x="248" y="346">GOOD</text>
+      <text x="248" y="402">GOOD</text>
+      <text x="248" y="458">GOOD</text>
+      <text x="248" y="514">GOOD</text>
+    </g>
+  </g>
+  <rect x="88" y="572" width="210" height="78" rx="14" fill="#261f0d" stroke="#9f7a22"/>
+  <text x="108" y="602" fill="#f0cf6a" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">SYSTEM READINESS</text>
+  <text x="108" y="630" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">MISSION READY</text>
+
+  <rect x="344" y="144" width="794" height="650" rx="18" fill="url(#panel)" stroke="#2f3539"/>
+  <text x="376" y="187" fill="#8b8f94" font-family="Segoe UI, Arial, sans-serif" font-size="13" letter-spacing="2">DIAGNOSTIC CHANNEL</text>
+  <text x="376" y="231" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">CPU DIAGNOSTICS</text>
+
+  <g transform="translate(390 278)">
+    <circle cx="150" cy="150" r="118" fill="#0a0d0f" stroke="#6b5620" stroke-width="12"/>
+    <circle cx="150" cy="150" r="92" fill="#111519" stroke="#2e3438" stroke-width="2"/>
+    <circle cx="150" cy="150" r="74" fill="none" stroke="#d6af45" stroke-width="4" stroke-dasharray="350 120" transform="rotate(-100 150 150)" filter="url(#glow)"/>
+    <text x="150" y="143" text-anchor="middle" fill="#f2d16f" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="800">67°</text>
+    <text x="150" y="174" text-anchor="middle" fill="#8f9599" font-family="Segoe UI, Arial, sans-serif" font-size="13" letter-spacing="2">PACKAGE TEMP</text>
+  </g>
+
+  <g transform="translate(720 290)" font-family="Segoe UI, Arial, sans-serif">
+    <rect width="372" height="90" rx="14" fill="#111519" stroke="#343a3f"/>
+    <text x="24" y="32" fill="#8f9599" font-size="12" letter-spacing="2">CURRENT LOAD</text>
+    <text x="24" y="67" fill="#ffffff" font-size="30" font-weight="800">42%</text>
+    <text x="276" y="67" fill="#6dd59a" font-size="15" font-weight="700">NORMAL</text>
+
+    <rect y="110" width="372" height="90" rx="14" fill="#111519" stroke="#343a3f"/>
+    <text x="24" y="142" fill="#8f9599" font-size="12" letter-spacing="2">CLOCK</text>
+    <text x="24" y="177" fill="#ffffff" font-size="30" font-weight="800">5.2 GHz</text>
+    <text x="276" y="177" fill="#6dd59a" font-size="15" font-weight="700">STABLE</text>
+
+    <rect y="220" width="372" height="90" rx="14" fill="#111519" stroke="#343a3f"/>
+    <text x="24" y="252" fill="#8f9599" font-size="12" letter-spacing="2">THERMAL HEADROOM</text>
+    <text x="24" y="287" fill="#ffffff" font-size="30" font-weight="800">23°C</text>
+    <text x="276" y="287" fill="#f0cf6a" font-size="15" font-weight="700">WATCH</text>
+  </g>
+
+  <rect x="376" y="640" width="716" height="118" rx="16" fill="#0d1114" stroke="#33393d"/>
+  <text x="400" y="674" fill="#d9bc60" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">SENSOR TRACE</text>
+  <polyline points="400,721 455,706 510,712 565,689 620,697 675,681 730,694 785,676 840,683 895,670 950,681 1010,668 1068,672" fill="none" stroke="#d4b24c" stroke-width="4"/>
+  <line x1="400" y1="734" x2="1068" y2="734" stroke="#2b3034"/>
+
+  <rect x="1166" y="144" width="366" height="650" rx="18" fill="url(#panel)" stroke="#2f3539"/>
+  <text x="1194" y="184" fill="#8b8f94" font-family="Segoe UI, Arial, sans-serif" font-size="13" letter-spacing="2">GUARDIAN TRIAGE</text>
+  <text x="1194" y="229" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="800">You are safe.</text>
+  <text x="1194" y="260" fill="#aeb3b6" font-family="Segoe UI, Arial, sans-serif" font-size="14">Current readings are within the</text>
+  <text x="1194" y="282" fill="#aeb3b6" font-family="Segoe UI, Arial, sans-serif" font-size="14">expected operating range.</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="1192" y="322" width="314" height="96" rx="14" fill="#101418" stroke="#394044"/>
+    <text x="1214" y="350" fill="#d9bc60" font-size="12" font-weight="700">WHAT THIS MEANS</text>
+    <text x="1214" y="378" fill="#d2d5d7" font-size="14">Cooling is keeping pace with load.</text>
+    <text x="1214" y="398" fill="#d2d5d7" font-size="14">No action is required.</text>
+
+    <rect x="1192" y="438" width="314" height="118" rx="14" fill="#101418" stroke="#394044"/>
+    <text x="1214" y="466" fill="#d9bc60" font-size="12" font-weight="700">FIRST CHECKS</text>
+    <text x="1214" y="494" fill="#d2d5d7" font-size="14">• Confirm airflow is unobstructed</text>
+    <text x="1214" y="518" fill="#d2d5d7" font-size="14">• Watch for sustained spikes</text>
+    <text x="1214" y="542" fill="#d2d5d7" font-size="14">• Recheck after long sessions</text>
+
+    <rect x="1192" y="576" width="314" height="148" rx="14" fill="#171307" stroke="#8f6f20"/>
+    <text x="1214" y="606" fill="#f0cf6a" font-size="12" font-weight="700">SERIOUS THRESHOLD</text>
+    <text x="1214" y="638" fill="#ffffff" font-size="18" font-weight="800">Sustained 90°C+</text>
+    <text x="1214" y="665" fill="#d2d5d7" font-size="14">Pause heavy work and inspect</text>
+    <text x="1214" y="687" fill="#d2d5d7" font-size="14">cooling before continuing.</text>
+  </g>
+
+  <line x1="68" y1="822" x2="1532" y2="822" stroke="#39310f"/>
+  <text x="68" y="850" fill="#6f7478" font-family="Segoe UI, Arial, sans-serif" font-size="12" letter-spacing="2">PRIVACY-SAFE PUBLIC RENDER // NO HOSTNAME // NO DEVICE IDENTIFIERS</text>
+  <text x="1532" y="850" text-anchor="end" fill="#d3b24c" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">WELCOME HOME</text>
+</svg>
