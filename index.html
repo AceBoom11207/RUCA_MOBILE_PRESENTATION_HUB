@@ -5,80 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#070506">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="Use a self-contained public simulation of RUCA Command Core, a controller-first personal computing environment.">
+  <meta name="description" content="Use a self-contained public simulation of RUCA OS, a controller-first personal computing environment.">
   <link rel="canonical" href="https://ruca-mobile-presentation-hub.vercel.app/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="RUCA Command Core | Public Product Simulation">
-  <meta property="og:description" content="Console confidence. PC authority. Enter five interactive RUCA worlds using deterministic local data.">
+  <meta property="og:title" content="RUCA OS | Public Product Simulation">
+  <meta property="og:description" content="A working five-world RUCA OS simulation using deterministic local data.">
   <meta property="og:url" content="https://ruca-mobile-presentation-hub.vercel.app/">
   <meta property="og:image" content="https://ruca-mobile-presentation-hub.vercel.app/assets/ruca-logo.png">
-  <meta property="og:image:alt" content="RUCA Command Core identity mark">
+  <meta property="og:image:alt" content="RUCA OS identity mark">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="RUCA Command Core">
-  <meta name="twitter:description" content="A working, self-contained public RUCA product simulation.">
+  <meta name="twitter:title" content="RUCA OS">
+  <meta name="twitter:description" content="A working, self-contained public RUCA OS simulation.">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'none'; worker-src 'self'; object-src 'none'; frame-src 'none'; media-src 'none'; form-action 'none'; base-uri 'none'">
-  <title>RUCA Command Core | Public Product Simulation</title>
+  <title>RUCA OS | Public Product Simulation</title>
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="icon" href="/icons/icon-192.png" sizes="192x192">
   <link rel="apple-touch-icon" href="/icons/icon-192.png">
-  <link rel="stylesheet" href="/assets/ruca-public.css?v=20260722-command-core-r1">
-  <script src="/assets/public-site.js?v=20260722-command-core-r1" defer></script>
+  <link rel="stylesheet" href="/assets/ruca-public.css?v=20260722-os-fidelity-r12">
+  <script src="/assets/public-site.js?v=20260722-os-fidelity-r12" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#worldSurface">Skip to active RUCA world</a>
 
   <div class="app-shell" id="appShell" data-world="home" data-severity="ready">
-    <header class="topbar">
-      <a class="brand-lockup" href="#home" data-route="home" data-focus aria-label="RUCA HOME">
-        <img src="/assets/ruca-logo.png" width="48" height="48" alt="">
-        <span><strong>RUCA</strong><small>COMMAND CORE</small></span>
+    <header class="top-shell">
+      <a class="brand-block" href="#home" data-route="home" data-focus aria-label="RUCA HOME">
+        <img src="/assets/ruca-logo.png" width="54" height="54" alt="RUCA crest">
+        <span><strong>RUCA OS</strong><small>REAL USER COMPUTER ASSISTANT</small><em>PUBLIC PRODUCT SIMULATION</em></span>
       </a>
 
       <nav class="world-nav" aria-label="RUCA worlds">
-        <button type="button" data-route="home" data-focus aria-current="page"><span>HOME</span><small>READY?</small></button>
-        <button type="button" data-route="play" data-focus><span>PLAY</span><small>LAUNCH?</small></button>
-        <button type="button" data-route="live-world" data-focus><span>LIVE WORLD</span><small>OBSERVE?</small></button>
-        <button type="button" data-route="diagnostics" data-focus><span>DIAGNOSTICS</span><small>SAFE?</small></button>
-        <button type="button" data-route="control" data-focus><span>CONTROL</span><small>BEHAVE?</small></button>
+        <button type="button" data-route="home" data-focus aria-current="page"><span>HOME</span></button>
+        <button type="button" data-route="play" data-focus><span>PLAY</span></button>
+        <button type="button" data-route="live-world" data-focus><span>LIVE WORLD</span></button>
+        <button type="button" data-route="diagnostics" data-focus><span>DIAGNOSTICS</span></button>
+        <button type="button" data-route="control" data-focus><span>CONTROL</span></button>
       </nav>
 
-      <nav class="resource-nav" aria-label="Public resources">
-        <a href="/portfolio/" data-focus>CASE STUDY</a>
-        <a href="/resume/Anthony_Moncion_Interaction_Designer_Public_Resume.pdf" data-focus>RESUME</a>
-        <button type="button" id="aboutOpen" data-focus>ABOUT</button>
-      </nav>
+      <section class="time-block" aria-label="Current local time">
+        <div id="clockDisplay">--:-- --</div>
+        <span id="dateDisplay">LOADING DATE</span>
+      </section>
     </header>
 
-    <section class="status-ribbon" aria-label="Simulated system status">
-      <div><span class="status-light" aria-hidden="true"></span><strong id="globalReadiness">MISSION READY</strong><small>SIMULATED READINESS</small></div>
-      <div><strong id="globalCpu">CPU 31%</strong><small>LOCAL SIGNAL</small></div>
-      <div><strong id="globalThermal">THERMAL 52°C</strong><small>SAFE RANGE</small></div>
-      <div><strong id="globalSource">DETERMINISTIC DATA</strong><small>NO WORKSTATION LINK</small></div>
+    <section class="intelligence-ribbon" aria-label="Simulated intelligence ribbon">
+      <span class="ribbon-title">INTELLIGENCE RIBBON</span>
+      <div class="ribbon-grid">
+        <div><strong id="globalReadiness">SYSTEM NOMINAL</strong><small>Public fixture is inside expected limits.</small></div>
+        <div><strong>DEMO LOCAL</strong><small>No bridge, workstation, or private source.</small></div>
+        <div><strong id="globalThermal">THERMAL 52°C</strong><small>Deterministic thermal example.</small></div>
+        <div><strong id="globalStorage">243GB FREE</strong><small>Capacity fixture, not a device reading.</small></div>
+        <div><strong id="globalCpu">DIAGNOSTICS READY</strong><small>Three simulated states available.</small></div>
+      </div>
     </section>
 
-    <main class="world-surface" id="worldSurface" tabindex="-1"><h1 class="sr-only">RUCA Command Core</h1></main>
+    <main class="world-surface" id="worldSurface" tabindex="-1"><h1 class="sr-only">RUCA OS</h1></main>
 
-    <footer class="command-footer">
-      <div class="footer-state"><strong>RUCA COMMAND SHELL</strong><small><span class="online-dot" aria-hidden="true"></span> PUBLIC SIMULATION ONLINE</small></div>
-      <div class="focus-state"><span>CURRENT FOCUS</span><strong id="focusReadout">HOME</strong></div>
-      <button class="audio-state" id="audioState" type="button" data-focus aria-pressed="false"><span aria-hidden="true">◈</span><strong>MUTED</strong><small>SIMULATED AUDIO STATE</small></button>
-      <p class="public-boundary">This public simulation reproduces RUCA’s interaction model with deterministic local data. It cannot access the owner’s workstation, telemetry, files, devices, or native commands.</p>
+    <footer class="machine-footer">
+      <div class="machine-chip footer-shell-state"><strong>RUCA COMMAND SHELL</strong><small><span class="online-dot" aria-hidden="true"></span> ONLINE // PUBLIC SIMULATION</small></div>
+      <div class="machine-chip footer-uptime"><strong>RUCA UPTIME</strong><small id="uptimeDisplay">0D 00H 00M 00S</small></div>
+      <div class="footer-volume-control">
+        <button id="audioState" type="button" data-focus aria-pressed="false" aria-label="Toggle simulated RUCA audio">MUTE</button>
+        <label for="footerVolume">VOL</label>
+        <button id="volumeDown" type="button" data-focus aria-label="Decrease simulated volume">−</button>
+        <input id="footerVolume" type="range" min="0" max="100" value="25" data-focus aria-label="Simulated RUCA volume">
+        <button id="volumeUp" type="button" data-focus aria-label="Increase simulated volume">+</button>
+        <output id="volumeOutput" for="footerVolume">25</output>
+      </div>
+      <div class="profile-chip">
+        <button type="button" id="aboutOpen" data-focus><strong>ACE</strong><small>PUBLIC DEMO</small></button>
+        <nav aria-label="Public resources"><a href="/portfolio/" data-focus>CASE STUDY</a><a href="/resume/Anthony_Moncion_Interaction_Designer_Public_Resume.pdf" data-focus>RESUME</a></nav>
+      </div>
     </footer>
+
+    <button class="core-return-anchor" type="button" data-route="home" data-focus aria-label="Return HOME through System Heart"><span>CORE</span><strong>HOME</strong></button>
+    <div class="focus-readout" aria-live="polite"><span>FOCUS</span><strong id="focusReadout">HOME</strong></div>
   </div>
 
   <dialog class="about-dialog" id="aboutDialog" aria-labelledby="aboutTitle">
     <button class="dialog-close" id="aboutClose" type="button" data-focus aria-label="Close About panel">×</button>
     <p class="eyebrow">PUBLIC PROOF // PRIVATE AUTHORITY</p>
-    <h2 id="aboutTitle">A REAL INTERACTION MODEL. A HARD SAFETY BOUNDARY.</h2>
-    <p>Every world, control, trace, command, and status change on this site runs in your browser from deterministic local data.</p>
+    <h2 id="aboutTitle">THE RUCA OS INTERACTION MODEL, WITH A HARD SAFETY BOUNDARY.</h2>
+    <p>Every world, control, trace, command and status change runs locally in this browser from deterministic fixtures.</p>
     <dl>
-      <div><dt>CAN DO</dt><dd>Navigate, focus, select, tune, compare, and inspect the public RUCA simulation.</dd></div>
-      <div><dt>CANNOT DO</dt><dd>Read hardware, reach a bridge, execute software, access files, control devices, or contact private endpoints.</dd></div>
+      <div><dt>CAN DO</dt><dd>Navigate, focus, select, tune, compare and inspect the public RUCA OS simulation.</dd></div>
+      <div><dt>CANNOT DO</dt><dd>Read hardware, reach a bridge, execute software, access files, control devices or contact private endpoints.</dd></div>
     </dl>
     <div class="dialog-actions"><a href="/portfolio/" data-focus>READ THE CASE STUDY</a><button type="button" id="aboutDone" data-focus>RETURN TO RUCA</button></div>
   </dialog>
 
   <div class="route-announcer sr-only" id="routeAnnouncer" aria-live="polite" aria-atomic="true"></div>
-  <noscript>RUCA Command Core requires JavaScript for its self-contained interactive simulation.</noscript>
+  <noscript>RUCA OS requires JavaScript for its self-contained interactive simulation.</noscript>
 </body>
 </html>

@@ -2,7 +2,8 @@
 
 ## Root architecture
 
-- PASS — HOME is rendered from real HTML buttons and inline SVG gauges/conduits. The root world surface contains zero screenshot images.
+- PASS — HOME is rendered from real HTML buttons and OS-style instrument components. The root world surface contains zero screenshot images.
+- PASS — The persistent three-part header, intelligence ribbon, machine footer, Core HOME return control, and all five world layouts were rebuilt against current live RUCA OS captures.
 - PASS — One application state owner controls routes, fixtures, focus, diagnostics, commands, live lanes, presets, and local persistence.
 - PASS — The five required hashes render without full-page application navigation.
 - PASS — The screenshot-tour hotspot layer, numbered evidence markers, focus frame, and PREV/NEXT narration were removed from the root implementation.
@@ -10,10 +11,10 @@
 ## World interaction
 
 - PASS — HOME renders six gauges, a breathing System Heart, slowly changing deterministic values, score updates, and focusable detail.
-- PASS — PLAY renders all six command districts, spatial nodes, selected-center ownership, and a no-native-execution handoff message.
+- PASS — PLAY renders the current nine-filter, 39-command district field, spatial nodes, selected-center ownership, and a no-native-execution handoff message.
 - PASS — LIVE WORLD switches six local lanes and updates title, source state, primary visual, trace, and supporting metrics.
 - PASS — DIAGNOSTICS switches Mission Ready, Advisory, and Critical Example states and updates score, severity, affected system, trace, sensors, explanation, first check, and next action.
-- PASS — CONTROL presets and sliders visibly update the simulation; state persists in browser storage; reset restores Blood Red.
+- PASS — CONTROL exposes the current eight-profile workshop and live sliders; state persists in browser storage; reset restores the RUCA Black / Gold default.
 
 ## Input and accessibility
 
@@ -22,11 +23,11 @@
 - PASS — Home returned to HOME; Q/E world cycling and Escape focus recovery were exercised.
 - PASS — Mobile pointer activation selected a command at the 412x915 viewport.
 - PASS — Visible interactive targets measured at least 40px in both axes in the automated viewport checks; primary touch controls are styled to 44px or larger where practical.
-- PASS — Reduced-motion emulation matched the media query, reduced animation duration to a single near-zero iteration, removed conduit dashes, and preserved visible content.
+- PASS — Reduced-motion emulation matched the media query, reduced animation duration to a single near-zero iteration, and preserved visible content.
 
 ## Responsive matrix
 
-Checked at 2560x1440, 1920x1080, 1366x768, 1280x800, 412x915, and 390x844 across HOME, PLAY, LIVE WORLD, DIAGNOSTICS, and CONTROL.
+Checked at 2560x1440, 1920x1080, 1366x768, 1280x720, 412x915, and 390x844 across HOME, PLAY, LIVE WORLD, DIAGNOSTICS, and CONTROL.
 
 - PASS — zero page-level horizontal overflow
 - PASS — zero zero-size world controls
@@ -45,7 +46,7 @@ Checked at 2560x1440, 1920x1080, 1366x768, 1280x800, 412x915, and 390x844 across
 
 ## Cache behavior
 
-- PASS — cache name changed to ruca-command-core-public-v1-20260722.
+- PASS — cache name changed to ruca-os-public-v2-20260722.
 - PASS — activation deletes every cache except the current version, covering old demo, recruiter, brochure, and guided-tour cache families.
 - PASS — documents, styles, scripts, and workers use network-first fetch behavior.
 - PASS — Vercel headers prevent root HTML and service-worker staleness and require CSS/JS revalidation.

@@ -1,9 +1,9 @@
-const CACHE_NAME = "ruca-command-core-public-v1-20260722";
+const CACHE_NAME = "ruca-os-public-v2-20260722";
 const CORE_ASSETS = [
   "/",
   "/index.html",
-  "/assets/ruca-public.css?v=20260722-command-core-r1",
-  "/assets/public-site.js?v=20260722-command-core-r1",
+  "/assets/ruca-public.css?v=20260722-os-fidelity-r12",
+  "/assets/public-site.js?v=20260722-os-fidelity-r12",
   "/assets/ruca-logo.png",
   "/manifest.webmanifest",
   "/icons/icon-192.png",

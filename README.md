@@ -1,19 +1,19 @@
-# RUCA Command Core Public Simulation
+# RUCA OS Public Simulation
 
 This repository serves the working public RUCA product simulation at:
 
 - https://ruca-mobile-presentation-hub.vercel.app/
 - https://ruca-mobile-presentation-hub.vercel.app/index.html#home
 
-The root is a self-contained browser application, not a screenshot tour. It reproduces RUCA's five-world interaction model with semantic HTML, CSS/SVG instrumentation, one JavaScript state owner, deterministic local fixtures, browser-only settings persistence, and no external data dependency.
+The root is a self-contained browser application, not a screenshot tour. Its shell and five world layouts mirror the current RUCA OS while using semantic HTML, CSS/SVG instrumentation, one JavaScript state owner, deterministic local fixtures, browser-only settings persistence, and no external data dependency.
 
 ## Five interactive worlds
 
 - **HOME** — six animated gauges, visible energy conduits, a breathing System Heart, a responsive readiness score, and focusable signal detail.
-- **PLAY** — six command districts with spatial command nodes, selected-center ownership, and explicit safe handoff feedback. No command can execute.
+- **PLAY** — the current nine-filter, 39-command district field with spatial nodes, selected-center ownership, and explicit safe handoff feedback. No command can execute.
 - **LIVE WORLD** — Weather, News, Markets, Sports, Technology, and Celestial lanes. Each visibly changes the primary briefing and declares its local source state.
 - **DIAGNOSTICS** — Mission Ready, Advisory, and Critical Example states with coordinated score, severity, sensor trace, Guardian explanation, first check, and next action.
-- **CONTROL** — Blood Red, Gunmetal, and Ice Blue presets plus live glow, motion, density, glass, depth, brightness, and accent controls. Settings persist in the current browser and can be reset.
+- **CONTROL** — the current eight-profile workshop plus live glow, motion, density, glass, depth, brightness, and accent controls. Settings persist in the current browser and can be reset.
 
 ## Input model
 
@@ -49,7 +49,7 @@ The real-product captures under assets/product remain available only as visual e
 
 - index.html — persistent semantic shell, navigation, status ribbon, footer, and boundary panel.
 - assets/public-site.js — canonical application state, route rendering, deterministic fixtures, focus manager, control persistence, and service-worker registration.
-- assets/ruca-public.css — Blood Red cockpit system, gauges, conduits, spatial command environment, responsive layouts, and reduced-motion treatment.
+- assets/ruca-public.css — current RUCA OS shell geometry, customizable theme tokens, gauges, conduits, spatial command environment, responsive layouts, and reduced-motion treatment.
 - service-worker.js — versioned cache, full legacy-cache removal on activation, network-first HTML/CSS/JavaScript, and offline fallback.
 - portfolio/ — separate recruiter case study and visual evidence.
 - resume/ — public resume artifact.
