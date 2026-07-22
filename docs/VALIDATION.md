@@ -1,74 +1,60 @@
-# RUCA Interactive Product Tour Validation
+# RUCA Public Simulation Validation
 
-## Required routes
+## Root architecture
 
-- `/`
-- `/index.html#home`
-- `/index.html#play`
-- `/index.html#live-world`
-- `/index.html#diagnostics`
-- `/index.html#control`
-- `/portfolio/`
-- `/resume/Anthony_Moncion_Interaction_Designer_Public_Resume.pdf`
+- PASS — HOME is rendered from real HTML buttons and inline SVG gauges/conduits. The root world surface contains zero screenshot images.
+- PASS — One application state owner controls routes, fixtures, focus, diagnostics, commands, live lanes, presets, and local persistence.
+- PASS — The five required hashes render without full-page application navigation.
+- PASS — The screenshot-tour hotspot layer, numbered evidence markers, focus frame, and PREV/NEXT narration were removed from the root implementation.
 
-## Static checks
+## World interaction
 
-- Validate `index.html` and `portfolio/index.html` as HTML5.
-- Run JavaScript syntax checks for `assets/public-site.js` and `service-worker.js`.
-- Resolve every local `href`, `src`, manifest icon, and service-worker asset.
-- Confirm the manifest and Vercel configuration parse as JSON.
-- Confirm no public HTML, CSS, JavaScript, JSON, or manifest exposes a private endpoint, IP address, credential, file path, telemetry API, or executable native action.
-- Confirm prohibited legacy interface wording does not appear in the visible tour or case-study UI.
+- PASS — HOME renders six gauges, a breathing System Heart, slowly changing deterministic values, score updates, and focusable detail.
+- PASS — PLAY renders all six command districts, spatial nodes, selected-center ownership, and a no-native-execution handoff message.
+- PASS — LIVE WORLD switches six local lanes and updates title, source state, primary visual, trace, and supporting metrics.
+- PASS — DIAGNOSTICS switches Mission Ready, Advisory, and Critical Example states and updates score, severity, affected system, trace, sensors, explanation, first check, and next action.
+- PASS — CONTROL presets and sliders visibly update the simulation; state persists in browser storage; reset restores Blood Red.
 
-## Browser checks
+## Input and accessibility
 
-Desktop:
+- PASS — Semantic links, buttons, range controls, color control, headings, regions, labels, and status announcements are present.
+- PASS — Directional arrow focus was exercised; focus moved spatially with a visible outline.
+- PASS — Home returned to HOME; Q/E world cycling and Escape focus recovery were exercised.
+- PASS — Mobile pointer activation selected a command at the 412x915 viewport.
+- PASS — Visible interactive targets measured at least 40px in both axes in the automated viewport checks; primary touch controls are styled to 44px or larger where practical.
+- PASS — Reduced-motion emulation matched the media query, reduced animation duration to a single near-zero iteration, removed conduit dashes, and preserved visible content.
 
-- 1920 × 1080
-- 2560 × 1440
-- 1366 × 768
+## Responsive matrix
 
-Mobile:
+Checked at 2560x1440, 1920x1080, 1366x768, 1280x800, 412x915, and 390x844 across HOME, PLAY, LIVE WORLD, DIAGNOSTICS, and CONTROL.
 
-- 390 × 844
-- 412 × 915
+- PASS — zero page-level horizontal overflow
+- PASS — zero zero-size world controls
+- PASS — zero screenshot images inside the root world surface
+- PASS — mobile route changes restore the top of the new world
+- PASS — the active mobile world tab scrolls fully into view
+- PASS — mobile System Heart and headings do not overlap
 
-At every size, confirm:
+## Safety boundary
 
-- HOME opens at the top of the page with the actual red cockpit capture as the dominant surface.
-- The opening, five world tabs, complete product stage, and boundary fit one 1920 × 1080 viewport.
-- No horizontal overflow hides content.
-- Product captures preserve the 16:9 source ratio.
-- On mobile, world tabs scroll horizontally and evidence controls meet a 44px target height.
-
-## Interaction and accessibility checks
-
-- Every world tab updates the image, world readout, route hash, active state, and evidence markers.
-- Direct loading of each supported hash selects the correct world.
-- Every numbered evidence marker updates the focus frame, evidence title, description, pressed state, and count.
-- PREV and NEXT wrap through the active world's evidence.
-- Left/Right arrows move among worlds from the tablist or product stage.
-- Home/End move to the first and last world from the tablist.
-- Bracket keys move among evidence when the product stage is focused.
-- Focus remains visible on tabs, evidence markers, controls, and public links.
-- The skip link reaches the product stage.
-- `prefers-reduced-motion: reduce` removes nonessential transitions.
-- The browser console remains clear during the full interaction pass.
-
-## Truth and security checks
-
-- The persistent state reads `GUIDED PRODUCT TOUR / CAPTURED PRODUCT STATES / NO WORKSTATION CONNECTION`.
-- PLAY interaction never launches or claims it can launch software.
-- The public diagnostics hook reports `connectedToDevice: false` and `nativeExecutionRoutes: 0`.
-- CSP retains `connect-src 'none'`.
-- Source inspection finds no fetch, WebSocket, localhost, loopback, bridge endpoint, native IPC, executable path, credential, or private workstation file.
+- PASS — connect-src none blocks application data connections.
+- PASS — no localhost, private endpoint, credential, token, native command, process execution, bridge client, or device-control code exists in the root application.
+- PASS — every data-bearing surface is labeled simulated, local, deterministic, cached, or stale in context.
+- PASS — PLAY explicitly reports that native execution is disabled and that nothing was launched.
+- PASS — the quiet footer and About panel state the public/private boundary.
 
 ## Cache behavior
 
-`service-worker.js` uses network-first delivery for documents, styles, scripts, and workers. The cache version is `ruca-public-v3-20260722-guided-tour-r2`; activation removes older public and legacy cache families.
+- PASS — cache name changed to ruca-command-core-public-v1-20260722.
+- PASS — activation deletes every cache except the current version, covering old demo, recruiter, brochure, and guided-tour cache families.
+- PASS — documents, styles, scripts, and workers use network-first fetch behavior.
+- PASS — Vercel headers prevent root HTML and service-worker staleness and require CSS/JS revalidation.
 
-## Final visual question
+## Static checks
 
-Would someone who saw the public experience believe it represents the same product as the real RUCA HOME screen?
+- PASS — assets/public-site.js passes node --check with the bundled Node runtime.
+- PASS — service-worker.js passes node --check with the bundled Node runtime.
+- PASS — manifest.webmanifest and vercel.json parse as JSON.
+- PASS — browser console warning/error capture returned no entries during local interaction tests.
 
-The corrected build is accepted only when the source reference and implementation pass the same-viewport side-by-side review.
+Production deployment and live-route receipts are recorded in the release handoff because their IDs are deployment-specific.

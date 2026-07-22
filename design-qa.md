@@ -1,51 +1,44 @@
-# RUCA Interactive Product Tour — Design QA
+# RUCA Command Core Design QA
 
-## Corrected product target
+## Visual standard
 
-- Reference: the real red RUCA HOME runtime at a 16:9 desktop viewport
-- Implementation: the root public experience at the same 16:9 desktop viewport
-- Comparison: the two full frames were placed side by side outside the public repository
-- Required outcome: the actual RUCA product remains visually dominant while the public layer adds honest navigation and evidence selection
+The public root now uses the private RUCA OS as its visual reference without using private runtime code or captures as the interface:
 
-## Root regression closed
+- deep black environment
+- disciplined Blood Red illumination
+- gunmetal instrument framing
+- central System Heart
+- six Swiss-watch-inspired gauges
+- visible energy conduits
+- persistent command shell and status ribbon
+- large couch-distance headings and selected states
+- layered physical depth without rainbow cyberpunk noise
 
-The previous release removed the interactive product experience and replaced it with a long editorial page. Its design-language section was one static screenshot beside a definition list, with zero interactive controls. That release did not meet the mission.
+The separate portfolio retains real-product captures as case-study evidence. The root simulation renders its own HTML/CSS/SVG interface and loads only the RUCA identity image.
 
-The correction replaces the static root with one working five-world product tour:
+## Responsive evidence
 
-- HOME, PLAY, LIVE WORLD, DIAGNOSTICS, and CONTROL switch in place.
-- Each world uses the corresponding 1920 × 1080 capture from the real private runtime.
-- Numbered markers, a focus frame, and an evidence readout point to the exact visible component being described.
-- World and evidence selection work with pointer and keyboard input.
-- The case study remains separate at `/portfolio/`.
+| Viewport | Worlds checked | Horizontal overflow | Zero-size controls | Root screenshots |
+|---|---:|---:|---:|---:|
+| 2560x1440 | 5 | 0 | 0 | 0 |
+| 1920x1080 | 5 | 0 | 0 | 0 |
+| 1366x768 | 5 | 0 | 0 | 0 |
+| 1280x800 | 5 | 0 | 0 | 0 |
+| 412x915 | 5 | 0 | 0 | 0 |
+| 390x844 | 5 | 0 | 0 | 0 |
 
-## Visual comparison result
+Mobile-specific visual inspection confirmed:
 
-PASS — no open P0, P1, or P2 visual findings.
+- current-world navigation centers the active tab
+- route changes restore the page to the new world heading
+- System Heart breathing does not translate over the heading
+- HOME becomes a two-column instrument surface with the Heart first
+- PLAY preserves a spatial command center instead of becoming a generic card grid
+- Live World lanes and district selectors scroll inside bounded rails without creating page overflow
+- CONTROL becomes a stacked workshop with readable preset ownership and 44px input targets
 
-- **Product identity:** both frames share the actual red/black/gunmetal cockpit, central System Heart, substantial gauges, illuminated conduits, intelligence ribbon, and persistent command shell because the public stage uses the real product capture.
-- **Hierarchy:** the public headline and world selector sit above the product. The product stage occupies the remainder of the first viewport and remains the dominant visual object.
-- **Traceable claims:** design-language copy is no longer separated from the visual evidence. Each claim activates a focus frame on the component it describes.
-- **Interaction:** five world states and per-world evidence states are real public interactions. None launch software, change workstation state, or pretend captured values are live.
-- **Boundary:** one quiet persistent state distinguishes captured product evidence from private authority.
+## Motion and focus
 
-## Responsive and interaction verification
+Motion is limited to world entry, gauge sweep, System Heart breathing, conduit energy, selected command emphasis, and trace drawing. prefers-reduced-motion reduces animation to a completed near-zero transition and removes animated conduit dashes.
 
-| Surface | Result |
-| --- | --- |
-| 2560 × 1440 | PASS — one-viewport shell; no horizontal overflow |
-| 1920 × 1080 | PASS — complete headline, five worlds, product stage, evidence panel, and boundary visible |
-| 1366 × 768 | PASS — complete shell; no collision or horizontal overflow |
-| 412 × 915 | PASS — horizontal world rail, full 16:9 capture, static evidence panel, 44px controls |
-| 390 × 844 | PASS — no horizontal overflow; direct `#home` load begins at page top |
-| World tabs | PASS — five images, hashes, active states, and marker sets update |
-| Evidence markers | PASS — focus frame, title, description, count, and pressed state update |
-| Keyboard | PASS — roving tab focus, arrows, Home/End, and bracket evidence navigation |
-| Reduced motion | PASS — nonessential transitions collapse through media query |
-| Console | PASS — zero errors during local route and interaction verification |
-
-## Public boundary
-
-The production bundle contains captured product states only. It has no local endpoint, telemetry listener, native command route, personal file path, credential, workstation connection, or public launch action.
-
-final result: passed
+Visible focus uses a high-contrast warm outline. Arrow navigation chooses the nearest valid control in the requested direction. Focus recovers after route changes and Escape returns to the active world navigation control.

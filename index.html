@@ -1,110 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#050607">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#070506">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="An interactive guided tour of RUCA Command Core, a controller-first personal computing environment.">
+  <meta name="description" content="Use a self-contained public simulation of RUCA Command Core, a controller-first personal computing environment.">
   <link rel="canonical" href="https://ruca-mobile-presentation-hub.vercel.app/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="RUCA Command Core | Interactive Product Tour">
-  <meta property="og:description" content="The PC lost the arrival ritual. Explore the five real RUCA product worlds.">
+  <meta property="og:title" content="RUCA Command Core | Public Product Simulation">
+  <meta property="og:description" content="Console confidence. PC authority. Enter five interactive RUCA worlds using deterministic local data.">
   <meta property="og:url" content="https://ruca-mobile-presentation-hub.vercel.app/">
-  <meta property="og:image" content="https://ruca-mobile-presentation-hub.vercel.app/assets/product/ruca-home-runtime.png">
-  <meta property="og:image:alt" content="RUCA HOME with its central System Heart, six telemetry gauges, intelligence ribbon, and command shell">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="https://ruca-mobile-presentation-hub.vercel.app/assets/ruca-logo.png">
+  <meta property="og:image:alt" content="RUCA Command Core identity mark">
+  <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="RUCA Command Core">
-  <meta name="twitter:description" content="An interactive tour of the five-world RUCA product experience.">
-  <meta name="twitter:image" content="https://ruca-mobile-presentation-hub.vercel.app/assets/product/ruca-home-runtime.png">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'none'; worker-src 'self'; object-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'">
-  <title>RUCA Command Core | Interactive Product Tour</title>
+  <meta name="twitter:description" content="A working, self-contained public RUCA product simulation.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'none'; worker-src 'self'; object-src 'none'; frame-src 'none'; media-src 'none'; form-action 'none'; base-uri 'none'">
+  <title>RUCA Command Core | Public Product Simulation</title>
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="icon" href="/icons/icon-192.png" sizes="192x192">
-  <link rel="stylesheet" href="/assets/ruca-public.css?v=20260722-tour-r2">
-  <script src="/assets/public-site.js?v=20260722-tour-r2" defer></script>
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <link rel="stylesheet" href="/assets/ruca-public.css?v=20260722-command-core-r1">
+  <script src="/assets/public-site.js?v=20260722-command-core-r1" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#product-stage">Skip to guided product tour</a>
+  <a class="skip-link" href="#worldSurface">Skip to active RUCA world</a>
 
-  <div class="experience-shell" id="home" data-active-world="home">
-    <header class="command-rail" aria-label="RUCA public navigation">
-      <a class="brand" href="#home" aria-label="RUCA HOME">
-        <img src="/assets/ruca-logo.png" alt="" width="42" height="42">
+  <div class="app-shell" id="appShell" data-world="home" data-severity="ready">
+    <header class="topbar">
+      <a class="brand-lockup" href="#home" data-route="home" data-focus aria-label="RUCA HOME">
+        <img src="/assets/ruca-logo.png" width="48" height="48" alt="">
         <span><strong>RUCA</strong><small>COMMAND CORE</small></span>
       </a>
 
-      <div class="capture-state" role="note">
-        <span class="capture-light" aria-hidden="true"></span>
-        <span><strong>GUIDED PRODUCT TOUR</strong><small>CAPTURED PRODUCT STATES // NO WORKSTATION CONNECTION</small></span>
-      </div>
+      <nav class="world-nav" aria-label="RUCA worlds">
+        <button type="button" data-route="home" data-focus aria-current="page"><span>HOME</span><small>READY?</small></button>
+        <button type="button" data-route="play" data-focus><span>PLAY</span><small>LAUNCH?</small></button>
+        <button type="button" data-route="live-world" data-focus><span>LIVE WORLD</span><small>OBSERVE?</small></button>
+        <button type="button" data-route="diagnostics" data-focus><span>DIAGNOSTICS</span><small>SAFE?</small></button>
+        <button type="button" data-route="control" data-focus><span>CONTROL</span><small>BEHAVE?</small></button>
+      </nav>
 
-      <nav class="utility-nav" aria-label="Public resources">
-        <a href="/portfolio/">Case study</a>
-        <a href="/resume/Anthony_Moncion_Interaction_Designer_Public_Resume.pdf">Resume</a>
+      <nav class="resource-nav" aria-label="Public resources">
+        <a href="/portfolio/" data-focus>CASE STUDY</a>
+        <a href="/resume/Anthony_Moncion_Interaction_Designer_Public_Resume.pdf" data-focus>RESUME</a>
+        <button type="button" id="aboutOpen" data-focus>ABOUT</button>
       </nav>
     </header>
 
-    <main class="tour" id="main">
-      <section class="tour-intro" aria-labelledby="tour-title">
-        <div>
-          <p class="eyebrow">RUCA // CONTROLLER-FIRST COMPUTING</p>
-          <h1 id="tour-title">THE PC LOST THE ARRIVAL RITUAL.</h1>
-        </div>
-        <p>RUCA restores one coherent place to arrive, launch, observe, diagnose, and control. Select a world, then select the illuminated evidence inside the actual product capture.</p>
-      </section>
+    <section class="status-ribbon" aria-label="Simulated system status">
+      <div><span class="status-light" aria-hidden="true"></span><strong id="globalReadiness">MISSION READY</strong><small>SIMULATED READINESS</small></div>
+      <div><strong id="globalCpu">CPU 31%</strong><small>LOCAL SIGNAL</small></div>
+      <div><strong id="globalThermal">THERMAL 52°C</strong><small>SAFE RANGE</small></div>
+      <div><strong id="globalSource">DETERMINISTIC DATA</strong><small>NO WORKSTATION LINK</small></div>
+    </section>
 
-      <nav class="world-tabs" aria-label="RUCA worlds" role="tablist">
-        <button type="button" id="tab-home" class="world-tab" role="tab" aria-selected="true" aria-controls="product-stage" tabindex="0" data-world="home">
-          <span class="tab-index">01</span><span>HOME<small>AM I READY?</small></span>
-        </button>
-        <button type="button" id="tab-play" class="world-tab" role="tab" aria-selected="false" aria-controls="product-stage" tabindex="-1" data-world="play">
-          <span class="tab-index">02</span><span>PLAY<small>WHAT DO I LAUNCH?</small></span>
-        </button>
-        <button type="button" id="tab-live" class="world-tab" role="tab" aria-selected="false" aria-controls="product-stage" tabindex="-1" data-world="live">
-          <span class="tab-index">03</span><span>LIVE WORLD<small>WHAT IS HAPPENING?</small></span>
-        </button>
-        <button type="button" id="tab-diagnostics" class="world-tab" role="tab" aria-selected="false" aria-controls="product-stage" tabindex="-1" data-world="diagnostics">
-          <span class="tab-index">04</span><span>DIAGNOSTICS<small>AM I SAFE?</small></span>
-        </button>
-        <button type="button" id="tab-control" class="world-tab" role="tab" aria-selected="false" aria-controls="product-stage" tabindex="-1" data-world="control">
-          <span class="tab-index">05</span><span>CONTROL<small>HOW SHOULD IT BEHAVE?</small></span>
-        </button>
-      </nav>
+    <main class="world-surface" id="worldSurface" tabindex="-1"><h1 class="sr-only">RUCA Command Core</h1></main>
 
-      <section class="product-stage" id="product-stage" role="tabpanel" aria-labelledby="tab-home" tabindex="0">
-        <figure class="product-capture">
-          <img id="world-image" src="/assets/product/ruca-home-runtime.png" alt="RUCA HOME centered on a large System Heart connected to six machine gauges" fetchpriority="high">
-          <div class="capture-vignette" aria-hidden="true"></div>
-          <div class="focus-frame" id="focus-frame" aria-hidden="true"></div>
-          <div class="hotspot-layer" id="hotspot-layer" role="group" aria-label="Visible product evidence"></div>
-          <figcaption><span id="capture-label">HOME // ARRIVAL AND READINESS</span><span>REAL RUCA PRODUCT CAPTURE</span></figcaption>
-        </figure>
-
-        <aside class="world-brief" aria-live="polite" aria-atomic="true">
-          <p class="brief-index" id="brief-index">WORLD 01 // HOME</p>
-          <h2 id="world-title">WELCOME HOME.</h2>
-          <p id="world-summary">The System Heart turns machine state into one immediate readiness signal while the visible instruments preserve the truth underneath.</p>
-          <div class="feature-readout">
-            <span id="feature-count">01 / 06</span>
-            <div>
-              <h3 id="feature-title">SYSTEM HEART</h3>
-              <p id="feature-description">One dominant center carries the emotional and informational weight of HOME.</p>
-            </div>
-          </div>
-          <div class="feature-controls">
-            <button type="button" id="feature-prev" aria-label="Previous visible feature">PREV</button>
-            <button type="button" id="feature-next" aria-label="Next visible feature">NEXT</button>
-          </div>
-        </aside>
-      </section>
-
-      <footer class="tour-footer">
-        <p><strong>PUBLIC PROOF // PRIVATE AUTHORITY</strong> These are captured states from the private local product. This tour cannot read telemetry, launch software, change settings, or reach the workstation.</p>
-        <p class="keyboard-hint">ARROW KEYS: CHANGE WORLD <span aria-hidden="true">//</span> [ &nbsp; ]: CHANGE EVIDENCE</p>
-        <div class="footer-links"><a href="/portfolio/">OPEN CASE STUDY</a><a href="mailto:hello@rucasrapidpcrepairlab.com?subject=RUCA%20Command%20Core">CONTACT</a></div>
-      </footer>
-    </main>
+    <footer class="command-footer">
+      <div class="footer-state"><strong>RUCA COMMAND SHELL</strong><small><span class="online-dot" aria-hidden="true"></span> PUBLIC SIMULATION ONLINE</small></div>
+      <div class="focus-state"><span>CURRENT FOCUS</span><strong id="focusReadout">HOME</strong></div>
+      <button class="audio-state" id="audioState" type="button" data-focus aria-pressed="false"><span aria-hidden="true">◈</span><strong>MUTED</strong><small>SIMULATED AUDIO STATE</small></button>
+      <p class="public-boundary">This public simulation reproduces RUCA’s interaction model with deterministic local data. It cannot access the owner’s workstation, telemetry, files, devices, or native commands.</p>
+    </footer>
   </div>
+
+  <dialog class="about-dialog" id="aboutDialog" aria-labelledby="aboutTitle">
+    <button class="dialog-close" id="aboutClose" type="button" data-focus aria-label="Close About panel">×</button>
+    <p class="eyebrow">PUBLIC PROOF // PRIVATE AUTHORITY</p>
+    <h2 id="aboutTitle">A REAL INTERACTION MODEL. A HARD SAFETY BOUNDARY.</h2>
+    <p>Every world, control, trace, command, and status change on this site runs in your browser from deterministic local data.</p>
+    <dl>
+      <div><dt>CAN DO</dt><dd>Navigate, focus, select, tune, compare, and inspect the public RUCA simulation.</dd></div>
+      <div><dt>CANNOT DO</dt><dd>Read hardware, reach a bridge, execute software, access files, control devices, or contact private endpoints.</dd></div>
+    </dl>
+    <div class="dialog-actions"><a href="/portfolio/" data-focus>READ THE CASE STUDY</a><button type="button" id="aboutDone" data-focus>RETURN TO RUCA</button></div>
+  </dialog>
+
+  <div class="route-announcer sr-only" id="routeAnnouncer" aria-live="polite" aria-atomic="true"></div>
+  <noscript>RUCA Command Core requires JavaScript for its self-contained interactive simulation.</noscript>
 </body>
 </html>

@@ -1,46 +1,59 @@
-# RUCA Command Core — Interactive Public Product Tour
+# RUCA Command Core Public Simulation
 
-This repository powers the existing public RUCA URL:
+This repository serves the working public RUCA product simulation at:
 
-- `https://ruca-mobile-presentation-hub.vercel.app/`
-- `https://ruca-mobile-presentation-hub.vercel.app/index.html#home`
-- `https://ruca-mobile-presentation-hub.vercel.app/portfolio/`
-- `https://ruca-mobile-presentation-hub.vercel.app/resume/Anthony_Moncion_Interaction_Designer_Public_Resume.pdf`
+- https://ruca-mobile-presentation-hub.vercel.app/
+- https://ruca-mobile-presentation-hub.vercel.app/index.html#home
 
-## Purpose
+The root is a self-contained browser application, not a screenshot tour. It reproduces RUCA's five-world interaction model with semantic HTML, CSS/SVG instrumentation, one JavaScript state owner, deterministic local fixtures, browser-only settings persistence, and no external data dependency.
 
-The root experience is a working five-world guided tour of RUCA. Visitors can switch among HOME, PLAY, LIVE WORLD, DIAGNOSTICS, and CONTROL, then select illuminated evidence directly on each real product capture. World selection updates the route hash, works with pointer or keyboard input, and keeps the actual RUCA interface—not an explanatory brochure—as the primary surface.
+## Five interactive worlds
 
-The tour does not recreate the private operating environment. It cannot read workstation telemetry, launch software, change settings, or reach local services.
+- **HOME** — six animated gauges, visible energy conduits, a breathing System Heart, a responsive readiness score, and focusable signal detail.
+- **PLAY** — six command districts with spatial command nodes, selected-center ownership, and explicit safe handoff feedback. No command can execute.
+- **LIVE WORLD** — Weather, News, Markets, Sports, Technology, and Celestial lanes. Each visibly changes the primary briefing and declares its local source state.
+- **DIAGNOSTICS** — Mission Ready, Advisory, and Critical Example states with coordinated score, severity, sensor trace, Guardian explanation, first check, and next action.
+- **CONTROL** — Blood Red, Gunmetal, and Ice Blue presets plus live glow, motion, density, glass, depth, brightness, and accent controls. Settings persist in the current browser and can be reset.
 
-## Experience
+## Input model
 
-- Five interactive world tabs with direct hash routes
-- Real red RUCA runtime captures for every world
-- Selectable on-image evidence and a visible focus frame
-- Concise world and feature readouts tied to visible product elements
-- Arrow-key world navigation and bracket-key evidence navigation
-- Persistent links to the case study, public resume, and contact route
-- Responsive desktop and mobile layouts with reduced-motion support
+- Mouse or pointer: select any visible control.
+- Touch-sized controls: primary targets are 44px or larger at the tested mobile breakpoints.
+- Arrow keys: move visible focus spatially.
+- Enter or Space: activate the focused control.
+- Escape: close About or return focus to the current world navigation control.
+- Home: return to HOME.
+- Q / E, [ / ], or Page Up / Page Down: cycle worlds.
 
-## Structure
+Reduced-motion preferences remove looping motion while preserving the complete interface and state feedback.
 
-```text
-index.html                         Interactive product-tour shell
-assets/ruca-public.css             Red cockpit visual system and responsive layout
-assets/public-site.js              Five-world routing, evidence selection, and keyboard input
-assets/product/                    Captures from the real private RUCA runtime
-portfolio/index.html               Product design case study
-portfolio/portfolio.css            Case-study visual system
-resume/                            Public resume PDF
-service-worker.js                  Versioned network-first application cache
-vercel.json                        Existing Vercel route, cache, and security headers
-```
+## Public safety boundary
 
-## Security boundary
+The root app has no telemetry reader, bridge client, native command path, private endpoint, credential access, filesystem API, device-control API, or external content/data request. Content Security Policy sets connect-src to none. All values, traces, stories, scores, commands, and environment states are deterministic local fixtures.
 
-The public bundle includes no workstation endpoint, bridge URL, IP address, credential, private file path, telemetry API, analytics tracker, or executable native action. Product values visible inside the screenshots are captured evidence only; the public JavaScript contains no device connection or native execution route.
+The real-product captures under assets/product remain available only as visual evidence inside the separate /portfolio/ case study. The root simulation does not load those files.
 
-## Local validation
+## Routes
 
-Serve the repository root as a static site and test the same paths used in production. The validation record in `docs/VALIDATION.md` covers desktop, mobile, world routing, evidence selection, keyboard operation, reduced motion, console output, asset resolution, privacy, and route integrity.
+- /
+- /index.html
+- /index.html#home
+- /index.html#play
+- /index.html#live-world
+- /index.html#diagnostics
+- /index.html#control
+- /portfolio/
+- /resume/Anthony_Moncion_Interaction_Designer_Public_Resume.pdf
+
+## Architecture
+
+- index.html — persistent semantic shell, navigation, status ribbon, footer, and boundary panel.
+- assets/public-site.js — canonical application state, route rendering, deterministic fixtures, focus manager, control persistence, and service-worker registration.
+- assets/ruca-public.css — Blood Red cockpit system, gauges, conduits, spatial command environment, responsive layouts, and reduced-motion treatment.
+- service-worker.js — versioned cache, full legacy-cache removal on activation, network-first HTML/CSS/JavaScript, and offline fallback.
+- portfolio/ — separate recruiter case study and visual evidence.
+- resume/ — public resume artifact.
+
+## Local run
+
+Serve the repository root with any static HTTP server, then open /index.html#home. The app requires no package install, build step, API key, environment variable, or localhost service in production.
