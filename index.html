@@ -2,94 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#050607">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="RUCA Command Core: a privacy-safe interactive product preview restoring console confidence to the power of a PC.">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; worker-src 'self'; object-src 'none'; frame-src 'none'; media-src 'none'; form-action 'none'; base-uri 'none'">
-  <title>RUCA Command Core | Public Product Preview</title>
-  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="description" content="RUCA Command Core visual product preview by Anthony Moncion.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'">
+  <title>RUCA Command Core | Product Showcase</title>
   <link rel="icon" href="icons/icon-192.png" sizes="192x192">
-  <link rel="apple-touch-icon" href="icons/icon-192.png">
-  <link rel="stylesheet" href="assets/demo.css?v=pass22-r1">
-  <link rel="stylesheet" href="assets/recruiter-mode.css?v=recruiter-r2">
+  <link rel="stylesheet" href="assets/product-showcase.css?v=showcase-r1">
 </head>
-<body data-route="home">
-  <canvas id="starfield" aria-hidden="true"></canvas>
-  <div class="space-haze" aria-hidden="true"></div>
+<body>
+  <header class="site-rail">
+    <div class="brand">
+      <img src="assets/ruca-logo.png" alt="RUCA crest">
+      <div><strong>RUCA COMMAND CORE</strong><span>Designed by Anthony Moncion</span></div>
+    </div>
+    <nav class="rail-links" aria-label="Project links">
+      <a href="portfolio/">Read Case Study</a>
+      <a href="portfolio/#resume">Resume</a>
+    </nav>
+  </header>
 
-  <div class="demo-shell">
-    <header class="top-rail">
-      <div class="brand-lockup">
-        <img src="assets/ruca-logo.png" alt="" width="44" height="44">
-        <div>
-          <strong>RUCA</strong>
-          <span>Welcome Home.</span>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Controller-first personal computing</span>
+        <h1>The PC forgot how to welcome you.</h1>
+        <p>RUCA restores the arrival ritual console players lose when they move to PC, without sacrificing the power, truth, and flexibility that made the move worthwhile.</p>
+        <div class="hero-actions">
+          <a href="#home">See the product</a>
+          <a href="portfolio/">Read the design story</a>
         </div>
       </div>
-      <div class="rail-actions">
-        <button class="icon-button" id="searchOpen" type="button" aria-label="Open Command Search" title="Command Search">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
-        </button>
-        <button class="install-button" id="installButton" type="button" hidden>INSTALL</button>
-      </div>
-    </header>
+      <figure class="hero-art">
+        <img src="portfolio/assets/ruca-public-hero.svg" alt="RUCA System Heart and six machine telemetry gauges">
+      </figure>
+    </section>
 
-    <div class="truth-rail" role="status" aria-live="polite">
-      <span class="demo-badge">PUBLIC PREVIEW</span>
-      <span id="connectionState">PRIVACY-SAFE SAMPLE DATA</span>
-      <span class="offline-state" id="offlineState">OFFLINE-CAPABLE</span>
+    <section class="manifesto">
+      <span class="eyebrow">The product idea</span>
+      <blockquote>Windows gives gamers access. RUCA gives the machine a sense of arrival, readiness, place, and protection.</blockquote>
+      <p>This is a visual product showcase built from the strongest public RUCA design evidence. It does not pretend that a stripped-down browser toy is the full operating environment.</p>
+    </section>
+
+    <div class="showcase">
+      <section class="chapter" id="home">
+        <div class="chapter-copy">
+          <span class="eyebrow">HOME // Arrival and readiness</span>
+          <h2>The machine greets you before it asks anything from you.</h2>
+          <p>The System Heart compresses machine readiness into one immediate read. Six surrounding gauges provide truthful context without turning HOME into a wall of monitoring software.</p>
+          <ul><li>One emotional and informational center</li><li>Console-scale readability from across the room</li><li>Complexity available, never dumped</li></ul>
+        </div>
+        <figure class="chapter-media"><img src="portfolio/assets/ruca-public-hero.svg" alt="RUCA HOME system composition"></figure>
+      </section>
+
+      <section class="chapter">
+        <div class="chapter-copy">
+          <span class="eyebrow">PLAY // One command universe</span>
+          <h2>Stop making the user remember where everything lives.</h2>
+          <p>PLAY turns games, launchers, media, creative tools, AI, browsers, and system utilities into one spatial command registry instead of another grid of shortcuts.</p>
+          <ul><li>Thirty-nine commands</li><li>Six durable districts</li><li>One selected center and one information owner</li></ul>
+        </div>
+        <figure class="chapter-media"><img src="portfolio/assets/02-play-command-districts.jpg" alt="RUCA PLAY command districts and orbit"></figure>
+      </section>
+
+      <section class="chapter">
+        <div class="chapter-copy">
+          <span class="eyebrow">LIVE WORLD // A concierge, not another feed</span>
+          <h2>Information belongs somewhere.</h2>
+          <p>Weather, markets, news, sports, and technology become one designed observation world with a shared visual language, source truth, and clear states for live, partial, stale, retrying, and unavailable data.</p>
+          <ul><li>One observation deck</li><li>Five normalized information lanes</li><li>No invented scores, forecasts, or headlines</li></ul>
+        </div>
+        <figure class="chapter-media"><img src="portfolio/assets/03-live-world-concierge.png" alt="RUCA Live World weather concierge"></figure>
+      </section>
+
+      <section class="chapter">
+        <div class="chapter-copy">
+          <span class="eyebrow">DIAGNOSTICS // Protection before panic</span>
+          <h2>Tell the user what is wrong, why it matters, and what to do next.</h2>
+          <p>Guardian turns sensor readings into plain-language severity, meaning, first checks, reassurance, thresholds, and next actions while keeping raw technical detail available underneath.</p>
+          <ul><li>Meaning before measurement</li><li>Action before alarm</li><li>Truthful escalation without fear theater</li></ul>
+        </div>
+        <figure class="chapter-media"><img src="portfolio/assets/04-diagnostics-guardian-public.svg" alt="RUCA Guardian diagnostics interface"></figure>
+      </section>
+
+      <section class="chapter">
+        <div class="chapter-copy">
+          <span class="eyebrow">CONTROL // A workshop, not a settings dump</span>
+          <h2>The system should explain the consequence of a choice.</h2>
+          <p>CONTROL organizes atmosphere, appearance, input, audio, sources, and authority around clear ownership and progressive disclosure instead of exposing disconnected toggles.</p>
+          <ul><li>Immediate visual feedback</li><li>Clear scope and ownership</li><li>Functional controls only</li></ul>
+        </div>
+        <figure class="chapter-media"><img src="portfolio/assets/05-control-workshop.png" alt="RUCA Control Workshop interface"></figure>
+      </section>
     </div>
 
-    <main id="appSurface" tabindex="-1" aria-live="polite"></main>
+    <section class="truth">
+      <span class="eyebrow">What this showcase represents</span>
+      <div class="truth-grid">
+        <article><h3>Actual design evidence</h3><p>The screens above come from the strongest public RUCA product assets, not a miniature substitute interface.</p></article>
+        <article><h3>Active product work</h3><p>RUCA Command Core remains an evolving desktop operating environment and interaction-design system.</p></article>
+        <article><h3>Privacy preserved</h3><p>The public presentation does not expose workstation telemetry, files, credentials, native controls, or the private runtime.</p></article>
+      </div>
+    </section>
+  </main>
 
-    <nav class="bottom-nav" aria-label="RUCA worlds">
-      <button type="button" data-route="home" class="active" aria-current="page">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 11 8-7 8 7v9h-6v-6h-4v6H4z"></path></svg><span>HOME</span>
-      </button>
-      <button type="button" data-route="play">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 9h8l3 3v6l-3 2-3-3h-2l-3 3-3-2v-6z"></path><path d="M8 13h4M10 11v4M16 12v.1M18 14v.1"></path></svg><span>PLAY</span>
-      </button>
-      <button type="button" data-route="live">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M4 12h16M12 4c3 3 3 13 0 16M12 4c-3 3-3 13 0 16"></path></svg><span>WORLD</span>
-      </button>
-      <button type="button" data-route="diagnostics">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17h3l2-7 3 10 3-13 2 10h3"></path></svg><span>HEALTH</span>
-      </button>
-      <button type="button" data-route="control">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10M14 4v6M10 14v6"></path></svg><span>CONTROL</span>
-      </button>
-    </nav>
-  </div>
-
-  <dialog id="commandDialog" class="command-dialog">
-    <button class="dialog-close" type="button" data-close-dialog="commandDialog" aria-label="Close command preview">&times;</button>
-    <span class="eyebrow">COMMAND HANDOFF PREVIEW</span>
-    <h2 id="commandTitle">Command</h2>
-    <p id="commandRole"></p>
-    <div class="demo-notice" id="commandNotice"></div>
-    <button class="primary-action" id="simulateLaunch" type="button">PREVIEW HANDOFF</button>
-    <div class="sequence-status" id="sequenceStatus" aria-live="polite"></div>
-  </dialog>
-
-  <dialog id="searchDialog" class="search-dialog">
-    <button class="dialog-close" type="button" data-close-dialog="searchDialog" aria-label="Close Command Search">&times;</button>
-    <span class="eyebrow">COMMAND SEARCH</span>
-    <h2>Find a world or command</h2>
-    <label class="search-field">
-      <span class="sr-only">Search commands and routes</span>
-      <input id="searchInput" type="search" inputmode="search" autocomplete="off" placeholder="Search RUCA">
-    </label>
-    <div id="searchResults" class="search-results"></div>
-    <div id="virtualKeyboard" class="virtual-keyboard" aria-label="RUCA virtual keyboard"></div>
-  </dialog>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <noscript>RUCA Command Core public preview requires JavaScript.</noscript>
-  <script src="data/demo-data.js?v=pass22-r1"></script>
-  <script src="assets/showroom-actions.js?v=pass22-r2"></script>
-  <script src="assets/demo.js?v=pass22-r2"></script>
-  <script src="assets/recruiter-mode.js?v=recruiter-r2"></script>
+  <footer class="footer"><strong>Anthony C. Moncion</strong><span>Product Designer // Systems Thinker // Creator of RUCA Command Core</span></footer>
 </body>
 </html>
