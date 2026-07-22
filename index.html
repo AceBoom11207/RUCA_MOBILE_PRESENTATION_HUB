@@ -3,238 +3,108 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#060708">
+  <meta name="theme-color" content="#050607">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="RUCA Command Core is a controller-first personal computing environment that restores the confidence and arrival ritual of a console to the power of a PC.">
+  <meta name="description" content="An interactive guided tour of RUCA Command Core, a controller-first personal computing environment.">
   <link rel="canonical" href="https://ruca-mobile-presentation-hub.vercel.app/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="RUCA Command Core | Console Confidence. PC Authority.">
-  <meta property="og:description" content="The PC lost the arrival ritual. RUCA brings it back.">
+  <meta property="og:title" content="RUCA Command Core | Interactive Product Tour">
+  <meta property="og:description" content="The PC lost the arrival ritual. Explore the five real RUCA product worlds.">
   <meta property="og:url" content="https://ruca-mobile-presentation-hub.vercel.app/">
   <meta property="og:image" content="https://ruca-mobile-presentation-hub.vercel.app/assets/product/ruca-home-runtime.png">
   <meta property="og:image:alt" content="RUCA HOME with its central System Heart, six telemetry gauges, intelligence ribbon, and command shell">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="RUCA Command Core">
-  <meta name="twitter:description" content="Console confidence. PC authority.">
+  <meta name="twitter:description" content="An interactive tour of the five-world RUCA product experience.">
   <meta name="twitter:image" content="https://ruca-mobile-presentation-hub.vercel.app/assets/product/ruca-home-runtime.png">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'none'; worker-src 'self'; object-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'">
-  <title>RUCA Command Core | Public Product Experience</title>
+  <title>RUCA Command Core | Interactive Product Tour</title>
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="icon" href="/icons/icon-192.png" sizes="192x192">
-  <link rel="stylesheet" href="/assets/ruca-public.css?v=20260722-red-r1">
-  <script src="/assets/public-site.js?v=20260722-red-r1" defer></script>
+  <link rel="stylesheet" href="/assets/ruca-public.css?v=20260722-tour-r2">
+  <script src="/assets/public-site.js?v=20260722-tour-r2" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to product experience</a>
+  <a class="skip-link" href="#product-stage">Skip to guided product tour</a>
 
-  <header class="site-header" aria-label="RUCA public navigation">
-    <a class="brand" href="#home" aria-label="RUCA Command Core home">
-      <img src="/assets/ruca-logo.png" alt="" width="44" height="44">
-      <span><strong>RUCA</strong><small>COMMAND CORE</small></span>
-    </a>
-    <nav class="desktop-nav" aria-label="Primary">
-      <a href="#thesis">Thesis</a>
-      <a href="#worlds">System Worlds</a>
-      <a href="#language">Design Language</a>
-      <a href="/portfolio/">Case Study</a>
-      <a class="nav-resume" href="/resume/Anthony_Moncion_Interaction_Designer_Public_Resume.pdf">Resume</a>
-    </nav>
-    <details class="mobile-menu">
-      <summary>Menu</summary>
-      <nav aria-label="Mobile">
-        <a href="#thesis">Thesis</a>
-        <a href="#worlds">System Worlds</a>
-        <a href="#language">Design Language</a>
-        <a href="/portfolio/">Case Study</a>
+  <div class="experience-shell" id="home" data-active-world="home">
+    <header class="command-rail" aria-label="RUCA public navigation">
+      <a class="brand" href="#home" aria-label="RUCA HOME">
+        <img src="/assets/ruca-logo.png" alt="" width="42" height="42">
+        <span><strong>RUCA</strong><small>COMMAND CORE</small></span>
+      </a>
+
+      <div class="capture-state" role="note">
+        <span class="capture-light" aria-hidden="true"></span>
+        <span><strong>GUIDED PRODUCT TOUR</strong><small>CAPTURED PRODUCT STATES // NO WORKSTATION CONNECTION</small></span>
+      </div>
+
+      <nav class="utility-nav" aria-label="Public resources">
+        <a href="/portfolio/">Case study</a>
         <a href="/resume/Anthony_Moncion_Interaction_Designer_Public_Resume.pdf">Resume</a>
       </nav>
-    </details>
-  </header>
+    </header>
 
-  <main id="main">
-    <section class="arrival" id="home" aria-labelledby="arrival-title">
-      <img class="arrival-image" src="/assets/product/ruca-home-runtime.png" alt="The real RUCA HOME interface in Blood Red: a large central System Heart connected to six radial machine gauges" fetchpriority="high">
-      <div class="arrival-shade" aria-hidden="true"></div>
-      <div class="arrival-copy">
-        <p class="kicker">RUCA COMMAND CORE // CONTROLLER-FIRST COMPUTING</p>
-        <h1 id="arrival-title">THE PC LOST THE ARRIVAL RITUAL.</h1>
-        <p class="arrival-lede">Consoles wake up with identity, continuity, and confidence. Windows gives the user a desktop and expects them to rebuild the experience every time. RUCA restores the feeling that the machine knows where you are, what matters, and whether you are ready.</p>
-        <nav class="arrival-actions" aria-label="Explore RUCA">
-          <a class="primary-action" href="#worlds">Explore the system</a>
-          <a href="/portfolio/">Read the case study</a>
-          <a href="/resume/Anthony_Moncion_Interaction_Designer_Public_Resume.pdf">View resume</a>
-        </nav>
-      </div>
-      <div class="arrival-status" role="note" aria-label="Public product boundary">
-        <span>REAL PRODUCT DESIGN</span>
-        <p>Captured from the private local runtime. This site has no connection to the workstation.</p>
-      </div>
-    </section>
-
-    <section class="thesis section-shell" id="thesis" aria-labelledby="thesis-title">
-      <div class="section-index" aria-hidden="true">01 // PRODUCT THESIS</div>
-      <div class="thesis-grid">
+    <main class="tour" id="main">
+      <section class="tour-intro" aria-labelledby="tour-title">
         <div>
-          <p class="kicker">ONE MACHINE. ONE COHERENT EXPERIENCE.</p>
-          <h2 id="thesis-title">CONSOLE CONFIDENCE.<br>PC AUTHORITY.</h2>
+          <p class="eyebrow">RUCA // CONTROLLER-FIRST COMPUTING</p>
+          <h1 id="tour-title">THE PC LOST THE ARRIVAL RITUAL.</h1>
         </div>
-        <div class="thesis-copy">
-          <p>RUCA is not a skin, launcher, dashboard, or telemetry overlay. It is a controller-first personal computing environment that brings readiness, launch control, machine health, live information, settings, and recovery into one coherent experience.</p>
-          <dl class="system-counts">
-            <div><dt>Primary worlds</dt><dd>5</dd></div>
-            <div><dt>Commands</dt><dd>39</dd></div>
-            <div><dt>Telemetry channels</dt><dd>6</dd></div>
-            <div><dt>Control systems</dt><dd>11</dd></div>
-          </dl>
-        </div>
-      </div>
-    </section>
+        <p>RUCA restores one coherent place to arrive, launch, observe, diagnose, and control. Select a world, then select the illuminated evidence inside the actual product capture.</p>
+      </section>
 
-    <section class="worlds" id="worlds" aria-labelledby="worlds-title">
-      <header class="worlds-heading section-shell">
-        <div class="section-index" aria-hidden="true">02 // ACTUAL SYSTEM WORLDS</div>
-        <p class="kicker">THE PRIVATE RUNTIME, SHOWN WITHOUT PUBLIC AUTHORITY</p>
-        <h2 id="worlds-title">FIVE QUESTIONS.<br>FIVE WORLDS.</h2>
-      </header>
+      <nav class="world-tabs" aria-label="RUCA worlds" role="tablist">
+        <button type="button" id="tab-home" class="world-tab" role="tab" aria-selected="true" aria-controls="product-stage" tabindex="0" data-world="home">
+          <span class="tab-index">01</span><span>HOME<small>AM I READY?</small></span>
+        </button>
+        <button type="button" id="tab-play" class="world-tab" role="tab" aria-selected="false" aria-controls="product-stage" tabindex="-1" data-world="play">
+          <span class="tab-index">02</span><span>PLAY<small>WHAT DO I LAUNCH?</small></span>
+        </button>
+        <button type="button" id="tab-live" class="world-tab" role="tab" aria-selected="false" aria-controls="product-stage" tabindex="-1" data-world="live">
+          <span class="tab-index">03</span><span>LIVE WORLD<small>WHAT IS HAPPENING?</small></span>
+        </button>
+        <button type="button" id="tab-diagnostics" class="world-tab" role="tab" aria-selected="false" aria-controls="product-stage" tabindex="-1" data-world="diagnostics">
+          <span class="tab-index">04</span><span>DIAGNOSTICS<small>AM I SAFE?</small></span>
+        </button>
+        <button type="button" id="tab-control" class="world-tab" role="tab" aria-selected="false" aria-controls="product-stage" tabindex="-1" data-world="control">
+          <span class="tab-index">05</span><span>CONTROL<small>HOW SHOULD IT BEHAVE?</small></span>
+        </button>
+      </nav>
 
-      <article class="world world-home">
-        <figure class="world-media">
-          <img src="/assets/product/ruca-home-runtime.png" alt="RUCA HOME centered on the System Heart and six connected machine gauges" loading="lazy" decoding="async">
-          <figcaption>HOME // ARRIVAL AND READINESS</figcaption>
+      <section class="product-stage" id="product-stage" role="tabpanel" aria-labelledby="tab-home" tabindex="0">
+        <figure class="product-capture">
+          <img id="world-image" src="/assets/product/ruca-home-runtime.png" alt="RUCA HOME centered on a large System Heart connected to six machine gauges" fetchpriority="high">
+          <div class="capture-vignette" aria-hidden="true"></div>
+          <div class="focus-frame" id="focus-frame" aria-hidden="true"></div>
+          <div class="hotspot-layer" id="hotspot-layer" role="group" aria-label="Visible product evidence"></div>
+          <figcaption><span id="capture-label">HOME // ARRIVAL AND READINESS</span><span>REAL RUCA PRODUCT CAPTURE</span></figcaption>
         </figure>
-        <div class="world-copy">
-          <span class="world-number">01</span>
-          <p class="kicker">HOME // AM I READY?</p>
-          <h3>The machine welcomes you before it asks anything from you.</h3>
-          <p>The System Heart turns machine state into one immediate readiness signal while six substantial gauges preserve the truth underneath.</p>
-          <ul>
-            <li>One emotional and informational center</li>
-            <li>Six visible machine-health channels</li>
-            <li>Couch-distance readability at a glance</li>
-          </ul>
-        </div>
-      </article>
 
-      <article class="world world-play">
-        <figure class="world-media">
-          <img src="/assets/product/ruca-play-runtime.png" alt="RUCA PLAY with command districts, an orbital application registry, and a selected center command" loading="lazy" decoding="async">
-          <figcaption>PLAY // COMMAND DISTRICTS</figcaption>
-        </figure>
-        <div class="world-copy">
-          <span class="world-number">02</span>
-          <p class="kicker">PLAY // WHAT DO I WANT TO LAUNCH?</p>
-          <h3>One destination model replaces a desk full of launchers.</h3>
-          <p>PLAY organizes games, media, creative tools, AI, browsers, and system utilities into one spatial command registry built for controller-first navigation.</p>
-          <ul>
-            <li>Thirty-nine commands</li>
-            <li>Six durable command districts</li>
-            <li>One selected center and one information owner</li>
-          </ul>
-        </div>
-      </article>
+        <aside class="world-brief" aria-live="polite" aria-atomic="true">
+          <p class="brief-index" id="brief-index">WORLD 01 // HOME</p>
+          <h2 id="world-title">WELCOME HOME.</h2>
+          <p id="world-summary">The System Heart turns machine state into one immediate readiness signal while the visible instruments preserve the truth underneath.</p>
+          <div class="feature-readout">
+            <span id="feature-count">01 / 06</span>
+            <div>
+              <h3 id="feature-title">SYSTEM HEART</h3>
+              <p id="feature-description">One dominant center carries the emotional and informational weight of HOME.</p>
+            </div>
+          </div>
+          <div class="feature-controls">
+            <button type="button" id="feature-prev" aria-label="Previous visible feature">PREV</button>
+            <button type="button" id="feature-next" aria-label="Next visible feature">NEXT</button>
+          </div>
+        </aside>
+      </section>
 
-      <article class="world world-live">
-        <figure class="world-media">
-          <img src="/assets/product/ruca-live-world-runtime.png" alt="RUCA Live World World Briefing with primary story, supporting stories, and clear source status" loading="lazy" decoding="async">
-          <figcaption>LIVE WORLD // OBSERVATION ENVIRONMENT</figcaption>
-        </figure>
-        <div class="world-copy">
-          <span class="world-number">03</span>
-          <p class="kicker">LIVE WORLD // WHAT IS HAPPENING?</p>
-          <h3>A designed observation environment, not another feed pile.</h3>
-          <p>Weather, news, markets, sports, technology, and celestial information share one hierarchy with explicit source and freshness states.</p>
-          <ul>
-            <li>Six observation lanes</li>
-            <li>Source, freshness, confidence, and fallback states</li>
-            <li>Live, partial, stale, retrying, and unavailable truth</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="world world-diagnostics">
-        <figure class="world-media">
-          <img src="/assets/product/ruca-diagnostics-runtime.png" alt="RUCA Diagnostics with a live signal trace and Guardian triage guidance" loading="lazy" decoding="async">
-          <figcaption>DIAGNOSTICS // GUARDIAN SYSTEM</figcaption>
-        </figure>
-        <div class="world-copy">
-          <span class="world-number">04</span>
-          <p class="kicker">DIAGNOSTICS // AM I SAFE?</p>
-          <h3>Meaning before measurement. Action before alarm.</h3>
-          <p>Guardian translates machine signals into severity, meaning, first checks, reassurance, and next action before exposing deeper technical detail.</p>
-          <ul>
-            <li>Plain-language triage</li>
-            <li>Live trace with threshold context</li>
-            <li>No invented health verdicts</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="world world-control">
-        <figure class="world-media">
-          <img src="/assets/product/ruca-control-runtime.png" alt="RUCA Control Workshop with Blood Red profile, command controls, and system ownership groups" loading="lazy" decoding="async">
-          <figcaption>CONTROL // COMMAND WORKSHOP</figcaption>
-        </figure>
-        <div class="world-copy">
-          <span class="world-number">05</span>
-          <p class="kicker">CONTROL // HOW SHOULD THE MACHINE BEHAVE?</p>
-          <h3>A workshop, not a settings dump.</h3>
-          <p>CONTROL organizes atmosphere, appearance, input, audio, sources, and device behavior around presets, visible consequences, and clear authority.</p>
-          <ul>
-            <li>Seven environment profiles</li>
-            <li>Eleven coordinated control systems</li>
-            <li>Local UI authority kept separate from device control</li>
-          </ul>
-        </div>
-      </article>
-    </section>
-
-    <section class="language section-shell" id="language" aria-labelledby="language-title">
-      <div class="section-index" aria-hidden="true">03 // DESIGN LANGUAGE</div>
-      <div class="language-grid">
-        <figure class="language-media">
-          <img src="/assets/product/ruca-home-runtime.png" alt="Close view of the RUCA HOME System Heart, gauges, conduits, ribbon, and command shell" loading="lazy" decoding="async">
-        </figure>
-        <div>
-          <p class="kicker">EVERY CLAIM IS VISIBLE IN THE PRODUCT</p>
-          <h2 id="language-title">MACHINE PRESENCE, WITHOUT THE NOISE.</h2>
-          <dl class="language-list">
-            <div><dt>Swiss-watch gauges</dt><dd>Concentric rings, restrained ticks, and physical depth make telemetry feel instrument-grade.</dd></div>
-            <div><dt>Energy conduits</dt><dd>Six illuminated paths make the System Heart the unmistakable source of readiness.</dd></div>
-            <div><dt>System Heart</dt><dd>One dominant center carries the emotional and informational weight of HOME.</dd></div>
-            <div><dt>Intelligence ribbon</dt><dd>Top-level conditions stay visible without competing with the active world.</dd></div>
-            <div><dt>Command shell</dt><dd>Persistent status and audio control anchor every route to the same machine.</dd></div>
-            <div><dt>Layered cockpit</dt><dd>Black glass, gunmetal framing, and red illumination establish depth without rainbow noise.</dd></div>
-            <div><dt>Couch-distance type</dt><dd>Large labels, compact explanations, and hard hierarchy survive across the room.</dd></div>
-            <div><dt>Controller-first focus</dt><dd>Selection is visible, directional, and recoverable across all five worlds.</dd></div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <section class="boundary section-shell" id="boundary" aria-labelledby="boundary-title">
-      <div class="section-index" aria-hidden="true">04 // PRODUCT BOUNDARY</div>
-      <div class="boundary-line">
-        <p class="kicker">PUBLIC PROOF. PRIVATE AUTHORITY.</p>
-        <p id="boundary-title">The complete RUCA runtime operates locally on the owner’s workstation. This public experience presents the product design and interaction architecture without exposing private telemetry, native controls, files, credentials, or local services.</p>
-      </div>
-    </section>
-
-    <section class="closing section-shell" aria-labelledby="closing-title">
-      <div>
-        <p class="kicker">THE PRODUCT AND THE THINKING BEHIND IT</p>
-        <h2 id="closing-title">THE PC CAN FEEL LIKE ONE PRODUCT AGAIN.</h2>
-      </div>
-      <div class="closing-actions">
-        <a class="primary-action" href="/portfolio/">Read the case study</a>
-        <a href="/resume/Anthony_Moncion_Interaction_Designer_Public_Resume.pdf">View Anthony’s resume</a>
-        <a href="mailto:hello@rucasrapidpcrepairlab.com?subject=RUCA%20Command%20Core">Contact Anthony</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div><strong>ANTHONY C. MONCION</strong><span>Product Designer // Systems Thinker // Creator of RUCA Command Core</span></div>
-    <p>RUCA COMMAND CORE // INDEPENDENT PRODUCT // 2026</p>
-  </footer>
+      <footer class="tour-footer">
+        <p><strong>PUBLIC PROOF // PRIVATE AUTHORITY</strong> These are captured states from the private local product. This tour cannot read telemetry, launch software, change settings, or reach the workstation.</p>
+        <p class="keyboard-hint">ARROW KEYS: CHANGE WORLD <span aria-hidden="true">//</span> [ &nbsp; ]: CHANGE EVIDENCE</p>
+        <div class="footer-links"><a href="/portfolio/">OPEN CASE STUDY</a><a href="mailto:hello@rucasrapidpcrepairlab.com?subject=RUCA%20Command%20Core">CONTACT</a></div>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>

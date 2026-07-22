@@ -1,12 +1,12 @@
 "use strict";
 
 const CACHE_PREFIXES = ["ruca-mobile-demo-", "ruca-public-"];
-const CACHE_NAME = "ruca-public-v2-20260722-red-cockpit-r1";
+const CACHE_NAME = "ruca-public-v3-20260722-guided-tour-r2";
 const CORE_ASSETS = [
   "/",
   "/index.html",
-  "/assets/ruca-public.css?v=20260722-red-r1",
-  "/assets/public-site.js?v=20260722-red-r1",
+  "/assets/ruca-public.css?v=20260722-tour-r2",
+  "/assets/public-site.js?v=20260722-tour-r2",
   "/assets/ruca-logo.png",
   "/assets/product/ruca-home-runtime.png",
   "/assets/product/ruca-play-runtime.png",
