@@ -1,58 +1,66 @@
-# RUCA OS Public Demo Design QA
+# RUCA public source-clone design QA
 
 ## Comparison target
 
-- Source visual truth: the current local RUCA OS at `http://127.0.0.1:7777/`, captured per world in `C:\Users\amonc\Documents\Codex\2026-07-22\la-cosa-nostra-ruca-ai-plugin\work\qa\current-os-*.png`.
-- Browser-rendered implementation: `http://127.0.0.1:4173/`, captured per world in `C:\Users\amonc\Documents\Codex\2026-07-22\la-cosa-nostra-ruca-ai-plugin\work\qa\public-demo-*.png`.
-- Combined comparison evidence: `C:\Users\amonc\Documents\Codex\2026-07-22\la-cosa-nostra-ruca-ai-plugin\work\qa\comparison-*.png`.
-- Viewport: 1280 x 720 CSS pixels for both source and implementation.
-- Pixel dimensions: 1280 x 720 source and 1280 x 720 implementation, combined without scaling at device scale factor 1.
-- States: HOME default, PLAY all-command Steam selection, LIVE WORLD weather, DIAGNOSTICS overview, CONTROL active profile.
+- Source visual truth: `C:\Users\amonc\OneDrive\Pictures\Screenshots 1\Screenshot 2026-07-18 233525.png` through `Screenshot 2026-07-18 234500.png`
+- Source markup truth: `C:\Users\amonc\.codex\attachments\89437eae-d7d8-4108-bbab-3f8833d395d1\pasted-text.txt`
+- Implementation: `http://127.0.0.1:4173/index.html?qa=final-r7`
+- Primary implementation captures: `C:\Users\amonc\Documents\Codex\2026-07-22\la-cosa-nostra-ruca-ai-plugin\work\qa\demo-home-r6-final.png`, `demo-play-r6-final.png`, `demo-live-weather-r6-final.png`, `demo-diagnostics-r6-final.png`, and `demo-control-r6-final.png`
+- Full LIVE comparison: `C:\Users\amonc\Documents\Codex\2026-07-22\la-cosa-nostra-ruca-ai-plugin\work\qa\compare-live-all-r4b.png`
+- HOME comparison: `C:\Users\amonc\Documents\Codex\2026-07-22\la-cosa-nostra-ruca-ai-plugin\work\qa\compare-home-r3b.png`
+- PLAY comparison: `C:\Users\amonc\Documents\Codex\2026-07-22\la-cosa-nostra-ruca-ai-plugin\work\qa\compare-play-r2.png`, followed by the corrected `demo-play-r6-final.png`
 
-## Full-view comparison evidence
+## Normalization
 
-- Persistent shell: passed. The public demo matches the current OS three-part header proportions, five-world navigation, time module, HOME intelligence ribbon, fixed machine footer, and non-HOME Core HOME return control.
-- HOME: passed. The centered System Heart, six radial machine gauges, paired left/right topology, route beacons, conduits, hierarchy, and bottom caption match the current OS composition.
-- PLAY: passed. The centered command wheel, nine-filter rail, 39-command orbital field, launch-readiness matrix, and persistent shell match the current Command Districts architecture.
-- LIVE WORLD: passed. The left concierge spine, primary conditions stage, split signal metrics, trace, forecast strip, source footer, and Core HOME control match the current observation-deck layout.
-- DIAGNOSTICS: passed. The sensor-group rail, Rapid PC Lab center, health core, overview/timeline tabs, evidence row, signal trace, and Guardian Console reproduce the current three-column diagnostic console.
-- CONTROL: passed. The profile reactor, eight-profile grid, four-part status strip, command-controls group, expandable theme/reactor/panel sections, and fixed footer reproduce the current Control Workshop.
-
-## Focused region comparison evidence
-
-- Typography: passed. Display headings use the current wide uppercase hierarchy; small labels use dense tracked uppercase; numerical instruments retain a contrasting serif treatment. Wrapping and truncation passed at the target viewport.
-- Spacing and layout rhythm: passed. Header/footer heights, panel tracks, radial balance, three-column diagnostics, LIVE WORLD sidebar proportions, and Control Workshop split align with the source. No horizontal overflow was found in the 30-route viewport matrix.
-- Colors and tokens: passed for structural fidelity. Color is intentionally a runtime theme token rather than the design identity; eight profiles and a custom accent control update the same shell geometry.
-- Image quality and asset fidelity: passed. The original RUCA crest is reused at native quality. The active world contains no screenshot surface. Application nodes use compact semantic command codes instead of pretending that native application integrations are available.
-- Copy and content: passed. World names, shell terminology, Command Districts, Live World Concierge, RUCA Rapid PC Lab, Guardian Console, Control Workshop, System Heart, and persistent machine-shell language track the current OS. Safety/source copy is public-demo-specific and explicit.
-
-## Comparison history
-
-1. P1: the first replacement used a generic cockpit instead of the current RUCA OS shell. Fixed by rebuilding the persistent header, ribbon, radial HOME, world-specific layouts, footer, and Core HOME control from the live OS captures.
-2. P2: PLAY initially exposed 18 commands and six district filters. Fixed by matching the current 39-command registry and nine-filter rail.
-3. P2: mobile header ordering, visible horizontal scrollbars, and several sub-40px buttons reduced fidelity and touch reliability. Fixed with an explicit mobile header grid, hidden rail scrollbars, compact command filtering, and 44px mobile controls.
-4. P2: desktop route changes could briefly disturb shell rendering because global viewport restoration ran when no horizontal nav scroll was needed. Fixed by limiting route-centering behavior to genuinely overflowing navigation.
-5. Post-fix evidence: 30 route/viewport combinations produced zero horizontal overflow, zero missing worlds, and zero screenshot images; the final mobile rerun produced zero undersized visible buttons.
+- Source pixels: 2048 x 1152.
+- Implementation pixels: 2048 x 1152.
+- CSS viewport: 2048 x 1152.
+- Density: equal-size desktop captures; no density conversion was required.
+- States: HOME, PLAY, LIVE WORLD Weather, World Briefing, Game Day, Signal Intelligence, Celestial Observatory, CPU Diagnostics, and Control Workshop.
+- Additional responsive checks: 1024 x 768 and 390 x 844.
 
 ## Findings
 
-- No actionable P0, P1, or P2 visual mismatch remains.
-- P3: the private runtime uses a richer native application glyph set in PLAY, while the public simulation uses text-coded nodes. This is an intentional truth boundary and does not change the command-field layout or interaction model.
-- P3: deterministic LIVE WORLD fixtures are slightly less information-dense than the live private weather source, but the current hierarchy and five-region layout are preserved.
+- No actionable P0, P1, or P2 mismatch remains.
+- P3 intentional content deviation: public-demo copy, timestamps, news subjects, and machine readings differ from the private/local RUCA runtime. The layout, crop strategy, hierarchy, and source visual system remain intact; the substituted content is explicitly deterministic and browser-local.
+- P3 intentional current-source deviation: Diagnostics technical workspaces and Control atmosphere groups use the current source's progressive-disclosure controls. They are functional and preserve the source markup rather than forcing the older screenshot state open.
 
-## Primary interactions tested
+## Required fidelity surfaces
 
-- Five-world header and Core HOME navigation.
-- HOME gauge selection and deterministic telemetry updates.
-- PLAY filters, district selection, command selection, and safe no-launch handoff.
-- LIVE WORLD lane switching.
-- DIAGNOSTICS Ready, Advisory, and Critical state changes.
-- CONTROL profile selection, range input, accent input, simulated audio, and reset.
-- Home shortcut, directional focus movement, Escape recovery, responsive touch targets, and reduced-motion emulation.
-- Browser console/runtime event stream: no errors during the final five-route sweep.
+- Fonts and typography: the canonical RUCA stylesheet and hierarchy are used. Desktop title scale, small-label spacing, navigation weight, and dense data typography match the source family. No broken wrapping or truncation remains in the primary deck.
+- Spacing and layout rhythm: desktop header is 62 px, footer is 50 px, and HOME/PLAY/LIVE/Diagnostics/Control region boundaries match the 2048 x 1152 captures. LIVE uses the 114 px rail and source stage proportions. Control uses the 280 px command rail and aligned main deck.
+- Colors and tokens: the canonical customizable RUCA theme variables remain active. The validation target used the red profile, while all theme presets, custom color inputs, density, glass, motion, and brightness controls remain functional.
+- Image quality and asset fidelity: the original RUCA logo and five realm backdrops are local assets. Realm imagery is rendered through the source layout and crop rules; no placeholder boxes or CSS-drawn replacement imagery was introduced.
+- Copy and content: app-specific labels, world names, command districts, sensor names, and control labels are preserved. Runtime-only claims are replaced with truthful public-demo labels.
+- Icons: the canonical source icon resolver populates all 39 PLAY nodes and navigation controls. Focus, selected, favorite, and status treatments render in the source style.
+- Responsiveness and accessibility: desktop, tablet, and mobile produced zero document-level horizontal overflow. All five primary navigation controls remained unique and operable. Buttons, tabs, details, form labels, focus states, and reduced-motion hooks remain semantic.
+
+## Focused evidence
+
+- PLAY node visibility and geometry were inspected at individual-node level after the full-view comparison. The focused crop `C:\Users\amonc\Documents\Codex\2026-07-22\la-cosa-nostra-ruca-ai-plugin\work\qa\play-node-crop.png` exposed the initial missing orbit render; the final pass verified 39 of 39 nodes with measured orbit coordinates.
+- HOME geometry was measured directly: 380 x 380 system heart, 62 px header, and 50 px footer at the target viewport.
+- Diagnostics focused checks verified 11 visible sensor groups, five triage blocks, exclusive technical workspaces, and the separate Machine Health Timeline state.
+
+## Comparison history
+
+1. Initial source import: HOME shell structure was correct, but HOME radial geometry and PLAY orbit positions were missing. Fixed by restoring the canonical measured geometry, then compared again at 2048 x 1152.
+2. PLAY comparison: nodes existed in the DOM but were initially overlapped at the center and then appeared oversized. Fixed route-triggered layout refresh, 42 px desktop nodes, 220 px command core, and source ring spacing. Post-fix evidence: `demo-play-r6-final.png` with 39/39 positioned nodes.
+3. LIVE comparison: the first pass used a rail that was 30 px too wide and an over-tall mode header. Fixed the source rail to 114 px, the gap to 9 px, the header to 67 px, hid the non-reference Market lane, and removed duplicate source-state copy. Post-fix evidence: `compare-live-all-r4b.png`.
+4. Diagnostics comparison: the severity/live cards collided and the sensor list collapsed to one column. Fixed the three-column evidence strip, two-column sensor grid, and full declared sensor visibility. Post-fix evidence: 11 visible groups with zero horizontal overflow.
+5. Control comparison: the command rail was too wide and the header overlapped the status strip. Fixed the 280 px rail, 12 px gap, compact title metrics, and 132 px command dial. The footer was normalized to 50 px across all worlds.
+
+## Interaction and runtime checks
+
+- Primary navigation: HOME, PLAY, LIVE WORLD, DIAGNOSTICS, and CONTROL.
+- PLAY: 39 commands, district filtering, selection, favorite state, and safe no-launch feedback.
+- LIVE WORLD: five realm lanes and their image-led decks.
+- Diagnostics: sensor selection, refresh, technical-detail toggle, Live Evidence, Sensor Map, Benchmark, Raw Inventory, and Machine Health Timeline.
+- Control: preset preview, apply, reset, sliders, details panels, and simulated power/settings controls.
+- Console: zero errors and zero warnings in the final local run.
+- Static checks: all three JavaScript files passed `node --check`; manifest and Vercel configuration parsed as JSON; private endpoint scan was clean.
 
 ## Follow-up polish
 
-- A future public-safe icon package could replace text command codes if the same glyph provenance and licensing are carried into this repository.
+- None required for handoff. Public content can be refreshed later without changing the RUCA shell.
 
 final result: passed

@@ -1,100 +1,661 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#070506">
-  <meta name="color-scheme" content="dark">
-  <meta name="description" content="Use a self-contained public simulation of RUCA OS, a controller-first personal computing environment.">
-  <link rel="canonical" href="https://ruca-mobile-presentation-hub.vercel.app/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="RUCA OS | Public Product Simulation">
-  <meta property="og:description" content="A working five-world RUCA OS simulation using deterministic local data.">
-  <meta property="og:url" content="https://ruca-mobile-presentation-hub.vercel.app/">
-  <meta property="og:image" content="https://ruca-mobile-presentation-hub.vercel.app/assets/ruca-logo.png">
-  <meta property="og:image:alt" content="RUCA OS identity mark">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="RUCA OS">
-  <meta name="twitter:description" content="A working, self-contained public RUCA OS simulation.">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'none'; worker-src 'self'; object-src 'none'; frame-src 'none'; media-src 'none'; form-action 'none'; base-uri 'none'">
-  <title>RUCA OS | Public Product Simulation</title>
-  <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="icon" href="/icons/icon-192.png" sizes="192x192">
-  <link rel="apple-touch-icon" href="/icons/icon-192.png">
-  <link rel="stylesheet" href="/assets/ruca-public.css?v=20260722-os-fidelity-r12">
-  <script src="/assets/public-site.js?v=20260722-os-fidelity-r12" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A faithful, interactive public simulation of the RUCA operating system interface." />
+  <meta name="theme-color" content="#050607" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+  <meta name="ruca-build-identity" content="RUCA_PUBLIC_SOURCE_CLONE_R7" />
+  <meta property="og:title" content="RUCA OS // Public Product Simulation" />
+  <meta property="og:description" content="Explore the actual RUCA OS interface with safe deterministic demo data." />
+  <meta property="og:image" content="https://ruca-mobile-presentation-hub.vercel.app/assets/RucaLogo.png" />
+  <title>RUCA OS // Public Product Simulation</title>
+  <link rel="canonical" href="https://ruca-mobile-presentation-hub.vercel.app/" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="/assets/RucaLogo.png" />
+  <link rel="stylesheet" href="/css/ruca.css?v=20260722-source-clone-r7" />
+  <!-- PASS03C: This is the INDUSTRIAL DESIGN PASS, not a feature pass. -->
 </head>
-<body>
-  <a class="skip-link" href="#worldSurface">Skip to active RUCA world</a>
-
-  <div class="app-shell" id="appShell" data-world="home" data-severity="ready">
+<body class="pass08-captivating-body pass09-unity-body pass10-cosmic-body pass12-living-machine pass13-cosmic-control pass14-atmosphere-engine pass15-source-layer pass15b-function-layer pass16a-motion-recovery pass16b-experience-convergence pass16c-core-navigation pass16d-energy-conduits pass16e-flight-camera pass16f-pattern-translation pass16g-world-viewport pass17a-controller-recovery pass17c1-home-radial-scaffold pass17c2c-home-living-system m01-public-showcase pass17d-weather-proof pass17e-live-world-unification pass18-starfield-engine pass19-unified-activation" data-world="home">
+  <canvas id="rucaStarfield" class="ruca-starfield" aria-hidden="true"></canvas>
+  <div id="nebula" aria-hidden="true"></div>
+  <div id="drift" aria-hidden="true"></div>
+  <div id="rucaApp" class="ruca-shell black-ceramic chassis-surface machined-surface pass06-command-center pass07-home-negative-space pass08-captivating-by-design pass09-unity-purpose pass12-living-machine">
     <header class="top-shell">
-      <a class="brand-block" href="#home" data-route="home" data-focus aria-label="RUCA HOME">
-        <img src="/assets/ruca-logo.png" width="54" height="54" alt="RUCA crest">
-        <span><strong>RUCA OS</strong><small>REAL USER COMPUTER ASSISTANT</small><em>PUBLIC PRODUCT SIMULATION</em></span>
-      </a>
+      <section class="brand-block structural-seam gold-trim titanium-rail instrument-housing glass-inset chassis-seam">
+        <img src="assets/RucaLogo.png" alt="RUCA logo" class="brand-logo" />
+        <div>
+          <div class="brand-title">RUCA OS</div>
+          <div class="brand-sub">REAL USER COMPUTER ASSISTANT</div>
+          <div class="design-doctrine-note"><strong>PUBLIC PRODUCT SIMULATION // SAFE DEMO DATA.</strong></div>
+        </div>
+      </section>
 
-      <nav class="world-nav" aria-label="RUCA worlds">
-        <button type="button" data-route="home" data-focus aria-current="page"><span>HOME</span></button>
-        <button type="button" data-route="play" data-focus><span>PLAY</span></button>
-        <button type="button" data-route="live-world" data-focus><span>LIVE WORLD</span></button>
-        <button type="button" data-route="diagnostics" data-focus><span>DIAGNOSTICS</span></button>
-        <button type="button" data-route="control" data-focus><span>CONTROL</span></button>
+      <nav class="world-nav structural-seam titanium-rail instrument-housing chassis-seam" aria-label="RUCA world navigation">
+        <button data-page="home" class="nav-btn active">
+          <span class="nav-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M12 3.2 3 10.5V20a1 1 0 0 0 1 1h5v-5.3h6V21h5a1 1 0 0 0 1-1V10.5L12 3.2Z" />
+            </svg>
+          </span>
+          <span class="nav-label">HOME</span>
+        </button>
+        <button data-page="play" class="nav-btn">
+          <span class="nav-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M3 5h14v2.5h-14V5Zm0 4h14v2.2H3V9Zm0 3.5h14v2.2H3v-2.2Zm0 3.5h9v2.2H3v-2.2Zm15 0h3v6.3h-3V16Zm2.5-7.4V8.6l2.5 1.4v6.4l-2.5 1.4v-3.4h-1V16h-1.5v-1.1H17V10.5h.5V8.6h3.8v-0.5h-3.8Z" />
+            </svg>
+          </span>
+          <span class="nav-label">PLAY</span>
+        </button>
+        <button data-page="live" class="nav-btn">
+          <span class="nav-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <circle cx="12" cy="12" r="3.6" />
+              <path d="M2.3 12C3.2 15.9 7.3 20.5 12 20.5S20.8 15.9 21.7 12M4.5 5.2C6 7.3 8.8 10 12 10s6-2.7 7.5-4.8M4.5 18.8c1.5-2.1 4.3-4.8 7.5-4.8s6 2.7 7.5 4.8" />
+            </svg>
+          </span>
+          <span class="nav-label">LIVE WORLD</span>
+        </button>
+        <button data-page="diagnostics" class="nav-btn">
+          <span class="nav-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <path d="M12 2.4 2.8 7.2v7.8c0 5.3 3.8 10.2 9.2 12 5.4-1.8 9.2-6.7 9.2-12V7.2L12 2.4Z" />
+              <path d="M9.7 15.3h4.6M9.7 11.9h4.6M9.7 8.5h4.6" />
+            </svg>
+          </span>
+          <span class="nav-label">DIAGNOSTICS</span>
+        </button>
+        <button data-page="control" class="nav-btn">
+          <span class="nav-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <circle cx="12" cy="12" r="2.6" />
+              <path d="M3 12h1.8M19.2 12H21M12 3v1.8M12 19.2V21M6 6l1.3 1.3M16.7 16.7 18 18M6 18l1.3-1.3M16.7 7.3 18 6" />
+            </svg>
+          </span>
+          <span class="nav-label">CONTROL</span>
+        </button>
       </nav>
 
-      <section class="time-block" aria-label="Current local time">
-        <div id="clockDisplay">--:-- --</div>
-        <span id="dateDisplay">LOADING DATE</span>
+      <section class="time-block glass-inlay glass-inset ceramic-field instrument-housing">
+        <div id="clock" class="clock">09:42 PM</div>
+        <div id="dateLine" class="date-line">CHECKING</div>
       </section>
     </header>
 
-    <section class="intelligence-ribbon" aria-label="Simulated intelligence ribbon">
-      <span class="ribbon-title">INTELLIGENCE RIBBON</span>
+    <section class="intelligence-ribbon structural-seam gold-trim instrument-cluster smoked-glass warm-gold recessed-bay chassis-seam">
+      <div class="ribbon-title">INTELLIGENCE RIBBON</div>
       <div class="ribbon-grid">
-        <div><strong id="globalReadiness">SYSTEM NOMINAL</strong><small>Public fixture is inside expected limits.</small></div>
-        <div><strong>DEMO LOCAL</strong><small>No bridge, workstation, or private source.</small></div>
-        <div><strong id="globalThermal">THERMAL 52°C</strong><small>Deterministic thermal example.</small></div>
-        <div><strong id="globalStorage">243GB FREE</strong><small>Capacity fixture, not a device reading.</small></div>
-        <div><strong id="globalCpu">DIAGNOSTICS READY</strong><small>Three simulated states available.</small></div>
+        <div class="ribbon-card"><span id="ribbonSystemState">CHECKING SYSTEM</span><small id="ribbonSystemDetail">Waiting for canonical telemetry.</small></div>
+        <div class="ribbon-card"><span id="ribbonBridgeState">PUBLIC DEMO READY</span><small id="ribbonBridgeDetail">Deterministic browser-local fixture</small></div>
+        <div class="ribbon-card"><span id="ribbonThermalState">CHECKING THERMALS</span><small id="ribbonThermalDetail">No thermal state is inferred.</small></div>
+        <div class="ribbon-card"><span id="ribbonStorageState">CHECKING STORAGE</span><small id="ribbonStorageDetail">No storage health is inferred.</small></div>
+        <div class="ribbon-card"><span id="ribbonDiagnosticState">DIAGNOSTICS CHECKING</span><small id="ribbonDiagnosticDetail">Waiting for a fresh machine sample.</small></div>
       </div>
     </section>
 
-    <main class="world-surface" id="worldSurface" tabindex="-1"><h1 class="sr-only">RUCA OS</h1></main>
+    <main class="stage">
+      <section id="page-home" class="page active instrument-cluster machined-surface" data-title="HOME">
+        <div class="home-heading">
+          <div class="eyebrow">WELCOME HOME</div>
+          <h1 id="homeMissionState">CHECKING SYSTEM</h1>
+          <div class="machine-name">DIXON-HOIRTUOT</div>
+        </div>
 
-    <footer class="machine-footer">
-      <div class="machine-chip footer-shell-state"><strong>RUCA COMMAND SHELL</strong><small><span class="online-dot" aria-hidden="true"></span> ONLINE // PUBLIC SIMULATION</small></div>
-      <div class="machine-chip footer-uptime"><strong>RUCA UPTIME</strong><small id="uptimeDisplay">0D 00H 00M 00S</small></div>
-      <div class="footer-volume-control">
-        <button id="audioState" type="button" data-focus aria-pressed="false" aria-label="Toggle simulated RUCA audio">MUTE</button>
-        <label for="footerVolume">VOL</label>
-        <button id="volumeDown" type="button" data-focus aria-label="Decrease simulated volume">−</button>
-        <input id="footerVolume" type="range" min="0" max="100" value="25" data-focus aria-label="Simulated RUCA volume">
-        <button id="volumeUp" type="button" data-focus aria-label="Increase simulated volume">+</button>
-        <output id="volumeOutput" for="footerVolume">25</output>
+        <div class="chronograph-system ruca-chassis titanium-shell outer-glass Titanium instrument-housing machined-surface" id="homeChronograph">
+          <div class="chrono-ring ring-a bearing-ring calibration-ring"></div>
+          <div class="chrono-ring ring-b bearing-ring calibration-ring"></div>
+          <div class="chrono-ring ring-c bearing-ring calibration-ring"></div>
+          <div class="chrono-ring ring-b gear-ring"></div>
+          <div class="chrono-ring ring-a gear-ring"></div>
+          <div class="bridge-line connector-arm cpu-line" data-energy-direction="in" data-energy-role="CPU RETURN" aria-hidden="true"><span class="pivot-node"></span><span class="gauge-bracket"></span></div>
+          <div class="bridge-line connector-arm gpu-line" data-energy-direction="out" data-energy-role="GPU COMMAND" aria-hidden="true"><span class="pivot-node"></span><span class="gauge-bracket"></span></div>
+          <div class="bridge-line connector-arm ram-line" data-energy-direction="in" data-energy-role="RAM RETURN" aria-hidden="true"><span class="pivot-node"></span><span class="gauge-bracket"></span></div>
+          <div class="bridge-line connector-arm storage-line" data-energy-direction="out" data-energy-role="STORAGE COMMAND" aria-hidden="true"><span class="pivot-node"></span><span class="gauge-bracket"></span></div>
+          <div class="bridge-line connector-arm network-line" data-energy-direction="in" data-energy-role="NETWORK RETURN" aria-hidden="true"><span class="pivot-node"></span><span class="gauge-bracket"></span></div>
+          <div class="bridge-line connector-arm thermal-line" data-energy-direction="out" data-energy-role="THERMAL COMMAND" aria-hidden="true"><span class="pivot-node"></span><span class="gauge-bracket"></span></div>
+
+          <nav class="core-nav-beacons" aria-label="System Heart destination beacons">
+            <button class="core-nav-beacon core-beacon-home active" type="button" data-core-route="home" data-energy-direction="in" data-energy-role="INFORMATION RETURN" aria-label="Enter HOME through System Heart">
+              <span>HOME</span><b>READY</b>
+            </button>
+            <button class="core-nav-beacon core-beacon-play" type="button" data-core-route="play" data-energy-direction="out" data-energy-role="COMMAND DEPLOYMENT" aria-label="Enter Command Deck through System Heart">
+              <span>PLAY</span><b>COMMAND DECK</b>
+            </button>
+            <button class="core-nav-beacon core-beacon-live" type="button" data-core-route="live" data-energy-direction="out" data-energy-role="OBSERVATION EXTENSION" aria-label="Enter Live World through System Heart">
+              <span>LIVE WORLD</span><b>OBSERVATION</b>
+            </button>
+            <button class="core-nav-beacon core-beacon-diagnostics" type="button" data-core-route="diagnostics" data-energy-direction="scan" data-energy-role="BIDIRECTIONAL SCAN" aria-label="Enter Diagnostics through System Heart">
+              <span>DIAGNOSTICS</span><b>ADVISOR</b>
+            </button>
+            <button class="core-nav-beacon core-beacon-control" type="button" data-core-route="control" data-energy-direction="out" data-energy-role="AUTHORITY DEPLOYMENT" aria-label="Enter Control through System Heart">
+              <span>CONTROL</span><b>AUTHORITY</b>
+            </button>
+          </nav>
+
+          <button class="system-heart mechanical-core gauge-mount calibration-ticks reactor-shell titanium-shell inner-glass Titanium bearing-ring glass-inset gold-calibration" data-detail="SYSTEM">
+            <span class="heart-bearing-ring" aria-hidden="true"></span>
+            <span class="heart-inner-glass-ring" aria-hidden="true"></span>
+            <span class="heart-calibration-ticks" aria-hidden="true"></span>
+            <span class="heart-node heart-node-a" aria-hidden="true"></span>
+            <span class="heart-node heart-node-b" aria-hidden="true"></span>
+            <span class="heart-node heart-node-c" aria-hidden="true"></span>
+            <span class="heart-node heart-node-d" aria-hidden="true"></span>
+            <span class="heart-mount mount-cpu" aria-hidden="true"></span>
+            <span class="heart-mount mount-gpu" aria-hidden="true"></span>
+            <span class="heart-mount mount-ram" aria-hidden="true"></span>
+            <span class="heart-mount mount-storage" aria-hidden="true"></span>
+            <span class="heart-mount mount-network" aria-hidden="true"></span>
+            <span class="heart-mount mount-thermal" aria-hidden="true"></span>
+            <span class="heart-center-jewel" aria-hidden="true"></span>
+            <span class="heart-label">SYSTEM HEART</span>
+            <span id="heartScore" class="heart-score">--</span>
+            <span id="heartState" class="heart-state">CHECKING BRIDGE</span>
+          </button>
+
+          <button class="complication comp-cpu ruca-gauge gauge-mount calibration-ticks titanium-shell Titanium instrument-housing glass-inset gold-calibration" data-component="CPU"><span class="meter-arc" aria-hidden="true"></span><span class="tick-ring" aria-hidden="true"></span><span class="value-sweep" aria-hidden="true"></span><span class="needle" aria-hidden="true"></span><span class="gauge-bracket" aria-hidden="true"></span><span class="status-band" aria-hidden="true"></span><span class="comp-label">CPU</span><strong id="homeCPU">CHECKING</strong><small>Ryzen 9 5900X</small></button>
+          <button class="complication comp-gpu ruca-gauge gauge-mount calibration-ticks titanium-shell instrument-housing glass-inset gold-calibration" data-component="GPU"><span class="meter-arc" aria-hidden="true"></span><span class="tick-ring" aria-hidden="true"></span><span class="value-sweep" aria-hidden="true"></span><span class="needle" aria-hidden="true"></span><span class="gauge-bracket" aria-hidden="true"></span><span class="status-band" aria-hidden="true"></span><span class="comp-label">GPU</span><strong id="homeGPU">CHECKING</strong><small>ASUS RTX 4070 Ti SUPER</small></button>
+          <button class="complication comp-ram ruca-gauge gauge-mount calibration-ticks titanium-shell instrument-housing glass-inset gold-calibration" data-component="RAM"><span class="meter-arc" aria-hidden="true"></span><span class="tick-ring" aria-hidden="true"></span><span class="value-sweep" aria-hidden="true"></span><span class="needle" aria-hidden="true"></span><span class="gauge-bracket" aria-hidden="true"></span><span class="status-band" aria-hidden="true"></span><span class="comp-label">RAM</span><strong id="homeRAM">CHECKING</strong><small>Corsair 128GB DDR4</small></button>
+          <button class="complication comp-storage ruca-gauge gauge-mount calibration-ticks titanium-shell instrument-housing glass-inset gold-calibration" data-component="Storage"><span class="meter-arc" aria-hidden="true"></span><span class="tick-ring" aria-hidden="true"></span><span class="value-sweep" aria-hidden="true"></span><span class="needle" aria-hidden="true"></span><span class="gauge-bracket" aria-hidden="true"></span><span class="status-band" aria-hidden="true"></span><span class="comp-label">STORAGE</span><strong id="homeStorage">CHECKING</strong><small>Samsung Storage</small></button>
+          <button class="complication comp-network ruca-gauge gauge-mount calibration-ticks titanium-shell instrument-housing glass-inset gold-calibration" data-component="Network"><span class="meter-arc" aria-hidden="true"></span><span class="tick-ring" aria-hidden="true"></span><span class="value-sweep" aria-hidden="true"></span><span class="needle" aria-hidden="true"></span><span class="gauge-bracket" aria-hidden="true"></span><span class="status-band" aria-hidden="true"></span><span class="comp-label">NETWORK</span><strong id="homeNetwork">CHECKING</strong><small>Spectrum / Nighthawk x2</small></button>
+          <button class="complication comp-thermal ruca-gauge gauge-mount calibration-ticks titanium-shell instrument-housing glass-inset gold-calibration" data-component="Thermals"><span class="meter-arc" aria-hidden="true"></span><span class="tick-ring" aria-hidden="true"></span><span class="value-sweep" aria-hidden="true"></span><span class="needle" aria-hidden="true"></span><span class="gauge-bracket" aria-hidden="true"></span><span class="status-band" aria-hidden="true"></span><span class="comp-label">THERMAL</span><strong id="homeThermal">CHECKING</strong><small>be quiet! Cooling</small></button>
+        </div>
+
+          <div class="home-caption glass-inlay glass-inset instrument-cluster chassis-seam">
+          <div class="home-caption-copy"><b>Engineering is the luxury.</b>
+          <span id="homeTelemetrySummary">Safe deterministic machine data is active. Every command remains inside this public browser demo.</span></div>
+          <button id="rucaLoungeRecovery" class="ruca-lounge-only ruca-lounge-recovery" type="button">RECOVERY</button>
+        </div>
+      </section>
+
+      <section id="page-play" class="page instrument-cluster machined-surface command-deck-world play-apps-integrated" data-title="PLAY + APPS">
+        <div class="mode-header">
+          <span>PLAY + APPS // ONE COMMAND WORLD</span>
+          <h2>COMMAND DISTRICTS</h2>
+          <p>Enter a district, select a launch node, and let the center wheel assume command without leaving the PLAY world.</p>
+        </div>
+        <div class="integrated-play-layout instrument-cluster">
+          <nav id="commandOrbitFilters" class="command-orbit-filters" aria-label="PLAY command districts">
+            <button class="command-filter-btn active" type="button" data-command-filter="all" aria-pressed="true">ALL <b data-filter-count="all">39</b></button>
+            <button class="command-filter-btn" type="button" data-command-filter="favorites" aria-pressed="false">FAVORITES <b data-filter-count="favorites">0</b></button>
+            <button class="command-filter-btn" type="button" data-command-filter="recent" aria-pressed="false">RECENT <b data-filter-count="recent">0</b></button>
+            <button class="command-filter-btn" type="button" data-command-filter="games-district" aria-pressed="false">GAMES DISTRICT <b data-filter-count="games-district">0</b></button>
+            <button class="command-filter-btn" type="button" data-command-filter="browser-district" aria-pressed="false">BROWSER DISTRICT <b data-filter-count="browser-district">0</b></button>
+            <button class="command-filter-btn" type="button" data-command-filter="media-district" aria-pressed="false">MEDIA DISTRICT <b data-filter-count="media-district">0</b></button>
+            <button class="command-filter-btn" type="button" data-command-filter="creative-district" aria-pressed="false">CREATIVE DISTRICT <b data-filter-count="creative-district">0</b></button>
+            <button class="command-filter-btn" type="button" data-command-filter="ai-district" aria-pressed="false">AI DISTRICT <b data-filter-count="ai-district">0</b></button>
+            <button class="command-filter-btn" type="button" data-command-filter="system-district" aria-pressed="false">SYSTEM DISTRICT <b data-filter-count="system-district">0</b></button>
+          </nav>
+          <section id="playCommandOrbit" class="launcher-orbit command-orbit structural-seam glass-inlay recessed-bay instrument-housing" aria-label="Integrated PLAY command district orbit">
+            <span class="command-orbit-ring orbit-ring-inner" aria-hidden="true"></span>
+            <span class="command-orbit-ring orbit-ring-middle" aria-hidden="true"></span>
+            <span class="command-orbit-ring orbit-ring-outer" aria-hidden="true"></span>
+            <span id="commandSelectionLink" class="command-selection-link" aria-hidden="true"></span>
+            <button id="commandWheelAction" class="launch-core command-wheel-action bearing-ring instrument-housing gold-calibration" type="button" data-app="Steam" data-app-id="steam" data-status="READY" aria-label="Open selected Steam command">
+              <span id="commandWheelKicker">SELECTED PORT</span>
+              <span id="commandWheelIcon" class="command-wheel-icon" aria-hidden="true"></span>
+              <b id="commandWheelTitle">STEAM</b>
+              <small id="commandWheelRole">Game library</small>
+              <small id="commandWheelState">READY</small>
+              <em>OPEN COMMAND</em>
+            </button>
+            <button id="commandFavoriteToggle" class="command-favorite-toggle" type="button" aria-label="Add selected command to favorites" aria-pressed="false" title="Toggle selected favorite">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.3-5.6-3-5.6 3 1.1-6.3-4.6-4.4 6.3-.9Z" /></svg>
+            </button>
+            <section class="app-grid app-orbit-field" id="appsGrid" aria-label="All RUCA district launch nodes"></section>
+            <div id="commandOrbitEmpty" class="command-orbit-empty" hidden>
+              <b>NO COMMANDS IN THIS DISTRICT</b>
+              <small>Choose another district or favorite a command.</small>
+            </div>
+            <div class="command-orbit-readout" aria-live="polite">
+              <span id="commandWheelCategory">ALL COMMANDS</span>
+              <b id="commandWheelPosition">1 / 1</b>
+              <small id="commandWheelCollection">39 COMMANDS // MOUSE, WHEEL, D-PAD, CONTROLLER, KEYBOARD</small>
+            </div>
+          </section>
+          <aside class="readiness-panel command-readiness-rail glass-inlay recessed-bay">
+            <h3>Launch Readiness</h3>
+            <div class="status-grid">
+              <div class="metric-card"><span>GPU Readiness</span><b>SEE DIAGNOSTICS</b><small>live GPU truth is owned by the sensor map</small></div>
+              <div class="metric-card"><span>VRAM</span><b>SOURCE CHECK</b><small>shows live only when bridge maps VRAM</small></div>
+              <div class="metric-card"><span>Network Latency</span><b>UNWIRED</b><small>latency source is not mapped yet</small></div>
+              <div class="metric-card"><span>Controller</span><b>READY</b><small>keyboard, D-pad focus, and analog cursor foundation</small></div>
+              <div class="metric-card"><span>Audio</span><b>MUTED DEFAULT</b><small>Control enables local RUCA cues</small></div>
+              <div class="metric-card"><span>Storage</span><b>SEE HOME</b><small>live storage truth remains on the machine gauge</small></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+        <section id="page-live" class="page instrument-cluster machined-surface" data-title="LIVE WORLD">
+        <div class="mode-header">
+          <span>RUCA INTELLIGENCE</span>
+          <h2>LIVE WORLD CONCIERGE</h2>
+          <p>Verified conditions, signals, and source status from one observation deck.</p>
+        </div>
+          <div class="live-grid live-world" id="liveWorld" data-world="weather">
+            <aside class="lane-switcher world-nav-spine structural-seam titanium-rail recessed-bay instrument-housing" aria-label="Live World lanes">
+            <button class="lane-btn active" data-lane="weather" data-source-state="NOT QUERIED">WEATHER</button>
+            <button class="lane-btn" data-lane="market" data-source-state="NOT QUERIED">MARKET</button>
+            <button class="lane-btn" data-lane="news" data-source-state="NOT QUERIED">WORLD</button>
+            <button class="lane-btn" data-lane="sports" data-source-state="NOT QUERIED">SPORTS</button>
+            <button class="lane-btn" data-lane="signal" data-source-state="NOT QUERIED">SIGNAL</button>
+            <button class="lane-btn" data-lane="celestial" data-source-state="NOT QUERIED">CELESTIAL</button>
+          </aside>
+            <section class="lane-stage world-stage glass-inlay structural-seam recessed-bay" id="laneStage" aria-live="polite"></section>
+        </div>
+      </section>
+
+      <section id="page-diagnostics" class="page instrument-cluster machined-surface passive-monitor" data-title="DIAGNOSTICS">
+        <div class="diag-shell instrument-cluster recessed-bay">
+          <aside class="sensor-groups structural-seam ceramic-field instrument-housing">
+            <span class="tiny-label">SENSOR GROUPS</span>
+            <h2>DIAGNOSTICS</h2>
+            <div id="sensorButtons" class="sensor-buttons"></div>
+            <button id="runScan" class="scan-btn">REFRESH TELEMETRY</button>
+          </aside>
+
+          <section class="rapid-lab glass-inlay glass-inset recessed-bay">
+            <div class="lab-topline">
+              <div>
+                <span class="tiny-label">RUCA RAPID PC LAB</span>
+                <h2 id="diagTitle">SYSTEM STATUS</h2>
+                <strong id="diagBehavior" class="diag-behavior">WAITING FOR EVIDENCE</strong>
+                <p id="diagSummary">Public demo evidence is loaded from deterministic browser-local fixtures.</p>
+              </div>
+              <div class="health-core-mini bearing-ring gold-calibration">
+                <small>SYSTEM HEALTH</small>
+                <b id="diagHealth">--</b>
+                <span id="diagState">CHECKING</span>
+              </div>
+            </div>
+
+            <nav class="diagnostics-view-tabs" aria-label="Diagnostics views">
+              <button type="button" class="active gamepad-focusable" data-diagnostics-view="evidence">OVERVIEW</button>
+              <button type="button" class="gamepad-focusable" data-diagnostics-view="timeline">MACHINE HEALTH TIMELINE</button>
+            </nav>
+
+            <section id="diagnosticsTimelineView" class="machine-health-timeline" hidden aria-label="Machine Health Timeline">
+              <div class="machine-timeline-toolbar">
+              <div><span class="tiny-label">SESSION RECONSTRUCTION</span><h3>GROUPED MACHINE HEALTH TIMELINE</h3><small>Routine motion stays informational. Acknowledged never means resolved.</small></div>
+              <div class="machine-timeline-filters" role="group" aria-label="Timeline filters">
+                <button type="button" class="active gamepad-focusable" data-machine-filter="ALL">ALL</button>
+                <button type="button" class="gamepad-focusable" data-machine-filter="REVIEW">REVIEW</button>
+                <button type="button" class="gamepad-focusable" data-machine-filter="OBSERVATIONS">OBSERVATIONS</button>
+                <button type="button" class="gamepad-focusable" data-machine-filter="RESOLVED">RESOLVED</button>
+              </div>
+              <div class="machine-timeline-actions">
+                <b id="machineTimelineCount">0 SESSION EVENTS</b>
+                <button type="button" id="acknowledgeAllMachineEvents" class="scan-btn small-scan gamepad-focusable" disabled>NO GROUPS NEED REVIEW</button>
+              </div>
+            </div>
+            <section id="machineAcknowledgementReport" class="machine-acknowledgement-report" hidden aria-live="polite"></section>
+            <div class="machine-timeline-grid">
+                <div id="machineTimelineList" class="machine-timeline-list" aria-live="polite"></div>
+                <aside id="machineEvidenceInspector" class="machine-evidence-inspector" aria-live="polite"></aside>
+              </div>
+              <footer class="machine-controller-contract"><span>D-PAD // NAVIGATE</span><span>A // INSPECT</span><span>X // ACKNOWLEDGE</span><span>Y // EVIDENCE</span><span>B // BACK</span></footer>
+            </section>
+
+            <div id="diagnosticsEvidenceView">
+
+            <div class="diag-overview-row">
+              <div class="scan-core">
+                <div class="scan-ring"></div>
+                <b id="scanStatus">CHECKING</b>
+                <small>Sensor confidence: <span id="diagConfidence">DATA UNAVAILABLE</span></small>
+              </div>
+              <div class="threshold-box">
+                <span>Severity</span><b id="diagSeverity">CHECKING</b>
+              </div>
+              <div class="threshold-box">
+                <span>Live Reading</span><b id="diagLive">DATA UNAVAILABLE</b>
+              </div>
+              <div class="threshold-box">
+                <span>Threshold</span><b id="diagThreshold">SOURCE-DRIVEN</b>
+              </div>
+              <div class="threshold-box">
+                <span>Last Scan</span><b id="lastScan">--</b>
+              </div>
+            </div>
+
+            <button id="rucaLoungeDetailsToggle" class="ruca-lounge-only ruca-lounge-details-toggle" type="button" aria-expanded="false" aria-controls="rucaLoungeDiagnosticDetail">SHOW LIVE DETAIL</button>
+
+            <div class="lab-main-grid" id="rucaLoungeDiagnosticDetail">
+              <section class="chart-panel panel-inset recessed-bay">
+                <div class="panel-head"><h3>Live Signal Trace</h3><span id="chartUnit">CHECKING</span></div>
+                <svg id="sensorChart" viewBox="0 0 640 210" preserveAspectRatio="none" aria-label="Selected sensor live signal trace"></svg>
+              </section>
+            </div>
+
+            <button id="rucaDiagnosticsDetailToggle" class="diagnostics-detail-toggle gamepad-focusable" type="button" aria-expanded="false" aria-controls="rucaDiagnosticsWorkspace rucaDiagnosticsMetrics rucaDiagnosticsTechnical deepGrid">SHOW TECHNICAL DETAIL</button>
+
+            <nav id="rucaDiagnosticsWorkspace" class="diagnostics-workspace-tabs" aria-label="Technical workspace" hidden>
+              <span>TECHNICAL WORKSPACE</span>
+              <div role="tablist" aria-label="Technical detail views">
+                <button type="button" class="active gamepad-focusable" role="tab" aria-selected="true" data-diagnostics-workspace="source" aria-controls="rucaDiagnosticsMetrics">LIVE EVIDENCE</button>
+                <button type="button" class="gamepad-focusable" role="tab" aria-selected="false" data-diagnostics-workspace="map" aria-controls="rucaSensorMapPanel">SENSOR MAP</button>
+                <button type="button" class="gamepad-focusable" role="tab" aria-selected="false" data-diagnostics-workspace="benchmark" aria-controls="rucaBenchmarkPanel">BENCHMARK</button>
+                <button type="button" class="gamepad-focusable" role="tab" aria-selected="false" data-diagnostics-workspace="raw" aria-controls="deepGrid">RAW INVENTORY</button>
+              </div>
+            </nav>
+
+            <section id="rucaDiagnosticsMetrics" class="metrics-panel panel-inset recessed-bay" hidden>
+              <div class="panel-head"><h3>Current / Source / Update / State</h3><span>Public fixture</span></div>
+              <div id="metricsTable" class="metrics-table"></div>
+            </section>
+
+            <div id="rucaDiagnosticsTechnical" class="shop-lab-grid" hidden>
+              <section id="rucaSensorMapPanel" class="panel-inset sensor-tree-panel recessed-bay" hidden>
+                <div class="panel-head"><h3>Sensor Drilldown Tree</h3><span>Live source map</span></div>
+                <div id="sensorTree" class="sensor-tree"></div>
+              </section>
+              <section id="rucaBenchmarkPanel" class="panel-inset benchmark-panel recessed-bay" hidden>
+                <div class="panel-head"><h3>On-Demand Benchmark Bay</h3><span id="benchmarkStatus">LOADING REGISTRY</span></div>
+                <div id="benchmarkCategories" class="benchmark-category-tabs" aria-label="Benchmark categories"></div>
+                <div id="benchmarkGrid" class="benchmark-grid">
+                  <button class="bench-btn" data-bench="quick-cpu-burst">CPU Burst</button>
+                  <button class="bench-btn" data-bench="gpu-raster">GPU Raster</button>
+                  <button class="bench-btn" data-bench="memory-bandwidth">Memory Bandwidth</button>
+                  <button class="bench-btn" data-bench="storage-latency">Storage Latency</button>
+                  <button class="bench-btn" data-bench="network-lan-latency">LAN Latency</button>
+                  <button class="bench-btn" data-bench="quick-thermal-response">Thermal Response</button>
+                </div>
+                <div id="benchmarkResults" class="benchmark-results"><div class="bench-result"><span>BENCHMARK FRAMEWORK</span><b>NOT CONFIGURED</b><small>No benchmark workload has been executed.</small></div></div>
+                <div class="bench-actions">
+                  <button id="runFullBenchmark" class="scan-btn small-scan">REVIEW FULL SUITE</button>
+                  <button id="cancelBenchmark" class="scan-btn small-scan secondary-scan" type="button" disabled>CANCEL JOB</button>
+                  <button id="exportReport" class="scan-btn small-scan secondary-scan">EXPORT REPORT</button>
+                </div>
+              </section>
+            </div>
+
+            <div class="deep-grid" id="deepGrid" hidden></div>
+            </div>
+          </section>
+
+          <aside class="triage-console ceramic-field structural-seam instrument-housing">
+            <span class="tiny-label">GUARDIAN CONSOLE</span>
+            <h2>TRIAGE</h2>
+            <div class="triage-item triage-primary"><h4>WHAT HAPPENED</h4><p id="triWhat">RUCA is waiting for canonical telemetry.</p></div>
+            <div class="triage-item triage-detail"><h4>WHY IT MATTERS</h4><p id="triWhy">Machine condition is not inferred from missing data.</p></div>
+            <div class="triage-item triage-detail"><h4>CHECK FIRST</h4><p id="triCheck">Review the selected public demo sensor and its declared source state.</p></div>
+            <div class="triage-item triage-primary"><h4>NEXT ACTION</h4><p id="triNext">Leave this page open for automatic recovery or refresh telemetry.</p></div>
+            <div class="triage-item triage-detail"><h4>RISK IF IGNORED</h4><p id="triRisk">Assessment unavailable until a real source responds.</p></div>
+            <div class="alert-rail" id="alertRail"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="page-control" class="page instrument-cluster machined-surface" data-title="CONTROL">
+        <div class="mode-header">
+          <span>COMMAND AUTHORITY</span>
+          <h2>CONTROL WORKSHOP</h2>
+          <p>One command surface for RUCA's appearance, atmosphere, input, audio, and public demo data.</p>
+        </div>
+        <div class="control-layout instrument-cluster pass12-control-console">
+          <section class="control-core structural-seam glass-inlay recessed-bay instrument-housing pass12-control-command">
+            <div class="control-dial bearing-ring gold-calibration">
+              <span>ACTIVE PROFILE</span>
+              <b id="rucaActivePreset">DEFAULT</b>
+              <small>Local UI command state</small>
+            </div>
+            <div class="preset-grid" role="group" aria-label="RUCA theme presets">
+              <button class="theme-preset active" data-ruca-preset="default"><span>RUCA</span><b>Black / Gold</b></button>
+              <button class="theme-preset" data-ruca-preset="lounge"><span>3DIXON</span><b>Lounge Mode</b></button>
+              <button class="theme-preset" data-ruca-preset="red"><span>Alert</span><b>Blood Red</b></button>
+              <button class="theme-preset" data-ruca-preset="neon"><span>High Vis</span><b>Neon Yellow</b></button>
+              <button class="theme-preset" data-ruca-preset="night"><span>Coolant</span><b>Ice Blue</b></button>
+              <button class="theme-preset" data-ruca-preset="diagnostics"><span>Field</span><b>Emerald</b></button>
+              <button class="theme-preset" data-ruca-preset="violet"><span>Deep</span><b>Violet</b></button>
+              <button class="theme-preset" data-ruca-preset="founder"><span>Ace</span><b>Founder Mode</b></button>
+            </div>
+            <div class="control-actions">
+              <button class="ruca-restore-btn command-btn" id="rucaApplyTheme">APPLY COMMAND</button>
+              <button class="ruca-restore-btn command-btn secondary-command" id="rucaResetTheme">RESET DEFAULT</button>
+            </div>
+          </section>
+          <section class="control-cards structural-seam recessed-bay pass12-control-matrix pass14-atmosphere-panel" id="rucaCustomizer">
+            <div class="control-status-strip">
+              <div class="metric-card"><span>Profile</span><b id="rucaProfileReadout">Mission Ready</b><small>Theme applies to local UI only</small></div>
+              <div class="metric-card"><span>Data</span><b>Public Demo</b><small>No device control is available</small></div>
+              <div class="metric-card"><span>Motion</span><b id="rucaMotionReadout">Balanced</b><small>Reduced motion can be forced</small></div>
+              <div class="metric-card"><span>Stars</span><b id="rucaStarReadout">Warm Gold</b><small>Passive canvas behind shell</small></div>
+            </div>
+            <details class="atmo-section global-theme-section">
+              <summary><span>Global Theme</span><b>RUCA environment color bus</b></summary>
+              <div class="ruca-customizer-grid">
+                <div class="ruca-custom-control"><label for="rucaAccentPick">Accent color</label><input id="rucaAccentPick" type="color" value="#d6b36b"></div>
+                <div class="ruca-custom-control"><label for="rucaGoldPick">Bright color</label><input id="rucaGoldPick" type="color" value="#f5d98f"></div>
+                <div class="ruca-custom-control"><label for="rucaTextPick">Text color</label><input id="rucaTextPick" type="color" value="#f7f1e6"></div>
+                <div class="ruca-custom-control"><label for="rucaFontPick">Font choice</label><select id="rucaFontPick"><option value='"Segoe UI", Inter, Roboto, Arial, sans-serif'>Segoe UI</option><option value='Inter, "Segoe UI", Arial, sans-serif'>Inter</option><option value='"Roboto Condensed", "Segoe UI", Arial, sans-serif'>Roboto Condensed</option><option value='Georgia, serif'>Serif Console</option></select></div>
+              </div>
+            </details>
+            <details class="atmo-section command-control-section" open>
+              <summary><span>Command Controls</span><b>Volume, brightness, power, and settings</b></summary>
+              <div class="command-control-grid">
+                <div class="slider-row"><span>Volume</span><input id="rucaCommandVolume" type="range" min="0" max="100" value="25" /><b>25</b></div>
+                <button class="ruca-restore-btn ruca-command-button" id="rucaMuteButton" type="button" aria-pressed="true">MUTE AUDIO</button>
+                <div class="slider-row"><span>Cockpit Brightness</span><input id="rucaBrightnessSlider" type="range" min="20" max="100" value="62" /><b>62</b></div>
+                <label class="ruca-toggle-control ruca-dim-night-control"><input id="rucaDimNight" type="checkbox" /> <span>Dim-night mode</span></label>
+                <button class="ruca-restore-btn ruca-command-button" id="rucaPowerButton" type="button" aria-pressed="false">POWER STANDBY</button>
+                <button class="ruca-restore-btn ruca-command-button secondary-command" id="rucaSettingsButton" type="button">OPEN SETTINGS</button>
+                <div class="metric-card command-control-readout">
+                  <span>Command State</span>
+                  <b id="rucaCommandControlState">READY</b>
+                  <small id="rucaCommandControlReadout">Local cockpit controls are online.</small>
+                </div>
+              </div>
+            </details>
+            <details class="atmo-section sports-realms-section">
+              <summary><span>Sports Realms</span><b>Team atmosphere selector</b></summary>
+              <div class="sports-realm-grid">
+                <div class="ruca-custom-control"><label for="rucaLeagueSelect">League</label><select id="rucaLeagueSelect"></select></div>
+                <div class="ruca-custom-control"><label for="rucaTeamSelect">Team</label><select id="rucaTeamSelect"></select></div>
+                <div class="ruca-custom-control"><label for="rucaTeamPresetSelect">Preset</label><select id="rucaTeamPresetSelect"><option value="home">Home</option><option value="away">Away</option><option value="alternate">Alternate</option><option value="arena">Arena</option><option value="victory">Victory Pulse</option></select></div>
+                <div class="ruca-custom-control apply-cell"><label>Team atmosphere</label><button class="ruca-restore-btn" id="rucaApplyTeamAtmosphere">APPLY TEAM ATMOSPHERE</button></div>
+              </div>
+              <div class="team-preview-console" id="rucaTeamPreview">
+                <div class="team-logo-slot" id="rucaTeamPreviewBadge">NYK</div>
+                <div>
+                  <span class="tiny-label">CONTROL PREVIEW</span>
+                  <b id="rucaTeamPreviewName">New York Knicks</b>
+                  <small id="rucaTeamPreviewColors">Primary / secondary / highlight ready</small>
+                </div>
+                <div class="team-swatch-row" id="rucaTeamPreviewSwatches" aria-hidden="true"></div>
+              </div>
+            </details>
+            <details class="atmo-section source-management-section" id="rucaSourceManagement">
+              <summary><span>Source Management</span><b>Public fixtures, cache, and demo actions</b></summary>
+              <div class="source-management-grid">
+                <div class="ruca-custom-control"><label for="rucaSportsProvider">Sports provider</label><select id="rucaSportsProvider"><option value="ESPN scoreboard">ESPN scoreboard</option><option value="TheSportsDB metadata fallback">TheSportsDB fallback</option></select></div>
+                <div class="ruca-custom-control"><label for="rucaMarketProvider">Market provider</label><select id="rucaMarketProvider"><option value="Auto">Auto</option><option value="Alpha Vantage">Alpha Vantage</option><option value="Yahoo fallback">Yahoo fallback</option></select></div>
+                <div class="ruca-custom-control"><label for="rucaRefreshInterval">Refresh interval</label><select id="rucaRefreshInterval"><option value="180">3 minutes</option><option value="300" selected>5 minutes</option><option value="600">10 minutes</option><option value="900">15 minutes</option></select></div>
+                <div class="ruca-custom-control"><label for="rucaAlphaKey">Alpha Vantage key</label><input id="rucaAlphaKey" class="masked-source-key" type="text" autocomplete="off" spellcheck="false" placeholder="masked / optional"></div>
+                <div class="ruca-custom-control"><label for="rucaSportsDbKey">TheSportsDB key</label><input id="rucaSportsDbKey" class="masked-source-key" type="text" autocomplete="off" spellcheck="false" placeholder="optional / masked"></div>
+                <div class="ruca-custom-control apply-cell"><label>Config</label><button class="ruca-restore-btn" id="rucaSaveSourceConfig">SAVE SOURCE CONFIG</button></div>
+              </div>
+              <div class="source-test-row" role="group" aria-label="Test Live World sources">
+                <button type="button" data-source-test="weather">TEST WEATHER</button>
+                <button type="button" data-source-test="markets">TEST MARKETS</button>
+                <button type="button" data-source-test="news">TEST NEWS</button>
+                <button type="button" data-source-test="sports">TEST SPORTS</button>
+                <button type="button" data-source-test="tech">TEST TECH</button>
+                <button type="button" data-source-clear-cache="all">CLEAR CACHE</button>
+              </div>
+              <div id="rucaSourceStatusGrid" class="source-status-grid" aria-live="polite"></div>
+              <pre id="rucaSourceTestOutput" class="source-test-output">Source registry waiting for bridge status.</pre>
+            </details>
+            <details class="atmo-section pass13-starfield-panel">
+              <summary><span>Starfield Engine</span><b>Existing passive canvas controls</b></summary>
+              <div class="star-mood-grid" role="group" aria-label="Starfield mood presets">
+                <button class="star-preset active" data-ruca-star-preset="warm"><span>Warm</span><b>Gold</b></button>
+                <button class="star-preset" data-ruca-star-preset="blood"><span>Blood</span><b>Red</b></button>
+                <button class="star-preset" data-ruca-star-preset="ice"><span>Ice</span><b>Blue</b></button>
+                <button class="star-preset" data-ruca-star-preset="emerald"><span>Emerald</span><b>Field</b></button>
+                <button class="star-preset" data-ruca-star-preset="violet"><span>Violet</span><b>Deep</b></button>
+                <button class="star-preset" data-ruca-star-preset="founder"><span>Founder</span><b>Custom</b></button>
+              </div>
+              <div class="ruca-customizer-grid starfield-grid">
+                <div class="ruca-custom-control"><label for="rucaStarColor">Star color</label><input id="rucaStarColor" type="color" value="#f5d98f"></div>
+                <div class="slider-row"><span>Brightness</span><input id="rucaStarBrightness" type="range" min="0" max="100" value="62" /><b>62</b></div>
+                <div class="slider-row"><span>Density</span><input id="rucaStarDensity" type="range" min="0" max="100" value="64" /><b>64</b></div>
+                <div class="slider-row"><span>Breathing</span><input id="rucaStarBreath" type="range" min="0" max="100" value="34" /><b>34</b></div>
+                <div class="slider-row"><span>Drift</span><input id="rucaStarDrift" type="range" min="0" max="100" value="28" /><b>28</b></div>
+              </div>
+            </details>
+            <details class="atmo-section reactor-control-section">
+              <summary><span>Reactor / Gauges</span><b>Glow and gauge response</b></summary>
+              <div class="slider-row"><span>Glow intensity</span><input id="rucaGlowSlider" type="range" min="0" max="100" value="56" /><b>56</b></div>
+              <div class="slider-row"><span>Density</span><input id="rucaDensitySlider" type="range" min="0" max="100" value="64" /><b>64</b></div>
+            </details>
+            <details class="atmo-section panel-control-section">
+              <summary><span>Panels / Glass</span><b>Depth and material intensity</b></summary>
+              <div class="slider-row"><span>Background depth</span><input id="rucaDepthSlider" type="range" min="0" max="100" value="64" /><b>64</b></div>
+              <div class="slider-row"><span>Glass intensity</span><input id="rucaGlassSlider" type="range" min="0" max="100" value="72" /><b>72</b></div>
+            </details>
+            <details class="atmo-section motion-control-section">
+              <summary><span>Motion</span><b>Animation budget</b></summary>
+              <div class="slider-row"><span>Motion intensity</span><input id="rucaMotionSlider" type="range" min="0" max="100" value="42" /><b>42</b></div>
+              <label class="ruca-toggle-control"><input id="rucaReducedMotion" type="checkbox" /> <span>Reduced motion override</span></label>
+            </details>
+            <details class="atmo-section audio-control-section">
+              <summary><span>Audio</span><b>Muted by default UI cues</b></summary>
+              <div class="ruca-customizer-grid audio-grid">
+                <label class="ruca-toggle-control"><input id="rucaAudioEnabled" type="checkbox" /> <span>Enable subtle UI sound cues</span></label>
+                <div class="slider-row"><span>Audio level</span><input id="rucaAudioVolume" type="range" min="0" max="100" value="25" /><b>25</b></div>
+                <div class="metric-card audio-readout"><span>Audio state</span><b id="rucaAudioReadout">MUTED</b><small id="rucaAudioLastCue">Last cue: none</small></div>
+                <div class="audio-test-grid" role="group" aria-label="Audio cue tests">
+                  <button class="ruca-restore-btn" data-audio-test="hover">HOVER</button>
+                  <button class="ruca-restore-btn" data-audio-test="activate">CLICK</button>
+                  <button class="ruca-restore-btn" data-audio-test="confirm">CONFIRM</button>
+                  <button class="ruca-restore-btn" data-audio-test="error">ERROR</button>
+                </div>
+              </div>
+            </details>
+            <details class="atmo-section controller-control-section">
+              <summary><span>Controller Mode</span><b>Couch navigation and analog cursor</b></summary>
+              <div class="controller-grid">
+                <label class="ruca-toggle-control"><input id="rucaControllerMode" type="checkbox" /> <span>Enable couch control mode</span></label>
+                <div class="slider-row"><span>Focus strength</span><input id="rucaFocusStrength" type="range" min="1" max="100" value="70" /><b>70</b></div>
+                <div class="metric-card controller-readout"><span>Controller Mode</span><b id="rucaControllerReadout">KEYBOARD ONLY</b><small id="rucaGamepadReadout">No gamepad detected</small></div>
+                <div class="ruca-custom-control apply-cell"><label>Focus test</label><button class="ruca-restore-btn" id="rucaTestFocus">TEST FOCUS PATH</button></div>
+                <div class="ruca-custom-control apply-cell"><label>Recovery test</label><button class="ruca-restore-btn" id="rucaTestRecovery" type="button">OPEN RECOVERY SYSTEM</button></div>
+                <div class="metric-card controller-readout"><span>Recovery Demo</span><b id="rucaRecoveryBridgeReadout">READY</b><small id="rucaRecoveryBridgeDetail">Start + Back opens the safe public recovery simulation.</small></div>
+              </div>
+              <p class="atmo-note">Arrow keys, WASD, Enter, Space, Escape, D-pad focus, and left-stick analog cursor remain inside visible controls. Focus stays visible and scrolls into view.</p>
+            </details>
+            <details class="atmo-section location-control-section">
+              <summary><span>Live World Location</span><b>Weather source fields</b></summary>
+              <div class="ruca-customizer-grid location-grid">
+                <div class="ruca-custom-control"><label for="rucaWeatherName">Location name</label><input id="rucaWeatherName" type="text" placeholder="Local"></div>
+                <div class="ruca-custom-control"><label for="rucaWeatherLat">Latitude</label><input id="rucaWeatherLat" type="text" placeholder="browser location"></div>
+                <div class="ruca-custom-control"><label for="rucaWeatherLon">Longitude</label><input id="rucaWeatherLon" type="text" placeholder="browser location"></div>
+                <div class="ruca-custom-control apply-cell"><label>Weather bus</label><button class="ruca-restore-btn" id="rucaApplyLocation">UPDATE LIVE WORLD</button></div>
+              </div>
+            </details>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="machine-footer structural-seam ceramic-field titanium-rail chassis-seam">
+      <div class="machine-chip footer-shell-state"><span>RUCA COMMAND SHELL</span><small>ONLINE</small></div>
+      <div class="machine-chip footer-uptime"><span>RUCA UPTIME</span><small id="uptime">STARTING</small></div>
+      <div class="volume footer-volume-control">
+        <button id="rucaFooterMute" class="footer-volume-mute" type="button" aria-label="Toggle RUCA audio" aria-pressed="true" title="Toggle RUCA audio">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9h4l5-4v14l-5-4H4V9Z"/><path d="M17 9.5c1.4 1.4 1.4 3.6 0 5M19.5 7c2.8 2.8 2.8 7.2 0 10"/></svg>
+        </button>
+        <label for="rucaFooterVolume">VOL</label>
+        <button id="rucaFooterVolumeDown" class="footer-volume-step" type="button" aria-label="Decrease RUCA audio volume" title="Decrease volume">-</button>
+        <input id="rucaFooterVolume" type="range" min="0" max="100" value="25" aria-label="RUCA audio volume" />
+        <button id="rucaFooterVolumeUp" class="footer-volume-step" type="button" aria-label="Increase RUCA audio volume" title="Increase volume">+</button>
+        <output id="rucaFooterVolumeValue" for="rucaFooterVolume">25</output>
       </div>
-      <div class="profile-chip">
-        <button type="button" id="aboutOpen" data-focus><strong>ACE</strong><small>PUBLIC DEMO</small></button>
-        <nav aria-label="Public resources"><a href="/portfolio/" data-focus>CASE STUDY</a><a href="/resume/Anthony_Moncion_Interaction_Designer_Public_Resume.pdf" data-focus>RESUME</a></nav>
-      </div>
+      <div class="profile-chip"><span>ACE</span><small>Founder Mode</small></div>
     </footer>
 
-    <button class="core-return-anchor" type="button" data-route="home" data-focus aria-label="Return HOME through System Heart"><span>CORE</span><strong>HOME</strong></button>
-    <div class="focus-readout" aria-live="polite"><span>FOCUS</span><strong id="focusReadout">HOME</strong></div>
+    <button id="coreReturnAnchor" class="core-return-anchor" type="button" aria-label="Return HOME through System Heart">
+      <span>CORE</span>
+      <b>HOME</b>
+    </button>
   </div>
 
-  <dialog class="about-dialog" id="aboutDialog" aria-labelledby="aboutTitle">
-    <button class="dialog-close" id="aboutClose" type="button" data-focus aria-label="Close About panel">×</button>
-    <p class="eyebrow">PUBLIC PROOF // PRIVATE AUTHORITY</p>
-    <h2 id="aboutTitle">THE RUCA OS INTERACTION MODEL, WITH A HARD SAFETY BOUNDARY.</h2>
-    <p>Every world, control, trace, command and status change runs locally in this browser from deterministic fixtures.</p>
-    <dl>
-      <div><dt>CAN DO</dt><dd>Navigate, focus, select, tune, compare and inspect the public RUCA OS simulation.</dd></div>
-      <div><dt>CANNOT DO</dt><dd>Read hardware, reach a bridge, execute software, access files, control devices or contact private endpoints.</dd></div>
-    </dl>
-    <div class="dialog-actions"><a href="/portfolio/" data-focus>READ THE CASE STUDY</a><button type="button" id="aboutDone" data-focus>RETURN TO RUCA</button></div>
-  </dialog>
+  <div id="detailDrawer" class="detail-drawer structural-seam glass-inlay recessed-bay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" inert>
+    <button id="closeDrawer" class="close-drawer" aria-label="Close detail drawer">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M18.5 5.5 5.5 18.5M5.5 5.5 18.5 18.5" />
+      </svg>
+    </button>
+    <div class="drawer-kicker">SENSOR DETAIL</div>
+    <h2 id="drawerTitle">CPU</h2>
+    <div id="drawerContent"></div>
+  </div>
 
-  <div class="route-announcer sr-only" id="routeAnnouncer" aria-live="polite" aria-atomic="true"></div>
-  <noscript>RUCA OS requires JavaScript for its self-contained interactive simulation.</noscript>
+  <div id="rucaCommandSearch" class="ruca-command-search" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="rucaCommandSearchTitle" inert>
+    <div class="ruca-command-search-panel glass-inlay structural-seam recessed-bay">
+      <div class="drawer-kicker">COMMAND SEARCH</div>
+      <h2 id="rucaCommandSearchTitle">Find Anything</h2>
+      <div class="ruca-command-search-workspace">
+        <div class="ruca-command-search-query">
+          <input id="rucaCommandSearchInput" type="search" autocomplete="off" spellcheck="false" placeholder="Search apps, games, folders, settings, commands" aria-label="Search apps, games, folders, settings, commands" />
+          <div id="rucaCommandSearchResults" class="ruca-command-search-results" role="listbox" aria-label="Command search results"></div>
+        </div>
+        <section id="rucaVirtualKeyboard" class="ruca-virtual-keyboard" aria-label="Controller search keyboard" data-keyboard-page="lower">
+          <header><span>CONTROLLER KEYBOARD</span><b id="rucaKeyboardPageLabel">LOWERCASE</b></header>
+          <div id="rucaVirtualKeyboardKeys" class="ruca-virtual-keyboard-keys" role="group" aria-label="Virtual keyboard keys"></div>
+          <footer><span>A // TYPE</span><span>B // BACK</span><span>X // CLEAR</span><span>LB / RB // PAGE</span><span>START // SEARCH</span><span>VIEW // CLOSE</span></footer>
+        </section>
+      </div>
+      <div class="ruca-command-search-hint">Ctrl+Space or controller Y opens Search. Controller focus begins on the keyboard. Escape or View returns.</div>
+    </div>
+  </div>
+
+  <section id="rucaRecoveryOverlay" class="ruca-recovery-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="rucaRecoveryTitle" inert>
+    <div class="ruca-recovery-console glass-inlay structural-seam recessed-bay">
+      <header class="ruca-recovery-header">
+        <div>
+          <div class="drawer-kicker">PASS17A // CONTROLLER RECOVERY</div>
+          <h2 id="rucaRecoveryTitle">CAPTAIN RECOVERY SYSTEM</h2>
+          <p>Controller-only escape tools for returning to RUCA after Windows or another app takes focus.</p>
+        </div>
+        <button id="rucaRecoveryClose" class="ruca-recovery-close" type="button" aria-label="Close controller recovery">CLOSE</button>
+      </header>
+
+      <div class="ruca-recovery-status" aria-live="polite">
+        <span>GLOBAL CAPTURE</span>
+        <b id="rucaRecoveryStatus">CHECKING</b>
+        <small id="rucaRecoveryDetail">Hold Start + Back for two seconds. Guide/Home is used only when exposed; Windows overlay suppression is not claimed.</small>
+      </div>
+
+      <div class="ruca-recovery-grid" role="group" aria-label="RUCA recovery actions">
+        <button type="button" class="ruca-recovery-action is-primary" data-recovery-action="return-home"><span>RUCA</span><b>RETURN HOME</b><small>Route this public simulation HOME</small></button>
+        <button type="button" class="ruca-recovery-action" data-recovery-action="switch-window"><span>WINDOWS</span><b>SWITCH WINDOW</b><small>LB / RB window cycle</small></button>
+        <button type="button" class="ruca-recovery-action" data-recovery-action="steam"><span>PLAY</span><b>OPEN STEAM</b><small>Verified Steam protocol handoff</small></button>
+        <button type="button" class="ruca-recovery-action" data-recovery-action="xbox"><span>PLAY</span><b>OPEN XBOX</b><small>Windows Xbox protocol handoff</small></button>
+        <button type="button" class="ruca-recovery-action" data-recovery-action="netflix"><span>MEDIA</span><b>OPEN NETFLIX</b><small>Open configured web browser</small></button>
+        <button type="button" class="ruca-recovery-action" data-recovery-action="explorer"><span>WINDOWS</span><b>OPEN EXPLORER</b><small>Open the Windows file system</small></button>
+        <button type="button" class="ruca-recovery-action" data-recovery-action="command-search"><span>RUCA</span><b>COMMAND SEARCH</b><small>Y opens launcher and search</small></button>
+        <button type="button" class="ruca-recovery-action" data-recovery-action="mouse-mode"><span>CONTROL</span><b>CONTROLLER MOUSE</b><small>Left stick cursor / A click</small></button>
+      </div>
+
+      <div class="ruca-recovery-power" role="group" aria-label="Windows power actions">
+        <div><span>PUBLIC DEMO SAFETY</span><small>Power actions are visible interface demonstrations only. Nothing executes outside this page.</small></div>
+        <button type="button" data-recovery-power="sleep" data-label="SLEEP PC">SLEEP PC</button>
+        <button type="button" data-recovery-power="restart" data-label="RESTART PC">RESTART PC</button>
+        <button type="button" data-recovery-power="shutdown" data-label="SHUT DOWN PC">SHUT DOWN PC</button>
+      </div>
+
+      <footer class="ruca-recovery-controls">
+        <span>LEFT STICK // CURSOR</span><span>A // SELECT</span><span>B / ESC // BACK</span><span>LT / RT // SCROLL</span><span>LB / RB // WINDOWS</span><span>START // ENTER</span><span>Y // SEARCH</span>
+      </footer>
+    </div>
+  </section>
+
+  <script src="/js/ruca-public-fixtures.js?v=20260722-source-clone-r7"></script>
+  <script src="/js/ruca-source-shell.js?v=20260722-source-clone-r7"></script>
+  <script src="/js/ruca-public-demo.js?v=20260722-source-clone-r7"></script>
 </body>
 </html>

@@ -1,8 +1,8 @@
 {
   "id": "/",
-  "name": "RUCA Command Core Public Simulation",
+  "name": "RUCA OS Public Product Simulation",
   "short_name": "RUCA",
-  "description": "A self-contained, controller-first RUCA product simulation using deterministic local data.",
+  "description": "A safe, self-contained public simulation of the RUCA operating shell using deterministic demo data.",
   "start_url": "/index.html#home",
   "scope": "/",
   "display": "standalone",
