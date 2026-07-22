@@ -6,7 +6,7 @@
 
 RUCA is a controller-first personal computing system. It is designed for people who value PC performance and customization but miss the calm, coherent ritual of turning on a console and immediately knowing where they are, whether the system is ready, and what to do next.
 
-![RUCA Mobile Presentation Hub](assets/ruca-public-hero.svg)
+![RUCA HOME runtime](../assets/product/ruca-home-runtime.png)
 
 ## Project Snapshot
 
@@ -95,7 +95,7 @@ The design combines Swiss calibration, aerospace instrumentation, and restrained
 
 ## PLAY // Command Districts
 
-![RUCA PLAY Command Districts](assets/02-play-command-districts.jpg)
+![RUCA PLAY runtime](../assets/product/ruca-play-runtime.png)
 
 PLAY uses one 39-command registry and one orbit renderer. Commands are organized into six durable districts:
 
@@ -110,7 +110,7 @@ Desktop and tablet use measured radial geometry. Phone layouts use the same regi
 
 ## LIVE WORLD // Concierge
 
-![RUCA Live World Concierge](assets/03-live-world-concierge.png)
+![RUCA LIVE WORLD runtime](../assets/product/ruca-live-world-runtime.png)
 
 Live World turns five real source buses into one observation experience:
 
@@ -124,7 +124,7 @@ The active lane owns the visual hierarchy. Source status is visible. Wrong-lane 
 
 ## DIAGNOSTICS // Guardian
 
-![RUCA Diagnostics Guardian](assets/04-diagnostics-guardian-public.svg)
+![RUCA DIAGNOSTICS runtime](../assets/product/ruca-diagnostics-runtime.png)
 
 Diagnostics translates machine state into plain-English protection. It combines health score, current/min/max/threshold readings, live traces, sensor drill-down, benchmark entry points, and Guardian guidance.
 
@@ -139,7 +139,7 @@ The intended questions are human, not technical:
 
 ## CONTROL // Workshop
 
-![RUCA Control Workshop](assets/05-control-workshop.png)
+![RUCA CONTROL runtime](../assets/product/ruca-control-runtime.png)
 
 Control was not missing behavior; CSS had hidden it. The M01 Workshop restores the existing command authority without adding another settings renderer.
 
@@ -181,7 +181,7 @@ The project also reinforced that controller UX is not keyboard UX with different
 - Task completion and recovery-path testing with a physical controller
 - General verified application launch service
 - Continued Diagnostics spatial refinement
-- Public demo feedback and iteration
+- Public product critique and iteration
 
 ## Closing
 

@@ -1,64 +1,59 @@
-# Validation Summary
+# RUCA Public Experience Validation
 
-This document keeps the public repository focused while preserving the most useful verification notes for the RUCA Mobile Presentation Hub.
+## Required routes
 
-## Runtime boundaries
+- `/`
+- `/index.html#home`
+- `/portfolio/`
+- `/resume/Anthony_Moncion_Interaction_Designer_Public_Resume.pdf`
 
-The public presentation build is isolated from the private desktop runtime. It does not include the RUCA bridge, native launch targets, workstation telemetry, personal paths, credentials, or host-control commands.
+## Static checks
 
-The demo uses deterministic local fixtures for system values, weather, markets, news, sports, and technology content. Demo interactions are labeled accordingly.
+- Validate `index.html` and `portfolio/index.html` as HTML5.
+- Run JavaScript syntax checks for `assets/public-site.js` and `service-worker.js`.
+- Resolve every local `href`, `src`, manifest icon, and service-worker asset.
+- Confirm the manifest and Vercel configuration parse as JSON.
+- Confirm no public HTML, CSS, JavaScript, JSON, or manifest exposes a private endpoint, IP address, credential, file path, telemetry API, or executable native action.
+- Confirm removed legacy interface language does not appear in the visible product or portfolio UI.
 
-## Architecture
+## Browser checks
 
-- One main application surface
-- One JavaScript renderer for the demo experience
-- One passive starfield animation owner
-- One service worker and PWA scope
-- Static portfolio and resume destinations inside the same origin
-- Local settings persistence
+Desktop:
 
-## Responsive verification
+- 1920 × 1080
+- 2560 × 1440
+- 1366 × 768
 
-The experience was checked across representative phone, tablet, and landscape viewports, including:
+Mobile:
 
-- 360 × 800
 - 390 × 844
 - 412 × 915
-- 430 × 932
-- 768 × 1024
-- 915 × 412
 
-Observed horizontal overflow: **0 px**.
+At every size, confirm:
 
-## Interaction and stability
+- The opening immediately reads as the same red cockpit product shown in the RUCA HOME source image.
+- The System Heart remains the visual center of the product image.
+- Heading and action text do not collide with the captured runtime.
+- No horizontal overflow hides content.
+- Each system-world image preserves its aspect ratio and remains legible.
+- The mobile menu opens, closes, and exposes the same destinations as desktop navigation.
 
-Verified behavior includes:
+## Interaction and accessibility checks
 
-- Navigation across HOME, PLAY, WORLD, HEALTH, and CONTROL
-- Command Search and virtual keyboard interaction
-- Safe command previews with no native execution
-- Theme and control-setting persistence
-- Portfolio and resume navigation
-- Return paths back to RUCA HOME
-- Reduced-motion behavior
-- 100 route transitions with no observed DOM growth
-- Zero observed console errors during the recorded validation pass
+- Tab through every link and the mobile-menu summary.
+- Confirm focus is visible against black and red surfaces.
+- Confirm the skip link moves focus to the product experience.
+- Confirm the three opening actions reach the system, case study, and public resume.
+- Emulate `prefers-reduced-motion: reduce` and confirm image breathing and smooth scrolling are disabled.
+- Check for browser console errors on the public experience and portfolio.
+- Confirm meaningful images have useful alternative text and decorative images are ignored.
 
-## Offline behavior
+## Cache behavior
 
-The service worker precaches the public showroom assets and supports:
+`service-worker.js` uses network-first delivery for documents, styles, scripts, and workers. The cache version is `ruca-public-v2-20260722-red-cockpit-r1`; activation removes older public and legacy cache families.
 
-- Standalone PWA launch
-- Offline HOME navigation
-- Offline access to all five primary worlds
-- Offline access to Weather, Markets, News, Sports, and Tech demo realms
-- Offline portfolio and resume access
-- Persisted interface settings after closing and reopening the installed app
+## Final visual question
 
-## Physical-device testing
+Would someone who saw the public opening believe it represents the same product as the real RUCA HOME screen?
 
-The presentation build was exercised on a physical Samsung Galaxy-class device in portrait and landscape orientations. Verified device behavior included touch navigation, PWA installation, standalone launch, command search, control interaction, and cold relaunch after the temporary origin was stopped.
-
-## Privacy posture
-
-The public runtime was checked for workstation paths, loopback dependencies, LAN addresses, credentials, executable targets, PowerShell invocation, and native PC-control references. None are intentionally included in the public presentation build.
+The build is not accepted until the answer is yes.

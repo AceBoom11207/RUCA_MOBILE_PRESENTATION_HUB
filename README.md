@@ -1,75 +1,45 @@
-<p align="center">
-  <img src="assets/ruca-logo.png" alt="RUCA" width="112">
-</p>
+# RUCA Command Core — Public Product Experience
 
-<h1 align="center">Anthony Moncion - Interaction Design Portfolio</h1>
+This repository powers the existing public RUCA product URL:
 
-<p align="center">
-  A recruiter-facing portfolio centered on RUCA Command Core, a controller-first personal computing system built around clarity, trustworthy system feedback, and responsive interaction.
-</p>
+- `https://ruca-mobile-presentation-hub.vercel.app/`
+- `https://ruca-mobile-presentation-hub.vercel.app/index.html#home`
+- `https://ruca-mobile-presentation-hub.vercel.app/portfolio/`
+- `https://ruca-mobile-presentation-hub.vercel.app/resume/Anthony_Moncion_Interaction_Designer_Public_Resume.pdf`
 
-<p align="center">
-  <a href="https://ruca-mobile-presentation-hub.vercel.app/"><strong>Portfolio</strong></a>
-  &middot;
-  <a href="https://ruca-mobile-presentation-hub.vercel.app/index.html#home"><strong>Interactive Prototype</strong></a>
-  &middot;
-  <a href="https://ruca-mobile-presentation-hub.vercel.app/resume/Anthony_Moncion_Google_Maps_Interaction_Designer_Resume.pdf"><strong>Application Resume</strong></a>
-</p>
+## Purpose
 
-![RUCA Mobile Presentation Hub](portfolio/assets/ruca-public-hero.svg)
+The site presents the real RUCA product design and interaction architecture to recruiters and collaborators. It does not recreate the complete operating environment or connect to the private workstation.
 
-## Overview
-
-RUCA Command Core explores what a personal computing experience can feel like when telemetry, navigation, media, diagnostics, and control are designed as one connected system instead of a pile of unrelated utilities.
-
-This repository contains the public mobile presentation build. It is intentionally separated from the private desktop runtime and uses safe local demonstration data rather than workstation access, credentials, or native system commands.
+The complete local runtime remains responsible for telemetry, native commands, device behavior, files, credentials, and local services. The public site contains only static product captures, product copy, the case study, and the public resume.
 
 ## Experience
 
-- **HOME** presents RUCA's system heart and machine-state overview.
-- **PLAY** organizes entertainment and application commands into focused districts.
-- **WORLD** demonstrates weather, markets, news, sports, and technology views.
-- **HEALTH** presents diagnostic guidance and advisory states.
-- **CONTROL** previews visual atmosphere, theme, and interface settings.
-- **COMMAND SEARCH** provides direct navigation through routes and demo commands.
-- **PORTFOLIO + RESUME** document the design process and product thinking inside the same experience.
+- Opening: the real RUCA HOME composition and the missing PC arrival ritual
+- Product thesis: console confidence with PC authority
+- System worlds: HOME, PLAY, LIVE WORLD, DIAGNOSTICS, and CONTROL
+- Design language: gauges, conduits, System Heart, intelligence ribbon, command shell, cockpit depth, readability, and controller focus
+- Product boundary: a quiet, explicit separation between public proof and private authority
+- Case study and public resume
 
-## Product qualities
-
-- Responsive layouts for phone, tablet, and landscape use
-- Installable Progressive Web App behavior
-- Offline navigation through the service worker cache
-- Keyboard, touch, and command-search interaction
-- Reduced-motion support
-- Local deterministic fixtures for a safe public demonstration
-- No desktop bridge, native execution, personal files, or credentials
-
-## Project structure
+## Structure
 
 ```text
-assets/                  Core interface styles, scripts, and brand assets
-data/                    Local demonstration fixtures
-icons/                   PWA icons
-portfolio/               Case study, project story, and visual evidence
-resume/                  Resume PDF
-index.html               Main presentation experience
-manifest.webmanifest     PWA metadata
-service-worker.js        Offline cache and navigation support
-docs/                    Concise technical and validation notes
+index.html                         Public product experience
+assets/ruca-public.css             Public visual system
+assets/public-site.js              Navigation and service-worker registration
+assets/product/                    Static captures from the real local runtime
+portfolio/index.html               Product design case study
+portfolio/portfolio.css            Case-study visual system
+resume/                            Public resume PDF
+service-worker.js                  Versioned offline cache
+vercel.json                        Existing Vercel route, cache, and security headers
 ```
 
-## Run locally
+## Security boundary
 
-```powershell
-py -m http.server 8788 --bind 127.0.0.1
-```
+The public build includes no workstation endpoint, bridge URL, IP address, credential, private file path, telemetry API, analytics tracker, or executable native action. The screenshots are static evidence only.
 
-Open `http://localhost:8788/` in a browser.
+## Local validation
 
-## Design and development
-
-Created by **AceBoom11207** as a product design, UX strategy, and systems-design project. RUCA combines interaction design, interface architecture, visual direction, prototyping, validation, and AI-assisted development into one evolving product system.
-
-## Status
-
-This repository is the public presentation build, not the complete private RUCA desktop runtime. The experience is actively evolving.
+Serve the repository root with any static server and test the same paths used in production. The validation record in `docs/VALIDATION.md` lists the required desktop, mobile, keyboard, reduced-motion, console, asset, privacy, and route checks.
