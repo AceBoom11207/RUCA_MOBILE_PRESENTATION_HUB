@@ -1,15 +1,15 @@
 "use strict";
 
 const CACHE_PREFIX = "ruca-mobile-demo-";
-const CACHE_NAME = "ruca-mobile-demo-v1-20260721-recruiter-mode-r1";
+const CACHE_NAME = "ruca-mobile-demo-v1-20260722-public-review-r5";
 const CORE_ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
   "./assets/demo.css?v=pass22-r1",
-  "./assets/recruiter-mode.css?v=recruiter-r1",
+  "./assets/recruiter-mode.css?v=recruiter-r2",
   "./assets/demo.js?v=pass22-r2",
-  "./assets/recruiter-mode.js?v=recruiter-r1",
-  "./assets/showroom-actions.js?v=privacy-r3",
+  "./assets/recruiter-mode.js?v=recruiter-r2",
+  "./assets/showroom-actions.js?v=pass22-r2",
   "./assets/ruca-logo.png",
   "./data/demo-data.js?v=pass22-r1",
   "./icons/icon-192.png",
@@ -17,7 +17,7 @@ const CORE_ASSETS = [
   "./icons/maskable-512.png",
   "./portfolio/",
   "./portfolio/index.html",
-  "./portfolio/portfolio.css?v=portfolio-r2",
+  "./portfolio/portfolio.css?v=portfolio-r3",
   "./portfolio/PORTFOLIO_CASE_STUDY.md",
   "./portfolio/RESUME_PROJECT_ENTRY.md",
   "./portfolio/assets/ruca-public-hero.svg",
@@ -59,7 +59,6 @@ self.addEventListener("fetch", (event) => {
   if (!insideDemoScope) return;
 
   if (request.mode === "navigate") {
-    const portfolioUrl = new URL("./portfolio/", scopeUrl);
     const demoUrl = new URL("./index.html", scopeUrl);
     const fallback = requestUrl.pathname === demoUrl.pathname
       ? "./index.html"
@@ -73,11 +72,13 @@ self.addEventListener("fetch", (event) => {
   }
 
   event.respondWith(
-    caches.match(request).then((cached) => cached || fetch(request).then((response) => {
-      if (!response || !response.ok || response.type !== "basic") return response;
-      const copy = response.clone();
-      caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
-      return response;
-    }))
+    fetch(request)
+      .then((response) => {
+        if (!response || !response.ok || response.type !== "basic") return response;
+        const copy = response.clone();
+        caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+        return response;
+      })
+      .catch(() => caches.match(request))
   );
 });
