@@ -1,12 +1,14 @@
 "use strict";
 
 const CACHE_PREFIX = "ruca-mobile-demo-";
-const CACHE_NAME = "ruca-mobile-demo-v1-20260721-public-contact-r4";
+const CACHE_NAME = "ruca-mobile-demo-v1-20260721-recruiter-mode-r1";
 const CORE_ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
   "./assets/demo.css?v=pass22-r1",
+  "./assets/recruiter-mode.css?v=recruiter-r1",
   "./assets/demo.js?v=pass22-r2",
+  "./assets/recruiter-mode.js?v=recruiter-r1",
   "./assets/showroom-actions.js?v=privacy-r3",
   "./assets/ruca-logo.png",
   "./data/demo-data.js?v=pass22-r1",
