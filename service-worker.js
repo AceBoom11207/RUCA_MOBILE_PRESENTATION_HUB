@@ -1,11 +1,11 @@
-const CACHE_NAME = "ruca-os-public-source-clone-r7-20260722";
+const CACHE_NAME = "ruca-os-public-source-clone-r8-20260722";
 const CORE_ASSETS = [
   "/",
   "/index.html",
-  "/css/ruca.css?v=20260722-source-clone-r7",
-  "/js/ruca-public-fixtures.js?v=20260722-source-clone-r7",
-  "/js/ruca-source-shell.js?v=20260722-source-clone-r7",
-  "/js/ruca-public-demo.js?v=20260722-source-clone-r7",
+  "/css/ruca.css?v=20260722-source-clone-r8",
+  "/js/ruca-public-fixtures.js?v=20260722-source-clone-r8",
+  "/js/ruca-source-shell.js?v=20260722-source-clone-r8",
+  "/js/ruca-public-demo.js?v=20260722-source-clone-r8",
   "/assets/RucaLogo.png",
   "/assets/realms/weather.png",
   "/assets/realms/news.png",
