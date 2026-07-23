@@ -21,7 +21,7 @@
   <title>Anthony Moncion | Product Designer | RUCA Command Core</title>
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="icon" href="/icons/icon-192.png" sizes="192x192">
-  <link rel="stylesheet" href="/portfolio/portfolio.css?v=portfolio-open-canvas-r6">
+  <link rel="stylesheet" href="/portfolio/portfolio.css?v=portfolio-command-core-r15">
 </head>
 <body>
   <a class="skip-link" href="#top">Skip to case study</a>
@@ -32,14 +32,17 @@
     </a>
     <div class="nav-actions">
       <nav aria-label="Case study sections">
-        <a href="#brief">Brief</a>
-        <a href="#problem">Problem</a>
-        <a href="#decisions">Decisions</a>
-        <a href="#evidence">Evidence</a>
-        <a href="#resume">Resume</a>
+        <a href="#top" data-section-link="top"><span>00</span> Overview</a>
+        <a href="#problem" data-section-link="problem"><span>01</span> Problem</a>
+        <a href="#decisions" data-section-link="decisions"><span>02</span> Decisions</a>
+        <a href="#experience" data-section-link="experience"><span>03</span> Product</a>
+        <a href="#evidence" data-section-link="evidence"><span>04</span> Proof</a>
+        <a href="#outcome" data-section-link="outcome"><span>05</span> Outcome</a>
+        <a href="#resume" data-section-link="resume"><span>06</span> Resume</a>
       </nav>
       <a class="return-ruca" href="/index.html#home">View RUCA</a>
     </div>
+    <div class="reading-progress" aria-hidden="true"><span id="readingProgress"></span></div>
   </header>
 
   <main id="top">
@@ -181,93 +184,110 @@
       </div>
     </section>
 
-    <section class="feature-band feature-home">
-      <div class="section-inner feature-grid">
-        <div class="feature-copy">
-          <p class="section-label">HOME // The arrival moment</p>
-          <h2>The System Heart tells the user the machine is ready before asking what comes next.</h2>
-          <p>Six telemetry channels orbit one readiness core. The visual hierarchy communicates confidence first while preserving truthful detail in the surrounding instruments.</p>
-          <ul class="evidence-list">
-            <li>One readiness center with six visible machine channels</li>
-            <li>Illuminated conduits make system relationships spatial</li>
-            <li>Missing sensors remain unavailable instead of being invented</li>
-          </ul>
-        </div>
-        <figure class="product-frame">
-          <img src="/assets/product/ruca-home-runtime.png" alt="RUCA HOME System Heart connected to six radial telemetry gauges">
-          <figcaption>HOME // captured from the real local runtime</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="feature-band alt-band">
-      <div class="section-inner feature-grid media-first">
-        <figure class="product-frame">
-          <img src="/assets/product/ruca-play-runtime.png" alt="RUCA PLAY command districts with an orbital registry and selected Steam command">
-          <figcaption>PLAY // command districts and application registry</figcaption>
-        </figure>
-        <div class="feature-copy">
-          <p class="section-label">PLAY // One destination model</p>
-          <h2>The user moves by intention instead of launcher ownership.</h2>
-          <p>Thirty-nine commands share one registry, one selection model, and six meaningful districts. Games, media, creative work, AI, browsers, and system tools become one command universe.</p>
-          <div class="metric-row" aria-label="PLAY facts">
-            <div><strong>39</strong><span>Commands</span></div>
-            <div><strong>6</strong><span>Districts</span></div>
-            <div><strong>1</strong><span>Registry</span></div>
+    <section id="experience" class="band experience-band" aria-labelledby="experience-title">
+      <div class="section-inner">
+        <div class="experience-heading">
+          <div>
+            <p class="section-label">The product // Five worlds</p>
+            <h2 id="experience-title">One system. Five answers.</h2>
           </div>
+          <p>Select a world to review the design decision, shipped interface, and proof without scrolling through five separate chapters.</p>
         </div>
-      </div>
-    </section>
 
-    <section class="feature-band">
-      <div class="section-inner feature-grid">
-        <div class="feature-copy">
-          <p class="section-label">LIVE WORLD // One observation environment</p>
-          <h2>External information follows one hierarchy and one truth contract.</h2>
-          <p>Weather, news, markets, sports, technology, and celestial data share a coherent observation deck. Every lane carries its source, freshness, confidence, and fallback state.</p>
-          <ul class="evidence-list">
-            <li>Six normalized information lanes</li>
-            <li>Live, partial, stale, retrying, and unavailable states</li>
-            <li>No invented scores, forecasts, headlines, or quotes</li>
-          </ul>
+        <div class="world-tabs" role="tablist" aria-label="RUCA product worlds">
+          <button id="world-tab-home" type="button" role="tab" aria-selected="true" aria-controls="world-panel-home" data-world-tab="home"><span>01</span> HOME</button>
+          <button id="world-tab-play" type="button" role="tab" aria-selected="false" aria-controls="world-panel-play" data-world-tab="play" tabindex="-1"><span>02</span> PLAY</button>
+          <button id="world-tab-live" type="button" role="tab" aria-selected="false" aria-controls="world-panel-live" data-world-tab="live" tabindex="-1"><span>03</span> LIVE WORLD</button>
+          <button id="world-tab-diagnostics" type="button" role="tab" aria-selected="false" aria-controls="world-panel-diagnostics" data-world-tab="diagnostics" tabindex="-1"><span>04</span> DIAGNOSTICS</button>
+          <button id="world-tab-control" type="button" role="tab" aria-selected="false" aria-controls="world-panel-control" data-world-tab="control" tabindex="-1"><span>05</span> CONTROL</button>
         </div>
-        <figure class="product-frame">
-          <img src="/assets/product/ruca-live-world-runtime.png" alt="RUCA Live World World Briefing with primary and supporting stories">
-          <figcaption>LIVE WORLD // World Briefing</figcaption>
-        </figure>
-      </div>
-    </section>
 
-    <section class="feature-band alt-band">
-      <div class="section-inner feature-grid media-first">
-        <figure class="product-frame">
-          <img src="/assets/product/ruca-diagnostics-runtime.png" alt="RUCA Diagnostics with live signal trace and Guardian triage">
-          <figcaption>DIAGNOSTICS // Guardian system</figcaption>
-        </figure>
-        <div class="feature-copy">
-          <p class="section-label">DIAGNOSTICS // Meaning before measurement</p>
-          <h2>Guardian explains what is happening, why it matters, and what comes next.</h2>
-          <p>Raw telemetry is useful only when the user can interpret it. Guardian leads with severity, meaning, first checks, reassurance, thresholds, and next action before deeper sensor detail.</p>
-        </div>
-      </div>
-    </section>
+        <div class="world-stage">
+          <article id="world-panel-home" class="world-panel" role="tabpanel" aria-labelledby="world-tab-home" data-world-panel="home">
+            <div class="world-panel-copy">
+              <p class="section-label">HOME // The arrival moment</p>
+              <h3>The machine establishes readiness before asking what comes next.</h3>
+              <p>Six telemetry channels orbit one System Heart. The visual hierarchy communicates confidence first while preserving truthful detail in the surrounding instruments.</p>
+              <ul class="evidence-list">
+                <li>One readiness center with six visible machine channels</li>
+                <li>Illuminated conduits make system relationships spatial</li>
+                <li>Missing sensors remain unavailable instead of being invented</li>
+              </ul>
+            </div>
+            <figure class="product-frame">
+              <img src="/assets/product/ruca-home-runtime.png" alt="RUCA HOME System Heart connected to six radial telemetry gauges">
+              <figcaption>HOME // captured from the real local runtime</figcaption>
+            </figure>
+          </article>
 
-    <section class="feature-band">
-      <div class="section-inner feature-grid">
-        <div class="feature-copy">
-          <p class="section-label">CONTROL // A workshop with consequences</p>
-          <h2>Settings earn their place by changing something the user can see or feel.</h2>
-          <p>CONTROL coordinates atmosphere, appearance, input, audio, source authority, and device behavior through profiles, visible consequences, and explicit ownership.</p>
-          <div class="metric-row" aria-label="Control facts">
-            <div><strong>7</strong><span>Profiles</span></div>
-            <div><strong>11</strong><span>Systems</span></div>
-            <div><strong>4</strong><span>Input modes</span></div>
-          </div>
+          <article id="world-panel-play" class="world-panel" role="tabpanel" aria-labelledby="world-tab-play" data-world-panel="play" hidden>
+            <div class="world-panel-copy">
+              <p class="section-label">PLAY // One destination model</p>
+              <h3>The user moves by intention instead of launcher ownership.</h3>
+              <p>Thirty-nine commands share one registry, one selection model, and six meaningful districts. Games, media, creative work, AI, browsers, and system tools become one command universe.</p>
+              <div class="metric-row" aria-label="PLAY facts">
+                <div><strong>39</strong><span>Commands</span></div>
+                <div><strong>6</strong><span>Districts</span></div>
+                <div><strong>1</strong><span>Registry</span></div>
+              </div>
+            </div>
+            <figure class="product-frame">
+              <img src="/assets/product/ruca-play-runtime.png" loading="lazy" alt="RUCA PLAY command districts with an orbital registry and selected Steam command">
+              <figcaption>PLAY // command districts and application registry</figcaption>
+            </figure>
+          </article>
+
+          <article id="world-panel-live" class="world-panel" role="tabpanel" aria-labelledby="world-tab-live" data-world-panel="live" hidden>
+            <div class="world-panel-copy">
+              <p class="section-label">LIVE WORLD // One observation environment</p>
+              <h3>External information follows one hierarchy and one truth contract.</h3>
+              <p>Weather, news, markets, sports, technology, and celestial data share a coherent observation deck. Every lane carries its source, freshness, confidence, and fallback state.</p>
+              <ul class="evidence-list">
+                <li>Six normalized information lanes</li>
+                <li>Live, partial, stale, retrying, and unavailable states</li>
+                <li>No invented scores, forecasts, headlines, or quotes</li>
+              </ul>
+            </div>
+            <figure class="product-frame">
+              <img src="/assets/product/ruca-live-world-runtime.png" loading="lazy" alt="RUCA Live World World Briefing with primary and supporting stories">
+              <figcaption>LIVE WORLD // World Briefing</figcaption>
+            </figure>
+          </article>
+
+          <article id="world-panel-diagnostics" class="world-panel" role="tabpanel" aria-labelledby="world-tab-diagnostics" data-world-panel="diagnostics" hidden>
+            <div class="world-panel-copy">
+              <p class="section-label">DIAGNOSTICS // Meaning before measurement</p>
+              <h3>Guardian explains what is happening, why it matters, and what comes next.</h3>
+              <p>Raw telemetry is useful only when the user can interpret it. Guardian leads with severity, meaning, first checks, reassurance, thresholds, and next action before deeper sensor detail.</p>
+              <ul class="evidence-list">
+                <li>Severity and meaning lead every state</li>
+                <li>Raw detail remains available one layer deeper</li>
+                <li>Unavailable sensors are never converted into zero</li>
+              </ul>
+            </div>
+            <figure class="product-frame">
+              <img src="/assets/product/ruca-diagnostics-runtime.png" loading="lazy" alt="RUCA Diagnostics with live signal trace and Guardian triage">
+              <figcaption>DIAGNOSTICS // Guardian system</figcaption>
+            </figure>
+          </article>
+
+          <article id="world-panel-control" class="world-panel" role="tabpanel" aria-labelledby="world-tab-control" data-world-panel="control" hidden>
+            <div class="world-panel-copy">
+              <p class="section-label">CONTROL // A workshop with consequences</p>
+              <h3>Settings earn their place by changing something the user can see or feel.</h3>
+              <p>CONTROL coordinates atmosphere, appearance, input, audio, source authority, and device behavior through profiles, visible consequences, and explicit ownership.</p>
+              <div class="metric-row" aria-label="Control facts">
+                <div><strong>7</strong><span>Profiles</span></div>
+                <div><strong>11</strong><span>Systems</span></div>
+                <div><strong>4</strong><span>Input modes</span></div>
+              </div>
+            </div>
+            <figure class="product-frame">
+              <img src="/assets/product/ruca-control-runtime.png" loading="lazy" alt="RUCA Control Workshop in Blood Red with profile and system controls">
+              <figcaption>CONTROL // command workshop</figcaption>
+            </figure>
+          </article>
         </div>
-        <figure class="product-frame">
-          <img src="/assets/product/ruca-control-runtime.png" alt="RUCA Control Workshop in Blood Red with profile and system controls">
-          <figcaption>CONTROL // command workshop</figcaption>
-        </figure>
       </div>
     </section>
 
@@ -359,9 +379,16 @@
     </section>
   </main>
 
+  <nav class="section-dock" aria-label="Move through the case study">
+    <button type="button" data-section-direction="-1" aria-label="Go to previous case study section">← Previous</button>
+    <output id="sectionPosition" aria-live="polite">Overview // 01 of 07</output>
+    <button type="button" data-section-direction="1" aria-label="Go to next case study section">Next →</button>
+  </nav>
+
   <footer class="site-footer">
     <div><strong>Anthony C. Moncion</strong><span>Product Designer // Service, Systems &amp; Customer Experience</span></div>
     <div class="footer-actions"><p>RUCA Command Core // Independent Product</p><a href="mailto:hello@rucasrapidpcrepairlab.com">hello@rucasrapidpcrepairlab.com</a><a href="/index.html#home">View RUCA</a></div>
   </footer>
+  <script src="/portfolio/portfolio.js?v=portfolio-command-core-r15" defer></script>
 </body>
 </html>

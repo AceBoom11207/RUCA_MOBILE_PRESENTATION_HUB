@@ -1,4 +1,4 @@
-const CACHE_NAME = "ruca-os-public-source-clone-r14-20260722";
+const CACHE_NAME = "ruca-os-public-portfolio-r15-20260723";
 const CORE_ASSETS = [
   "/",
   "/index.html",
@@ -21,6 +21,8 @@ const CORE_ASSETS = [
   "/icons/icon-192.png",
   "/icons/icon-512.png",
   "/portfolio/",
+  "/portfolio/portfolio.css?v=portfolio-command-core-r15",
+  "/portfolio/portfolio.js?v=portfolio-command-core-r15",
   "/resume/Anthony_Moncion_Interaction_Designer_Public_Resume.pdf"
 ];
 
