@@ -20037,3 +20037,100 @@ body:not(.ruca-3dixon-lounge) #page-diagnostics.passive-monitor.diagnostics-deta
     top: -7px;
   }
 }
+
+/* PUBLIC R12 // Open shell. Product instruments stay; constraining chrome goes. */
+body.m01-public-showcase #rucaApp,
+body.m01-public-showcase .top-shell,
+body.m01-public-showcase .top-shell > .brand-block,
+body.m01-public-showcase .top-shell > .world-nav,
+body.m01-public-showcase .top-shell > .time-block,
+body.m01-public-showcase #rucaApp > .machine-footer {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+body.m01-public-showcase .top-shell > .brand-block::before,
+body.m01-public-showcase .top-shell > .brand-block::after,
+body.m01-public-showcase .top-shell > .world-nav::before,
+body.m01-public-showcase .top-shell > .world-nav::after,
+body.m01-public-showcase .top-shell > .time-block::before,
+body.m01-public-showcase .top-shell > .time-block::after,
+body.m01-public-showcase #rucaApp > .machine-footer::before,
+body.m01-public-showcase #rucaApp > .machine-footer::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.m01-public-showcase .world-nav .nav-btn,
+body.m01-public-showcase .reviewer-actions a,
+body.m01-public-showcase .mobile-reviewer-dock,
+body.m01-public-showcase .mobile-reviewer-dock a,
+body.m01-public-showcase .footer-volume-mute,
+body.m01-public-showcase .footer-volume-step {
+  border: 0 !important;
+}
+
+body.m01-public-showcase[data-world="home"] .intelligence-ribbon,
+body.m01-public-showcase[data-world="home"] #page-home > .home-caption {
+  display: none !important;
+}
+
+body.m01-public-showcase #rucaApp > .machine-footer {
+  display: none !important;
+}
+
+@media (min-width: 821px) {
+  body.m01-public-showcase.pass16g-world-viewport[data-world] #rucaApp {
+    grid-template-rows: 62px minmax(0, 1fr) !important;
+    gap: 0 !important;
+    padding: 8px !important;
+  }
+
+  body.m01-public-showcase.pass16g-world-viewport[data-world] .top-shell {
+    grid-row: 1 !important;
+    height: 62px !important;
+    min-height: 0 !important;
+  }
+
+  body.m01-public-showcase.pass16g-world-viewport[data-world] .top-shell > .brand-block,
+  body.m01-public-showcase.pass16g-world-viewport[data-world] .top-shell > .world-nav,
+  body.m01-public-showcase.pass16g-world-viewport[data-world] .top-shell > .time-block {
+    height: 62px !important;
+    min-height: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  body.m01-public-showcase.pass16g-world-viewport[data-world] .stage {
+    grid-row: 2 !important;
+  }
+}
+
+@media (max-width: 820px) {
+  body.m01-public-showcase.pass16g-world-viewport[data-world] #rucaApp {
+    grid-template-rows: 64px minmax(0, 1fr) !important;
+    gap: 0 !important;
+    padding: 6px !important;
+  }
+
+  body.m01-public-showcase.pass16g-world-viewport[data-world] .stage {
+    grid-row: 2 !important;
+  }
+
+  body.m01-public-showcase .mobile-reviewer-dock {
+    left: auto !important;
+    right: 8px !important;
+    bottom: 8px !important;
+    width: min(276px, calc(100% - 16px)) !important;
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr) !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  body.m01-public-showcase .mobile-reviewer-dock a:not(.reviewer-action-primary) {
+    background: rgba(21, 3, 4, .94) !important;
+  }
+}
