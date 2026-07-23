@@ -1000,3 +1000,258 @@ h2 {
   .verification-matrix article { min-height: 0; }
   .research-gap { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* R6 // OPEN CANVAS. Typography, space, and scale replace boxes and banners. */
+:root { --max: 1680px; }
+
+body * {
+  border: 0 !important;
+}
+
+.site-nav {
+  position: absolute;
+  background: transparent;
+  box-shadow: none;
+}
+
+.return-ruca,
+.hero-actions a,
+.case-links a,
+.resume-actions a,
+.footer-actions a {
+  border-radius: 0;
+}
+
+.return-ruca {
+  background: rgba(227, 41, 41, .12);
+}
+
+.hero-actions a:not(:first-child),
+.case-links a,
+.resume-actions a,
+.footer-actions a {
+  background: transparent;
+}
+
+.band,
+.feature-band,
+.principles-band,
+.intro-band,
+.designer-band,
+.system-band,
+.process-band,
+.decision-band,
+.alt-band,
+.evidence-band,
+.outcome-band,
+.resume-band {
+  background: var(--ink);
+}
+
+.band,
+.feature-band {
+  padding: clamp(88px, 8vw, 148px) clamp(24px, 4.5vw, 92px);
+}
+
+.section-inner,
+.hero-content {
+  width: min(var(--max), calc(100% - 0px));
+}
+
+.ownership-grid,
+.designer-grid,
+.intro-grid,
+.outcome-grid,
+.evidence-layout,
+.resume-grid {
+  gap: clamp(56px, 8vw, 150px);
+}
+
+.scope-grid,
+.designer-pillars,
+.principle-grid,
+.process-grid,
+.world-grid,
+.decision-grid,
+.verification-matrix,
+.learning-grid,
+.evidence-stats,
+.metric-row {
+  background: transparent;
+}
+
+.scope-grid {
+  gap: clamp(34px, 4vw, 72px);
+}
+
+.scope-grid article,
+.designer-pillars article,
+.principle-grid div,
+.process-grid article,
+.world-grid article,
+.decision-grid > article,
+.verification-matrix article,
+.learning-grid article,
+.evidence-stats div,
+.metric-row div {
+  min-height: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.designer-pillars {
+  gap: clamp(28px, 4vw, 64px);
+}
+
+.project-brief {
+  gap: 6px;
+}
+
+.project-brief div {
+  padding: 10px 0;
+}
+
+.process-grid {
+  gap: clamp(28px, 3vw, 56px);
+}
+
+.process-grid article {
+  display: flex;
+  flex-direction: column;
+}
+
+.process-grid h3 {
+  margin-top: 18px;
+}
+
+.validation-note,
+.criteria-block,
+.research-gap,
+.certification-line {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.validation-note {
+  margin-top: 52px;
+}
+
+.criteria-block {
+  margin-top: 44px;
+}
+
+.world-grid {
+  gap: clamp(28px, 3.5vw, 64px);
+}
+
+.feature-grid,
+.feature-grid.media-first {
+  grid-template-columns: minmax(300px, .7fr) minmax(0, 1.3fr);
+  gap: clamp(54px, 6vw, 120px);
+}
+
+.feature-grid.media-first {
+  grid-template-columns: minmax(0, 1.3fr) minmax(300px, .7fr);
+}
+
+.product-frame {
+  overflow: visible;
+  background: transparent;
+  box-shadow: none;
+}
+
+.product-frame img,
+.product-frame video {
+  background: transparent;
+}
+
+.product-frame figcaption {
+  padding: 12px 0 0;
+}
+
+.evidence-list li,
+.resume-entry li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.evidence-list li::before,
+.resume-entry li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .72em;
+  width: 8px;
+  height: 2px;
+  background: var(--gold-bright);
+}
+
+.metric-row,
+.evidence-stats {
+  gap: clamp(24px, 4vw, 64px);
+}
+
+.decision-grid {
+  gap: clamp(42px, 5vw, 90px);
+}
+
+.decision-grid h3 {
+  min-height: 0;
+  margin-bottom: 22px;
+}
+
+.decision-grid dl {
+  gap: 18px;
+}
+
+.decision-grid dl div {
+  padding: 0;
+}
+
+.verification-matrix {
+  gap: clamp(36px, 5vw, 84px);
+}
+
+.research-gap {
+  margin-top: 64px;
+}
+
+.learning-grid {
+  gap: clamp(36px, 5vw, 80px);
+}
+
+.site-footer {
+  background: var(--ink);
+}
+
+@media (max-width: 1100px) {
+  .feature-grid,
+  .feature-grid.media-first {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .band,
+  .feature-band {
+    padding: 76px 22px;
+  }
+
+  .scope-grid,
+  .designer-pillars,
+  .process-grid,
+  .world-grid,
+  .decision-grid,
+  .verification-matrix,
+  .learning-grid {
+    gap: 42px;
+  }
+
+  .validation-note,
+  .research-gap {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+}

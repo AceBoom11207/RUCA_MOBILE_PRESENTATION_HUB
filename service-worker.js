@@ -1,4 +1,4 @@
-const CACHE_NAME = "ruca-os-public-source-clone-r10-20260722";
+const CACHE_NAME = "ruca-os-public-source-clone-r11-20260722";
 const CORE_ASSETS = [
   "/",
   "/index.html",
