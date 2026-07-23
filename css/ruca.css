@@ -36,10 +36,10 @@ body.m01-public-showcase .time-block {
 
 body.m01-public-showcase .reviewer-actions {
   display: grid;
-  grid-template-columns: minmax(132px, 1fr) minmax(88px, auto);
+  grid-template-columns: 170px 88px;
   align-items: stretch;
   gap: 7px;
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   min-width: 0;
 }
 
@@ -20108,6 +20108,11 @@ body.m01-public-showcase #rucaApp > .machine-footer {
 }
 
 @media (max-width: 820px) {
+  html,
+  body.m01-public-showcase {
+    overflow-x: clip !important;
+  }
+
   body.m01-public-showcase.pass16g-world-viewport[data-world] #rucaApp {
     grid-template-rows: 64px minmax(0, 1fr) !important;
     gap: 0 !important;
@@ -20133,4 +20138,1126 @@ body.m01-public-showcase #rucaApp > .machine-footer {
   body.m01-public-showcase .mobile-reviewer-dock a:not(.reviewer-action-primary) {
     background: rgba(21, 3, 4, .94) !important;
   }
+
+  body.m01-public-showcase .world-nav {
+    scrollbar-width: none;
+  }
+
+  body.m01-public-showcase .world-nav::-webkit-scrollbar {
+    display: none;
+    width: 0 !important;
+    height: 0 !important;
+  }
+}
+
+/* PUBLIC R14 // Borderless information architecture.
+   Space, scale, and type separate content; rectangular panel chrome does not. */
+body.m01-public-showcase :is(
+  .page,
+  .integrated-play-layout,
+  .command-orbit-filters,
+  .launcher-orbit,
+  .command-readiness-rail,
+  .live-grid,
+  .lane-switcher,
+  .lane-stage,
+  .live-world-render-root,
+  .world-stage-content,
+  .ruca-live-grid,
+  .diag-shell,
+  .sensor-groups,
+  .rapid-lab,
+  .triage-console,
+  .control-layout,
+  .control-core,
+  .control-cards
+) {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+body.m01-public-showcase :is(
+  .page,
+  .mode-header,
+  .command-orbit-filters,
+  .command-readiness-rail,
+  .lane-switcher,
+  .lane-stage,
+  .diag-shell,
+  .sensor-groups,
+  .rapid-lab,
+  .triage-console,
+  .control-core,
+  .control-cards
+)::before,
+body.m01-public-showcase :is(
+  .page,
+  .mode-header,
+  .command-orbit-filters,
+  .command-readiness-rail,
+  .lane-switcher,
+  .lane-stage,
+  .diag-shell,
+  .sensor-groups,
+  .rapid-lab,
+  .triage-console,
+  .control-core,
+  .control-cards
+)::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.m01-public-showcase :is(
+  .mode-header h2,
+  .command-readiness-rail h3,
+  .command-readiness-rail .metric-card b,
+  .ruca-observation-header h3,
+  .sensor-groups h2,
+  .rapid-lab h2,
+  .triage-console h2,
+  #page-control summary span,
+  #page-control .slider-row span,
+  #page-control .slider-row b
+) {
+  font-weight: 900 !important;
+  text-wrap: balance;
+}
+
+/* PLAY: launch-readiness language floats in one open band. */
+body.m01-public-showcase #page-play .command-orbit-filters {
+  padding-inline: 18px !important;
+  gap: clamp(12px, 1.7vw, 30px) !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.m01-public-showcase #page-play .command-orbit-filters::before,
+body.m01-public-showcase #page-play .command-orbit-filters::after,
+body.m01-public-showcase #page-play .command-filter-btn::before,
+body.m01-public-showcase #page-play .command-filter-btn::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.m01-public-showcase #page-play .command-filter-btn {
+  min-height: 42px !important;
+  padding: 5px 2px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-weight: 850 !important;
+}
+
+body.m01-public-showcase #page-play .command-filter-btn.active,
+body.m01-public-showcase #page-play .command-filter-btn:hover,
+body.m01-public-showcase #page-play .command-filter-btn:focus-visible {
+  color: var(--gold2) !important;
+  background: transparent !important;
+  text-shadow: 0 0 14px color-mix(in srgb, var(--gold2) 48%, transparent);
+}
+
+body.m01-public-showcase #page-play .command-filter-btn:focus-visible,
+body.m01-public-showcase #page-play .command-filter-btn.ruca-controller-focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+  text-shadow: 0 0 18px var(--gold2) !important;
+}
+
+body.m01-public-showcase #page-play .command-readiness-rail {
+  padding: 10px clamp(16px, 2vw, 34px) 8px !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  overflow: visible !important;
+}
+
+body.m01-public-showcase #page-play .command-readiness-rail h3 {
+  margin: 0 0 7px !important;
+  color: var(--gold2) !important;
+  font-size: 11px !important;
+  letter-spacing: .13em !important;
+}
+
+body.m01-public-showcase #page-play .command-readiness-rail .status-grid {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  align-items: start !important;
+  gap: clamp(18px, 2.4vw, 42px) !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+body.m01-public-showcase #page-play .command-readiness-rail .metric-card {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.m01-public-showcase #page-play .command-readiness-rail .metric-card span {
+  color: color-mix(in srgb, var(--gold2) 76%, white 24%) !important;
+  font-size: 9px !important;
+  font-weight: 850 !important;
+  line-height: 1.15 !important;
+  letter-spacing: .08em !important;
+}
+
+body.m01-public-showcase #page-play .command-readiness-rail .metric-card b {
+  margin-top: 4px !important;
+  color: var(--white) !important;
+  font-size: clamp(11px, .78vw, 14px) !important;
+  line-height: 1.15 !important;
+  letter-spacing: .01em !important;
+  overflow-wrap: anywhere;
+}
+
+body.m01-public-showcase #page-play .command-readiness-rail .metric-card small {
+  display: none !important;
+}
+
+/* LIVE WORLD: photography stays; rails, cells, cards, and table lines disappear. */
+body.m01-public-showcase #page-live :is(
+  .ruca-observation-header,
+  .world-source-status,
+  .world-source-contract,
+  .weather-world,
+  .world-hero,
+  .world-intelligence,
+  .world-primary,
+  .world-secondary,
+  .world-ribbon,
+  .weather-readout,
+  .weather-secondary-row,
+  .weather-forecast-ribbon,
+  .weather-forecast-track,
+  .weather-forecast-item,
+  .weather-state-panel,
+  .realm-world,
+  .realm-main,
+  .realm-hero,
+  .realm-intelligence,
+  .realm-ticker-ribbon,
+  .realm-ribbon-track,
+  .realm-section-heading,
+  .realm-identity-line,
+  .editorial-hero-story,
+  .editorial-support-story,
+  .editorial-timeline-item,
+  .editorial-support-list,
+  .sports-intelligence-grid,
+  .sports-scoreboard,
+  .sports-context-deck,
+  .sports-score-row,
+  .sports-context-row,
+  .sports-upcoming-list,
+  .sports-schedule-item,
+  .signal-market-readout,
+  .signal-channel-panel,
+  .signal-topic-row,
+  .signal-correlation-panel,
+  .signal-correlation-row,
+  .market-ticker-item,
+  .celestial-metric-grid,
+  .celestial-metric-grid article,
+  .celestial-state-band,
+  .celestial-entertainment
+) {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+body.m01-public-showcase #page-live :is(
+  .ruca-observation-header,
+  .world-source-status,
+  .weather-world,
+  .world-hero,
+  .world-intelligence,
+  .world-primary,
+  .world-secondary,
+  .world-ribbon,
+  .weather-readout,
+  .weather-secondary-row,
+  .weather-forecast-item,
+  .realm-world,
+  .realm-main,
+  .realm-hero,
+  .realm-intelligence,
+  .realm-ticker-ribbon,
+  .realm-section-heading,
+  .editorial-hero-story,
+  .editorial-support-story,
+  .editorial-timeline-item,
+  .sports-score-row,
+  .sports-context-row,
+  .signal-channel-panel,
+  .signal-topic-row,
+  .market-ticker-item,
+  .celestial-metric-grid article
+)::before,
+body.m01-public-showcase #page-live :is(
+  .ruca-observation-header,
+  .world-source-status,
+  .weather-world,
+  .world-hero,
+  .world-intelligence,
+  .world-primary,
+  .world-secondary,
+  .world-ribbon,
+  .weather-readout,
+  .weather-secondary-row,
+  .weather-forecast-item,
+  .realm-world,
+  .realm-main,
+  .realm-hero,
+  .realm-intelligence,
+  .realm-ticker-ribbon,
+  .realm-section-heading,
+  .editorial-hero-story,
+  .editorial-support-story,
+  .editorial-timeline-item,
+  .sports-score-row,
+  .sports-context-row,
+  .signal-channel-panel,
+  .signal-topic-row,
+  .market-ticker-item,
+  .celestial-metric-grid article
+)::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.m01-public-showcase #page-live .lane-switcher {
+  padding-inline: 8px !important;
+  gap: 12px !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+body.m01-public-showcase #page-live .lane-stage {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.m01-public-showcase #page-live .lane-btn {
+  min-height: 48px !important;
+  padding: 6px 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  line-height: 1.02 !important;
+}
+
+body.m01-public-showcase #page-live .lane-btn::before,
+body.m01-public-showcase #page-live .lane-btn::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.m01-public-showcase #page-live .lane-btn.active,
+body.m01-public-showcase #page-live .lane-btn:hover,
+body.m01-public-showcase #page-live .lane-btn:focus-visible {
+  color: var(--white) !important;
+  background: transparent !important;
+  text-shadow: 0 0 18px var(--gold2);
+}
+
+body.m01-public-showcase #page-live .lane-btn:focus-visible,
+body.m01-public-showcase #page-live .lane-btn.ruca-controller-focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+  text-shadow: 0 0 20px var(--gold2) !important;
+}
+
+body.m01-public-showcase #page-live .weather-location-line,
+body.m01-public-showcase #page-live .weather-forecast-ribbon > header {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.m01-public-showcase #page-live :is(
+  .weather-readout span,
+  .weather-secondary-row span,
+  .weather-forecast-day,
+  .realm-section-heading span,
+  .editorial-meta span,
+  .sports-score-row > span,
+  .sports-context-row > span,
+  .signal-channel-panel > header span,
+  .celestial-metric-grid span
+) {
+  font-weight: 850 !important;
+}
+
+body.m01-public-showcase #page-live :is(
+  .weather-readout strong,
+  .weather-secondary-row b,
+  .weather-forecast-item strong,
+  .editorial-story-copy h4,
+  .sports-team-line b,
+  .sports-team-line strong,
+  .sports-context-row b,
+  .signal-topic-row h4,
+  .celestial-metric-grid strong
+) {
+  font-weight: 900 !important;
+  line-height: 1.14 !important;
+}
+
+/* DIAGNOSTICS: preserve instrumentation, remove every rectangular cage. */
+body.m01-public-showcase #page-diagnostics :is(
+  .diag-overview-row,
+  .threshold-box,
+  .lab-main-grid,
+  .chart-panel,
+  .panel-inset,
+  .metrics-panel,
+  .shop-lab-grid,
+  .sensor-tree-panel,
+  .benchmark-panel,
+  .benchmark-results,
+  .bench-result,
+  .deep-grid,
+  .triage-item,
+  .alert-rail,
+  .diagnostics-view-tabs,
+  .diagnostics-workspace-tabs,
+  .machine-health-timeline,
+  .machine-timeline-toolbar,
+  .machine-timeline-grid,
+  .machine-evidence-inspector,
+  .machine-controller-contract
+) {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+body.m01-public-showcase #page-diagnostics :is(
+  .diag-shell,
+  .sensor-groups,
+  .rapid-lab,
+  .triage-console,
+  .chart-panel,
+  .panel-inset,
+  .threshold-box,
+  .triage-item,
+  .alert-rail,
+  .alert-rail > *,
+  #sensorChart,
+  .diagnostics-detail-toggle
+) {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+body.m01-public-showcase #page-diagnostics :is(
+  .threshold-box,
+  .chart-panel,
+  .panel-inset,
+  .triage-item,
+  .diagnostics-view-tabs,
+  .diagnostics-workspace-tabs,
+  .machine-timeline-toolbar,
+  .machine-evidence-inspector
+)::before,
+body.m01-public-showcase #page-diagnostics :is(
+  .threshold-box,
+  .chart-panel,
+  .panel-inset,
+  .triage-item,
+  .diagnostics-view-tabs,
+  .diagnostics-workspace-tabs,
+  .machine-timeline-toolbar,
+  .machine-evidence-inspector
+)::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.m01-public-showcase #page-diagnostics .sensor-btn,
+body.m01-public-showcase #page-diagnostics .diagnostics-view-tabs button,
+body.m01-public-showcase #page-diagnostics .diagnostics-workspace-tabs button,
+body.m01-public-showcase #page-diagnostics .bench-btn {
+  min-height: 44px !important;
+  padding: 8px 6px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 11px !important;
+  font-weight: 900 !important;
+}
+
+body.m01-public-showcase #page-diagnostics :is(
+  .sensor-btn,
+  .diagnostics-view-tabs button,
+  .diagnostics-workspace-tabs button,
+  .bench-btn,
+  .scan-btn,
+  .diagnostics-detail-toggle
+):focus-visible,
+body.m01-public-showcase #page-diagnostics :is(
+  .sensor-btn,
+  .diagnostics-view-tabs button,
+  .diagnostics-workspace-tabs button,
+  .bench-btn,
+  .scan-btn,
+  .diagnostics-detail-toggle
+).ruca-controller-focus {
+  outline: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  text-shadow: 0 0 18px var(--gold2) !important;
+}
+
+body.m01-public-showcase #page-diagnostics :is(.scan-btn,.diagnostics-detail-toggle) {
+  min-height: 44px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--white) !important;
+  font-size: 11px !important;
+  font-weight: 900 !important;
+}
+
+body.m01-public-showcase #page-diagnostics :is(.scan-btn,.diagnostics-detail-toggle):hover,
+body.m01-public-showcase #page-diagnostics :is(.scan-btn,.diagnostics-detail-toggle):focus-visible {
+  color: var(--gold2) !important;
+  text-shadow: 0 0 18px var(--gold2) !important;
+}
+
+body.m01-public-showcase #page-diagnostics :is(.sensor-btn.active,.sensor-btn:hover,.sensor-btn:focus-visible,.diagnostics-view-tabs button.active,.diagnostics-workspace-tabs button.active,.bench-btn:hover,.bench-btn:focus-visible) {
+  color: var(--white) !important;
+  background: transparent !important;
+  text-shadow: 0 0 16px var(--gold2);
+}
+
+body.m01-public-showcase #page-diagnostics .triage-item {
+  margin-block: 16px !important;
+  padding: 0 !important;
+}
+
+body.m01-public-showcase #page-diagnostics .triage-item h4,
+body.m01-public-showcase #page-diagnostics .threshold-box span,
+body.m01-public-showcase #page-diagnostics .panel-head h3 {
+  font-weight: 900 !important;
+}
+
+body.m01-public-showcase #page-diagnostics .triage-item p,
+body.m01-public-showcase #page-diagnostics .threshold-box b {
+  font-weight: 750 !important;
+  line-height: 1.35 !important;
+}
+
+body.m01-public-showcase #page-diagnostics #sensorChart .ruca-trace-grid {
+  stroke: transparent !important;
+}
+
+body.m01-public-showcase #page-diagnostics #sensorChart .ruca-trace-reference {
+  stroke: transparent !important;
+}
+
+body.m01-public-showcase #page-diagnostics .panel-head {
+  border: 0 !important;
+}
+
+body.m01-public-showcase #page-diagnostics .lab-topline > div:first-child::before {
+  content: none !important;
+  display: none !important;
+}
+
+body.m01-public-showcase #page-diagnostics #sensorChart g line,
+body.m01-public-showcase #page-diagnostics svg#sensorChart g line {
+  stroke: transparent !important;
+}
+
+/* CONTROL: controls stay interactive; every enclosing panel becomes air. */
+body.m01-public-showcase #page-control .control-core {
+  padding-inline: 10px 22px !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+body.m01-public-showcase #page-control :is(
+  .control-status-strip,
+  .control-status-strip .metric-card,
+  .atmo-section,
+  .ruca-custom-control,
+  .slider-row,
+  .ruca-toggle-control,
+  .metric-card,
+  .team-preview-console,
+  .source-status-grid,
+  .source-status-grid > *,
+  .source-test-output,
+  .audio-readout,
+  .controller-readout,
+  .command-control-readout
+) {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+body.m01-public-showcase #page-control .control-status-strip {
+  gap: clamp(18px, 2.4vw, 40px) !important;
+  padding-bottom: 16px !important;
+}
+
+body.m01-public-showcase #page-control .control-status-strip .metric-card {
+  min-height: 64px !important;
+  padding: 2px 0 !important;
+}
+
+body.m01-public-showcase #page-control .control-status-strip .metric-card span {
+  font-weight: 850 !important;
+}
+
+body.m01-public-showcase #page-control .control-status-strip .metric-card b {
+  font-weight: 900 !important;
+}
+
+body.m01-public-showcase #page-control .control-status-strip .metric-card small {
+  font-weight: 650 !important;
+  line-height: 1.3 !important;
+}
+
+body.m01-public-showcase #page-control .atmo-section {
+  min-height: 56px !important;
+  padding-block: 4px 14px !important;
+  overflow: visible !important;
+}
+
+body.m01-public-showcase #page-control .atmo-section[open] {
+  border: 0 !important;
+}
+
+body.m01-public-showcase #page-control .atmo-section summary {
+  min-height: 54px !important;
+  padding: 8px 34px 8px 0 !important;
+}
+
+body.m01-public-showcase #page-control .atmo-section summary b {
+  color: rgba(240,240,240,.72) !important;
+  font-weight: 750 !important;
+}
+
+body.m01-public-showcase #page-control .atmo-section > :not(summary) {
+  margin-inline: 0 !important;
+}
+
+body.m01-public-showcase #page-control .theme-preset,
+body.m01-public-showcase #page-control :is(
+  .ruca-restore-btn,
+  .ruca-command-button,
+  .source-test-row button,
+  .star-preset,
+  .audio-test-grid button
+) {
+  min-height: 44px !important;
+  padding: 8px 4px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--white) !important;
+  font-weight: 900 !important;
+}
+
+body.m01-public-showcase #page-control .theme-preset.active,
+body.m01-public-showcase #page-control .theme-preset:hover,
+body.m01-public-showcase #page-control .theme-preset:focus-visible,
+body.m01-public-showcase #page-control :is(.ruca-restore-btn,.ruca-command-button,.source-test-row button,.star-preset,.audio-test-grid button):hover,
+body.m01-public-showcase #page-control :is(.ruca-restore-btn,.ruca-command-button,.source-test-row button,.star-preset,.audio-test-grid button):focus-visible {
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--gold2) !important;
+  text-shadow: 0 0 16px color-mix(in srgb, var(--gold2) 56%, transparent);
+}
+
+body.m01-public-showcase #page-control .theme-preset,
+body.m01-public-showcase #page-control .theme-preset.active,
+body.m01-public-showcase #page-control .theme-preset:focus-visible,
+body.m01-public-showcase #page-control .theme-preset.ruca-controller-focus {
+  outline: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.m01-public-showcase #page-control .theme-preset.active,
+body.m01-public-showcase #page-control .theme-preset:focus-visible,
+body.m01-public-showcase #page-control .theme-preset.ruca-controller-focus {
+  color: var(--gold2) !important;
+  text-shadow: 0 0 18px var(--gold2) !important;
+}
+
+body.m01-public-showcase #page-control .slider-row {
+  grid-template-columns: minmax(118px, auto) minmax(0, 1fr) 42px !important;
+  gap: 14px !important;
+  min-height: 52px !important;
+  margin: 7px 0 !important;
+  padding: 7px 0 !important;
+}
+
+body.m01-public-showcase #page-control .slider-row span,
+body.m01-public-showcase #page-control .slider-row b {
+  color: var(--white) !important;
+  font-size: 12px !important;
+  line-height: 1.1 !important;
+}
+
+body.m01-public-showcase #page-control .slider-row b {
+  color: var(--gold2) !important;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+body.m01-public-showcase #page-control input[type="range"],
+body.m01-public-showcase .machine-footer input[type="range"] {
+  --range-progress: 0%;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  width: 100% !important;
+  min-width: 0;
+  height: 18px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  outline-offset: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--gold2) 0 var(--range-progress),
+    rgba(255,255,255,.13) var(--range-progress) 100%
+  ) !important;
+  box-shadow:
+    0 0 12px color-mix(in srgb, var(--gold2) 24%, transparent),
+    inset 0 0 0 1px rgba(255,255,255,.07) !important;
+  cursor: pointer;
+}
+
+body.m01-public-showcase #page-control input[type="range"]::-webkit-slider-runnable-track,
+body.m01-public-showcase .machine-footer input[type="range"]::-webkit-slider-runnable-track {
+  height: 10px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+}
+
+body.m01-public-showcase #page-control input[type="range"]::-webkit-slider-thumb,
+body.m01-public-showcase .machine-footer input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 19px;
+  height: 19px;
+  margin-top: -4.5px;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  background: var(--gold2);
+  box-shadow: 0 0 14px color-mix(in srgb, var(--gold2) 66%, transparent);
+}
+
+body.m01-public-showcase #page-control input[type="range"]::-moz-range-track,
+body.m01-public-showcase .machine-footer input[type="range"]::-moz-range-track {
+  height: 10px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255,255,255,.13);
+}
+
+body.m01-public-showcase #page-control input[type="range"]::-moz-range-progress,
+body.m01-public-showcase .machine-footer input[type="range"]::-moz-range-progress {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--gold2);
+}
+
+body.m01-public-showcase #page-control input[type="range"]::-moz-range-thumb,
+body.m01-public-showcase .machine-footer input[type="range"]::-moz-range-thumb {
+  width: 17px;
+  height: 17px;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  background: var(--gold2);
+}
+
+body.m01-public-showcase #page-control input[type="range"]:focus-visible {
+  outline: 0 !important;
+  box-shadow:
+    0 0 20px color-mix(in srgb, var(--gold2) 48%, transparent),
+    inset 0 0 0 1px rgba(255,255,255,.09) !important;
+}
+
+body.m01-public-showcase #page-control :is(button,summary):focus-visible,
+body.m01-public-showcase #page-control :is(button,summary).ruca-controller-focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+  text-shadow: 0 0 18px var(--gold2) !important;
+}
+
+body.m01-public-showcase #page-control .ruca-custom-control input:not([type="color"]),
+body.m01-public-showcase #page-control .ruca-custom-control select,
+body.m01-public-showcase #page-control #rucaSourceTestOutput {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--white) !important;
+  font-weight: 750 !important;
+}
+
+/* R14: timeline labels are spatial wayfinding, not cells in another rail. */
+body.m01-public-showcase #page-live .editorial-timeline-ribbon > header,
+body.m01-public-showcase #page-live .world-ribbon > header {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* R14: every LIVE information layer floats over the realm image. The backdrop
+   remains intact; only nested card, cell, ribbon, and selector chrome is removed. */
+body.m01-public-showcase #page-live .realm-world :is(
+  button,
+  article,
+  section,
+  header,
+  footer,
+  div,
+  span,
+  li,
+  a
+) {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.m01-public-showcase #page-live .realm-world button:is(:hover,:focus-visible,[aria-selected="true"],.active) {
+  outline: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--gold2) !important;
+  text-shadow: 0 0 16px var(--gold2) !important;
+}
+
+@media (max-width: 980px) {
+  body.m01-public-showcase #page-play .command-readiness-rail .status-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    row-gap: 14px !important;
+  }
+
+  body.m01-public-showcase #page-control .control-core {
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+@media (max-width: 620px) {
+  html,
+  body.m01-public-showcase {
+    overflow: clip !important;
+  }
+
+  body.m01-public-showcase .core-nav-beacon,
+  body.m01-public-showcase #coreReturnAnchor.core-return-anchor {
+    display: none !important;
+  }
+
+  body.m01-public-showcase #rucaApp {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  body.m01-public-showcase #rucaApp > :is(.top-shell,.stage,.machine-footer,.intelligence-ribbon) {
+    grid-column: 1 !important;
+  }
+
+  body.m01-public-showcase.pass16g-world-viewport[data-world="diagnostics"] #rucaApp .stage #page-diagnostics.passive-monitor {
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    padding: 14px 14px 128px !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+  }
+
+  body.m01-public-showcase.pass16g-world-viewport:not(.ruca-3dixon-lounge)[data-world="diagnostics"] #page-diagnostics.passive-monitor:not(.diagnostics-detail-open) .diag-shell,
+  body.m01-public-showcase.pass16g-world-viewport:not(.ruca-3dixon-lounge)[data-world="diagnostics"] #page-diagnostics.passive-monitor.diagnostics-detail-open .diag-shell {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 28px !important;
+    width: 100% !important;
+    height: auto !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+  }
+
+  body.m01-public-showcase #page-diagnostics :is(.sensor-groups,.rapid-lab,.triage-console) {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  body.m01-public-showcase #page-diagnostics .sensor-groups h2,
+  body.m01-public-showcase #page-diagnostics .triage-console h2 {
+    font-size: 26px !important;
+    line-height: 1 !important;
+  }
+
+  body.m01-public-showcase #page-diagnostics .sensor-buttons {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 8px 12px !important;
+    margin-block: 14px !important;
+  }
+
+  body.m01-public-showcase #page-diagnostics #sensorButtons .sensor-btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 36px !important;
+    padding: 4px 0 !important;
+    font-size: 9px !important;
+    white-space: normal !important;
+  }
+
+  body.m01-public-showcase #page-diagnostics .lab-topline {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 76px !important;
+    gap: 12px !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  body.m01-public-showcase #page-diagnostics .lab-topline h2 {
+    max-width: none !important;
+    font-size: 34px !important;
+    line-height: .96 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  body.m01-public-showcase #page-diagnostics .lab-topline p {
+    max-width: none !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+
+  body.m01-public-showcase #page-diagnostics .health-core-mini {
+    width: 76px !important;
+    height: 76px !important;
+  }
+
+  body.m01-public-showcase #page-diagnostics .diagnostics-view-tabs {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px 18px !important;
+    width: 100% !important;
+    margin-block: 18px !important;
+    overflow: visible !important;
+  }
+
+  body.m01-public-showcase #page-diagnostics .diag-overview-row {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px 22px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  body.m01-public-showcase #page-diagnostics .diag-overview-row > :is(.scan-core,.threshold-box) {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+  }
+
+  body.m01-public-showcase #page-diagnostics :is(.lab-main-grid,.chart-panel,#sensorChart) {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  body.m01-public-showcase #page-diagnostics .lab-main-grid,
+  body.m01-public-showcase #page-diagnostics .chart-panel {
+    height: auto !important;
+  }
+
+  body.m01-public-showcase #page-diagnostics #sensorChart {
+    height: 230px !important;
+  }
+
+  body.m01-public-showcase #page-diagnostics .triage-console {
+    padding-top: 16px !important;
+  }
+
+  body.m01-public-showcase #page-play {
+    padding-bottom: 124px !important;
+  }
+
+  body.m01-public-showcase.pass16f-pattern-translation #page-play.play-apps-integrated .integrated-play-layout {
+    min-height: 780px !important;
+    grid-template-rows: 76px 508px auto !important;
+  }
+
+  body.m01-public-showcase.pass16f-pattern-translation #page-play.play-apps-integrated :is(.command-orbit,.launcher-orbit) {
+    height: 508px !important;
+    min-height: 508px !important;
+  }
+
+  body.m01-public-showcase #page-play .command-orbit-filters {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    align-content: center !important;
+    height: 76px !important;
+    min-height: 76px !important;
+    gap: 4px 8px !important;
+    padding-inline: 4px !important;
+    overflow: hidden !important;
+    scrollbar-width: none;
+  }
+
+  body.m01-public-showcase #page-play .command-orbit-filters .command-filter-btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 32px !important;
+    padding-inline: 2px !important;
+    font-size: 8px !important;
+    letter-spacing: .025em !important;
+    white-space: normal !important;
+  }
+
+  body.m01-public-showcase #page-play .command-orbit-filters::-webkit-scrollbar {
+    display: none;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  body.m01-public-showcase #page-play .command-readiness-rail .status-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  body.m01-public-showcase #page-play .command-readiness-rail .status-grid::after {
+    content: "";
+    display: block;
+    grid-column: 1 / -1;
+    height: 76px;
+    pointer-events: none;
+  }
+
+  body.m01-public-showcase #page-live .lane-switcher {
+    width: 100% !important;
+    gap: 18px !important;
+    padding-inline: 8px 20px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  body.m01-public-showcase #page-live .lane-switcher::-webkit-scrollbar {
+    display: none;
+  }
+
+  body.m01-public-showcase #page-live .lane-switcher .lane-btn {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: max-content !important;
+    padding: 7px 4px !important;
+    white-space: nowrap !important;
+    scroll-snap-align: start;
+    font-size: 12px !important;
+    letter-spacing: .04em !important;
+  }
+
+  body.m01-public-showcase #page-live .lane-switcher .lane-btn small {
+    display: block !important;
+    margin-top: 2px !important;
+    font-size: 8px !important;
+    line-height: 1 !important;
+    letter-spacing: .08em !important;
+  }
+
+  body.m01-public-showcase #page-live .lane-switcher .lane-btn[data-lane="market"] {
+    display: none !important;
+  }
+
+  body.m01-public-showcase #page-control .slider-row {
+    grid-template-columns: minmax(96px, auto) minmax(0, 1fr) 34px !important;
+    gap: 9px !important;
+  }
+}
+
+/* PUBLIC R14.1 // Header words remain; every header container disappears. */
+body.m01-public-showcase #rucaApp > .top-shell,
+body.m01-public-showcase #rucaApp > .top-shell :is(.brand-block,.world-nav,.time-block,.reviewer-actions,.reviewer-actions a,.nav-btn,.time-readout),
+body.m01-public-showcase #rucaApp > .mobile-reviewer-dock,
+body.m01-public-showcase #rucaApp > .mobile-reviewer-dock a {
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+body.m01-public-showcase #rucaApp > .top-shell :is(.brand-block,.world-nav,.time-block,.reviewer-actions,.nav-btn,.time-readout)::before,
+body.m01-public-showcase #rucaApp > .top-shell :is(.brand-block,.world-nav,.time-block,.reviewer-actions,.nav-btn,.time-readout)::after,
+body.m01-public-showcase #rucaApp > .mobile-reviewer-dock::before,
+body.m01-public-showcase #rucaApp > .mobile-reviewer-dock::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.m01-public-showcase #rucaApp > .top-shell .nav-btn:is(.active,:hover,:focus-visible,.ruca-controller-focus),
+body.m01-public-showcase #rucaApp > :is(.top-shell,.mobile-reviewer-dock) a:is(:hover,:focus-visible),
+body.m01-public-showcase #rucaApp > :is(.top-shell,.mobile-reviewer-dock) .reviewer-action-primary {
+  border: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--white) !important;
+  text-shadow: 0 0 16px var(--gold2) !important;
+}
+
+body.m01-public-showcase #rucaApp > :is(.top-shell,.mobile-reviewer-dock) a {
+  font-weight: 900 !important;
 }

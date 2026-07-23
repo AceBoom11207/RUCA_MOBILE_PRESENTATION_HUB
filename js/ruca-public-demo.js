@@ -158,7 +158,9 @@
     const availableX = Math.max(0, w / 2 - gaugeRadius - 14);
     const availableY = Math.max(0, h / 2 - gaugeRadius - 10);
     const orbitX = Math.min(w * (compact ? .36 : .30), availableX, compact ? 580 : 540);
-    const orbitY = Math.min(h * (compact ? .42 : .44), availableY);
+    const orbitY = compact
+      ? Math.min(h * .42, availableY)
+      : Math.min(h * .34, availableY, 320);
     const upperX = orbitX * (compact ? .70 : .72);
     const upperY = orbitY * (compact ? .82 : .78);
     const gauges = {
@@ -243,16 +245,26 @@
     if (!board) return;
     let frame = 0;
     const refresh = () => {
-      if (frame) cancelAnimationFrame(frame);
+      if (frame) return;
       frame = requestAnimationFrame(() => {
         frame = 0;
         if (board.clientWidth < 1 || board.clientHeight < 1) return;
+        board.dataset.homeGeometryInput = `${board.clientWidth}x${board.clientHeight}`;
         applyHomeGeometry(board, computeHomeGeometry(board.clientWidth, board.clientHeight));
       });
     };
-    if (typeof ResizeObserver === "function") new ResizeObserver(refresh).observe(board);
+    board.__rucaRefreshHomeGeometry = refresh;
+    if (typeof ResizeObserver === "function") {
+      const observer = new ResizeObserver(refresh);
+      observer.observe(board);
+      if (board.parentElement) observer.observe(board.parentElement);
+      board.__rucaHomeGeometryObserver = observer;
+    }
     window.addEventListener("resize", refresh, { passive: true });
+    window.addEventListener("load", refresh, { once: true });
     refresh();
+    requestAnimationFrame(() => requestAnimationFrame(refresh));
+    [120, 360, 900].forEach(delay => window.setTimeout(refresh, delay));
   }
 
   function playNodes() {
@@ -704,10 +716,24 @@
       applyPalette("default");
       text("#rucaCommandControlState", "DEFAULT RESTORED");
     });
+    const syncRangeFill = input => {
+      const min = Number(input.min || 0);
+      const max = Number(input.max || 100);
+      const value = Math.min(max, Math.max(min, Number(input.value || min)));
+      const percentage = max === min ? 0 : ((value - min) / (max - min)) * 100;
+      input.style.setProperty("--range-progress", `${percentage.toFixed(2)}%`);
+      input.setAttribute("aria-valuenow", String(value));
+    };
+    $$("input[type='range']").forEach(input => {
+      syncRangeFill(input);
+      input.addEventListener("input", () => syncRangeFill(input));
+      input.addEventListener("change", () => syncRangeFill(input));
+    });
     $$(".slider-row input[type='range']").forEach(input => {
       const output = input.parentElement.querySelector("b");
       const update = () => {
         if (output) output.textContent = input.value;
+        syncRangeFill(input);
         if (input.id === "rucaBrightnessSlider") document.documentElement.style.setProperty("--ruca-brightness-filter", String(0.45 + Number(input.value) / 80));
         if (input.id === "rucaGlowSlider") document.documentElement.style.setProperty("--ruca-preview-glow-size", `${20 + Number(input.value)}px`);
         if (input.id === "rucaDensitySlider") document.documentElement.style.setProperty("--ruca-density-level", input.value);
@@ -720,7 +746,12 @@
     });
     const volumeInputs = [$("#rucaCommandVolume"), $("#rucaAudioVolume"), $("#rucaFooterVolume")].filter(Boolean);
     volumeInputs.forEach(input => input.addEventListener("input", () => {
-      volumeInputs.forEach(other => { if (other !== input) other.value = input.value; });
+      volumeInputs.forEach(other => {
+        if (other !== input) other.value = input.value;
+        syncRangeFill(other);
+        const output = other.closest(".slider-row")?.querySelector("b");
+        if (output) output.textContent = other.value;
+      });
       text("#rucaFooterVolumeValue", input.value);
       document.documentElement.style.setProperty("--ruca-audio-volume", `${input.value}%`);
     }));
