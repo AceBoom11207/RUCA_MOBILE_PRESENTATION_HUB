@@ -21,7 +21,7 @@
   <title>Anthony Moncion | Product Designer | RUCA Command Core</title>
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="icon" href="/icons/icon-192.png" sizes="192x192">
-  <link rel="stylesheet" href="/portfolio/portfolio.css?v=portfolio-red-r4">
+  <link rel="stylesheet" href="/portfolio/portfolio.css?v=portfolio-red-r5">
 </head>
 <body>
   <a class="skip-link" href="#top">Skip to case study</a>
@@ -32,10 +32,9 @@
     </a>
     <div class="nav-actions">
       <nav aria-label="Case study sections">
-        <a href="#about">About</a>
+        <a href="#brief">Brief</a>
         <a href="#problem">Problem</a>
-        <a href="#process">Process</a>
-        <a href="#system">System</a>
+        <a href="#decisions">Decisions</a>
         <a href="#evidence">Evidence</a>
         <a href="#resume">Resume</a>
       </nav>
@@ -48,38 +47,36 @@
       <div class="hero-orbit" aria-hidden="true"></div>
       <div class="hero-shade" aria-hidden="true"></div>
       <div class="hero-content">
-        <p class="eyebrow">Independent Product // Interaction Architecture // 2026</p>
+        <p class="eyebrow">Product Design Case Study // Independent End-to-End Build // 2026</p>
         <h1 id="hero-title">RUCA Command Core</h1>
-        <p class="hero-summary">Powering on a console feels like entering a product. Powering on a PC feels like arriving at a workspace someone forgot to finish.</p>
+        <p class="hero-summary">I designed and shipped a controller-first OS layer that turns fragmented PC tasks into five coherent worlds—then built a safe public simulation reviewers can use.</p>
         <div class="hero-actions" aria-label="Portfolio actions">
           <a href="#problem">Read the case study</a>
           <a href="/index.html#home">Explore the product</a>
           <a href="#resume">View resume</a>
         </div>
         <dl class="hero-meta">
-          <div><dt>Role</dt><dd>Founder &amp; Lead Product Designer</dd></div>
-          <div><dt>Focus</dt><dd>Product strategy / interaction architecture / controller-first computing</dd></div>
-          <div><dt>Status</dt><dd>Independent product in active development</dd></div>
+          <div><dt>Role</dt><dd>Founder, Product &amp; Interaction Designer</dd></div>
+          <div><dt>Ownership</dt><dd>Strategy, IA, interaction model, visual system, implementation, validation</dd></div>
+          <div><dt>Team</dt><dd>Independent end-to-end build</dd></div>
+          <div><dt>Status</dt><dd>Working product in active development</dd></div>
         </dl>
       </div>
       <a class="case-cue" href="#problem">Why RUCA exists <span aria-hidden="true">↓</span></a>
     </section>
 
-    <section id="about" class="band designer-band">
-      <div class="section-inner designer-grid">
+    <section id="brief" class="band designer-band">
+      <div class="section-inner ownership-grid">
         <div>
-          <p class="section-label">About the designer</p>
-          <h2>Systems-minded by practice, not by title.</h2>
+          <p class="section-label">Project brief</p>
+          <h2>Product direction through shipped interaction.</h2>
+          <p class="section-lede">RUCA is an independent product for console-comfortable players who want PC power without inheriting PC fragmentation.</p>
         </div>
-        <div class="body-copy">
-          <p>I am a systems-minded product designer whose background in hospitality and operations trained me to recognize friction early, coordinate complex environments, and protect the user experience while the machinery stays out of the way.</p>
-          <p>RUCA comes from lived experience as a console gamer, PC builder, operator, and technical problem solver. I knew exactly what disappeared when I moved from a console’s coherent startup ritual to the fragmented power of Windows.</p>
-          <p>I bring service judgment, operational leadership, hands-on PC fluency, interaction design, and technical implementation together to make complicated systems feel clear, trustworthy, and ready.</p>
-          <div class="designer-pillars" role="list" aria-label="Experience foundations">
-            <article role="listitem"><strong>Hospitality</strong><span>Read the room and protect the experience</span></article>
-            <article role="listitem"><strong>Operations</strong><span>Coordinate complexity without passing it downstream</span></article>
-            <article role="listitem"><strong>Systems</strong><span>Turn machine truth into a confident next action</span></article>
-          </div>
+        <div class="scope-grid" role="list" aria-label="Project scope and ownership">
+          <article role="listitem"><span>My role</span><strong>Product and interaction design</strong><p>Problem framing, information architecture, interaction rules, visual direction, implementation criteria, and final acceptance.</p></article>
+          <article role="listitem"><span>Platform</span><strong>Desktop-first, input-flexible</strong><p>Private Windows runtime plus a responsive, deterministic public simulation.</p></article>
+          <article role="listitem"><span>Core constraint</span><strong>Prove the product safely</strong><p>The public experience cannot touch telemetry, files, devices, native commands, credentials, or private endpoints.</p></article>
+          <article role="listitem"><span>Delivery</span><strong>One live product surface</strong><p>Five worlds, one state owner, one routing model, one visual-preset owner, and one focus system.</p></article>
         </div>
       </div>
     </section>
@@ -99,6 +96,16 @@
             <div><dt>Core promise</dt><dd>Console confidence without sacrificing PC truth or control</dd></div>
             <div><dt>Public boundary</dt><dd>Show the product design without exposing private workstation authority</dd></div>
           </dl>
+          <div class="criteria-block">
+            <strong>Success criteria I set</strong>
+            <ul>
+              <li>Orient the user around readiness before presenting choices.</li>
+              <li>Let users move by intent, not by launcher or utility ownership.</li>
+              <li>Make every machine and information state honest about source and availability.</li>
+              <li>Support keyboard, mouse, touch, and controller-style directional focus.</li>
+              <li>Keep the public proof completely disconnected from private workstation authority.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -118,6 +125,45 @@
           <strong>Validation status</strong>
           <p>Current decisions are grounded in lived console-to-PC friction, repeated implementation review, responsive and controller testing, telemetry validation, and browser proof. Moderated testing with target users remains the next formal research stage and is not presented as completed work.</p>
         </aside>
+      </div>
+    </section>
+
+    <section id="decisions" class="band decision-band">
+      <div class="section-inner">
+        <p class="section-label">Decision trail</p>
+        <h2>Three product decisions turned a dashboard into a coherent operating experience.</h2>
+        <div class="decision-grid" role="list">
+          <article role="listitem">
+            <span>Decision 01 // Arrival</span>
+            <h3>Lead with readiness, not navigation.</h3>
+            <dl>
+              <div><dt>Signal</dt><dd>PC startup exposes tools before it establishes confidence.</dd></div>
+              <div><dt>Decision</dt><dd>Make the System Heart the first answer: the machine is ready, advisory, or critical.</dd></div>
+              <div><dt>Tradeoff</dt><dd>Fewer shortcuts above the fold; stronger orientation and emotional arrival.</dd></div>
+              <div><dt>Result</dt><dd>One readiness core coordinates six visible machine channels and the next destinations.</dd></div>
+            </dl>
+          </article>
+          <article role="listitem">
+            <span>Decision 02 // Architecture</span>
+            <h3>Organize around five user questions.</h3>
+            <dl>
+              <div><dt>Signal</dt><dd>Launchers, telemetry, news, diagnostics, and settings compete as unrelated owners.</dd></div>
+              <div><dt>Decision</dt><dd>Map the product to readiness, launch intent, live context, safety, and behavior.</dd></div>
+              <div><dt>Tradeoff</dt><dd>More design work in shared shell and state ownership; less user translation between tools.</dd></div>
+              <div><dt>Result</dt><dd>Five durable worlds share one navigation, focus, and status language.</dd></div>
+            </dl>
+          </article>
+          <article role="listitem">
+            <span>Decision 03 // Trust</span>
+            <h3>Explain meaning before exposing measurement.</h3>
+            <dl>
+              <div><dt>Signal</dt><dd>Raw sensor values create anxiety when users cannot judge severity or next action.</dd></div>
+              <div><dt>Decision</dt><dd>Guardian leads with severity, meaning, first check, and next action; raw depth stays available.</dd></div>
+              <div><dt>Tradeoff</dt><dd>Technical detail moves one layer deeper; the primary view becomes calmer and more useful.</dd></div>
+              <div><dt>Result</dt><dd>Diagnostics supports progressive disclosure without inventing missing readings.</dd></div>
+            </dl>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -226,34 +272,53 @@
     </section>
 
     <section id="evidence" class="band evidence-band">
-      <div class="section-inner evidence-layout">
-        <div>
-          <p class="section-label">Product evidence</p>
-          <h2>Visible scope, verified behavior, honest limits.</h2>
-          <p>The work is evaluated through real routes, responsive viewports, keyboard and controller behavior, syntax checks, console inspection, telemetry truth states, and recovery paths.</p>
+      <div class="section-inner">
+        <div class="evidence-layout">
+          <div>
+            <p class="section-label">Product evidence</p>
+            <h2>Visible scope, verified behavior, honest limits.</h2>
+            <p>The case study separates shipped proof from planned research. Feature counts describe scope; the verification matrix describes what was actually checked.</p>
+          </div>
+          <dl class="evidence-stats">
+            <div><dt>Primary worlds</dt><dd>5</dd></div>
+            <div><dt>Commands</dt><dd>39</dd></div>
+            <div><dt>Command districts</dt><dd>6</dd></div>
+            <div><dt>Control systems</dt><dd>11</dd></div>
+            <div><dt>Telemetry channels</dt><dd>6</dd></div>
+            <div><dt>Truth states</dt><dd>5</dd></div>
+            <div><dt>Input modes</dt><dd>4</dd></div>
+            <div><dt>Public native authority</dt><dd>0</dd></div>
+          </dl>
         </div>
-        <dl class="evidence-stats">
-          <div><dt>Primary worlds</dt><dd>5</dd></div>
-          <div><dt>Commands</dt><dd>39</dd></div>
-          <div><dt>Command districts</dt><dd>6</dd></div>
-          <div><dt>Control systems</dt><dd>11</dd></div>
-          <div><dt>Telemetry channels</dt><dd>6</dd></div>
-          <div><dt>Truth states</dt><dd>5</dd></div>
-          <div><dt>Input modes</dt><dd>4</dd></div>
-          <div><dt>Public native authority</dt><dd>0</dd></div>
-        </dl>
+        <div class="verification-matrix" role="list" aria-label="Verification results">
+          <article role="listitem"><span>Route continuity</span><strong>Verified</strong><p>Direct hashes open all five worlds; the shared shell remains mounted between transitions.</p></article>
+          <article role="listitem"><span>Input model</span><strong>Verified in browser</strong><p>Mouse, keyboard activation, Escape/Home recovery, touch-sized controls, and visible directional focus paths.</p></article>
+          <article role="listitem"><span>Responsive behavior</span><strong>Verified</strong><p>Desktop and mobile layouts reflow without horizontal overflow in the tested public build.</p></article>
+          <article role="listitem"><span>Public safety</span><strong>Verified by boundary</strong><p>Deterministic local fixtures, restrictive CSP, no bridge, no private endpoint, and no native execution path.</p></article>
+          <article role="listitem"><span>State ownership</span><strong>Verified</strong><p>One router, one visual-preset owner, one focus manager, and browser-local persistence for allowed settings.</p></article>
+          <article role="listitem"><span>Physical gamepad</span><strong>Environment-dependent</strong><p>The optional Gamepad API fails safely; this case study does not claim universal device validation.</p></article>
+        </div>
+        <aside class="research-gap" aria-label="Research gap and next study">
+          <div><span>Evidence limit</span><strong>No fabricated user metrics</strong></div>
+          <p>Moderated testing with target users is not complete. The next study will measure time to understand readiness, first-destination success, diagnostics comprehension, and confidence in the public/private boundary.</p>
+        </aside>
       </div>
     </section>
 
     <section id="outcome" class="band outcome-band">
       <div class="section-inner outcome-grid">
         <div>
-          <p class="section-label">Outcome</p>
-          <h2>A PC experience designed to feel powerful, present, and ready.</h2>
+          <p class="section-label">Shipped outcome</p>
+          <h2>A working product demonstration—not a narrated screenshot tour.</h2>
         </div>
         <div class="body-copy">
-          <p>RUCA now has one arrival ritual, five purposeful worlds, truthful machine-state communication, controller-aware interaction, progressive diagnostics, and controls with visible ownership.</p>
-          <p>The public experience shows that product design directly while the complete runtime, telemetry, files, credentials, native controls, and local services remain on the owner’s workstation.</p>
+          <p>I replaced the brochure-like guided tour with a functional public simulation. Reviewers can navigate all five worlds, change states, inspect diagnostics, select commands, and alter the cockpit without reading feature narration first.</p>
+          <p>The shipped result proves the interaction architecture while the complete runtime, telemetry, files, credentials, native controls, and local services remain on the owner’s workstation.</p>
+          <div class="learning-grid" role="list" aria-label="Outcome and learning">
+            <article role="listitem"><span>What changed</span><strong>Explanation became interaction</strong><p>The product now demonstrates its value through use instead of hotspots, slides, or screenshot overlays.</p></article>
+            <article role="listitem"><span>What I learned</span><strong>Trust is part of navigation</strong><p>Readiness, provenance, and unavailable states must be designed as carefully as destination structure.</p></article>
+            <article role="listitem"><span>Next experiment</span><strong>Test comprehension, not preference</strong><p>Observe whether console-to-PC users can orient, launch, diagnose, and explain the safety boundary without coaching.</p></article>
+          </div>
           <div class="case-links">
             <a href="/index.html#home">Explore RUCA</a>
             <a href="#resume">View resume</a>
@@ -267,7 +332,7 @@
       <div class="section-inner resume-grid">
         <div class="resume-intro">
           <p class="section-label">Resume project entry</p>
-          <h2 id="resume-title">Founder &amp; Lead Product Designer.</h2>
+          <h2 id="resume-title">Founder, Product &amp; Interaction Designer.</h2>
           <p>Independent Product // 2026–Present</p>
           <p>Resume covering product design, hospitality, operational leadership, customer experience, and technical systems fluency.</p>
           <div class="resume-actions">
@@ -282,6 +347,7 @@
             <li>Designed five durable product worlds around the questions users bring to the machine: readiness, launch intent, live context, safety, and behavior.</li>
             <li>Built a console-scale information architecture with one System Heart, six machine gauges, 39 commands across six PLAY districts, Guardian diagnostics, and an eleven-system Control Workshop.</li>
             <li>Designed keyboard, mouse, controller, and touch interaction foundations with visible focus, reduced motion, and route recovery.</li>
+            <li>Replaced a screenshot-led guided tour with a working public simulation that preserves the private workstation boundary.</li>
             <li>Established responsive, syntax, console, interaction, telemetry, and rollback validation as part of the product design process.</li>
           </ul>
           <div class="certification-line">

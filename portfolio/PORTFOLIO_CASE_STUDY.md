@@ -1,187 +1,141 @@
 # RUCA Command Core
 
-## Welcome Home
+## Product Design Case Study
 
-**The Console Experience. The Power of PC.**
+I designed and shipped a controller-first OS layer that turns fragmented PC tasks into five coherent worlds, then built a safe public simulation reviewers can use.
 
-RUCA is a controller-first personal computing system. It is designed for people who value PC performance and customization but miss the calm, coherent ritual of turning on a console and immediately knowing where they are, whether the system is ready, and what to do next.
+[Explore the working public product](../index.html#home)
 
 ![RUCA HOME runtime](../assets/product/ruca-home-runtime.png)
 
 ## Project Snapshot
 
-- **Role:** Founder and Lead Interaction Designer
-- **Status:** Independent product project, 2026-present
-- **Platform:** Windows, browser shell, local Python bridge
-- **Primary audience:** Console-to-PC gamers, builders, creators, and enthusiasts
-- **Design objective:** Power without intimidation
-- **Core constraint:** Truth before beauty; missing data must remain missing
+- **Role:** Founder, Product and Interaction Designer
+- **Ownership:** Product strategy, information architecture, interaction model, visual system, implementation criteria, validation, and final acceptance
+- **Team:** Independent end-to-end build
+- **Status:** Working product in active development
+- **Primary audience:** Console-comfortable players moving into powerful PC setups
+- **Core promise:** Console confidence without sacrificing PC truth or control
+- **Public constraint:** Demonstrate the product without exposing private telemetry, files, devices, credentials, endpoints, or native commands
 
 ## The Problem
 
-PC gaming delivers performance and flexibility, but its experience is fragmented across launchers, hardware monitors, settings utilities, media apps, feeds, and Windows surfaces. The user carries the integration burden.
+Powering on a console feels like entering a product. Powering on a PC feels like arriving at a workspace someone forgot to finish.
 
-Early RUCA prototypes reproduced that fragmentation. New scripts were stacked over old renderers. Telemetry contracts duplicated. Visual systems competed. Features existed, but the product did not feel like one machine.
+PC users move between launchers, telemetry utilities, settings, media, feeds, folders, and system controls as separate experiences. The user carries the integration burden.
 
-The design problem became:
+The design question became:
 
-> How might a Windows PC welcome the user home, communicate readiness, reveal complexity only when needed, and remain fully honest about what is live?
+> How might a PC establish readiness, continuity, and a trusted starting point before asking what the user wants to do next?
 
-## Product Principles
+## Success Criteria
 
-1. Experience before technology.
-2. Truth before beauty.
-3. Build places, not pages.
-4. Reduce cognitive load.
-5. Reveal complexity progressively.
-6. Replace, never stack.
-7. Every interaction has a trigger, action, and feedback response.
-8. Every world has a back path.
+1. Orient the user around readiness before presenting choices.
+2. Let users move by intent, not by launcher or utility ownership.
+3. Make every machine and information state honest about source and availability.
+4. Support keyboard, mouse, touch, and controller-style directional focus.
+5. Keep the public proof completely disconnected from private workstation authority.
 
-## Information Architecture
+## Decision Trail
 
-RUCA uses five primary worlds:
+### 1. Lead With Readiness, Not Navigation
 
-| World | User question | Role |
+- **Signal:** PC startup exposes tools before it establishes confidence.
+- **Decision:** Make the System Heart the first answer: the machine is ready, advisory, or critical.
+- **Tradeoff:** Fewer shortcuts above the fold; stronger orientation and emotional arrival.
+- **Result:** One readiness core coordinates six visible machine channels and the next destinations.
+
+### 2. Organize Around Five User Questions
+
+- **Signal:** Launchers, telemetry, news, diagnostics, and settings compete as unrelated owners.
+- **Decision:** Map the product to readiness, launch intent, live context, safety, and behavior.
+- **Tradeoff:** More design work in shared shell and state ownership; less user translation between tools.
+- **Result:** Five durable worlds share one navigation, focus, and status language.
+
+### 3. Explain Meaning Before Measurement
+
+- **Signal:** Raw sensor values create anxiety when users cannot judge severity or next action.
+- **Decision:** Guardian leads with severity, meaning, first check, and next action; raw depth stays available.
+- **Tradeoff:** Technical detail moves one layer deeper; the primary view becomes calmer and more useful.
+- **Result:** Diagnostics supports progressive disclosure without inventing missing readings.
+
+## Product Architecture
+
+| World | User question | Product responsibility |
 | --- | --- | --- |
-| HOME | Am I ready? | Machine heart and readiness overview |
-| PLAY | What do I want to launch? | Games, apps, media, creative, AI, and system commands |
-| LIVE WORLD | What is happening around me? | Weather, markets, news, sports, and technology |
-| DIAGNOSTICS | Am I safe, and what should I do? | Protective system explanation and drill-down |
-| CONTROL | How should RUCA behave? | Appearance, atmosphere, input, audio, and sources |
+| HOME | Am I ready? | Readiness, confidence, and machine overview |
+| PLAY | What do I want to launch? | One spatial command registry organized by intent |
+| LIVE WORLD | What is happening? | One source-aware observation environment |
+| DIAGNOSTICS | Am I safe? | Severity, meaning, first check, and next action |
+| CONTROL | How should RUCA behave? | Appearance, atmosphere, input, audio, and local preferences |
 
-## System Architecture
+## Shipped Interaction
 
-```mermaid
-flowchart LR
-  A[Windows telemetry and system state] --> B[One local Python bridge]
-  C[Weather, markets, RSS, and sports sources] --> B
-  D[Windows XInput recovery watcher] --> B
-  B --> E[One browser shell]
-  E --> F[HOME]
-  E --> G[PLAY]
-  E --> H[LIVE WORLD]
-  E --> I[DIAGNOSTICS]
-  E --> J[CONTROL]
-```
+### HOME
 
-The architecture is intentionally conservative: one route owner, one telemetry endpoint, one normalized application registry, one starfield loop, one browser controller manager, and one local bridge listener.
+The System Heart turns six machine channels into one immediate readiness signal. Users can focus a gauge for detail without leaving HOME.
 
-## Design Process
-
-### 1. Audit Before Editing
-
-I mapped active files, renderers, telemetry bindings, source routes, controller loops, duplicate registries, and CSS ownership. This separated working behavior from visual debt and prevented another rebuild.
-
-### 2. Consolidate Ownership
-
-PLAY and APPS were merged into one command world. Two competing application data structures were replaced by one 39-command registry with local SVG icons, favorites, recents, and a shared drawer.
-
-### 3. Establish Product Worlds
-
-Each page received a clear mission and visual center of gravity. HOME belongs to the System Heart. PLAY belongs to the selected command. Live World belongs to the active observation. Diagnostics belongs to Guardian status. Control belongs to command authority.
-
-### 4. Validate Truth And Interaction
-
-Every pass included backups, exact diffs, syntax checks, browser console inspection, route tests, viewport measurements, and rollback instructions. Source failures were tested as product states rather than hidden.
-
-## HOME // Machine Heart
-
-HOME answers one question: **Am I ready?**
-
-One System Heart anchors six live machine gauges: CPU, GPU, RAM, storage, network, and thermal. The gauges share measured radial geometry. Six conduits visibly move real machine energy toward or away from the Heart. Five route beacons extend navigation from the same core.
-
-The design combines Swiss calibration, aerospace instrumentation, and restrained material depth without turning telemetry into decorative fiction.
-
-## PLAY // Command Districts
+### PLAY
 
 ![RUCA PLAY runtime](../assets/product/ruca-play-runtime.png)
 
-PLAY uses one 39-command registry and one orbit renderer. Commands are organized into six durable districts:
+Thirty-nine commands share one selection model and six districts. Selection changes center ownership and produces a safe simulated handoff instead of executing anything outside the page.
 
-- Games: 6
-- Browser: 1
-- Media: 7
-- Creative: 6
-- AI: 2
-- System: 17
-
-Desktop and tablet use measured radial geometry. Phone layouts use the same registry and nodes in a compact command dock. Selection updates one central command state and opens one truthful action drawer.
-
-## LIVE WORLD // Concierge
+### LIVE WORLD
 
 ![RUCA LIVE WORLD runtime](../assets/product/ruca-live-world-runtime.png)
 
-Live World turns five real source buses into one observation experience:
+Six deterministic information lanes share one hierarchy. Each lane communicates its simulated source state without pretending to be current live information.
 
-- Weather: Open-Meteo current conditions and forecast
-- Markets: configured market providers with partial/stale truth states
-- News: normalized BBC RSS
-- Sports: normalized ESPN scoreboard data
-- Tech: normalized BBC Technology RSS
-
-The active lane owns the visual hierarchy. Source status is visible. Wrong-lane content is rejected. Missing data exposes retry, configuration, cache, location, or API-key actions instead of a dead-end label.
-
-## DIAGNOSTICS // Guardian
+### DIAGNOSTICS
 
 ![RUCA DIAGNOSTICS runtime](../assets/product/ruca-diagnostics-runtime.png)
 
-Diagnostics translates machine state into plain-English protection. It combines health score, current/min/max/threshold readings, live traces, sensor drill-down, benchmark entry points, and Guardian guidance.
+Guardian translates machine-state examples into severity, meaning, first check, and next action before exposing deeper technical detail.
 
-The intended questions are human, not technical:
-
-- Am I safe?
-- What is wrong?
-- Why does it matter?
-- What should I check first?
-- What should I not panic about?
-- What should I do next?
-
-## CONTROL // Workshop
+### CONTROL
 
 ![RUCA CONTROL runtime](../assets/product/ruca-control-runtime.png)
 
-Control was not missing behavior; CSS had hidden it. The M01 Workshop restores the existing command authority without adding another settings renderer.
+Controls change the actual simulation and persist allowed preferences locally in the browser. Reset returns the experience to its default state.
 
-The persistent surface contains the active profile, seven theme presets, Apply, Reset, and six quick controls. Eleven advanced systems remain available through progressive drill-down: theme, reactor, panels, motion, starfield, sports atmosphere, audio, controller, sources, location, and command controls.
+## Evidence
 
-## Controller And Recovery
+| Area | Current proof |
+| --- | --- |
+| Route continuity | Direct hashes open all five worlds while the shared shell remains mounted |
+| Input model | Mouse, keyboard activation, Escape/Home recovery, touch-sized controls, and visible directional focus paths |
+| Responsive behavior | Desktop and mobile layouts reflow without horizontal overflow in tested public builds |
+| Public safety | Deterministic local fixtures, restrictive CSP, no private endpoint, and no native execution path |
+| State ownership | One router, one visual-preset owner, one focus manager, and browser-local persistence for allowed settings |
+| Physical gamepad | Environment-dependent; universal device validation is not claimed |
 
-RUCA supports mouse, keyboard, WASD, D-pad navigation, controller focus, an in-app analog cursor, reduced motion, and a Windows recovery foundation. START+BACK can summon the recovery path through one XInput watcher when the browser architecture allows it.
+## Shipped Outcome
 
-The recovery system and browser controller manager are separate by responsibility, not duplicated.
+I replaced a brochure-like guided tour with a functional public simulation. Reviewers can navigate all five worlds, change states, inspect diagnostics, select commands, and alter the cockpit without reading feature narration first.
 
-## Outcome
+The result proves the interaction architecture while the complete private runtime and workstation authority remain outside the public product.
 
-M01 currently validates:
-
-- Five coherent product worlds
-- One 39-command registry and renderer
-- Six HOME telemetry gauges and six moving conduits
-- Five separated Live World source lanes
-- Eleven reachable Control systems
-- One starfield canvas and animation loop
-- One local Python bridge listener
-- Zero browser console warnings or errors in the final M01 route pass
-- No document-level horizontal overflow in validated desktop, tablet, and phone layouts
-
-These are system and validation results, not claims of market adoption or user impact.
+These are product and verification outcomes, not claims of adoption, revenue, or market impact.
 
 ## What I Learned
 
-The hardest product work was not adding features. It was deciding what owned each state, removing duplicate paths, and making the visible hierarchy match the architecture.
+The hardest work was deciding what owned each state, removing competing paths, and making visible hierarchy match the product architecture.
 
-RUCA became more usable when I stopped treating missing data as a visual defect. Honest unavailable states, plain-English guidance, and clear recovery actions made the product feel more trustworthy than decorative completeness.
+Trust is part of navigation. Readiness, provenance, unavailable states, and recovery paths must be designed as carefully as the destinations themselves.
 
-The project also reinforced that controller UX is not keyboard UX with different buttons. Couch distance, focus visibility, hit targets, back paths, and recovery from Windows all have to be designed as one operating context.
+## Evidence Limit and Next Study
 
-## Next Validation
+Moderated testing with target users is not complete, and no user metrics are fabricated.
 
-- Moderated usability sessions with console-to-PC gamers
-- Task completion and recovery-path testing with a physical controller
-- General verified application launch service
-- Continued Diagnostics spatial refinement
-- Public product critique and iteration
+The next study will observe whether console-to-PC users can:
+
+- understand readiness without coaching;
+- reach a first destination by intent;
+- interpret Guardian guidance correctly; and
+- explain what the public simulation can and cannot access.
+
+The planned measures are time to orient, first-destination success, diagnostics comprehension, and confidence in the public/private boundary.
 
 ## Closing
 
