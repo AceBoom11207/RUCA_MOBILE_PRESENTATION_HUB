@@ -1,90 +1,106 @@
 %PDF-1.4
-%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<<
-/F1 2 0 R /F2 3 0 R
->>
+<< /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
->>
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
 endobj
 3 0 obj
-<<
-/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
->>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R /Annots [7 0 R 8 0 R] >>
 endobj
 4 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (mailto:hello@rucasrapidpcrepairlab.com)
->> /Border [ 0 0 0 ] /Rect [ 116.358 694 250.53 704.8 ] /Subtype /Link /Type /Annot
->>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 5 0 obj
-<<
-/A <<
-/S /URI /Type /Action /URI (https://ruca-mobile-presentation-hub.vercel.app/portfolio/)
->> /Border [ 0 0 0 ] /Rect [ 89.016 680.3 287.592 691.1 ] /Subtype /Link /Type /Annot
->>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 6 0 obj
-<<
-/Annots [ 4 0 R 5 0 R ] /Contents 10 0 R /MediaBox [ 0 0 612 792 ] /Parent 9 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 
-  /Trans <<
-
->> /Type /Page
->>
+<< /Length 4964 >>
+stream
+BT /F2 21 Tf 46.0 748.0 Td (ANTHONY C. MONCION) Tj ET
+BT /F2 10.5 Tf 46.0 728.0 Td (PRODUCT DESIGNER | INTERACTION DESIGN & PROTOTYPING) Tj ET
+BT /F1 9 Tf 46.0 711.0 Td (Monticello, NY | hello@rucasrapidpcrepairlab.com) Tj ET
+BT /F1 9 Tf 46.0 697.0 Td (Portfolio: ruca-mobile-presentation-hub.vercel.app/portfolio/) Tj ET
+BT /F1 9.3 Tf 46.0 675.0 Td (Product designer with independent desktop and mobile projects and a background in postal) Tj ET
+BT /F1 9.3 Tf 46.0 663.0 Td (operations and hospitality. Focused on information architecture, interaction consistency, system) Tj ET
+BT /F1 9.3 Tf 46.0 651.0 Td (feedback, and iterative prototyping, supported by Google training in UX design and advanced data) Tj ET
+BT /F1 9.3 Tf 46.0 639.0 Td (analytics.) Tj ET
+BT /F2 9.3 Tf 46.0 624.0 Td (DESIGN SKILLS & TOOLS) Tj ET
+0.6 w 46.0 620.0 m 566.0 620.0 l S
+BT /F1 8.8 Tf 46.0 606.0 Td (Figma | Information architecture | Interaction design | Responsive interfaces | Prototyping | Product) Tj ET
+BT /F1 8.8 Tf 46.0 595.0 Td (requirements | Design documentation | AI-assisted HTML/CSS/JavaScript prototyping | GitHub) Tj ET
+BT /F2 9.3 Tf 46.0 580.0 Td (INDEPENDENT PRODUCT DESIGN PROJECTS) Tj ET
+0.6 w 46.0 576.0 m 566.0 576.0 l S
+BT /F2 10 Tf 46.0 562.0 Td (RUCA OS & RUCA OS Mobile Companion) Tj ET
+BT /F1 9 Tf 489.0 562.0 Td (2026-Present) Tj ET
+BT /F1 9 Tf 46.0 548.0 Td (Independent product design and prototyping.) Tj ET
+BT /F1 9 Tf 46.0 535.0 Td (-) Tj ET
+BT /F1 8.6 Tf 56.0 535.0 Td (Defined product concepts, navigation, information hierarchy, and interaction requirements for) Tj ET
+BT /F1 8.6 Tf 56.0 524.0 Td (a desktop PC interface and an Android companion.) Tj ET
+BT /F1 9 Tf 46.0 512.0 Td (-) Tj ET
+BT /F1 8.6 Tf 56.0 512.0 Td (Developed desktop experiences around telemetry, diagnostics, media, and system controls;) Tj ET
+BT /F1 8.6 Tf 56.0 501.0 Td (adapted mobile flows for touch rather than duplicating the desktop layout.) Tj ET
+BT /F1 9 Tf 46.0 489.0 Td (-) Tj ET
+BT /F1 8.6 Tf 56.0 489.0 Td (Specified interface states for live, stale, unavailable, and unknown information, with) Tj ET
+BT /F1 8.6 Tf 56.0 478.0 Td (attention to connection feedback and consistent command behavior across devices.) Tj ET
+BT /F1 9 Tf 46.0 466.0 Td (-) Tj ET
+BT /F1 8.6 Tf 56.0 466.0 Td (Used Figma and AI-assisted development workflows to iterate on prototypes, review) Tj ET
+BT /F1 8.6 Tf 56.0 455.0 Td (implementation against requirements, and document acceptance criteria and limitations.) Tj ET
+BT /F1 9 Tf 46.0 443.0 Td (-) Tj ET
+BT /F1 8.6 Tf 56.0 443.0 Td (Presented a public product simulation with explicitly labeled demonstration data, separate) Tj ET
+BT /F1 8.6 Tf 56.0 432.0 Td (from local hardware-connected functionality.) Tj ET
+BT /F2 9.3 Tf 46.0 418.0 Td (PROFESSIONAL EXPERIENCE) Tj ET
+0.6 w 46.0 414.0 m 566.0 414.0 l S
+BT /F2 9.7 Tf 46.0 400.0 Td (United States Postal Service | Supervisor, Customer Services \(EAS\)) Tj ET
+BT /F1 9 Tf 500.0 400.0 Td (2019-2026) Tj ET
+BT /F1 8.8 Tf 46.0 386.0 Td (Middletown / Monticello, NY) Tj ET
+BT /F1 8.8 Tf 46.0 374.0 Td (-) Tj ET
+BT /F1 8.5 Tf 56.0 374.0 Td (Supervised approximately 75 employees across delivery, retail, logistics, maintenance, and) Tj ET
+BT /F1 8.5 Tf 56.0 363.0 Td (support functions.) Tj ET
+BT /F1 8.8 Tf 46.0 352.0 Td (-) Tj ET
+BT /F1 8.5 Tf 56.0 352.0 Td (Coordinated staffing, dispatch, staging, and daily workflows supporting 49 city and rural) Tj ET
+BT /F1 8.5 Tf 56.0 341.0 Td (routes; addressed service commitments and operational exceptions.) Tj ET
+BT /F1 8.8 Tf 46.0 330.0 Td (-) Tj ET
+BT /F1 8.5 Tf 56.0 330.0 Td (Supported customer escalations, employee coaching, safety, compliance, multi-site operations,) Tj ET
+BT /F1 8.5 Tf 56.0 319.0 Td (and the Passport Acceptance Program.) Tj ET
+BT /F2 9.3 Tf 46.0 306.0 Td (Earlier hospitality experience) Tj ET
+BT /F1 8.5 Tf 46.0 293.0 Td (Resorts World Catskills | Bartender) Tj ET
+BT /F1 8.5 Tf 512.0 293.0 Td (2018-2019) Tj ET
+BT /F1 8.5 Tf 46.0 282.0 Td (Ovation Bistro & Bar | Bartender / Mixologist) Tj ET
+BT /F1 8.5 Tf 512.0 282.0 Td (2016-2018) Tj ET
+BT /F1 8.5 Tf 46.0 271.0 Td (Planet Hollywood | Server / Bartender) Tj ET
+BT /F1 8.5 Tf 512.0 271.0 Td (2015-2016) Tj ET
+BT /F1 8.5 Tf 46.0 260.0 Td (TGI Fridays | Kitchen Supervisor / Server / Bartender) Tj ET
+BT /F1 8.5 Tf 512.0 260.0 Td (2009-2015) Tj ET
+BT /F1 8.5 Tf 46.0 249.0 Td (Walt Disney World Resort | Attractions Cast Member) Tj ET
+BT /F1 8.5 Tf 512.0 249.0 Td (2009-2010) Tj ET
+BT /F2 9.3 Tf 46.0 234.0 Td (EDUCATION & CERTIFICATES) Tj ET
+0.6 w 46.0 230.0 m 566.0 230.0 l S
+BT /F1 8.5 Tf 46.0 216.0 Td (Google UX Design Professional Certificate | Google / Coursera | July 2026) Tj ET
+BT /F1 8.5 Tf 46.0 205.0 Td (Google Advanced Data Analytics Professional Certificate | Google / Coursera | July 2026) Tj ET
+BT /F1 8.5 Tf 46.0 194.0 Td (GED preparation | SUNY ATTAIN Lab | In progress) Tj ET
+BT /F1 8.5 Tf 46.0 183.0 Td (Languages: English and Spanish) Tj ET
+endstream
 endobj
 7 0 obj
-<<
-/PageMode /UseNone /Pages 9 0 R /Type /Catalog
->>
+<< /Type /Annot /Subtype /Link /Rect [139 704 315 717] /Border [0 0 0] /A << /S /URI /URI (mailto:hello@rucasrapidpcrepairlab.com) >> >>
 endobj
 8 0 obj
-<<
-/Author (Anthony C. Moncion) /CreationDate (D:20260910002329+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260910002329+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (\(unspecified\)) /Title (Anthony C. Moncion | Product Designer) /Trapped /False
->>
-endobj
-9 0 obj
-<<
-/Count 1 /Kids [ 6 0 R ] /Type /Pages
->>
-endobj
-10 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2582
->>
-stream
-Gb!#]?#SIU'RfGRi7$TnNag,&g0Wo&:?jHO]NE!RTJ*Z?gKZ"$USssmp>^?f8riM>ek+R*!KrhI`635J4m,^`8IIbcq&Lf8]FDs@YtJ>_"A@`tS.5j#aZ+P:cPs?`fl]mDlXM]iS<i&Ph#VNNNo0EsVseai5*;m)\<"88FdiL?DX.n\gt(fVRl6#Mi8+5$,8iN&m!Lj_S54V]_;?O57BcG5IdXAlnst>;p#3U?[c?V!l8@@_@oblhY1rCWV`e_$I0A/ArEa8ii(.@$EIN!i$HUV>4uo$k0?Cn=1(D5>_bkq<b$jiS_7\\gpc+a::[2ETq-Hd3ARmF`9j"!I#2sfU$NVE`&i.lp'<0t7Mdt-[^u\p4enhG\aR?D?BeF,>UF_W\UKkf\iIiDS%BT"[m`P^%$)s47k2OuJ,TY)p+r3:Q#FT*_9,1H3U^-3piES0q9fOuQ%^YH;_qHMc5'Vf1muOq@UiIQOH%"biE"/;bg]`HrbMgH7MPpdqM-/&).?ihIX#8jM`%m'SWVP[KM2]e<,'J#QPN$KrWn`P1ZCp1,8r<ZlGY0`R.iK(`0kkfLB<=UoEK"tHEN3;'N^[(2/0Z:WKhER&Erhsi>]YT&$H\b37c@+9q'O&IGck-eDOMj.i4jpr)2iS>9sY=2B%^r5U_7F+nT9Jq7A`r&>)UXKq%FoPfSu&YVjO<5^\gnP@CI"Xdko!3&QKMi1u<b?\PntU;e_;Sb:.54W^u%3J#OR6MOXW#3B`q.n:L9'ds9d/h*K5)k,Z&OFu9jQkJf5`-'WdtqgC5F,!FJc[j`fc1ZK9&cZI0g%?naW%9[S`Rb_Rg4(*jmffoY,/-5FdWCQ*2gT3gd9i@7BSM?WSd+f0W,4C,ie&0R\Ie]L@ds3?eVKSqH00%qU?*U=sZ9-\_q.,4$c1"JGD6b+El-X`6`ij)AmV8j&pjP=4lBBpN`N!Lhm'=Wk=uKXsbfJMh'Cob!CSN`^IZc.UEH*uWP&j@2lG#-U!$dV:1dqJ;%(tW.X!m]5_Zr<rOGSFqLD`BG)ICVQIIb&-bR/0orkY..gM$S6"A[2-]h2[l3K'4/&_J"RGth240VCtCD+@K`OR*O_<]msq(.e)jZ2&P8Hf16PPuY3P.D(QL;Aui7j\:odCVDRSe@[$DCQ>,YX`$gCh'qnV7>`U'!gQL(7^oe.YH,*9"[c3D9Httd<*59](6_LC+1Ku4O_Y`MVP7qoln_=n_d/p5e/Fcb0t+&,5_qC*V(ahf5a*H%+"]1C%foKQ7@aA^gRst#U=(W[Z+)M:h1n=R,$Yf6eJc0&ej(Q3ZC$Dt+$t\/D.#*SLdKY0e7h#AoUgI12:#CGQ^gK+R>&[3Aof%]hj\p7B"A0h],XP4rh.Xfd]6@&gbJT$D)/&AOW->1U!ZN$-!+[AO0N?P!,)E]M-aT+ef_3Z?mnI8"1)dMMtJFQ0mipI?sW&P`]C#XDV(=$9/p37j@73@9+5Xn2D%Vs6'Y>%E(j^gm"Y!TMqP5md1tB#>hqn^[j3QrPu.T"?0Sqa+n.k#`GKEG:Un)P4^.5=^Zq.m)m*#WR;O7U@KH%<"Y/\,&_elV\tD%Q2-9;Pjfh!QC-WHNY&'_ERPaLFVZ6h];Mp.G,"+)qVD>`VOr]c<@h3gl/5ejL]++&#@._$70OEHM_#9>7o/R:^6TFjrg%]#3SrUgubBNe_RIB#Cm!CG"mrt*If;Y4ng7R%fJ'OiB3#p0)7Ag+2KkuoLOXlPZf?1;Eb;I;Wq59k"6c7:E*P^c[[LIlTl\7\a%bkm[cBPnXU##/)jiB=8_ASE/QmjVALZIm&[Pm0K^Sb*q'u<%50=.Kj014-8k"o]FlKWR"KB.gtdl(<bW`FE4Js%SHHP;[Pift<Xm0fm/R*lT6Bo>qjFXo-E4iDR<l1sbV;ONXY1?'b5j991_962G=Gb.bIY)RY-b`Ir]Ci?YTcfJcG,pNU"d)JbCK`q5!,bPjYj[W-&NFd#'rm8.fLokN]o]=if0lFilCOQ2V%"lFIo9<=#q!IT2XQl,5:ekd9bq1#F\eKoaF/#O)VSEGm`5UNo*eLNh6-cm'D3+]4<SbpDi.QEEqq)<qr<]C;Q)$u7%\93O^Q+tHWJo6dmQR2oB``(&BKuAjp/2pIW>ZoAj=_\:LlA:TYBV&M&E(#33D:YEItYlQXN8!PrZ^[=gEYD;SoNSi39-T;g\0SXj@fn#Fb/O)Q<LBcB4:K$7f_9oJK6iTfN,2%)"miQ3f@^p'R;(cG]P)tUcS^8UI"O-1::<fqM]U5p"P`9It'_9P6j784JEd#m!iu!(JAt`0&ZT@!4Z&&>Aj0Q!"[kbg\LgKs$^EdNd./$9rY9rCOu1UWUf"<%`us13Fg1ja.h=7#.iW-0DXU_e)R4HdEoNCqMC0N(W#0WK$WK28""7-^Gcs)Au^6#J,,dc3ij9U,oSJl:lQ=g[AA>6U5pV^gdAH"Kg^8W1%r=HO10H[GViU-[oZ)rj`lR2$\]i(6=F!0;"urrhnFnkEV/99*6[`c>$E;+r,VXr%"hqIR?CL[cu099Z\t+:K'T0%40Nds3i2)@TIZ?.9#g*Fk5!^fRWJEu0jigrJ\:dhAq@7N~>endstream
+<< /Type /Annot /Subtype /Link /Rect [85 690 331 703] /Border [0 0 0] /A << /S /URI /URI (https://ruca-mobile-presentation-hub.vercel.app/portfolio/) >> >>
 endobj
 xref
-0 11
+0 9
 0000000000 65535 f 
-0000000061 00000 n 
-0000000102 00000 n 
-0000000209 00000 n 
-0000000321 00000 n 
-0000000500 00000 n 
-0000000701 00000 n 
-0000000919 00000 n 
-0000000987 00000 n 
-0000001296 00000 n 
-0000001355 00000 n 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000273 00000 n 
+0000000343 00000 n 
+0000000418 00000 n 
+0000005434 00000 n 
+0000005586 00000 n 
 trailer
-<<
-/ID 
-[<bc9595b4e87bf144d6f16de5711cfa63><bc9595b4e87bf144d6f16de5711cfa63>]
-% ReportLab generated PDF document -- digest (opensource)
-
-/Info 8 0 R
-/Root 7 0 R
-/Size 11
->>
+<< /Size 9 /Root 1 0 R >>
 startxref
-4029
+5757
 %%EOF
