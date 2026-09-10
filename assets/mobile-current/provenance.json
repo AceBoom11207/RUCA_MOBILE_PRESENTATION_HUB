@@ -1,0 +1,125 @@
+{
+  "title": "RUCA Mobile Companion V1 public demo evidence",
+  "verifiedOn": "2026-09-10",
+  "design": {
+    "fileKey": "vo2DuY25t0yN7O9VxjcWjc",
+    "url": "https://www.figma.com/design/vo2DuY25t0yN7O9VxjcWjc/RUCA-OS----MOBILE-COMPANION",
+    "frames": [
+      {
+        "route": "home",
+        "nodeId": "53:8",
+        "file": "home.png",
+        "width": 2400,
+        "height": 1080,
+        "sha256": "273c2e0d2194323a3b9af573ced65600342cf41a95094d4352cc67cfb006244d",
+        "kind": "Exact Figma frame export"
+      },
+      {
+        "route": "media",
+        "nodeId": "53:520",
+        "file": "media.png",
+        "width": 2400,
+        "height": 1080,
+        "sha256": "308016ed691dc8ea7fe0c5cab0156cfc8991f4161936ee65becee00cd40b50ff",
+        "kind": "Exact Figma frame export"
+      },
+      {
+        "route": "heart",
+        "nodeId": "54:7",
+        "file": "heart.png",
+        "width": 2400,
+        "height": 1080,
+        "sha256": "b33786d52a8c0cb980f7124cecd2b551b3bd3ba70c81a2624fdf7ac2e228030f",
+        "kind": "Exact Figma frame export"
+      },
+      {
+        "route": "command",
+        "nodeId": "54:226",
+        "file": "command.png",
+        "width": 2400,
+        "height": 1080,
+        "sha256": "c6b03854144d7a93aa8f0c93e9d4cfaa61ea2fe4fe8aff54832a4ef529951c8c",
+        "kind": "Exact Figma frame export"
+      },
+      {
+        "route": "diagnostics",
+        "nodeId": "54:316",
+        "file": "diagnostics.png",
+        "width": 2400,
+        "height": 1080,
+        "sha256": "158432557440aeeca9105d4f5eccfa281fb0ed49d7c164eb3ae2c87fe924b843",
+        "kind": "Exact Figma frame export"
+      }
+    ]
+  },
+  "native": {
+    "project": "ruca_android",
+    "package": "ai.ruca.companion",
+    "sourceFiles": [
+      "app/src/main/java/ai/ruca/companion/MainActivity.java",
+      "app/src/main/java/ai/ruca/companion/RucaSurface.java"
+    ],
+    "captureDate": "2026-09-07",
+    "capturePhase": "Installed V1 validation before same-day telemetry and navigation-icon repairs",
+    "deviceCurrentlyAvailable": false,
+    "captures": [
+      {
+        "route": "home",
+        "file": "native-home-sep07.png",
+        "sha256": "3c38412a220297f365b130a854fe149b3e46b787382ef9f97da27c79db2463d2"
+      },
+      {
+        "route": "media",
+        "file": "native-media-sep07.png",
+        "sha256": "920f31bba899af1a70b4cb3952251ffbbfaa91d38e3b290821e34ef771f849ba"
+      },
+      {
+        "route": "heart",
+        "file": "native-heart-sep07.png",
+        "sha256": "ac2d74d4377d31c6d5d59254926f3c5a465c328dfd68011ec705987393ecb6d9"
+      },
+      {
+        "route": "command",
+        "file": "native-command-sep07.png",
+        "sha256": "95538c9f31aaeba2fdf74487a4fd4c53fefd6d2b9c5bdb6fcf834f5324ec8225"
+      },
+      {
+        "route": "diagnostics",
+        "file": "native-diagnostics-sep07.png",
+        "sha256": "a9a55bc7d8744df0bd6903e2fdd0acc15d5acfab01dc08222e96faa4d6d22c3b"
+      }
+    ]
+  },
+  "publicDemo": {
+    "kind": "Interactive HTML translation of current Figma design with illustrative sample state",
+    "desktopConnection": false,
+    "controls": [
+      "five destinations",
+      "six persistent configurable HOME ports",
+      "configuration save and cancel",
+      "media play/pause, previous/next, seek and volume",
+      "command search",
+      "sleep/wake confirmation previews",
+      "connected, stale and disconnected scenarios"
+    ],
+    "sourceTruth": "Native source supports CPU/GPU/memory data, media relays and command launch ports. Additional Figma telemetry and display actions are design concepts and are marked unavailable or design-only in the demo."
+  },
+  "verification": {
+    "viewport": "390 CSS px and 1600 CSS px",
+    "brokenImages": 0,
+    "documentOverflow": false,
+    "browserErrors": 0,
+    "passed": [
+      "five destination navigation",
+      "port configuration cancellation",
+      "port save and route execution",
+      "port persistence after reload",
+      "media play/pause",
+      "relative seek and next track",
+      "command filtering",
+      "sleep confirmation cancel and confirm",
+      "disconnected state",
+      "restored connected state"
+    ]
+  }
+}

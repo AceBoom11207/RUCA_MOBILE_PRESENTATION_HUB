@@ -5,6 +5,7 @@
   ],
   "headers": [
     { "source": "/", "headers": [{ "key": "Cache-Control", "value": "no-store, max-age=0" }] },
+    { "source": "/index.html", "headers": [{ "key": "Cache-Control", "value": "no-store, max-age=0" }] },
     { "source": "/portfolio/(.*)", "headers": [{ "key": "Cache-Control", "value": "no-store, max-age=0" }] },
     { "source": "/demo/(.*)", "headers": [{ "key": "Cache-Control", "value": "no-store, max-age=0" }] },
     { "source": "/mobile-showcase/(.*)", "headers": [{ "key": "Cache-Control", "value": "no-store, max-age=0" }] },

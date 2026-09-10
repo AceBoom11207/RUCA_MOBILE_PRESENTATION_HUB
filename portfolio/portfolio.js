@@ -1,8 +1,10 @@
-// Keep the public portfolio and its resume synchronized for returning visitors.
+// Refresh previously installed RUCA caches through the same registered worker URL.
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js', { updateViaCache: 'none' })
-      .then(registration => registration.update())
-      .catch(() => { /* The portfolio remains fully usable without offline caching. */ });
+    navigator.serviceWorker.getRegistrations().then(registrations => {
+      for (const registration of registrations) {
+        if (registration.active?.scriptURL === `${location.origin}/service-worker.js`) registration.update();
+      }
+    }).catch(() => {});
   });
 }

@@ -1,1 +1,1551 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RUCA OS Mobile Companion // V1 Showcase</title><style>*{box-sizing:border-box}html,body{margin:0;background:#030508;color:#e8f6f4;font-family:Arial,sans-serif}.shell{max-width:1500px;margin:auto;padding:20px}.top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #28343b;padding:10px 0 18px}.brand{font-weight:800;letter-spacing:.16em}.brand small{display:block;color:#79a8a4;margin-top:7px}.links a{color:#ccefed;margin-left:15px}.nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.nav button{padding:10px 14px;border:1px solid #29434a;background:#081016;color:#a7c5c3;cursor:pointer}.nav button.active{color:#fff;border-color:#00d8c2;box-shadow:0 0 20px #00d8c233}.phone{width:min(1180px,100%);aspect-ratio:2.22/1;margin:auto;border:2px solid #39454b;border-radius:28px;background:radial-gradient(circle at 50% 50%,#233f55 0,#17102d 27%,#05070d 68%);box-shadow:0 25px 70px #000;overflow:hidden;position:relative}.status{height:12%;display:flex;align-items:center;justify-content:space-between;padding:0 4%;border-bottom:1px solid #253039;background:#05080bcc;font-size:12px;letter-spacing:.12em}.status b{color:#00e2c9}.screen{display:none;height:76%;padding:3.2% 4%}.screen.active{display:block}.screen h1{margin:0 0 2%;font-size:clamp(22px,3vw,46px);letter-spacing:.04em}.sub{color:#80aaa7;font-size:12px;letter-spacing:.12em}.ports{display:grid;grid-template-columns:repeat(3,1fr);gap:2%;height:72%;margin-top:2%}.port{border:1px solid #3a5358;background:#071016bb;padding:5%;display:flex;flex-direction:column;justify-content:space-between}.port span{color:#83aaa6;font-size:11px}.port strong{font-size:clamp(15px,2vw,30px)}.media{display:grid;grid-template-columns:.8fr 1.3fr;gap:4%;height:78%;margin-top:2%}.art{background:radial-gradient(circle,#e2c5ff 0 4%,#3689b5 16%,#6c275a 36%,#050813 70%);border:1px solid #40525b}.track{display:flex;flex-direction:column;justify-content:center}.track h2{font-size:clamp(24px,4vw,54px);margin:7px 0}.transport{font-size:clamp(22px,3vw,42px);letter-spacing:.5em;margin-top:5%}.heart{height:78%;display:grid;place-items:center}.core{width:min(30vw,270px);aspect-ratio:1;border-radius:50%;border:8px double #6d6f6c;background:radial-gradient(circle,#f3b15c 0 5%,#5d1f1c 17%,#080c10 55%);box-shadow:0 0 55px #e0603b55;display:grid;place-items:center;text-align:center}.core strong{font-size:clamp(28px,5vw,60px)}.commands,.diag{display:grid;grid-template-columns:repeat(3,1fr);gap:2%;margin-top:3%}.cmd,.reading{padding:6%;border:1px solid #3b5056;background:#071016cc}.cmd strong,.reading strong{display:block;margin-top:10px}.bottom{height:12%;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #28343b;background:#05080be8}.bottom span{display:grid;place-items:center;font-size:11px;color:#6f8f8d}.bottom .on{color:#00e2c9}.caption{max-width:1180px;margin:18px auto;color:#94aaa8;font-size:13px}.caption strong{color:#fff}.truth{color:#00d8c2}@media(max-width:700px){.top{align-items:flex-start;flex-direction:column;gap:12px}.links a{margin:0 12px 0 0}.phone{aspect-ratio:1.4/1}.ports,.commands,.diag{grid-template-columns:repeat(2,1fr)}.screen{overflow:auto}.bottom span{font-size:8px}}</style></head><body><div class="shell"><header class="top"><div class="brand">RUCA OS MOBILE COMPANION<small>Current V1 product-direction showcase · September 2026</small></div><div class="links"><a href="/portfolio/ruca-mobile/">CASE STUDY</a><a href="/portfolio/">PORTFOLIO</a><a href="/demo/">DESKTOP DEMO</a></div></header><nav class="nav"><button class="active" data-screen="home">HOME</button><button data-screen="media">MEDIA</button><button data-screen="heart">SYSTEM HEART</button><button data-screen="command">COMMAND DECK</button><button data-screen="diagnostics">DIAGNOSTICS</button></nav><main class="phone"><div class="status"><span>RUCA COMPANION</span><b>PC LINK · NOMINAL</b><span>V1</span></div><section class="screen active" id="home"><span class="sub">WELCOME HOME // SIX ASSIGNABLE PORTS</span><h1>HOME</h1><div class="ports"><div class="port"><span>CPU</span><strong>23%</strong><span>LOAD</span></div><div class="port"><span>GPU</span><strong>18%</strong><span>POWER</span></div><div class="port"><span>MEDIA</span><strong>NOW PLAYING</strong><span>OPEN</span></div><div class="port"><span>SYSTEM HEART</span><strong>94</strong><span>NOMINAL</span></div><div class="port"><span>COMMAND</span><strong>SLEEP</strong><span>AVAILABLE</span></div><div class="port"><span>DIAGNOSTICS</span><strong>CHECK</strong><span>ACTIVE</span></div></div></section><section class="screen" id="media"><span class="sub">MEDIA // TOUCH-FIRST PLAYBACK</span><h1>MEDIA</h1><div class="media"><div class="art"></div><div class="track"><span class="truth">RUCA OS · PLAYBACK DEVICE</span><h2>Cosmic Continuum</h2><span>RUCA MEDIA DISTRICT</span><div class="transport">◀︎ ◼︎ ▶︎</div></div></div></section><section class="screen" id="heart"><span class="sub">SELECTIVE MACHINE CONDITION</span><h1>SYSTEM HEART</h1><div class="heart"><div class="core"><div><span class="sub">SYSTEM</span><br><strong>94</strong><br><span class="truth">NOMINAL</span></div></div></div></section><section class="screen" id="command"><span class="sub">AUTHORIZED DESKTOP ACTIONS</span><h1>COMMAND DECK</h1><div class="commands"><div class="cmd">POWER<strong>SLEEP</strong></div><div class="cmd">POWER<strong>WAKE</strong></div><div class="cmd">MEDIA<strong>MUTE</strong></div><div class="cmd">WINDOWS<strong>DESKTOP</strong></div><div class="cmd">RUCA<strong>HOME</strong></div><div class="cmd">CUSTOM<strong>PORT 06</strong></div></div></section><section class="screen" id="diagnostics"><span class="sub">CONNECTION · FRESHNESS · MACHINE STATE</span><h1>DIAGNOSTICS</h1><div class="diag"><div class="reading">CPU TEMP<strong>46°C</strong></div><div class="reading">GPU TEMP<strong>43°C</strong></div><div class="reading">RAM<strong>31%</strong></div><div class="reading">TELEMETRY<strong>FRESH</strong></div><div class="reading">PC LINK<strong>NOMINAL</strong></div><div class="reading">SENSORS<strong>AVAILABLE</strong></div></div></section><div class="bottom"><span class="on">HOME</span><span>MEDIA</span><span>HEART</span><span>COMMAND</span><span>DIAGNOSTICS</span></div></main><p class="caption"><strong>Current V1 reviewer showcase.</strong> This is a self-contained representation of the accepted Mobile Companion V1 architecture so it cannot break because an external Figma embed refuses to load. Demonstration values are labeled product-demo state. <span class="truth">Installed-device screenshots are kept separate from design-state evidence.</span></p></div><script>const names=['home','media','heart','command','diagnostics'];function show(id){document.querySelectorAll('.screen').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.screen===id));document.querySelectorAll('.bottom span').forEach((x,i)=>x.classList.toggle('on',names[i]===id));history.replaceState(null,'','#'+id)}document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>show(b.dataset.screen));const h=location.hash.slice(1);if(names.includes(h))show(h)</script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Explore RUCA Mobile Companion V1: a navigable demo of the current Figma design, six configurable HOME ports, media controls and connection states. Includes September native Android evidence."><title>RUCA Mobile Companion — Interactive V1 Demo</title><link rel="stylesheet" href="./figma.css"><link rel="stylesheet" href="./showcase.css"></head><body>
+<header class="site-header"><a href="/portfolio/">ANTHONY C. MONCION</a><nav aria-label="Portfolio"><a href="/portfolio/ruca-mobile/">Case study</a><a href="/demo/">Desktop demo</a><a href="/portfolio/">Portfolio</a></nav></header>
+<main><div class="intro"><div><p class="eyebrow">RUCA PRODUCT FAMILY / SEPTEMBER 2026</p><h1>Mobile Companion.</h1><p>Five destinations. Six personal ports. One continuous command space.</p></div><span class="demo-label">INTERACTIVE DESIGN DEMO · SAMPLE DATA</span></div>
+<div class="toolbar"><nav class="route-tabs" aria-label="Companion destinations"><button data-go="home">HOME</button><button data-go="media">MEDIA</button><button data-go="heart">SYSTEM HEART</button><button data-go="command">COMMAND DECK</button><button data-go="diagnostics">DIAGNOSTICS</button></nav><label>Scenario <select id="scenario"><option value="sample">Connected sample</option><option value="degraded">Degraded sample</option><option value="offline">Disconnected sample</option></select></label></div>
+<div class="screen-viewport" id="viewport"><div class="screen-stage" id="stage"><div id="screen-home" data-route="home" class="f0 f1 f2 f3 f4 f5" data-node-id="53:8" data-name="v1-home-connected">
+      <div aria-hidden="true" class="f6 f7 f8">
+        <img alt="" class="f6 f9 f10 f5" src="/assets/mobile-current/asset-165abf26d96a.png" />
+        <div class="f6 f11 f7"></div>
+      </div>
+      <div class="f6 f7 f12" data-node-id="53:9" data-name="hud-grid-overlay">
+        <img alt="" class="f6 f7 f9 f10 f8 f5" src="/assets/mobile-current/asset-4a144c5de817.png" />
+      </div>
+      <div class="f13 f14 f15 f16 f17 f0 f1 f18 f19 f20 f21 f4 f22 f23" data-node-id="53:10" data-name="top-header">
+        <div class="f0 f1 f24 f19 f4 f22" data-node-id="53:11" data-name="brand-section">
+          <div class="f4 f22 f25" data-node-id="53:12" data-name="Ellipse">
+            <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-21b281e8f40b.svg" />
+          </div>
+          <p class="f27 f28 f29 f30 f4 f22 f31 f32 f33 f34" data-node-id="53:13">
+            RUCA OS
+          </p>
+          <p class="f27 f35 f36 f30 f4 f22 f37 f38 f34" data-node-id="53:14">
+            HOST LINK NOMINAL
+          </p>
+        </div>
+        <div class="f0 f1 f19 f4 f22" data-node-id="53:15" data-name="destination-label">
+          <p class="f27 f39 f40 f30 f4 f22 f41 f42 f43 f34" data-node-id="53:16">COMPANION // HOME</p>
+        </div>
+        <div class="f27 f0 f1 f44 f19 f30 f4 f22 f34" data-node-id="53:17" data-name="meta-section">
+          <p class="f35 f36 f4 f22 f37 f38" data-node-id="53:18">
+            LATENCY: 12ms
+          </p>
+          <p class="f39 f40 f4 f22 f42 f32" data-node-id="53:19">
+            09:41:52 UTC
+          </p>
+        </div>
+      </div>
+      <div class="f45 f15 f16 f17 f0 f1 f46 f19 f20 f21 f4 f22 f23" data-node-id="53:20" data-name="intelligence-ribbon">
+        <div class="f47 f4 f22 f48" data-node-id="53:21" data-name="Line">
+          <div class="f6 f49">
+            <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-247808c3f6f2.svg" />
+          </div>
+        </div>
+        <p class="f27 f39 f40 f30 f4 f22 f41 f37 f33 f34" data-node-id="53:22">• PC LINK NOMINAL // TELEMETRY ACTIVE // MEDIA BUS READY</p>
+        <div class="f47 f4 f22 f48" data-node-id="53:23" data-name="Line">
+          <div class="f6 f49">
+            <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-247808c3f6f2.svg" />
+          </div>
+        </div>
+      </div>
+      <div class="f0 f1 f50 f19 f20 f51 f52 f4 f23" data-node-id="53:24" data-name="dashboard-main">
+        <div class="f0 f1 f53 f19 f4 f22" data-node-id="53:25" data-name="left-control-wing">
+          <div class="f13 f54 f55 f15 f17 f0 f1 f2 f56 f57 f3 f58 f59 f60 f4 f61 f22 f62" data-node-id="53:26" data-name="navigation-rail">
+            <div class="f63 f55 f64 f17 f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="53:27" data-name="nav-item-HOME">
+              <div class="f4 f22 f68" data-node-id="53:28" data-name="Frame">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-8f97de1b12ff.svg" />
+              </div>
+            </div>
+            <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="53:30" data-name="nav-item-MEDIA">
+              <div class="f4 f22 f68" data-node-id="53:31" data-name="Frame">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-1a3889279f10.svg" />
+              </div>
+            </div>
+            <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="53:33" data-name="nav-item-HEART">
+              <div class="f4 f22 f68" data-node-id="53:34" data-name="Frame">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-bdcad148be23.svg" />
+              </div>
+            </div>
+            <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="53:36" data-name="nav-item-COMMAND">
+              <div class="f4 f22 f68" data-node-id="53:37" data-name="Frame">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-2e13e2da742e.svg" />
+              </div>
+            </div>
+            <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="53:39" data-name="nav-item-DIAGNOSTICS">
+              <div class="f4 f22 f68" data-node-id="53:40" data-name="Frame">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-061beafff32d.svg" />
+              </div>
+            </div>
+          </div>
+          <div class="f0 f1 f2 f24 f3 f4 f22" data-node-id="53:42" data-name="ports-left">
+            <div class="f54 f55 f64 f17 f0 f1 f2 f69 f70 f3 f71 f4 f66 f22 f72" data-node-id="53:43" data-name="command-pod-port-01">
+              <div class="f6 f73 f74 f75 f76 f77 f78 f79" data-node-id="53:44" data-name="active-accent-bar"></div>
+              <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="53:45" data-name="Frame">
+                <div class="f0 f1 f80 f19 f4 f22" data-node-id="53:46" data-name="Frame">
+                  <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="53:47">
+                    PORT 01
+                  </p>
+                  <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="53:48" data-name="Frame">
+                    <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="53:49">
+                      TELEMETRY
+                    </p>
+                  </div>
+                </div>
+                <div class="f4 f22 f88" data-node-id="53:50" data-name="Frame">
+                  <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-e3578d468ff6.svg" />
+                </div>
+              </div>
+              <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="53:52" data-name="Frame">
+                <p class="f39 f40 f4 f22 f90 f32" data-node-id="53:53">
+                  47°C
+                </p>
+                <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="53:54">
+                  CPU TEMPERATURE
+                </p>
+              </div>
+            </div>
+            <div class="f54 f55 f64 f17 f0 f1 f2 f69 f70 f3 f71 f4 f66 f22 f72" data-node-id="53:55" data-name="command-pod-port-02">
+              <div class="f6 f73 f74 f75 f76 f77 f78 f79" data-node-id="53:56" data-name="active-accent-bar"></div>
+              <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="53:57" data-name="Frame">
+                <div class="f0 f1 f80 f19 f4 f22" data-node-id="53:58" data-name="Frame">
+                  <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="53:59">
+                    PORT 02
+                  </p>
+                  <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="53:60" data-name="Frame">
+                    <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="53:61">
+                      DESTINATION
+                    </p>
+                  </div>
+                </div>
+                <div class="f4 f22 f88" data-node-id="53:62" data-name="Frame">
+                  <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-5628ecdfc61d.svg" />
+                </div>
+              </div>
+              <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="53:64" data-name="Frame">
+                <p class="f39 f40 f4 f22 f90 f32" data-node-id="53:65">
+                  Spotify
+                </p>
+                <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="53:66">
+                  Continuum (Remix)
+                </p>
+              </div>
+            </div>
+            <div class="f54 f55 f64 f17 f0 f1 f2 f69 f70 f3 f71 f4 f66 f22 f72" data-node-id="53:67" data-name="command-pod-port-03">
+              <div class="f6 f73 f74 f75 f76 f77 f78 f79" data-node-id="53:68" data-name="active-accent-bar"></div>
+              <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="53:69" data-name="Frame">
+                <div class="f0 f1 f80 f19 f4 f22" data-node-id="53:70" data-name="Frame">
+                  <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="53:71">
+                    PORT 03
+                  </p>
+                  <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="53:72" data-name="Frame">
+                    <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="53:73">
+                      COMMAND
+                    </p>
+                  </div>
+                </div>
+                <div class="f4 f22 f88" data-node-id="53:74" data-name="Frame">
+                  <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-1d9ede257185.svg" />
+                </div>
+              </div>
+              <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="53:76" data-name="Frame">
+                <p class="f39 f40 f4 f22 f90 f32" data-node-id="53:77">
+                  READY
+                </p>
+                <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="53:78">
+                  STEAM CLIENT PROCESS
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="f0 f1 f50 f2 f44 f93 f19 f58 f94 f4" data-node-id="53:79" data-name="contextual-continuity-zone">
+          <div class="f27 f0 f1 f2 f69 f19 f30 f4 f22 f95 f96 f34" data-node-id="53:80" data-name="Frame">
+            <p class="f39 f40 f4 f22 f90 f97" data-node-id="53:81">DESKTOP // ONLINE</p>
+            <p class="f35 f36 f4 f22 f37 f82" data-node-id="53:82">
+              CONTINUUM ENVIRONMENT DOMINANT
+            </p>
+          </div>
+          <div class="f0 f1 f24 f19 f98 f4 f22" data-node-id="53:83" data-name="system-heart">
+            <div class="f47 f4 f22 f99" data-node-id="53:84" data-name="Line">
+              <div class="f6 f49">
+                <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-7986cb271bf3.svg" />
+              </div>
+            </div>
+            <div class="f4 f22 f88" data-node-id="53:85" data-name="Frame">
+              <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-2dd09f773c60.svg" />
+            </div>
+            <p class="f27 f39 f40 f30 f4 f22 f37 f32 f82 f34" data-node-id="53:87">HEART STATUS // 94% NOMINAL RATE</p>
+            <div class="f47 f4 f22 f99" data-node-id="53:88" data-name="Line">
+              <div class="f6 f49">
+                <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-7986cb271bf3.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="f0 f1 f2 f24 f3 f4 f22" data-node-id="53:89" data-name="ports-right">
+          <div class="f54 f55 f64 f17 f0 f1 f2 f69 f70 f3 f71 f4 f66 f22 f72" data-node-id="53:90" data-name="command-pod-port-04">
+            <div class="f6 f73 f74 f75 f76 f77 f78 f79" data-node-id="53:91" data-name="active-accent-bar"></div>
+            <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="53:92" data-name="Frame">
+              <div class="f0 f1 f80 f19 f4 f22" data-node-id="53:93" data-name="Frame">
+                <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="53:94">
+                  PORT 04
+                </p>
+                <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="53:95" data-name="Frame">
+                  <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="53:96">
+                    TELEMETRY
+                  </p>
+                </div>
+              </div>
+              <div class="f4 f22 f88" data-node-id="53:97" data-name="Frame">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-3136288a701a.svg" />
+              </div>
+            </div>
+            <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="53:99" data-name="Frame">
+              <p class="f39 f40 f4 f22 f90 f32" data-node-id="53:100">
+                62°C
+              </p>
+              <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="53:101">
+                GPU FREQUENCY
+              </p>
+            </div>
+          </div>
+          <div class="f54 f55 f64 f17 f0 f1 f2 f69 f70 f3 f71 f4 f66 f22 f72" data-node-id="53:102" data-name="command-pod-port-05">
+            <div class="f6 f73 f74 f75 f76 f77 f78 f79" data-node-id="53:103" data-name="active-accent-bar"></div>
+            <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="53:104" data-name="Frame">
+              <div class="f0 f1 f80 f19 f4 f22" data-node-id="53:105" data-name="Frame">
+                <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="53:106">
+                  PORT 05
+                </p>
+                <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="53:107" data-name="Frame">
+                  <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="53:108">
+                    DESTINATION
+                  </p>
+                </div>
+              </div>
+              <div class="f4 f22 f88" data-node-id="53:109" data-name="Frame">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-41964d154b82.svg" />
+              </div>
+            </div>
+            <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="53:111" data-name="Frame">
+              <p class="f39 f40 f4 f22 f90 f32" data-node-id="53:112">
+                94%
+              </p>
+              <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="53:113">
+                HEART RECOVERY FEED
+              </p>
+            </div>
+          </div>
+          <div class="f54 f55 f64 f17 f0 f1 f2 f69 f70 f3 f71 f4 f66 f22 f72" data-node-id="53:114" data-name="command-pod-port-06">
+            <div class="f6 f73 f74 f75 f76 f77 f78 f79" data-node-id="53:115" data-name="active-accent-bar"></div>
+            <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="53:116" data-name="Frame">
+              <div class="f0 f1 f80 f19 f4 f22" data-node-id="53:117" data-name="Frame">
+                <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="53:118">
+                  PORT 06
+                </p>
+                <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="53:119" data-name="Frame">
+                  <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="53:120">
+                    ACTION
+                  </p>
+                </div>
+              </div>
+              <div class="f4 f22 f88" data-node-id="53:121" data-name="Frame">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-bd7d82936352.svg" />
+              </div>
+            </div>
+            <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="53:123" data-name="Frame">
+              <p class="f39 f40 f4 f22 f90 f32" data-node-id="53:124">
+                OFF
+              </p>
+              <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="53:125">
+                AUDIO OUT MUTE STATE
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="f27 f14 f15 f17 f100 f0 f1 f101 f19 f20 f30 f21 f4 f22 f81 f23 f34" data-node-id="53:126" data-name="bottom-status">
+        <p class="f35 f36 f4 f22 f38" data-node-id="53:127">
+          RAZER EDGE 5G TARGET CONSOLE
+        </p>
+        <p class="f39 f40 f4 f22 f102" data-node-id="53:128">TELEMETRY LINK STABLE // ACTIVE</p>
+        <p class="f35 f36 f4 f22 f38" data-node-id="53:129">
+          SECURE SHELL v1.42.0
+        </p>
+      </div>
+    </div>
+<div id="screen-media" data-route="media" class="f0 f1 f2 f3 f4 f5" data-node-id="53:520" data-name="v1-media">
+      <div aria-hidden="true" class="f6 f7 f8">
+        <img alt="" class="f6 f9 f10 f5" src="/assets/mobile-current/asset-f3c4299493b7.png" />
+        <div class="f6 f11 f7"></div>
+      </div>
+      <div class="f6 f7 f12" data-node-id="53:521" data-name="hud-grid-overlay">
+        <img alt="" class="f6 f7 f9 f10 f8 f5" src="/assets/mobile-current/asset-4a144c5de817.png" />
+      </div>
+      <div class="f13 f14 f15 f16 f17 f0 f1 f18 f19 f20 f21 f4 f22 f23" data-node-id="53:522" data-name="top-header">
+        <div class="f0 f1 f24 f19 f4 f22" data-node-id="53:523" data-name="brand-section">
+          <div class="f4 f22 f25" data-node-id="53:524" data-name="Ellipse">
+            <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-21b281e8f40b.svg" />
+          </div>
+          <p class="f27 f28 f29 f30 f4 f22 f31 f32 f33 f34" data-node-id="53:525">
+            RUCA OS
+          </p>
+          <p class="f27 f35 f36 f30 f4 f22 f37 f38 f34" data-node-id="53:526">
+            HOST LINK NOMINAL
+          </p>
+        </div>
+        <div class="f0 f1 f19 f4 f22" data-node-id="53:527" data-name="destination-label">
+          <p class="f27 f39 f40 f30 f4 f22 f41 f42 f43 f34" data-node-id="53:528">COMPANION // MEDIA</p>
+        </div>
+        <div class="f27 f0 f1 f44 f19 f30 f4 f22 f34" data-node-id="53:529" data-name="meta-section">
+          <p class="f35 f36 f4 f22 f37 f38" data-node-id="53:530">
+            LATENCY: 12ms
+          </p>
+          <p class="f39 f40 f4 f22 f42 f32" data-node-id="53:531">
+            09:41:52 UTC
+          </p>
+        </div>
+      </div>
+      <div class="f45 f15 f16 f17 f0 f1 f46 f19 f20 f21 f4 f22 f23" data-node-id="53:532" data-name="intelligence-ribbon">
+        <div class="f47 f4 f22 f48" data-node-id="53:533" data-name="Line">
+          <div class="f6 f49">
+            <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-247808c3f6f2.svg" />
+          </div>
+        </div>
+        <p class="f27 f39 f40 f30 f4 f22 f41 f37 f33 f34" data-node-id="53:534">• PC LINK NOMINAL // SPOTIFY BUS BROADCASTING // TRANSPORT BUS ENGAGED</p>
+        <div class="f47 f4 f22 f48" data-node-id="53:535" data-name="Line">
+          <div class="f6 f49">
+            <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-247808c3f6f2.svg" />
+          </div>
+        </div>
+      </div>
+      <div class="f0 f1 f50 f19 f20 f51 f52 f4 f23" data-node-id="53:536" data-name="dashboard-main">
+        <div class="f0 f1 f53 f19 f103 f4 f22" data-node-id="53:537" data-name="left-control-wing">
+          <div class="f13 f54 f55 f15 f17 f0 f1 f2 f56 f57 f3 f58 f59 f60 f4 f61 f22 f62" data-node-id="53:538" data-name="navigation-rail">
+            <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="53:539" data-name="nav-item-HOME">
+              <div class="f4 f22 f68" data-node-id="53:540" data-name="Frame">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-f35b3eda65e9.svg" />
+              </div>
+            </div>
+            <div class="f63 f55 f64 f17 f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="53:542" data-name="nav-item-MEDIA">
+              <div class="f4 f22 f68" data-node-id="53:543" data-name="Frame">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-dc3c7aec6792.svg" />
+              </div>
+            </div>
+            <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="53:545" data-name="nav-item-HEART">
+              <div class="f4 f22 f68" data-node-id="53:546" data-name="Frame">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-bdcad148be23.svg" />
+              </div>
+            </div>
+            <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="53:548" data-name="nav-item-COMMAND">
+              <div class="f4 f22 f68" data-node-id="53:549" data-name="Frame">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-2e13e2da742e.svg" />
+              </div>
+            </div>
+            <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="53:551" data-name="nav-item-DIAGNOSTICS">
+              <div class="f4 f22 f68" data-node-id="53:552" data-name="Frame">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-061beafff32d.svg" />
+              </div>
+            </div>
+          </div>
+          <div class="f0 f1 f2 f24 f3 f4 f22" data-node-id="53:554" data-name="ports-left">
+            <div class="f54 f55 f64 f17 f0 f1 f2 f69 f70 f3 f71 f4 f66 f22 f72" data-node-id="53:555" data-name="command-pod-port-01">
+              <div class="f6 f73 f74 f75 f76 f77 f78 f79" data-node-id="53:556" data-name="active-accent-bar"></div>
+              <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="53:557" data-name="Frame">
+                <div class="f0 f1 f80 f19 f4 f22" data-node-id="53:558" data-name="Frame">
+                  <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="53:559">
+                    PORT 01
+                  </p>
+                  <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="53:560" data-name="Frame">
+                    <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="53:561">
+                      TELEMETRY
+                    </p>
+                  </div>
+                </div>
+                <div class="f4 f22 f88" data-node-id="53:562" data-name="Frame">
+                  <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-6a0dd99f8805.svg" />
+                </div>
+              </div>
+              <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="53:564" data-name="Frame">
+                <p class="f39 f40 f4 f22 f90 f32" data-node-id="53:565">
+                  47°C
+                </p>
+                <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="53:566">
+                  CPU TEMPERATURE
+                </p>
+              </div>
+            </div>
+            <div class="f54 f55 f64 f17 f0 f1 f2 f69 f70 f3 f71 f4 f66 f22 f72" data-node-id="53:567" data-name="command-pod-port-02">
+              <div class="f6 f73 f74 f75 f76 f77 f78 f79" data-node-id="53:568" data-name="active-accent-bar"></div>
+              <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="53:569" data-name="Frame">
+                <div class="f0 f1 f80 f19 f4 f22" data-node-id="53:570" data-name="Frame">
+                  <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="53:571">
+                    PORT 02
+                  </p>
+                  <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="53:572" data-name="Frame">
+                    <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="53:573">
+                      DESTINATION
+                    </p>
+                  </div>
+                </div>
+                <div class="f4 f22 f88" data-node-id="53:574" data-name="Frame">
+                  <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-643edcde5873.svg" />
+                </div>
+              </div>
+              <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="53:576" data-name="Frame">
+                <p class="f39 f40 f4 f22 f90 f32" data-node-id="53:577">
+                  Spotify
+                </p>
+                <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="53:578">
+                  Continuum (Remix)
+                </p>
+              </div>
+            </div>
+            <div class="f54 f55 f64 f17 f0 f1 f2 f69 f70 f3 f71 f4 f66 f22 f72" data-node-id="53:579" data-name="command-pod-port-03">
+              <div class="f6 f73 f74 f75 f76 f77 f78 f79" data-node-id="53:580" data-name="active-accent-bar"></div>
+              <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="53:581" data-name="Frame">
+                <div class="f0 f1 f80 f19 f4 f22" data-node-id="53:582" data-name="Frame">
+                  <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="53:583">
+                    PORT 03
+                  </p>
+                  <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="53:584" data-name="Frame">
+                    <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="53:585">
+                      COMMAND
+                    </p>
+                  </div>
+                </div>
+                <div class="f4 f22 f88" data-node-id="53:586" data-name="Frame">
+                  <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-48122dee2dc1.svg" />
+                </div>
+              </div>
+              <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="53:588" data-name="Frame">
+                <p class="f39 f40 f4 f22 f90 f32" data-node-id="53:589">
+                  READY
+                </p>
+                <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="53:590">
+                  STEAM CLIENT PROCESS
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="f0 f1 f50 f2 f104 f93 f19 f58 f94 f4" data-node-id="53:591" data-name="contextual-continuity-zone">
+          <div class="f27 f0 f1 f2 f53 f19 f30 f4 f22 f34" data-node-id="53:592" data-name="now-playing-hud">
+            <p class="f39 f40 f4 f22 f41 f42 f43" data-node-id="53:593">
+              NOW PLAYING
+            </p>
+            <p class="f28 f29 f4 f22 f105 f32 f96" data-node-id="53:594">
+              Nebula Dreams
+            </p>
+            <p class="f106 f107 f4 f22 f31 f38 f96" data-node-id="53:595">
+              Stellar Echoes — Cosmic Drift
+            </p>
+          </div>
+          <div class="f0 f1 f108 f19 f4 f22" data-node-id="53:596" data-name="transport-cluster">
+            <div class="f54 f55 f15 f17 f0 f1 f19 f58 f4 f109 f22 f110" data-node-id="53:597" data-name="btn-prev">
+              <div class="f4 f22 f111" data-node-id="53:662" data-name="skip-back">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-61660868c4cf.svg" />
+              </div>
+            </div>
+            <div class="f54 f55 f15 f17 f0 f1 f19 f58 f4 f109 f22 f110" data-node-id="53:599" data-name="btn-skip-back-10">
+              <p class="f27 f39 f40 f30 f4 f22 f112 f32 f34" data-node-id="53:600">
+                -10s
+              </p>
+            </div>
+            <div class="f63 f113 f64 f17 f0 f1 f19 f58 f4 f114 f22 f115" data-node-id="53:601" data-name="btn-play-pause">
+              <div class="f4 f22 f116" data-node-id="53:602" data-name="Frame">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-15629dfa7db8.svg" />
+              </div>
+            </div>
+            <div class="f54 f55 f15 f17 f0 f1 f19 f58 f4 f109 f22 f110" data-node-id="53:604" data-name="btn-skip-forward-10">
+              <p class="f27 f39 f40 f30 f4 f22 f112 f32 f34" data-node-id="53:605">
+                +10s
+              </p>
+            </div>
+            <div class="f54 f55 f15 f17 f0 f1 f19 f58 f4 f109 f22 f110" data-node-id="53:606" data-name="btn-next">
+              <div class="f4 f22 f111" data-node-id="53:665" data-name="skip-forward">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-e08824a8ccde.svg" />
+              </div>
+            </div>
+          </div>
+          <div class="f0 f1 f2 f24 f3 f4 f22 f117" data-node-id="53:608" data-name="seek-container">
+            <div class="f83 f0 f1 f118 f3 f4 f119 f22 f23" data-node-id="53:609" data-name="seek-track">
+              <div class="f73 f93 f4 f22 f120" data-node-id="53:610" data-name="Rectangle"></div>
+            </div>
+            <div class="f27 f0 f1 f106 f107 f3 f20 f30 f4 f22 f121 f23 f34" data-node-id="53:611" data-name="Frame">
+              <p class="f4 f22 f41" data-node-id="53:612">
+                2:34
+              </p>
+              <p class="f4 f22 f38" data-node-id="53:613">
+                4:12
+              </p>
+            </div>
+          </div>
+          <div class="f54 f55 f15 f17 f0 f1 f44 f19 f122 f4 f123 f22 f117" data-node-id="53:614" data-name="volume-panel">
+            <div class="f4 f22 f68" data-node-id="53:615" data-name="Frame">
+              <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-6a45fe5ad6e6.svg" />
+            </div>
+            <div class="f83 f0 f1 f50 f124 f3 f94 f4 f86" data-node-id="53:617" data-name="volume-track">
+              <div class="f125 f93 f4 f22 f126" data-node-id="53:618" data-name="Rectangle"></div>
+            </div>
+            <p class="f27 f39 f40 f30 f4 f22 f121 f32 f34" data-node-id="53:619">
+              45%
+            </p>
+          </div>
+        </div>
+        <div class="f0 f1 f2 f24 f3 f103 f4 f22" data-node-id="53:620" data-name="ports-right">
+          <div class="f54 f55 f64 f17 f0 f1 f2 f69 f70 f3 f71 f4 f66 f22 f72" data-node-id="53:621" data-name="command-pod-port-04">
+            <div class="f6 f73 f74 f75 f76 f77 f78 f79" data-node-id="53:622" data-name="active-accent-bar"></div>
+            <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="53:623" data-name="Frame">
+              <div class="f0 f1 f80 f19 f4 f22" data-node-id="53:624" data-name="Frame">
+                <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="53:625">
+                  PORT 04
+                </p>
+                <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="53:626" data-name="Frame">
+                  <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="53:627">
+                    TELEMETRY
+                  </p>
+                </div>
+              </div>
+              <div class="f4 f22 f88" data-node-id="53:628" data-name="Frame">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-8445078fdcba.svg" />
+              </div>
+            </div>
+            <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="53:630" data-name="Frame">
+              <p class="f39 f40 f4 f22 f90 f32" data-node-id="53:631">
+                62°C
+              </p>
+              <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="53:632">
+                GPU FREQUENCY
+              </p>
+            </div>
+          </div>
+          <div class="f54 f55 f64 f17 f0 f1 f2 f69 f70 f3 f71 f4 f66 f22 f72" data-node-id="53:633" data-name="command-pod-port-05">
+            <div class="f6 f73 f74 f75 f76 f77 f78 f79" data-node-id="53:634" data-name="active-accent-bar"></div>
+            <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="53:635" data-name="Frame">
+              <div class="f0 f1 f80 f19 f4 f22" data-node-id="53:636" data-name="Frame">
+                <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="53:637">
+                  PORT 05
+                </p>
+                <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="53:638" data-name="Frame">
+                  <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="53:639">
+                    DESTINATION
+                  </p>
+                </div>
+              </div>
+              <div class="f4 f22 f88" data-node-id="53:640" data-name="Frame">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-db55168ce2bf.svg" />
+              </div>
+            </div>
+            <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="53:642" data-name="Frame">
+              <p class="f39 f40 f4 f22 f90 f32" data-node-id="53:643">
+                94%
+              </p>
+              <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="53:644">
+                HEART RECOVERY FEED
+              </p>
+            </div>
+          </div>
+          <div class="f54 f55 f64 f17 f0 f1 f2 f69 f70 f3 f71 f4 f66 f22 f72" data-node-id="53:645" data-name="command-pod-port-06">
+            <div class="f6 f73 f74 f75 f76 f77 f78 f79" data-node-id="53:646" data-name="active-accent-bar"></div>
+            <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="53:647" data-name="Frame">
+              <div class="f0 f1 f80 f19 f4 f22" data-node-id="53:648" data-name="Frame">
+                <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="53:649">
+                  PORT 06
+                </p>
+                <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="53:650" data-name="Frame">
+                  <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="53:651">
+                    ACTION
+                  </p>
+                </div>
+              </div>
+              <div class="f4 f22 f88" data-node-id="53:652" data-name="Frame">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-ab84411d32a0.svg" />
+              </div>
+            </div>
+            <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="53:654" data-name="Frame">
+              <p class="f39 f40 f4 f22 f90 f32" data-node-id="53:655">
+                OFF
+              </p>
+              <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="53:656">
+                AUDIO OUT MUTE STATE
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="f27 f14 f15 f17 f100 f0 f1 f101 f19 f20 f30 f21 f4 f22 f81 f23 f34" data-node-id="53:657" data-name="bottom-status">
+        <p class="f35 f36 f4 f22 f38" data-node-id="53:658">
+          RAZER EDGE 5G TARGET CONSOLE
+        </p>
+        <p class="f39 f40 f4 f22 f102" data-node-id="53:659">TELEMETRY LINK STABLE // ACTIVE</p>
+        <p class="f35 f36 f4 f22 f38" data-node-id="53:660">
+          SECURE SHELL v1.42.0
+        </p>
+      </div>
+    </div>
+<div id="screen-heart" data-route="heart" class="f0 f1 f2 f3 f4 f5" data-node-id="54:7" data-name="v1-heart">
+      <div aria-hidden="true" class="f6 f7 f8">
+        <img alt="" class="f6 f9 f10 f5" src="/assets/mobile-current/asset-73238615cf79.png" />
+        <div class="f6 f11 f7"></div>
+      </div>
+      <div class="f6 f7 f12" data-node-id="54:8" data-name="hud-grid-overlay">
+        <img alt="" class="f6 f7 f9 f10 f8 f5" src="/assets/mobile-current/asset-4a144c5de817.png" />
+      </div>
+      <div class="f13 f14 f15 f16 f17 f0 f1 f18 f19 f20 f21 f4 f22 f23" data-node-id="54:9" data-name="top-header">
+        <div class="f0 f1 f24 f19 f4 f22" data-node-id="54:10" data-name="brand-section">
+          <div class="f4 f22 f25" data-node-id="54:11" data-name="Ellipse">
+            <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-21b281e8f40b.svg" />
+          </div>
+          <p class="f27 f28 f29 f30 f4 f22 f31 f32 f33 f34" data-node-id="54:12">
+            RUCA OS
+          </p>
+          <p class="f27 f35 f36 f30 f4 f22 f37 f38 f34" data-node-id="54:13">
+            HOST LINK NOMINAL
+          </p>
+        </div>
+        <div class="f0 f1 f19 f4 f22" data-node-id="54:14" data-name="destination-label">
+          <p class="f27 f39 f40 f30 f4 f22 f41 f42 f43 f34" data-node-id="54:15">COMPANION // HEART</p>
+        </div>
+        <div class="f27 f0 f1 f44 f19 f30 f4 f22 f34" data-node-id="54:16" data-name="meta-section">
+          <p class="f35 f36 f4 f22 f37 f38" data-node-id="54:17">
+            LATENCY: 12ms
+          </p>
+          <p class="f39 f40 f4 f22 f42 f32" data-node-id="54:18">
+            09:41:52 UTC
+          </p>
+        </div>
+      </div>
+      <div class="f45 f15 f16 f17 f0 f1 f46 f19 f20 f21 f4 f22 f23" data-node-id="54:19" data-name="intelligence-ribbon">
+        <div class="f47 f4 f22 f48" data-node-id="54:20" data-name="Line">
+          <div class="f6 f49">
+            <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-247808c3f6f2.svg" />
+          </div>
+        </div>
+        <p class="f27 f39 f40 f30 f4 f22 f41 f37 f33 f34" data-node-id="54:21">• HOST TELEMETRY STREAMING NOMINAL // ALL ENGINES MONITORING</p>
+        <div class="f47 f4 f22 f48" data-node-id="54:22" data-name="Line">
+          <div class="f6 f49">
+            <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-247808c3f6f2.svg" />
+          </div>
+        </div>
+      </div>
+      <div class="f0 f1 f50 f104 f19 f51 f52 f4 f23" data-node-id="54:23" data-name="dashboard-main">
+        <div class="f13 f54 f55 f15 f17 f0 f1 f2 f56 f57 f3 f58 f59 f60 f4 f61 f22 f62" data-node-id="54:24" data-name="navigation-rail">
+          <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="54:25" data-name="nav-item-HOME">
+            <div class="f4 f22 f68" data-node-id="54:26" data-name="Frame">
+              <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-0e00a3b03624.svg" />
+            </div>
+          </div>
+          <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="54:28" data-name="nav-item-MEDIA">
+            <div class="f4 f22 f68" data-node-id="54:29" data-name="Frame">
+              <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-0942d0234753.svg" />
+            </div>
+          </div>
+          <div class="f63 f55 f64 f17 f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="54:31" data-name="nav-item-HEART">
+            <div class="f4 f22 f68" data-node-id="54:32" data-name="Frame">
+              <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-77a63d1c7645.svg" />
+            </div>
+          </div>
+          <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="54:34" data-name="nav-item-COMMAND">
+            <div class="f4 f22 f68" data-node-id="54:35" data-name="Frame">
+              <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-16c980e115eb.svg" />
+            </div>
+          </div>
+          <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="54:37" data-name="nav-item-DIAGNOSTICS">
+            <div class="f4 f22 f68" data-node-id="54:38" data-name="Frame">
+              <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-203322d93c8d.svg" />
+            </div>
+          </div>
+        </div>
+        <div class="f0 f1 f50 f2 f44 f93 f3 f94 f127 f4" data-node-id="54:40" data-name="deck-container">
+          <div class="f54 f55 f15 f17 f0 f1 f19 f20 f128 f4 f123 f22 f23" data-node-id="54:41" data-name="deck-header-panel">
+            <div class="f27 f0 f1 f2 f39 f40 f80 f3 f30 f4 f22 f34" data-node-id="54:42" data-name="Frame">
+              <p class="f4 f22 f41 f121 f33" data-node-id="54:43">HOST PERFORMANCE ANALYTICS // RUCA-DESKTOP-01</p>
+              <p class="f4 f22 f90 f32" data-node-id="54:44">
+                SYSTEM HEALTH OVERVIEW
+              </p>
+            </div>
+            <div class="f0 f1 f53 f19 f4 f22" data-node-id="54:45" data-name="Frame">
+              <p class="f27 f35 f36 f30 f4 f22 f121 f38 f34" data-node-id="54:46">
+                REFRESH INTERVAL: 100ms
+              </p>
+              <div class="f63 f55 f64 f17 f0 f1 f3 f129 f130 f4 f131 f22" data-node-id="54:47" data-name="Frame">
+                <p class="f27 f39 f40 f30 f4 f22 f41 f37 f34" data-node-id="54:48">
+                  REAL-TIME SYNCED
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="f0 f1 f2 f56 f3 f4 f22 f23" data-node-id="54:49" data-name="instrument-grid-sections">
+            <div class="f0 f1 f56 f3 f4 f22 f23" data-node-id="54:50" data-name="Frame">
+              <div class="f54 f55 f132 f17 f0 f1 f2 f24 f133 f3 f122 f4 f66 f22 f72" data-node-id="54:51" data-name="Frame">
+                <div class="f6 f73 f134 f75 f76 f77 f78 f79" data-node-id="54:52" data-name="Rectangle"></div>
+                <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="54:53" data-name="Frame">
+                  <div class="f0 f1 f80 f19 f4 f22" data-node-id="54:54" data-name="Frame">
+                    <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="54:55">
+                      CPU TEMP
+                    </p>
+                    <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="54:56" data-name="Frame">
+                      <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="54:57">
+                        LIVE READ
+                      </p>
+                    </div>
+                  </div>
+                  <div class="f4 f22 f88" data-node-id="54:58" data-name="Frame">
+                    <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-88f5c2b659ff.svg" />
+                  </div>
+                </div>
+                <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="54:60" data-name="Frame">
+                  <div class="f0 f1 f39 f40 f69 f135 f4 f22 f23" data-node-id="54:61" data-name="Frame">
+                    <p class="f4 f22 f136 f32" data-node-id="54:62">
+                      47°C
+                    </p>
+                    <p class="f4 f22 f41 f121" data-node-id="54:63">
+                      ◀▶
+                    </p>
+                  </div>
+                  <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="54:64">
+                    INTEL CORE I9-14900K
+                  </p>
+                </div>
+              </div>
+              <div class="f54 f55 f132 f17 f0 f1 f2 f24 f133 f3 f122 f4 f66 f22 f72" data-node-id="54:65" data-name="Frame">
+                <div class="f6 f73 f134 f75 f76 f77 f78 f79" data-node-id="54:66" data-name="Rectangle"></div>
+                <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="54:67" data-name="Frame">
+                  <div class="f0 f1 f80 f19 f4 f22" data-node-id="54:68" data-name="Frame">
+                    <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="54:69">
+                      CPU LOAD
+                    </p>
+                    <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="54:70" data-name="Frame">
+                      <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="54:71">
+                        LIVE READ
+                      </p>
+                    </div>
+                  </div>
+                  <div class="f4 f22 f88" data-node-id="54:72" data-name="Frame">
+                    <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-88f5c2b659ff.svg" />
+                  </div>
+                </div>
+                <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="54:74" data-name="Frame">
+                  <div class="f0 f1 f39 f40 f69 f135 f4 f22 f23" data-node-id="54:75" data-name="Frame">
+                    <p class="f4 f22 f136 f32" data-node-id="54:76">
+                      24.2%
+                    </p>
+                    <p class="f4 f22 f41 f121" data-node-id="54:77">
+                      ▲
+                    </p>
+                  </div>
+                  <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="54:78">
+                    CURRENT AVERAGE LOAD
+                  </p>
+                </div>
+              </div>
+              <div class="f54 f55 f137 f17 f0 f1 f2 f24 f133 f3 f122 f4 f66 f22 f72" data-node-id="54:79" data-name="Frame">
+                <div class="f6 f138 f134 f75 f76 f77 f78 f79" data-node-id="54:80" data-name="Rectangle"></div>
+                <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="54:81" data-name="Frame">
+                  <div class="f0 f1 f80 f19 f4 f22" data-node-id="54:82" data-name="Frame">
+                    <p class="f27 f39 f40 f30 f4 f22 f139 f81 f82 f34" data-node-id="54:83">
+                      GPU TEMP
+                    </p>
+                    <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="54:84" data-name="Frame">
+                      <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="54:85">
+                        LIVE READ
+                      </p>
+                    </div>
+                  </div>
+                  <div class="f4 f22 f88" data-node-id="54:86" data-name="Frame">
+                    <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-83a1ce97ed24.svg" />
+                  </div>
+                </div>
+                <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="54:88" data-name="Frame">
+                  <div class="f0 f1 f39 f40 f69 f135 f4 f22 f23" data-node-id="54:89" data-name="Frame">
+                    <p class="f4 f22 f136 f32" data-node-id="54:90">
+                      68°C
+                    </p>
+                    <p class="f4 f22 f139 f121" data-node-id="54:91">
+                      ▲
+                    </p>
+                  </div>
+                  <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="54:92">
+                    NVIDIA RTX 4090
+                  </p>
+                </div>
+              </div>
+              <div class="f54 f55 f137 f17 f0 f1 f2 f24 f133 f3 f122 f4 f66 f22 f72" data-node-id="54:93" data-name="Frame">
+                <div class="f6 f138 f134 f75 f76 f77 f78 f79" data-node-id="54:94" data-name="Rectangle"></div>
+                <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="54:95" data-name="Frame">
+                  <div class="f0 f1 f80 f19 f4 f22" data-node-id="54:96" data-name="Frame">
+                    <p class="f27 f39 f40 f30 f4 f22 f139 f81 f82 f34" data-node-id="54:97">
+                      GPU LOAD
+                    </p>
+                    <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="54:98" data-name="Frame">
+                      <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="54:99">
+                        LIVE READ
+                      </p>
+                    </div>
+                  </div>
+                  <div class="f4 f22 f88" data-node-id="54:100" data-name="Frame">
+                    <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-83a1ce97ed24.svg" />
+                  </div>
+                </div>
+                <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="54:102" data-name="Frame">
+                  <div class="f0 f1 f39 f40 f69 f135 f4 f22 f23" data-node-id="54:103" data-name="Frame">
+                    <p class="f4 f22 f136 f32" data-node-id="54:104">
+                      81.5%
+                    </p>
+                    <p class="f4 f22 f139 f121" data-node-id="54:105">
+                      ▲
+                    </p>
+                  </div>
+                  <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="54:106">
+                    TEXTURE RENDER CORES
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="f0 f1 f56 f3 f4 f22 f23" data-node-id="54:107" data-name="Frame">
+              <div class="f54 f55 f132 f17 f0 f1 f2 f24 f133 f3 f122 f4 f66 f22 f72" data-node-id="54:108" data-name="Frame">
+                <div class="f6 f73 f134 f75 f76 f77 f78 f79" data-node-id="54:109" data-name="Rectangle"></div>
+                <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="54:110" data-name="Frame">
+                  <div class="f0 f1 f80 f19 f4 f22" data-node-id="54:111" data-name="Frame">
+                    <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="54:112">
+                      MEMORY
+                    </p>
+                    <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="54:113" data-name="Frame">
+                      <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="54:114">
+                        LIVE READ
+                      </p>
+                    </div>
+                  </div>
+                  <div class="f4 f22 f88" data-node-id="54:115" data-name="Frame">
+                    <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-d8ca3e08c4b0.svg" />
+                  </div>
+                </div>
+                <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="54:117" data-name="Frame">
+                  <div class="f0 f1 f39 f40 f69 f135 f4 f22 f23" data-node-id="54:118" data-name="Frame">
+                    <p class="f4 f22 f136 f32" data-node-id="54:119">
+                      12.4 GB
+                    </p>
+                    <p class="f4 f22 f41 f121" data-node-id="54:120">
+                      ◀▶
+                    </p>
+                  </div>
+                  <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="54:121">
+                    USED OUT OF 32.0 GB
+                  </p>
+                </div>
+              </div>
+              <div class="f54 f55 f132 f17 f0 f1 f2 f24 f133 f3 f122 f4 f66 f22 f72" data-node-id="54:122" data-name="Frame">
+                <div class="f6 f73 f134 f75 f76 f77 f78 f79" data-node-id="54:123" data-name="Rectangle"></div>
+                <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="54:124" data-name="Frame">
+                  <div class="f0 f1 f80 f19 f4 f22" data-node-id="54:125" data-name="Frame">
+                    <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="54:126">
+                      SWAP FILE
+                    </p>
+                    <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="54:127" data-name="Frame">
+                      <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="54:128">
+                        LIVE READ
+                      </p>
+                    </div>
+                  </div>
+                  <div class="f4 f22 f88" data-node-id="54:129" data-name="Frame">
+                    <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-d8ca3e08c4b0.svg" />
+                  </div>
+                </div>
+                <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="54:131" data-name="Frame">
+                  <div class="f0 f1 f39 f40 f69 f135 f4 f22 f23" data-node-id="54:132" data-name="Frame">
+                    <p class="f4 f22 f136 f32" data-node-id="54:133">
+                      2.1 GB
+                    </p>
+                    <p class="f4 f22 f41 f121" data-node-id="54:134">
+                      ▼
+                    </p>
+                  </div>
+                  <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="54:135">
+                    PAGEFILE ALLOCATION
+                  </p>
+                </div>
+              </div>
+              <div class="f54 f55 f132 f17 f0 f1 f2 f24 f133 f3 f122 f4 f66 f22 f72" data-node-id="54:136" data-name="Frame">
+                <div class="f6 f73 f134 f75 f76 f77 f78 f79" data-node-id="54:137" data-name="Rectangle"></div>
+                <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="54:138" data-name="Frame">
+                  <div class="f0 f1 f80 f19 f4 f22" data-node-id="54:139" data-name="Frame">
+                    <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="54:140">
+                      STORAGE [C:]
+                    </p>
+                    <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="54:141" data-name="Frame">
+                      <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="54:142">
+                        LIVE READ
+                      </p>
+                    </div>
+                  </div>
+                  <div class="f4 f22 f88" data-node-id="54:143" data-name="Frame">
+                    <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-8f37c89a9291.svg" />
+                  </div>
+                </div>
+                <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="54:145" data-name="Frame">
+                  <div class="f0 f1 f39 f40 f69 f135 f4 f22 f23" data-node-id="54:146" data-name="Frame">
+                    <p class="f4 f22 f136 f32" data-node-id="54:147">
+                      842.1 GB
+                    </p>
+                    <p class="f4 f22 f41 f121" data-node-id="54:148">
+                      ◀▶
+                    </p>
+                  </div>
+                  <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="54:149">FREE SPACE // NVME GEN5</p>
+                </div>
+              </div>
+              <div class="f54 f55 f132 f17 f0 f1 f2 f24 f133 f3 f122 f4 f66 f22 f72" data-node-id="54:150" data-name="Frame">
+                <div class="f6 f73 f134 f75 f76 f77 f78 f79" data-node-id="54:151" data-name="Rectangle"></div>
+                <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="54:152" data-name="Frame">
+                  <div class="f0 f1 f80 f19 f4 f22" data-node-id="54:153" data-name="Frame">
+                    <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="54:154">
+                      STORAGE [D:]
+                    </p>
+                    <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="54:155" data-name="Frame">
+                      <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="54:156">
+                        LIVE READ
+                      </p>
+                    </div>
+                  </div>
+                  <div class="f4 f22 f88" data-node-id="54:157" data-name="Frame">
+                    <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-8f37c89a9291.svg" />
+                  </div>
+                </div>
+                <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="54:159" data-name="Frame">
+                  <div class="f0 f1 f39 f40 f69 f135 f4 f22 f23" data-node-id="54:160" data-name="Frame">
+                    <p class="f4 f22 f136 f32" data-node-id="54:161">
+                      1.8 TB
+                    </p>
+                    <p class="f4 f22 f41 f121" data-node-id="54:162">
+                      ◀▶
+                    </p>
+                  </div>
+                  <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="54:163">FREE SPACE // MASS ARCHIVE</p>
+                </div>
+              </div>
+            </div>
+            <div class="f0 f1 f56 f3 f4 f22 f23" data-node-id="54:164" data-name="Frame">
+              <div class="f54 f55 f132 f17 f0 f1 f2 f24 f133 f3 f122 f4 f66 f22 f72" data-node-id="54:165" data-name="Frame">
+                <div class="f6 f73 f134 f75 f76 f77 f78 f79" data-node-id="54:166" data-name="Rectangle"></div>
+                <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="54:167" data-name="Frame">
+                  <div class="f0 f1 f80 f19 f4 f22" data-node-id="54:168" data-name="Frame">
+                    <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="54:169">
+                      NET LATENCY
+                    </p>
+                    <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="54:170" data-name="Frame">
+                      <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="54:171">
+                        LIVE READ
+                      </p>
+                    </div>
+                  </div>
+                  <div class="f4 f22 f88" data-node-id="54:172" data-name="Frame">
+                    <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-a0577ef30c9c.svg" />
+                  </div>
+                </div>
+                <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="54:174" data-name="Frame">
+                  <div class="f0 f1 f39 f40 f69 f135 f4 f22 f23" data-node-id="54:175" data-name="Frame">
+                    <p class="f4 f22 f136 f32" data-node-id="54:176">
+                      12 ms
+                    </p>
+                    <p class="f4 f22 f41 f121" data-node-id="54:177">
+                      ◀▶
+                    </p>
+                  </div>
+                  <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="54:178">
+                    DESKTOP HOST RESPONSE
+                  </p>
+                </div>
+              </div>
+              <div class="f54 f55 f132 f17 f0 f1 f2 f24 f133 f3 f122 f4 f66 f22 f72" data-node-id="54:179" data-name="Frame">
+                <div class="f6 f73 f134 f75 f76 f77 f78 f79" data-node-id="54:180" data-name="Rectangle"></div>
+                <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="54:181" data-name="Frame">
+                  <div class="f0 f1 f80 f19 f4 f22" data-node-id="54:182" data-name="Frame">
+                    <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="54:183">
+                      NET UPTIME
+                    </p>
+                    <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="54:184" data-name="Frame">
+                      <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="54:185">
+                        LIVE READ
+                      </p>
+                    </div>
+                  </div>
+                  <div class="f4 f22 f88" data-node-id="54:186" data-name="Frame">
+                    <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-a0577ef30c9c.svg" />
+                  </div>
+                </div>
+                <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="54:188" data-name="Frame">
+                  <div class="f0 f1 f39 f40 f69 f135 f4 f22 f23" data-node-id="54:189" data-name="Frame">
+                    <p class="f4 f22 f136 f32" data-node-id="54:190">
+                      04:12:35
+                    </p>
+                    <p class="f4 f22 f41 f121" data-node-id="54:191">
+                      ▲
+                    </p>
+                  </div>
+                  <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="54:192">
+                    ACTIVE SESSION DURATION
+                  </p>
+                </div>
+              </div>
+              <div class="f54 f55 f132 f17 f0 f1 f2 f24 f133 f3 f122 f4 f66 f22 f72" data-node-id="54:193" data-name="Frame">
+                <div class="f6 f73 f134 f75 f76 f77 f78 f79" data-node-id="54:194" data-name="Rectangle"></div>
+                <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="54:195" data-name="Frame">
+                  <div class="f0 f1 f80 f19 f4 f22" data-node-id="54:196" data-name="Frame">
+                    <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="54:197">
+                      LINK STABILITY
+                    </p>
+                    <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="54:198" data-name="Frame">
+                      <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="54:199">
+                        LIVE READ
+                      </p>
+                    </div>
+                  </div>
+                  <div class="f4 f22 f88" data-node-id="54:200" data-name="Frame">
+                    <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-d8ca3e08c4b0.svg" />
+                  </div>
+                </div>
+                <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="54:202" data-name="Frame">
+                  <div class="f0 f1 f39 f40 f69 f135 f4 f22 f23" data-node-id="54:203" data-name="Frame">
+                    <p class="f4 f22 f136 f32" data-node-id="54:204">
+                      99.8%
+                    </p>
+                    <p class="f4 f22 f41 f121" data-node-id="54:205">
+                      ◀▶
+                    </p>
+                  </div>
+                  <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="54:206">
+                    PACKET RETRANSMISSION RATE
+                  </p>
+                </div>
+              </div>
+              <div class="f54 f55 f132 f17 f0 f1 f2 f24 f133 f3 f122 f4 f66 f22 f72" data-node-id="54:207" data-name="Frame">
+                <div class="f6 f73 f134 f75 f76 f77 f78 f79" data-node-id="54:208" data-name="Rectangle"></div>
+                <div class="f0 f1 f19 f20 f4 f22 f23" data-node-id="54:209" data-name="Frame">
+                  <div class="f0 f1 f80 f19 f4 f22" data-node-id="54:210" data-name="Frame">
+                    <p class="f27 f39 f40 f30 f4 f22 f41 f81 f82 f34" data-node-id="54:211">
+                      DECK VOLTAGE
+                    </p>
+                    <div class="f83 f0 f1 f3 f84 f85 f4 f86 f22" data-node-id="54:212" data-name="Frame">
+                      <p class="f27 f39 f40 f30 f4 f22 f87 f38 f34" data-node-id="54:213">
+                        LIVE READ
+                      </p>
+                    </div>
+                  </div>
+                  <div class="f4 f22 f88" data-node-id="54:214" data-name="Frame">
+                    <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-ccaaba3037b5.svg" />
+                  </div>
+                </div>
+                <div class="f27 f0 f1 f2 f89 f3 f30 f4 f22 f23 f34" data-node-id="54:216" data-name="Frame">
+                  <div class="f0 f1 f39 f40 f69 f135 f4 f22 f23" data-node-id="54:217" data-name="Frame">
+                    <p class="f4 f22 f136 f32" data-node-id="54:218">
+                      12.1V
+                    </p>
+                    <p class="f4 f22 f41 f121" data-node-id="54:219">
+                      ◀▶
+                    </p>
+                  </div>
+                  <p class="f35 f36 f4 f22 f91 f38 f82 f92" data-node-id="54:220">
+                    AUXILIARY DC POWER BUS
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="f27 f14 f15 f17 f100 f0 f1 f101 f19 f20 f30 f21 f4 f22 f81 f23 f34" data-node-id="54:221" data-name="bottom-status">
+        <p class="f35 f36 f4 f22 f38" data-node-id="54:222">
+          RAZER EDGE 5G TARGET CONSOLE
+        </p>
+        <p class="f39 f40 f4 f22 f102" data-node-id="54:223">TELEMETRY LINK STABLE // HIGH_RATE ACTIVE</p>
+        <p class="f35 f36 f4 f22 f38" data-node-id="54:224">
+          SECURE SHELL v1.42.0
+        </p>
+      </div>
+    </div>
+<div id="screen-command" data-route="command" class="f0 f1 f2 f3 f4 f5" data-node-id="54:226" data-name="v1-command">
+      <div aria-hidden="true" class="f6 f7 f8">
+        <img alt="" class="f6 f9 f10 f5" src="/assets/mobile-current/asset-165abf26d96a.png" />
+        <div class="f6 f11 f7"></div>
+      </div>
+      <div class="f6 f7 f12" data-node-id="54:227" data-name="hud-grid-overlay">
+        <img alt="" class="f6 f7 f9 f10 f8 f5" src="/assets/mobile-current/asset-4a144c5de817.png" />
+      </div>
+      <div class="f13 f14 f15 f16 f17 f0 f1 f18 f19 f20 f21 f4 f22 f23" data-node-id="54:228" data-name="top-header">
+        <div class="f0 f1 f24 f19 f4 f22" data-node-id="54:229" data-name="brand-section">
+          <div class="f4 f22 f25" data-node-id="54:230" data-name="Ellipse">
+            <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-21b281e8f40b.svg" />
+          </div>
+          <p class="f27 f28 f29 f30 f4 f22 f31 f32 f33 f34" data-node-id="54:231">
+            RUCA OS
+          </p>
+          <p class="f27 f35 f36 f30 f4 f22 f37 f38 f34" data-node-id="54:232">
+            HOST LINK NOMINAL
+          </p>
+        </div>
+        <div class="f0 f1 f19 f4 f22" data-node-id="54:233" data-name="destination-label">
+          <p class="f27 f39 f40 f30 f4 f22 f41 f42 f43 f34" data-node-id="54:234">COMPANION // COMMAND</p>
+        </div>
+        <div class="f27 f0 f1 f44 f19 f30 f4 f22 f34" data-node-id="54:235" data-name="meta-section">
+          <p class="f35 f36 f4 f22 f37 f38" data-node-id="54:236">
+            LATENCY: 12ms
+          </p>
+          <p class="f39 f40 f4 f22 f42 f32" data-node-id="54:237">
+            09:41:52 UTC
+          </p>
+        </div>
+      </div>
+      <div class="f45 f15 f16 f17 f0 f1 f46 f19 f20 f21 f4 f22 f23" data-node-id="54:238" data-name="intelligence-ribbon">
+        <div class="f47 f4 f22 f48" data-node-id="54:239" data-name="Line">
+          <div class="f6 f49">
+            <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-247808c3f6f2.svg" />
+          </div>
+        </div>
+        <p class="f27 f39 f40 f30 f4 f22 f41 f37 f33 f34" data-node-id="54:240">• SECURE SHELL PIPELINE ESTABLISHED // REMOTE INSTRUCTIONS ARMED</p>
+        <div class="f47 f4 f22 f48" data-node-id="54:241" data-name="Line">
+          <div class="f6 f49">
+            <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-247808c3f6f2.svg" />
+          </div>
+        </div>
+      </div>
+      <div class="f0 f1 f50 f104 f19 f51 f52 f4 f23" data-node-id="54:242" data-name="dashboard-main">
+        <div class="f13 f54 f55 f15 f17 f0 f1 f2 f56 f57 f3 f58 f59 f60 f4 f61 f22 f62" data-node-id="54:243" data-name="navigation-rail">
+          <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="54:244" data-name="nav-item-HOME">
+            <div class="f4 f22 f68" data-node-id="54:245" data-name="Frame">
+              <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-0e00a3b03624.svg" />
+            </div>
+          </div>
+          <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="54:247" data-name="nav-item-MEDIA">
+            <div class="f4 f22 f68" data-node-id="54:248" data-name="Frame">
+              <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-0942d0234753.svg" />
+            </div>
+          </div>
+          <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="54:250" data-name="nav-item-HEART">
+            <div class="f4 f22 f68" data-node-id="54:251" data-name="Frame">
+              <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-53a83bef466d.svg" />
+            </div>
+          </div>
+          <div class="f63 f55 f64 f17 f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="54:253" data-name="nav-item-COMMAND">
+            <div class="f4 f22 f68" data-node-id="54:254" data-name="Frame">
+              <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-d94888e44247.svg" />
+            </div>
+          </div>
+          <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="54:256" data-name="nav-item-DIAGNOSTICS">
+            <div class="f4 f22 f68" data-node-id="54:257" data-name="Frame">
+              <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-203322d93c8d.svg" />
+            </div>
+          </div>
+        </div>
+        <div class="f0 f1 f50 f2 f44 f93 f3 f94 f127 f4" data-node-id="54:259" data-name="command-grid-layout">
+          <div class="f54 f55 f15 f17 f0 f1 f56 f19 f122 f4 f140 f22 f23" data-node-id="54:260" data-name="search-header-container">
+            <div class="f141 f4 f22 f68" data-node-id="54:261" data-name="Frame">
+              <div class="f6 f142" data-node-id="54:508" data-name="search">
+                <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-8b959cf1c086.svg" />
+              </div>
+            </div>
+            <p class="f27 f50 f39 f40 f30 f94 f4 f31 f32" data-node-id="54:263">
+              FILTER COMMANDS...
+            </p>
+            <p class="f27 f35 f36 f30 f4 f22 f37 f38 f34" data-node-id="54:264">KEYBOARD DISENGAGED // TAP SYSTEM FOR TRIGGER</p>
+          </div>
+          <div class="f27 f0 f1 f50 f56 f3 f30 f51 f4 f23 f34" data-node-id="54:265" data-name="Frame">
+            <div class="f54 f55 f15 f17 f0 f1 f50 f2 f53 f93 f3 f94 f143 f4 f123" data-node-id="54:266" data-name="Frame">
+              <p class="f28 f29 f4 f22 f41 f121 f33" data-node-id="54:267">SYSTEM POWER // CONTROL</p>
+              <div class="f0 f1 f2 f144 f3 f4 f22 f23" data-node-id="54:268" data-name="Frame">
+                <div class="f145 f55 f15 f17 f0 f1 f19 f20 f122 f4 f66 f22 f23" data-node-id="54:269" data-name="Frame">
+                  <p class="f39 f40 f4 f22 f112 f32" data-node-id="54:270">
+                    LOCK HOST
+                  </p>
+                  <p class="f106 f107 f4 f22 f37 f38" data-node-id="54:271">
+                    2m ago
+                  </p>
+                </div>
+                <div class="f145 f55 f15 f17 f0 f1 f19 f20 f122 f4 f66 f22 f23" data-node-id="54:272" data-name="Frame">
+                  <p class="f39 f40 f4 f22 f112 f32" data-node-id="54:273">
+                    SLEEP PC
+                  </p>
+                  <p class="f106 f107 f4 f22 f37 f38" data-node-id="54:274">
+                    1h ago
+                  </p>
+                </div>
+                <div class="f145 f55 f15 f17 f0 f1 f19 f20 f122 f4 f66 f22 f23" data-node-id="54:275" data-name="Frame">
+                  <p class="f39 f40 f4 f22 f112 f32" data-node-id="54:276">
+                    RESTART EXECUTION
+                  </p>
+                  <p class="f106 f107 f4 f22 f37 f38" data-node-id="54:277">
+                    Never
+                  </p>
+                </div>
+                <div class="f63 f55 f64 f17 f0 f1 f39 f40 f19 f20 f122 f4 f66 f22 f41 f23" data-node-id="54:278" data-name="Frame">
+                  <p class="f4 f22 f112" data-node-id="54:279">
+                    WAKE ON LAN
+                  </p>
+                  <p class="f4 f22 f37" data-node-id="54:280">
+                    SENT ✓
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="f54 f55 f15 f17 f0 f1 f50 f2 f53 f93 f3 f94 f143 f4 f123" data-node-id="54:281" data-name="Frame">
+              <p class="f28 f29 f4 f22 f41 f121 f33" data-node-id="54:282">MEDIA DECK // OVERRIDES</p>
+              <div class="f0 f1 f2 f144 f3 f4 f22 f23" data-node-id="54:283" data-name="Frame">
+                <div class="f145 f55 f15 f17 f0 f1 f19 f20 f122 f4 f66 f22 f23" data-node-id="54:284" data-name="Frame">
+                  <p class="f39 f40 f4 f22 f112 f32" data-node-id="54:285">
+                    PLAY / PAUSE
+                  </p>
+                  <p class="f106 f107 f4 f22 f37 f38" data-node-id="54:286">
+                    Active
+                  </p>
+                </div>
+                <div class="f145 f55 f15 f17 f0 f1 f19 f20 f122 f4 f66 f22 f23" data-node-id="54:287" data-name="Frame">
+                  <p class="f39 f40 f4 f22 f112 f32" data-node-id="54:288">
+                    SKIP FORWARD
+                  </p>
+                  <p class="f106 f107 f4 f22 f37 f38" data-node-id="54:289">
+                    15m ago
+                  </p>
+                </div>
+                <div class="f145 f55 f15 f17 f0 f1 f19 f20 f122 f4 f66 f22 f23" data-node-id="54:290" data-name="Frame">
+                  <p class="f39 f40 f4 f22 f112 f32" data-node-id="54:291">
+                    VOLUME UP (+5%)
+                  </p>
+                  <p class="f106 f107 f4 f22 f37 f38" data-node-id="54:292">
+                    12m ago
+                  </p>
+                </div>
+                <div class="f145 f55 f15 f17 f0 f1 f19 f20 f122 f4 f66 f22 f23" data-node-id="54:293" data-name="Frame">
+                  <p class="f39 f40 f4 f22 f112 f32" data-node-id="54:294">
+                    AUDIO MUTE STATE
+                  </p>
+                  <p class="f106 f107 f4 f22 f37 f38" data-node-id="54:295">
+                    Never
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="f54 f55 f15 f17 f0 f1 f50 f2 f53 f93 f3 f94 f143 f4 f123" data-node-id="54:296" data-name="Frame">
+              <p class="f28 f29 f4 f22 f41 f121 f33" data-node-id="54:297">DISPLAY MATRIX // POWER</p>
+              <div class="f0 f1 f2 f144 f3 f4 f22 f23" data-node-id="54:298" data-name="Frame">
+                <div class="f145 f55 f15 f17 f0 f1 f19 f20 f122 f4 f66 f22 f23" data-node-id="54:299" data-name="Frame">
+                  <p class="f39 f40 f4 f22 f112 f32" data-node-id="54:300">
+                    BRIGHTNESS UP
+                  </p>
+                  <p class="f106 f107 f4 f22 f37 f38" data-node-id="54:301">
+                    3h ago
+                  </p>
+                </div>
+                <div class="f145 f55 f15 f17 f0 f1 f19 f20 f122 f4 f66 f22 f23" data-node-id="54:302" data-name="Frame">
+                  <p class="f39 f40 f4 f22 f112 f32" data-node-id="54:303">
+                    BRIGHTNESS DOWN
+                  </p>
+                  <p class="f106 f107 f4 f22 f37 f38" data-node-id="54:304">
+                    Yesterday
+                  </p>
+                </div>
+                <div class="f145 f55 f15 f17 f0 f1 f19 f20 f122 f4 f66 f22 f23" data-node-id="54:305" data-name="Frame">
+                  <p class="f39 f40 f4 f22 f112 f32" data-node-id="54:306">
+                    MATRIX TEST COLOR
+                  </p>
+                  <p class="f106 f107 f4 f22 f37 f38" data-node-id="54:307">
+                    Never
+                  </p>
+                </div>
+                <div class="f145 f55 f15 f17 f0 f1 f19 f20 f122 f4 f66 f22 f23" data-node-id="54:308" data-name="Frame">
+                  <p class="f39 f40 f4 f22 f112 f32" data-node-id="54:309">
+                    TOGGLE HUD PROJECTION
+                  </p>
+                  <p class="f106 f107 f4 f22 f37 f38" data-node-id="54:310">
+                    Never
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="f27 f14 f15 f17 f100 f0 f1 f101 f19 f20 f30 f21 f4 f22 f81 f23 f34" data-node-id="54:311" data-name="bottom-status">
+        <p class="f35 f36 f4 f22 f38" data-node-id="54:312">
+          RAZER EDGE 5G TARGET CONSOLE
+        </p>
+        <p class="f39 f40 f4 f22 f102" data-node-id="54:313">TELEMETRY LINK STABLE // HIGH_RATE ACTIVE</p>
+        <p class="f35 f36 f4 f22 f38" data-node-id="54:314">COMMANDS ARMED // TAP EXECUTED IMMEDIATELY</p>
+      </div>
+    </div>
+<div id="screen-diagnostics" data-route="diagnostics" class="f0 f1 f2 f3 f4 f5" data-node-id="54:316" data-name="v1-diagnostics">
+      <div aria-hidden="true" class="f6 f7 f8">
+        <img alt="" class="f6 f9 f10 f5" src="/assets/mobile-current/asset-032f4a59a5c9.png" />
+        <div class="f6 f11 f7"></div>
+      </div>
+      <div class="f6 f7 f12" data-node-id="54:317" data-name="hud-grid-overlay">
+        <img alt="" class="f6 f7 f9 f10 f8 f5" src="/assets/mobile-current/asset-4a144c5de817.png" />
+      </div>
+      <div class="f13 f14 f15 f16 f17 f0 f1 f18 f19 f20 f21 f4 f22 f23" data-node-id="54:318" data-name="top-header">
+        <div class="f0 f1 f24 f19 f4 f22" data-node-id="54:319" data-name="brand-section">
+          <div class="f4 f22 f25" data-node-id="54:320" data-name="Ellipse">
+            <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-21b281e8f40b.svg" />
+          </div>
+          <p class="f27 f28 f29 f30 f4 f22 f31 f32 f33 f34" data-node-id="54:321">
+            RUCA OS
+          </p>
+          <p class="f27 f35 f36 f30 f4 f22 f37 f38 f34" data-node-id="54:322">
+            HOST LINK NOMINAL
+          </p>
+        </div>
+        <div class="f0 f1 f19 f4 f22" data-node-id="54:323" data-name="destination-label">
+          <p class="f27 f39 f40 f30 f4 f22 f41 f42 f43 f34" data-node-id="54:324">COMPANION // DIAGNOSTICS</p>
+        </div>
+        <div class="f27 f0 f1 f44 f19 f30 f4 f22 f34" data-node-id="54:325" data-name="meta-section">
+          <p class="f35 f36 f4 f22 f37 f38" data-node-id="54:326">
+            LATENCY: 12ms
+          </p>
+          <p class="f39 f40 f4 f22 f42 f32" data-node-id="54:327">
+            09:41:52 UTC
+          </p>
+        </div>
+      </div>
+      <div class="f45 f15 f16 f17 f0 f1 f46 f19 f20 f21 f4 f22 f23" data-node-id="54:328" data-name="intelligence-ribbon">
+        <div class="f47 f4 f22 f48" data-node-id="54:329" data-name="Line">
+          <div class="f6 f49">
+            <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-247808c3f6f2.svg" />
+          </div>
+        </div>
+        <p class="f27 f39 f40 f30 f4 f22 f41 f37 f33 f34" data-node-id="54:330">• CONTINUUM CONNECTION HEALTH READOUT // SECURE SHELL ACTIVE</p>
+        <div class="f47 f4 f22 f48" data-node-id="54:331" data-name="Line">
+          <div class="f6 f49">
+            <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-247808c3f6f2.svg" />
+          </div>
+        </div>
+      </div>
+      <div class="f0 f1 f50 f104 f19 f51 f52 f4 f23" data-node-id="54:332" data-name="dashboard-main">
+        <div class="f13 f54 f55 f15 f17 f0 f1 f2 f56 f57 f3 f58 f59 f60 f4 f61 f22 f62" data-node-id="54:333" data-name="navigation-rail">
+          <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="54:334" data-name="nav-item-HOME">
+            <div class="f4 f22 f68" data-node-id="54:335" data-name="Frame">
+              <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-0e00a3b03624.svg" />
+            </div>
+          </div>
+          <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="54:337" data-name="nav-item-MEDIA">
+            <div class="f4 f22 f68" data-node-id="54:338" data-name="Frame">
+              <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-0942d0234753.svg" />
+            </div>
+          </div>
+          <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="54:340" data-name="nav-item-HEART">
+            <div class="f4 f22 f68" data-node-id="54:341" data-name="Frame">
+              <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-53a83bef466d.svg" />
+            </div>
+          </div>
+          <div class="f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="54:343" data-name="nav-item-COMMAND">
+            <div class="f4 f22 f68" data-node-id="54:344" data-name="Frame">
+              <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-16c980e115eb.svg" />
+            </div>
+          </div>
+          <div class="f63 f55 f64 f17 f0 f1 f2 f65 f19 f58 f4 f66 f22 f67" data-node-id="54:346" data-name="nav-item-DIAGNOSTICS">
+            <div class="f4 f22 f68" data-node-id="54:347" data-name="Frame">
+              <img alt="" class="f6 f26 f7 f9 f5" src="/assets/mobile-current/asset-4fcf95cdd8b9.svg" />
+            </div>
+          </div>
+        </div>
+        <div class="f0 f1 f50 f44 f93 f3 f94 f127 f4" data-node-id="54:349" data-name="diagnostic-layout">
+          <div class="f54 f55 f15 f17 f0 f1 f50 f2 f56 f93 f3 f94 f128 f4 f123" data-node-id="54:350" data-name="Frame">
+            <p class="f27 f28 f29 f30 f4 f22 f41 f121 f33 f34" data-node-id="54:351">CONNECTION HEALTH // TELEMETRY</p>
+            <div class="f0 f1 f2 f146 f3 f4 f22 f23" data-node-id="54:352" data-name="Frame">
+              <div class="f27 f0 f1 f19 f20 f30 f4 f22 f112 f23 f34" data-node-id="54:353" data-name="Frame">
+                <p class="f35 f36 f4 f22 f38" data-node-id="54:354">
+                  CONNECTION STATE
+                </p>
+                <p class="f39 f40 f4 f22 f41" data-node-id="54:355">
+                  ACTIVE
+                </p>
+              </div>
+              <div class="f47 f4 f22 f23" data-node-id="54:356" data-name="Line">
+                <div class="f6 f49">
+                  <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-8656fcd9cc93.svg" />
+                </div>
+              </div>
+              <div class="f27 f0 f1 f19 f20 f30 f4 f22 f112 f23 f34" data-node-id="54:357" data-name="Frame">
+                <p class="f35 f36 f4 f22 f38" data-node-id="54:358">
+                  PING LATENCY
+                </p>
+                <p class="f39 f40 f4 f22 f41" data-node-id="54:359">
+                  12ms (NOMINAL)
+                </p>
+              </div>
+              <div class="f47 f4 f22 f23" data-node-id="54:360" data-name="Line">
+                <div class="f6 f49">
+                  <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-8656fcd9cc93.svg" />
+                </div>
+              </div>
+              <div class="f27 f0 f1 f19 f20 f30 f4 f22 f112 f23 f34" data-node-id="54:361" data-name="Frame">
+                <p class="f35 f36 f4 f22 f38" data-node-id="54:362">
+                  CONNECTION METHOD
+                </p>
+                <p class="f39 f40 f4 f22 f32" data-node-id="54:363">
+                  WIFI 6E DIRECT
+                </p>
+              </div>
+              <div class="f47 f4 f22 f23" data-node-id="54:364" data-name="Line">
+                <div class="f6 f49">
+                  <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-8656fcd9cc93.svg" />
+                </div>
+              </div>
+              <div class="f27 f0 f1 f19 f20 f30 f4 f22 f112 f23 f34" data-node-id="54:365" data-name="Frame">
+                <p class="f35 f36 f4 f22 f38" data-node-id="54:366">
+                  PACKET LOSS RATE
+                </p>
+                <p class="f39 f40 f4 f22 f41" data-node-id="54:367">
+                  0.00%
+                </p>
+              </div>
+              <div class="f47 f4 f22 f23" data-node-id="54:368" data-name="Line">
+                <div class="f6 f49">
+                  <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-8656fcd9cc93.svg" />
+                </div>
+              </div>
+              <div class="f27 f0 f1 f19 f20 f30 f4 f22 f112 f38 f23 f34" data-node-id="54:369" data-name="Frame">
+                <p class="f35 f36 f4 f22" data-node-id="54:370">
+                  LAST DISCONNECT
+                </p>
+                <p class="f39 f40 f4 f22" data-node-id="54:371">12:30:11 UTC // AUTO-RECOVERY</p>
+              </div>
+            </div>
+          </div>
+          <div class="f54 f55 f15 f17 f0 f1 f50 f2 f56 f93 f3 f94 f128 f4 f123" data-node-id="54:372" data-name="Frame">
+            <p class="f27 f28 f29 f30 f4 f22 f41 f121 f33 f34" data-node-id="54:373">HOST METADATA // DESKTOP IDENTITY</p>
+            <div class="f0 f1 f2 f146 f3 f4 f22 f23" data-node-id="54:374" data-name="Frame">
+              <div class="f27 f0 f1 f19 f20 f30 f4 f22 f112 f23 f34" data-node-id="54:375" data-name="Frame">
+                <p class="f35 f36 f4 f22 f38" data-node-id="54:376">
+                  MACHINE NAME
+                </p>
+                <p class="f39 f40 f4 f22 f32" data-node-id="54:377">
+                  RUCA-DESKTOP-01
+                </p>
+              </div>
+              <div class="f47 f4 f22 f23" data-node-id="54:378" data-name="Line">
+                <div class="f6 f49">
+                  <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-8656fcd9cc93.svg" />
+                </div>
+              </div>
+              <div class="f27 f0 f1 f19 f20 f30 f4 f22 f112 f23 f34" data-node-id="54:379" data-name="Frame">
+                <p class="f35 f36 f4 f22 f38" data-node-id="54:380">
+                  OS VERSION
+                </p>
+                <p class="f39 f40 f4 f22 f32" data-node-id="54:381">
+                  Windows 11 Pro 23H2
+                </p>
+              </div>
+              <div class="f47 f4 f22 f23" data-node-id="54:382" data-name="Line">
+                <div class="f6 f49">
+                  <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-8656fcd9cc93.svg" />
+                </div>
+              </div>
+              <div class="f27 f0 f1 f19 f20 f30 f4 f22 f112 f23 f34" data-node-id="54:383" data-name="Frame">
+                <p class="f35 f36 f4 f22 f38" data-node-id="54:384">
+                  RUCA CORE VERSION
+                </p>
+                <p class="f39 f40 f4 f22 f32" data-node-id="54:385">
+                  v1.42.0-RELEASE
+                </p>
+              </div>
+              <div class="f47 f4 f22 f23" data-node-id="54:386" data-name="Line">
+                <div class="f6 f49">
+                  <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-8656fcd9cc93.svg" />
+                </div>
+              </div>
+              <div class="f27 f0 f1 f19 f20 f30 f4 f22 f112 f23 f34" data-node-id="54:387" data-name="Frame">
+                <p class="f35 f36 f4 f22 f38" data-node-id="54:388">
+                  LOCAL NETWORK IP
+                </p>
+                <p class="f39 f40 f4 f22 f32" data-node-id="54:389">
+                  192.168.1.144
+                </p>
+              </div>
+              <div class="f47 f4 f22 f23" data-node-id="54:390" data-name="Line">
+                <div class="f6 f49">
+                  <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-8656fcd9cc93.svg" />
+                </div>
+              </div>
+              <div class="f27 f0 f1 f19 f20 f30 f4 f22 f112 f23 f34" data-node-id="54:391" data-name="Frame">
+                <p class="f35 f36 f4 f22 f38" data-node-id="54:392">
+                  CPU ARCHITECTURE
+                </p>
+                <p class="f39 f40 f4 f22 f32" data-node-id="54:393">X86_64 // 24 CORES</p>
+              </div>
+            </div>
+          </div>
+          <div class="f54 f55 f15 f17 f0 f1 f50 f2 f56 f93 f3 f94 f128 f4 f123" data-node-id="54:394" data-name="Frame">
+            <p class="f27 f28 f29 f30 f4 f22 f41 f121 f33 f34" data-node-id="54:395">COMPANION IDENTITY // MOBILE</p>
+            <div class="f0 f1 f2 f146 f3 f4 f22 f23" data-node-id="54:396" data-name="Frame">
+              <div class="f27 f0 f1 f19 f20 f30 f4 f22 f112 f23 f34" data-node-id="54:397" data-name="Frame">
+                <p class="f35 f36 f4 f22 f38" data-node-id="54:398">
+                  CLIENT DEVICE
+                </p>
+                <p class="f39 f40 f4 f22 f32" data-node-id="54:399">
+                  Razer Edge 5G
+                </p>
+              </div>
+              <div class="f47 f4 f22 f23" data-node-id="54:400" data-name="Line">
+                <div class="f6 f49">
+                  <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-8656fcd9cc93.svg" />
+                </div>
+              </div>
+              <div class="f27 f0 f1 f19 f20 f30 f4 f22 f112 f23 f34" data-node-id="54:401" data-name="Frame">
+                <p class="f35 f36 f4 f22 f38" data-node-id="54:402">
+                  APP VERSION
+                </p>
+                <p class="f39 f40 f4 f22 f32" data-node-id="54:403">
+                  v—.—.— (READING)
+                </p>
+              </div>
+              <div class="f47 f4 f22 f23" data-node-id="54:404" data-name="Line">
+                <div class="f6 f49">
+                  <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-8656fcd9cc93.svg" />
+                </div>
+              </div>
+              <div class="f27 f0 f1 f19 f20 f30 f4 f22 f112 f23 f34" data-node-id="54:405" data-name="Frame">
+                <p class="f35 f36 f4 f22 f38" data-node-id="54:406">
+                  HARDWARE BUILD
+                </p>
+                <p class="f39 f40 f4 f22 f32" data-node-id="54:407">
+                  QUALCOMM G3X GEN 1
+                </p>
+              </div>
+              <div class="f47 f4 f22 f23" data-node-id="54:408" data-name="Line">
+                <div class="f6 f49">
+                  <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-8656fcd9cc93.svg" />
+                </div>
+              </div>
+              <div class="f27 f0 f1 f19 f20 f30 f4 f22 f112 f23 f34" data-node-id="54:409" data-name="Frame">
+                <p class="f35 f36 f4 f22 f38" data-node-id="54:410">
+                  LAST CLOCK SYNC
+                </p>
+                <p class="f39 f40 f4 f22 f32" data-node-id="54:411">
+                  09:41:52 UTC
+                </p>
+              </div>
+              <div class="f47 f4 f22 f23" data-node-id="54:412" data-name="Line">
+                <div class="f6 f49">
+                  <img alt="" class="f26 f9 f5" src="/assets/mobile-current/asset-8656fcd9cc93.svg" />
+                </div>
+              </div>
+              <div class="f27 f0 f1 f19 f20 f30 f4 f22 f112 f23 f34" data-node-id="54:413" data-name="Frame">
+                <p class="f35 f36 f4 f22 f38" data-node-id="54:414">
+                  BATTERY LEVEL
+                </p>
+                <p class="f39 f40 f4 f22 f32" data-node-id="54:415">94% // POWER CONNECTED</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="f27 f14 f15 f17 f100 f0 f1 f101 f19 f20 f30 f21 f4 f22 f81 f23 f34" data-node-id="54:416" data-name="bottom-status">
+        <p class="f35 f36 f4 f22 f38" data-node-id="54:417">
+          RAZER EDGE 5G TARGET CONSOLE
+        </p>
+        <p class="f39 f40 f4 f22 f102" data-node-id="54:418">TELEMETRY LINK STABLE // HIGH_RATE ACTIVE</p>
+        <p class="f35 f36 f4 f22 f38" data-node-id="54:419">STATIC READ METRIC WINDOW // STATUS ONLY</p>
+      </div>
+    </div></div></div>
+<div class="interaction-bar"><p id="interaction-help">Tap a port to open it. Hold or configure a port to change its assignment.</p><div><button id="configure">Configure ports</button><button id="back">Back</button><button id="fullscreen">Expand demo</button></div></div><p class="feedback" id="feedback" role="status" aria-live="polite">Sample session ready. All actions stay inside this demo.</p>
+<section class="evidence"><div><p class="eyebrow">SOURCE & IMPLEMENTATION</p><h2>See the design. See the build.</h2><p>This interactive demo translates the current V1 Figma frames into HTML controls and uses illustrative data. The native Android foundation has the five destinations, six command ports, media transport, themes and a continuous cosmic background. Current Java source also relays timestamped CPU, GPU, memory and media data.</p><p>Several additional telemetry tiles and display actions remain design concepts. They are marked unavailable or design-only here. This public demo does not connect to a PC.</p></div><div><a class="evidence-card" id="design-link" href="/assets/mobile-current/home.png" target="_blank"><img id="design-image" src="/assets/mobile-current/home.png" alt="Exact current HOME frame exported from Figma" loading="lazy"><span>Current Figma V1 · exact frame</span></a><a class="evidence-card" id="native-link" href="/assets/mobile-current/native-home-sep07.png" target="_blank"><img id="native-image" src="/assets/mobile-current/native-home-sep07.png" alt="Actual native Android HOME captured on September 7" loading="lazy"><span>Native Android · 7 September 2026</span></a><p class="small">The device captures precede the same-day telemetry and icon repairs. They document the installed build at that time; they are not captures of the later fixes.</p></div></section>
+<footer><a href="https://www.figma.com/design/vo2DuY25t0yN7O9VxjcWjc/RUCA-OS----MOBILE-COMPANION?node-id=53-8" target="_blank" rel="noreferrer">Figma source</a><a href="/portfolio/ruca-mobile/">Read the case study</a><a href="/portfolio/">Back to portfolio</a></footer></main>
+<dialog id="port-dialog"><form method="dialog" id="port-form"><p class="eyebrow">SIX PERSONAL PORTS</p><h2>Configure HOME port</h2><label>Port<select id="port-number"></select></label><label>Assignment<select id="port-assignment"></select></label><label>Label<input id="port-label" maxlength="28" autocomplete="off"></label><p>Saved only in this browser. Cancel preserves your current assignment.</p><div class="dialog-actions"><button value="cancel">Cancel</button><button id="save-port" value="save">Save assignment</button></div></form></dialog>
+<dialog id="action-dialog"><form method="dialog"><p class="eyebrow">DEMO COMMAND</p><h2 id="action-title"></h2><p id="action-description"></p><div class="dialog-actions"><button value="cancel">Cancel</button><button id="confirm-action" value="confirm">Confirm in demo</button></div></form></dialog>
+<script src="./showcase.js" defer></script></body></html>
