@@ -9,6 +9,8 @@
     { "source": "/portfolio/(.*)", "headers": [{ "key": "Cache-Control", "value": "no-store, max-age=0" }] },
     { "source": "/demo/(.*)", "headers": [{ "key": "Cache-Control", "value": "no-store, max-age=0" }] },
     { "source": "/mobile-showcase/(.*)", "headers": [{ "key": "Cache-Control", "value": "no-store, max-age=0" }] },
+    { "source": "/la-cosa-nostra-demo/(.*)", "headers": [{ "key": "Cache-Control", "value": "no-store, max-age=0" }] },
+    { "source": "/gourmet-glatt-demo/(.*)", "headers": [{ "key": "Cache-Control", "value": "no-store, max-age=0" }] },
     { "source": "/resume/(.*)", "headers": [{ "key": "Cache-Control", "value": "no-store, max-age=0" }] },
     { "source": "/service-worker.js", "headers": [{ "key": "Cache-Control", "value": "no-store, max-age=0, must-revalidate" }, { "key": "Service-Worker-Allowed", "value": "/" }] },
     { "source": "/(.*)", "headers": [

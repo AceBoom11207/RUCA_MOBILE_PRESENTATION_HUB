@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>La Cosa Nostra · Interactive Product Demo</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'; object-src 'none'; base-uri 'self'">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./demo.css">
+</head>
+<body>
+  <aside class="demo-banner" aria-label="Interactive demo guide"><div><b>INTERACTIVE PRODUCT DEMO</b><span>Sample clients, money and provider work. Changes stay in this tab and reset on reload.</span></div><div class="demo-actions"><button id="demoRevenue">TRY REVENUE WORKFLOW</button><button id="demoMission">TRY MISSION WORKFLOW</button><button id="demoReset">RESET DEMO</button><a href="/portfolio/">PORTFOLIO ↗</a></div><p id="demoHint" role="status">Start with a sample opportunity: evaluate, pursue, approve a proposal, then build a sample production and invoice record.</p></aside>
+  <header class="app-header">
+    <button class="brand" data-view="revenue" aria-label="Go to Revenue Board">
+      <img src="./assets/ruca-logo.png" alt="RUCA Industries crest">
+      <span><b>LA COSA NOSTRA</b><small>RUCA INDUSTRIES · PUBLIC STUDIO SIMULATION</small></span>
+    </button>
+    <nav aria-label="Workspace">
+      <button data-view="command">COMMAND</button>
+      <button data-view="revenue" class="on">REVENUE</button>
+      <button data-view="tasks">TASKS</button>
+      <button data-view="calendar">CALENDAR</button>
+      <button data-view="ledger">THE BOOKS</button>
+      <button data-view="preview">COLLABORATIVE PREVIEW</button>
+      <button data-view="connections">CONNECTIONS</button>
+    </nav>
+    <div class="now" aria-label="RUCA Brooklyn timepiece">
+      <div class="timepiece-stack">
+        <small class="clock-label">ANALOG · BROOKLYN</small>
+        <div class="timepiece-face"><canvas id="analogClock" width="240" height="240" aria-label="Analog clock showing Brooklyn time"></canvas></div>
+        <div class="digital-readout"><small>DIGITAL · RUCA STANDARD TIME</small><time id="clock">--:--:-- --</time><span id="today">BROOKLYN</span></div>
+      </div>
+      <div class="theme-control"><button id="themeToggle" aria-expanded="false">QUICK COLOR</button><div id="themeMenu" class="theme-menu color-studio" hidden>
+        <div class="color-studio-head"><b>COLOR</b><button id="themeClose" type="button" aria-label="Close color selector">×</button></div>
+        <div class="color-wheel-wrap"><canvas id="colorWheel" width="240" height="240" aria-label="RGB color wheel"></canvas><i id="colorCursor"></i></div>
+        <label class="brightness-control" aria-label="Brightness"><canvas id="brightnessBar" width="280" height="28"></canvas><input id="colorBrightness" type="range" min="10" max="100" value="100"></label>
+        <div class="color-values"><label>R <input id="colorR" type="number" min="0" max="255" value="212"></label><label>G <input id="colorG" type="number" min="0" max="255" value="174"></label><label>B <input id="colorB" type="number" min="0" max="255" value="85"></label><label class="hex-value"><i id="colorPreview"></i><input id="colorHex" value="#d4ae55" maxlength="7" aria-label="Hex color"></label></div>
+        <div class="color-swatches" aria-label="Quick colors"><button data-color="#e4473f" style="--swatch:#e4473f" aria-label="RUCA red"></button><button data-color="#ed49cf" style="--swatch:#ed49cf" aria-label="Pink"></button><button data-color="#a244d1" style="--swatch:#a244d1" aria-label="Purple"></button><button data-color="#7d5cff" style="--swatch:#7d5cff" aria-label="Violet"></button><button data-color="#4056ff" style="--swatch:#4056ff" aria-label="Indigo"></button><button data-color="#4a92ff" style="--swatch:#4a92ff" aria-label="Blue"></button><button data-color="#2fc4d3" style="--swatch:#2fc4d3" aria-label="Cyan"></button><button data-color="#45dfb0" style="--swatch:#45dfb0" aria-label="Mint"></button><button data-color="#53df38" style="--swatch:#53df38" aria-label="Green"></button><button data-color="#bef126" style="--swatch:#bef126" aria-label="Lime"></button><button data-color="#ffc21c" style="--swatch:#ffc21c" aria-label="Yellow"></button><button data-color="#ff932f" style="--swatch:#ff932f" aria-label="Orange"></button><button data-color="#f4f2ed" style="--swatch:#f4f2ed" aria-label="White"></button><button data-color="#d4ae55" style="--swatch:#d4ae55" aria-label="RUCA gold"></button></div>
+        <button id="applyCustomColor" class="color-apply" type="button">USE THIS COLOR</button>
+      </div></div>
+    </div>
+  </header>
+
+  <main>
+    <section id="command" class="view workspace command-screen">
+      <div id="review" class="review-strip" role="status" aria-live="polite"><p>Nothing needs ACE right now.</p></div>
+      <section id="commandDesk" class="command-desk">
+        <div class="command-copy">
+          <small>GIVE THE WORD</small>
+          <h1>What needs to get done?</h1>
+          <p>State the outcome. Name the constraints. The family handles the lanes.</p>
+        </div>
+        <form id="newMission" class="mission-form">
+          <div class="intake-modes" role="tablist" aria-label="Command intake mode"><button type="button" class="on" data-intake-mode="MISSION">OPEN MISSION</button><button type="button" data-intake-mode="OPPORTUNITY">ADD OPPORTUNITY</button></div>
+          <div id="missionFields">
+          <label for="missionText">MISSION BRIEF</label>
+          <textarea id="missionText" maxlength="1000" placeholder="Describe the outcome, what success looks like, and anything the crew needs to know." required></textarea>
+          <div class="mission-form-foot">
+            <label class="project-field">PROJECT <input id="project" value="SAMPLE CREATIVE PROJECT" aria-label="Project"></label>
+            <span><b id="missionCount">0</b> / 1000</span>
+            <button class="primary">OPEN MISSION</button>
+          </div>
+          <p class="storage-note">SAMPLE WORKFLOW · IN-MEMORY DEMO · NO PROVIDER CALLS OR FILE WRITES</p>
+          </div>
+          <div id="opportunityFields" hidden>
+            <label for="opportunityText">OPPORTUNITY OR CLIENT BRIEF</label>
+            <textarea id="opportunityText" maxlength="6000" placeholder="Paste the job, project request, or client brief. Saving stays local and performs no external action."></textarea>
+            <div class="opportunity-grid"><label>SOURCE<select id="opportunitySource"><option>MANUAL PASTE</option><option>URL</option><option>EMAIL</option><option>LINKEDIN</option><option>INDEED</option><option>UPWORK</option><option>CONTRA</option><option>WELLFOUND</option><option>COMPANY WEBSITE</option><option>REFERRAL</option><option>EXISTING CLIENT</option><option>LOCAL BUSINESS</option><option>OTHER</option></select></label><label>SOURCE URL<input id="opportunityUrl" type="url" placeholder="https://"></label><label>CLIENT<input id="opportunityClient" placeholder="Prospective client"></label><label>COMPANY<input id="opportunityCompany"></label><label>INDUSTRY<input id="opportunityIndustry"></label><label>WEBSITE<input id="opportunityWebsite" type="url"></label><label>ESTIMATED VALUE<input id="opportunityBudget" type="number" min="0" step="50"></label><label>DEADLINE<input id="opportunityDeadline"></label><label>REQUESTED DELIVERABLES<input id="opportunityDeliverables" placeholder="Comma-separated"></label><label>NOTES<input id="opportunityNotes"></label></div>
+            <button id="saveOpportunity" type="button" class="primary">SAVE OPPORTUNITY</button>
+            <p class="storage-note">LOCAL INTAKE ONLY · ZERO PROVIDER SUBMISSIONS · ZERO AUTOMATIC SPEND</p>
+          </div>
+        </form>
+      </section>
+
+      <section id="revenueDesk" class="revenue-desk" aria-label="Revenue workflow"><header><div><small>REVENUE OPERATING SYSTEM</small><h2>OPPORTUNITIES &amp; PROPOSALS</h2></div><div id="revenueMetrics"></div></header><div id="opportunityList" class="opportunity-list"></div><aside id="revenueDetail" class="revenue-detail"><p>Add an opportunity to begin the local evaluation workflow.</p></aside></section>
+
+      <section class="mission-overview" aria-label="Active mission progress">
+        <div class="mission-heading">
+          <div><small>ACTIVE MISSION</small><h2 id="missionTitle">Waiting for the word.</h2><p id="missionObjective">Open a mission and the work appears here.</p></div>
+          <div class="mission-controls"><button id="newMissionDesk" class="text-action">NEW MISSION</button><select id="missionSelect" aria-label="Active mission"><option>NO ACTIVE MISSION</option></select><button id="dispatch" class="text-action">RUN NEXT NOW</button><button class="text-action studio-control" data-control="STOP">STOP ALL</button><button class="text-action studio-control" data-control="RESUME">RESUME ALL</button><button class="text-action danger studio-control" data-control="RESET" data-scope="mission">RESET MISSION</button></div>
+        </div>
+        <div class="completion-row">
+          <strong id="progressPercent">0%</strong>
+          <div class="completion-track" aria-label="Mission completion"><i id="progressBar"></i></div>
+          <span id="progressLabel">0 of 0 complete</span>
+          <b id="missionState" class="status standby">STANDBY</b>
+        </div>
+        <div id="crew" class="crew-line" role="list" aria-label="Mission agents"></div>
+      </section>
+
+    </section>
+
+    <section id="revenue" class="view on workspace agency-screen">
+      <header class="agency-hero"><div><small>RUCA INDUSTRIES · AGENCY OPERATIONS</small><h1>THE REVENUE BOARD</h1><p>From lead to paid invoice. Every client, job, dollar, and next move in one operating view.</p></div><div id="agencyKpis" class="agency-kpis"></div></header>
+      <section class="agency-grid revenue-priority"><article><header><small>TODAY</small><b>ONLY WHAT MOVES MONEY</b></header><div id="todayBoard" class="agency-ledger"></div></article><article><header><small>ACE MODE</small><b>REVIEW · APPROVE · DECIDE</b></header><div id="aceAttention" class="agency-ledger"></div></article></section>
+      <section class="agency-actions">
+        <form id="clientForm"><small>CLIENT CRM</small><h2>ADD CLIENT</h2><div class="agency-form-grid"><label>CLIENT / CONTACT<input name="name" required></label><label>COMPANY<input name="company"></label><label>INDUSTRY<input name="industry"></label><label>WEBSITE<input name="website" type="url"></label></div><label>NOTES<textarea name="notes"></textarea></label><button class="primary">SAVE CLIENT</button></form>
+        <div class="first-invoice"><small>PRIMARY KPI</small><h2>FIRST INVOICE</h2><strong id="firstInvoiceState">NOT YET PAID</strong><p id="firstInvoiceDetail">The operating target stays visible until money is collected.</p></div>
+      </section>
+      <section class="agency-operations"><header><small>OPERATIONS DESK</small><h2>DISCOVERY → PRODUCTION → PAYMENT</h2><p>Local records only. No email, provider, publication, or payment processor action occurs here.</p></header><div>
+        <form id="discoveryForm"><h3>CLIENT DISCOVERY</h3><label>CLIENT<select name="client_id" id="discoveryClient" required></select></label><label>OPPORTUNITY<select name="opportunity_id" id="discoveryOpportunity" required></select></label><label>BUSINESS GOALS<input name="business_goals" required></label><label>TARGET AUDIENCE<input name="target_audience" required></label><label>COMPETITORS<input name="competitors"></label><label>CURRENT ASSETS<input name="current_assets"></label><label>BRAND<input name="brand_voice"></label><label>CONTENT<input name="content"></label><label>EXISTING WEBSITE<input name="current_website"></label><label>EXISTING APPLICATIONS<input name="existing_applications"></label><label>CURRENT PROBLEMS<input name="current_problems" required></label><label>BUDGET<input name="budget" type="number" min="0"></label><label>TIMELINE<input name="timeline" required></label><label>SUCCESS CRITERIA<input name="success_criteria" required></label><button>SAVE DISCOVERY</button></form>
+        <form id="agencyProjectForm"><h3>START CLIENT PROJECT</h3><label>CLIENT<select name="client_id" id="projectClient" required></select></label><label>WON MISSION<select name="opportunity_id" id="projectOpportunity" required></select></label><label>SERVICE<select name="service_id" id="projectService" required></select></label><label>EXPECTED REVENUE<input name="expected_revenue" type="number" min="0" required></label><label>EXPECTED AI SPEND<input name="expected_ai_spend" type="number" min="0" value="0"></label><label>EXPECTED LABOR<input name="expected_labor" type="number" min="0" value="0"></label><button>START PRODUCTION</button></form>
+      </div></section>
+      <section class="pipeline-section"><header><div><small>OPPORTUNITY PIPELINE</small><h2>LEAD → RETAINER</h2></div><p>Stage changes are controlled by the runtime. Skipping required business steps is rejected.</p></header><div id="agencyPipeline" class="agency-pipeline"></div></section>
+      <section id="acquisitionQueues" class="acquisition-queues" aria-label="Acquisition queues"></section>
+      <section class="agency-grid"><article><header><small>CLIENT DASHBOARDS</small><b id="clientCount">0</b></header><div id="clientLedger" class="agency-ledger"></div></article><article><header><small>SERVICE CATALOG</small><b>PRODUCTIZED</b></header><div id="serviceCatalog" class="agency-ledger"></div></article><article><header><small>PROJECTS IN PRODUCTION</small><b id="projectCount">0</b></header><div id="projectLedger" class="agency-ledger"></div></article><article><header><small>INVOICES</small><b id="invoiceCount">0</b></header><div id="invoiceLedger" class="agency-ledger"></div></article></section>
+      <section class="agency-grid"><article><header><small>PORTFOLIO PIPELINE</small><b>PRIVATE BY DEFAULT</b></header><div id="portfolioLedger" class="agency-ledger"></div></article><article><header><small>RETENTION</small><b>MRR</b></header><div id="retentionLedger" class="agency-ledger"></div></article><article><header><small>DEPARTMENT OPERATIONS</small><b>8 DEPARTMENTS</b></header><div id="departmentLedger" class="agency-ledger"></div></article><article><header><small>BUSINESS INTELLIGENCE</small><b>LEARNING LOOP</b></header><div id="learningSummary" class="agency-ledger"></div></article></section>
+    </section>
+
+    <section id="tasks" class="view workspace task-screen">
+      <section class="task-desk">
+        <header class="task-desk-head">
+          <div><small>AI DIGITAL CREATIVE STUDIO</small><h2>THE WORK</h2><p>Find it. See who owns it. Know what changed.</p></div>
+          <label class="search"><span>SEARCH</span><input id="taskSearch" type="search" placeholder="Mission, task, project, agent..."></label>
+        </header>
+
+        <div id="phaseProgress" class="stage-line" aria-label="Studio workflow stages">
+          <div data-phase="INTAKE"><span><b>01</b> INTAKE</span><i></i><em>STANDBY</em></div><div data-phase="STRATEGY"><span><b>02</b> STRATEGY</span><i></i><em>STANDBY</em></div><div data-phase="CREATE"><span><b>03</b> CREATE</span><i></i><em>STANDBY</em></div><div data-phase="REVIEW"><span><b>04</b> REVIEW</span><i></i><em>STANDBY</em></div><div data-phase="DELIVER"><span><b>05</b> DELIVER</span><i></i><em>STANDBY</em></div>
+        </div>
+
+        <div class="task-workspace">
+          <aside class="filters" aria-label="Task filters">
+            <small>STATUS</small>
+            <div id="statusFilters" class="status-filters">
+              <button data-filter="ALL" class="on">ALL <span id="allCount">0</span></button>
+              <button data-filter="RECOMMENDED">RECOMMENDED</button>
+              <button data-filter="UPCOMING">UPCOMING</button>
+              <button data-filter="COMPLETE">COMPLETED</button>
+              <button data-filter="FAILED">FAILED</button>
+            </div>
+            <small>AGENT</small>
+            <div id="agentFilters" class="agent-filters"></div>
+            <div id="agentControl" class="agent-control"></div>
+          </aside>
+
+          <section class="task-ledger" aria-live="polite">
+            <div class="ledger-summary"><strong id="taskCount">0 tasks</strong><button id="clearFilters">CLEAR FILTERS</button><span id="filterSummary">All agents · All states</span></div>
+            <div class="task-columns" aria-hidden="true"><span>WORK</span><span>OWNER</span><span>UPDATED</span><span>STATE</span></div>
+            <div id="taskList" class="task-list"></div>
+            <div id="taskEmpty" class="task-empty" hidden><b>Nothing matches.</b><p>Clear a filter or search another word.</p></div>
+          </section>
+
+          <aside class="context-rail">
+            <section id="taskDetail" class="task-detail"><small>SELECTED WORK</small><h3>Choose a task</h3><p>Task ownership, timestamps, output, and next action show here.</p></section>
+            <div id="taskControl" class="task-controls"></div>
+          </aside>
+        </div>
+      </section>
+    </section>
+
+    <section id="calendar" class="view workspace calendar-screen">
+      <header class="calendar-title"><div><small>WORK TIMELINE</small><h1>CALENDAR</h1><p>Choose a day. See work updated that day, its owner, and its recorded state.</p></div><div class="calendar-today"><time id="calendarClock">--:-- --</time><span id="calendarDate">BROOKLYN</span></div></header>
+      <div class="calendar-workspace">
+        <section class="calendar-panel calendar-large">
+          <div class="calendar-head"><button id="calendarPrev" aria-label="Previous month">PREVIOUS</button><div class="calendar-jump"><select id="calendarMonthSelect" aria-label="Calendar month"></select><select id="calendarYearSelect" aria-label="Calendar year"></select></div><button id="calendarToday">TODAY</button><button id="calendarNext" aria-label="Next month">NEXT</button></div>
+          <div class="calendar-week"><span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span></div>
+          <div id="calendarDays" class="calendar-days"></div>
+        </section>
+        <aside class="calendar-agenda"><div class="agenda-head"><small>DAY ACTIVITY</small><h2 id="agendaDate">SELECT A DATE</h2><p id="agendaCount">Recorded work</p></div><div id="calendarAgenda" class="agenda-list"></div><button id="viewAgendaTasks" class="primary">OPEN WORK IN TASKS</button></aside>
+      </div>
+    </section>
+
+    <section id="ledger" class="view secondary-view">
+      <header><small>THE AUTHORITATIVE RECORD</small><h1>ACTIVITY LOGS</h1><p>Recall every move. Filter by agent, activity, date, or exact words.</p></header>
+      <div class="log-tools"><label>SEARCH LOGS<input id="logSearch" type="search" placeholder="Mission, message, owner..."></label><label>AGENT<select id="logActor"><option value="ALL">ALL AGENTS</option></select></label><label>ACTIVITY<select id="logKind"><option value="ALL">ALL ACTIVITY</option></select></label><label>DATE<input id="logDate" type="date"></label><button id="clearLogFilters">CLEAR</button></div>
+      <div class="log-summary"><strong id="logCount">0 activities</strong><span id="logFilterSummary">All recorded activity</span></div>
+      <div id="allEvents" class="book"></div>
+    </section>
+
+    <section id="preview" class="view preview-view">
+      <header class="preview-title"><div><small>ACE REVIEW ROOM · SAMPLE FAMILY WIRE</small><h1>COLLABORATIVE PREVIEW WINDOW</h1><p>Advance sample lanes, inspect prepared artifacts, and try the approval and revision controls.</p></div><div class="preview-resolution"><b>2560 × 1440</b><span>27-INCH LOGICAL CANVAS · 16:9</span></div></header>
+      <div class="preview-toolbar">
+        <label>MISSION<select id="previewMission" aria-label="Preview mission"></select></label>
+        <label>WORK ITEM<select id="previewTask" aria-label="Preview work item"></select></label>
+        <div class="preview-modes" role="group" aria-label="Preview size"><button id="previewFit" class="on">FIT</button><button id="previewActual">100%</button></div>
+        <div class="preview-meta"><span id="previewOwner">NO OWNER</span><b id="previewState">STANDBY</b><time id="previewStamp">NO TIMESTAMP</time></div>
+      </div>
+      <div class="preview-lane-deck">
+        <div id="previewLaneRail" class="preview-lane-rail" aria-label="Mission lanes"></div>
+        <div id="previewLaneControls" class="preview-lane-controls" aria-label="Selected lane controls"></div>
+      </div>
+      <div id="previewMonitor" class="preview-monitor">
+        <div id="previewCanvas" class="preview-canvas">
+          <div id="previewContent" class="preview-content"><small>COLLABORATIVE PREVIEW</small><h2>Follow the work live.</h2><p>Prepared sample provider work and interactive approval controls appear here.</p></div>
+        </div>
+      </div>
+      <footer class="preview-footer"><span>FAMILY WIRE · SHARED REVIEW SURFACE</span><span id="previewScale">FIT · 100%</span></footer>
+    </section>
+
+    <section id="connections" class="view secondary-view">
+      <header><small>STUDIO FOUNDATION + ROUTING</small><h1>PROJECTS &amp; CONNECTIONS</h1><p>Register where work belongs, protect its boundaries, then keep every program on the same mission.</p></header>
+      <section id="operatingProfile" class="operating-profile"></section>
+      <section class="project-registry">
+        <div class="registry-copy"><small>PROJECT REGISTRY</small><h2>Tell the studio where it can work.</h2><p>Try a sample registry entry. This demo never reads local folders or creates workspaces. The source app uses project boundaries and shared write locks.</p><div id="coordinationHealth" class="coordination-health"></div></div>
+        <form id="projectForm" class="project-form">
+          <label>PROJECT NAME<input name="name" required placeholder="RUCA INDUSTRIES WEBSITE"></label>
+          <label>SAMPLE PROJECT LABEL<input name="root_path" required placeholder="sample-project"></label>
+          <label>WRITE POLICY<select name="write_policy"><option>READ_ONLY</option><option>WORKTREE_ONLY</option><option>SCOPED_WRITE</option></select></label>
+          <label>ALLOWED PATHS<input name="allowed_paths" value="." placeholder="src, public, tests"></label>
+          <label>PROTECTED PATHS<input name="protected_paths" placeholder=".env, production, archives"></label>
+          <button>REGISTER PROJECT</button>
+        </form>
+      </section>
+      <div id="projectList" class="project-list"></div>
+      <div id="routes" class="routes"></div>
+    </section>
+  </main>
+
+  <div id="toast" role="status"></div>
+  <script src="./demo-data.js"></script>
+  <script src="./ui.js"></script>
+  <script src="./demo-ui.js"></script>
+</body>
+</html>

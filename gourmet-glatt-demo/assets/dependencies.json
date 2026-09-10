@@ -1,0 +1,40 @@
+[
+  {
+    "file": "lucide.js",
+    "source": "https://unpkg.com/lucide@1.44.0/dist/umd/lucide.js",
+    "sha256": "0c897b6954e52424b15b3089134e291d12188a2f73443d68d4fb79c3f6bcf8eb"
+  },
+  {
+    "file": "LUCIDE-LICENSE.txt",
+    "source": "https://unpkg.com/lucide@1.44.0/LICENSE",
+    "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+  },
+  {
+    "file": "TAILWIND-LICENSE.txt",
+    "source": "https://unpkg.com/tailwindcss@3.4.17/LICENSE",
+    "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
+  },
+  {
+    "file": "INTER-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/rsms/inter/master/LICENSE.txt",
+    "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
+  },
+  {
+    "file": "inter-variable-latin.woff2",
+    "source": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+    "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+    "stylesheetSource": "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap",
+    "format": "woff2",
+    "family": "Inter",
+    "style": "normal",
+    "axes": [
+      {
+        "tag": "wght",
+        "min": 100.0,
+        "default": 400.0,
+        "max": 900.0
+      }
+    ],
+    "defaultWeight": 400
+  }
+]

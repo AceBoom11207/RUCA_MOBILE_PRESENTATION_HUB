@@ -1,0 +1,35 @@
+{
+  "title": "Gourmet Glatt fulfillment design proposal",
+  "sourceArtifact": "GOURMET_GLATT_DELIVERY_OPTIMIZATION_PLAN.html",
+  "sourceSha256": "ed684b5bea2976cdf532ef45b4a77827472a687f66b3dea7fef592fbf0eab424",
+  "sourceModified": "2026-06-05",
+  "publicationKind": "Independent interactive design proposal / not deployed",
+  "preserved": [
+    "11 original tabs",
+    "9 territory models",
+    "9 original LOT route SVG schematics and route notes; optional external map references",
+    "bay layout",
+    "color reference",
+    "interactive volume calculator",
+    "13 step workflow",
+    "multilingual signage filters",
+    "Business Proposal",
+    "Market and Territory Analysis",
+    "Fulfillment Operations Manual"
+  ],
+  "publicCopyChanges": [
+    "local UI dependencies and font",
+    "author/recipient placeholder cleanup",
+    "public design-proposal labeling",
+    "removed employer and unverified management endorsement references",
+    "clarified hypothetical handling requirements",
+    "removed private-document labels and map joke",
+    "nonnegative calculator capacity for invalid assumptions",
+    "accessible navigation and fragment routes",
+    "rendered original route SVG geometry locally in every LOT zone",
+    "replaced blank satellite embeds with optional external map links; retained bay plan",
+    "changed dated presentation heading to suggested presentation flow",
+    "replaced incorrectly labeled static Inter Black font with verified Inter variable WOFF2 (100\u2013900; default 400)"
+  ],
+  "publicArtifactSha256": "6092a301cf180e251fbc6bce146ff55d3cdac6dc695859135e987e042fd0da69"
+}

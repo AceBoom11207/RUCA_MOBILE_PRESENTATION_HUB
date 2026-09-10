@@ -1,0 +1,179 @@
+[
+  {
+    "id": "SVC-UX-AUDIT",
+    "name": "UX Audit",
+    "scope": "Audit usability, accessibility, structure, and conversion friction.",
+    "timeline_days": 5,
+    "price_low": 1800,
+    "price_high": 2800,
+    "target_margin": 0.82,
+    "departments": [
+      "RESEARCH",
+      "UX",
+      "REVIEW",
+      "DELIVERY"
+    ],
+    "deliverables": [
+      "Findings report",
+      "Priority matrix",
+      "Implementation brief"
+    ]
+  },
+  {
+    "id": "SVC-LANDING",
+    "name": "Landing Page Sprint",
+    "scope": "Conversion-focused page strategy, copy, responsive design direction, and handoff.",
+    "timeline_days": 10,
+    "price_low": 2950,
+    "price_high": 4300,
+    "target_margin": 0.86,
+    "departments": [
+      "RESEARCH",
+      "UX",
+      "CREATIVE",
+      "ENGINEERING",
+      "REVIEW",
+      "DELIVERY"
+    ],
+    "deliverables": [
+      "Competitor snapshot",
+      "Page structure",
+      "Copy",
+      "Responsive design",
+      "Handoff"
+    ]
+  },
+  {
+    "id": "SVC-WEBSITE",
+    "name": "Website Sprint",
+    "scope": "Small business website strategy, design, implementation, and delivery.",
+    "timeline_days": 20,
+    "price_low": 6500,
+    "price_high": 9800,
+    "target_margin": 0.78,
+    "departments": [
+      "RESEARCH",
+      "UX",
+      "CREATIVE",
+      "ENGINEERING",
+      "REVIEW",
+      "DELIVERY"
+    ],
+    "deliverables": [
+      "Discovery",
+      "UX system",
+      "Website",
+      "QA",
+      "Launch package"
+    ]
+  },
+  {
+    "id": "SVC-BRAND",
+    "name": "Brand Identity Sprint",
+    "scope": "Identity direction and a practical production-ready brand kit.",
+    "timeline_days": 15,
+    "price_low": 4200,
+    "price_high": 6800,
+    "target_margin": 0.8,
+    "departments": [
+      "RESEARCH",
+      "CREATIVE",
+      "REVIEW",
+      "DELIVERY"
+    ],
+    "deliverables": [
+      "Positioning",
+      "Identity system",
+      "Brand guide",
+      "Asset package"
+    ]
+  },
+  {
+    "id": "SVC-CAMPAIGN",
+    "name": "Creative Campaign",
+    "scope": "Campaign concept, channel system, creative assets, and rollout plan.",
+    "timeline_days": 15,
+    "price_low": 4800,
+    "price_high": 7500,
+    "target_margin": 0.76,
+    "departments": [
+      "RESEARCH",
+      "CREATIVE",
+      "OPERATIONS",
+      "REVIEW",
+      "DELIVERY"
+    ],
+    "deliverables": [
+      "Campaign strategy",
+      "Creative system",
+      "Channel assets",
+      "Launch plan"
+    ]
+  },
+  {
+    "id": "SVC-PROTOTYPE",
+    "name": "Product Prototype",
+    "scope": "Validated product flow and interactive prototype with engineering handoff.",
+    "timeline_days": 15,
+    "price_low": 5200,
+    "price_high": 8200,
+    "target_margin": 0.81,
+    "departments": [
+      "RESEARCH",
+      "UX",
+      "ENGINEERING",
+      "REVIEW",
+      "DELIVERY"
+    ],
+    "deliverables": [
+      "Flow",
+      "Prototype",
+      "Usability review",
+      "Build brief"
+    ]
+  },
+  {
+    "id": "SVC-APP-LAUNCH",
+    "name": "App Launch",
+    "scope": "Launch positioning, store assets, campaign, and operational checklist.",
+    "timeline_days": 15,
+    "price_low": 5000,
+    "price_high": 8500,
+    "target_margin": 0.75,
+    "departments": [
+      "RESEARCH",
+      "UX",
+      "CREATIVE",
+      "OPERATIONS",
+      "REVIEW",
+      "DELIVERY"
+    ],
+    "deliverables": [
+      "Launch strategy",
+      "Store assets",
+      "Campaign assets",
+      "Launch checklist"
+    ]
+  },
+  {
+    "id": "SVC-OPS",
+    "name": "Monthly Creative Operations",
+    "scope": "Recurring design, optimization, reporting, and production support.",
+    "timeline_days": 30,
+    "price_low": 2500,
+    "price_high": 6000,
+    "target_margin": 0.84,
+    "departments": [
+      "UX",
+      "CREATIVE",
+      "OPERATIONS",
+      "REVIEW",
+      "DELIVERY"
+    ],
+    "deliverables": [
+      "Monthly production queue",
+      "Optimization",
+      "Reporting"
+    ]
+  }
+]
