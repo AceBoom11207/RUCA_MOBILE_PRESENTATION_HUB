@@ -1,21 +1,22 @@
 # Anthony C. Moncion: portfolio content authority
 
-Canonical personal portfolio: /portfolio/
+Canonical personal portfolio: /
+Portfolio route: /portfolio/
 Desktop public simulation: /index.html#home
 Canonical public resume: /resume/Anthony_Moncion_Interaction_Designer_Public_Resume.pdf
 
 ## Separation of responsibilities
-The portfolio explains Anthony's work and contribution. Product demonstrations are supporting evidence, not the portfolio home. The resume separates independent projects, real employment, and education.
+The portfolio explains Anthony's work and contribution. Product demonstrations are supporting evidence, not the portfolio home. The résumé separates independent projects, professional employment, education, and credentials.
 
 ## Projects
-- RUCA OS: independent desktop product work; isolated browser simulation and existing desktop runtime captures. The public demo is a documented snapshot, not a claim of current private workstation state.
-- RUCA OS Mobile Companion: existing native Android application; touch-first six-port HOME and five-destination refinement. Do not substitute the older PWA or desktop public simulation for the native companion. Multi-host support remains research.
-- La Cosa Nostra Design Studio: independent AI-workflow product concept and foundational implementation work. Do not claim a registered commercial agency or universally connected live provider integrations.
-- Gourmet Glatt Delivery Optimization: independent service-design proposal, not deployed or a paid client engagement. Do not publish private leadership conversations.
+- RUCA OS: independent desktop product work with a separate browser simulation and desktop runtime captures.
+- RUCA OS Mobile Companion: native Android companion product work with touch-first HOME, MEDIA, SYSTEM HEART, COMMAND DECK, and DIAGNOSTICS design direction. Multi-host support remains research.
+- La Cosa Nostra Design Studio: independent AI-assisted workflow product concept and foundational implementation work centered on ownership, review gates, state, and human authority.
+- Gourmet Glatt Delivery Optimization: independent service-design proposal centered on territory structure, a 13-stage order lifecycle, staging/dispatch handoffs, and designed exception paths.
 
 ## Identity and evidence
-Use Anthony C. Moncion, Product Designer; interaction design and prototyping. RUCA INDUSTRIES is not an employer. Independent product work is self-directed and unpaid. Do not invent commercial years, clients, a paid design team, measured user outcomes, or completed research.
+Use Anthony C. Moncion, Product Designer. Lead with interaction systems, information architecture, prototyping, cross-device UX, and operations-informed design. Do not invent clients, tenure, user research, measured impact, or commercial outcomes. Do not publish internal compensation or business-registration commentary.
 
-The resume content is synchronized with Anthony_Moncion_Product_Designer_Figma.docx supplied in the September 9, 2026 application conversation. Project descriptions use existing public source and project briefs. Desktop assets remain the existing captures. No new Android screenshot or end-to-end device validation is claimed.
+Use product evidence only for claims it actually supports. Keep current implementation, design direction, proposal status, and research direction distinct without turning the portfolio into a disclaimer page.
 
-This publication update does not modify Windows RUCA OS, its bridges, or the native Android project.
+This publication does not modify the private Windows RUCA OS runtime, its bridges, or the native Android project.
