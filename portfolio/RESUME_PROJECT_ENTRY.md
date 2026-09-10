@@ -2,7 +2,7 @@
 
 ## RUCA OS & RUCA OS Mobile Companion | 2026-Present
 
-Self-directed, unpaid product design and prototyping.
+Independent product design and prototyping.
 
 - Defined product concepts, navigation, information hierarchy, and interaction requirements for a desktop PC interface and an Android companion.
 - Developed desktop experiences around telemetry, diagnostics, media, and system controls; adapted mobile flows for touch rather than duplicating the desktop layout.
@@ -10,4 +10,4 @@ Self-directed, unpaid product design and prototyping.
 - Used Figma and AI-assisted development workflows to iterate on prototypes, review implementation against requirements, and document acceptance criteria and limitations.
 - Presented a public product simulation with explicitly labeled demonstration data, separate from local hardware-connected functionality.
 
-These are independent projects, not employment at RUCA INDUSTRIES. Professional employment, education, and certificates belong in separate resume sections.
+Professional employment, education, and certificates remain in their own résumé sections.
