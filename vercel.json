@@ -9,6 +9,16 @@
       "permanent": false
     },
     {
+      "source": "/gourmet-glatt-demo/",
+      "destination": "/catskills-grocery-demo/",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/gourmet-glatt/",
+      "destination": "/portfolio/catskills-grocery/",
+      "permanent": true
+    },
+    {
       "source": "/gourmet-glatt-demo/:path*",
       "destination": "/catskills-grocery-demo/:path*",
       "permanent": true
