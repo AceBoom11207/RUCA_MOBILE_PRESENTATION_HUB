@@ -1,0 +1,1 @@
+Current RUCA portfolio evidence namespace. Desktop captures are September 9, 2026 evidence from the accepted local runtime. Mobile design renders are explicitly labeled design evidence unless installed-device provenance exists.
