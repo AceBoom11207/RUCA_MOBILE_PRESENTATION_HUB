@@ -1,4 +1,5 @@
 {
+  "alias": ["ruca-mobile-presentation-hub.vercel.app"],
   "headers": [
     {
       "source": "/",
