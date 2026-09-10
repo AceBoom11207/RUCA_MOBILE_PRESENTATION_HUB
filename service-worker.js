@@ -1,4 +1,4 @@
-const CACHE_NAME = "ruca-os-public-portfolio-alignment-20260909";
+const CACHE_NAME = "ruca-os-public-portfolio-entry-20260909";
 const CORE_ASSETS = [
   "/", "/index.html",
   "/css/ruca.css?v=20260722-source-clone-r14",
